@@ -52,6 +52,15 @@ def width_for(tier):
         raise KeystreamError(f"tier must be 3 or 4, got {tier!r}") from None
 
 
+def _check_width(width):
+    """Reject bool and non-integer widths before any shift or format."""
+    if isinstance(width, bool) or not isinstance(width, int):
+        raise KeyBitsError(f"width must be an int, got {type(width).__name__}")
+    if width <= 0:
+        raise KeyBitsError(f"width must be positive, got {width}")
+    return width
+
+
 def key_bits_from_int(value, width):
     """Return ``width`` bits of ``value``, most significant bit first.
 
@@ -60,8 +69,7 @@ def key_bits_from_int(value, width):
     """
     if isinstance(value, bool) or not isinstance(value, int):
         raise KeyBitsError(f"key must be an int, got {type(value).__name__}")
-    if width <= 0:
-        raise KeyBitsError(f"width must be positive, got {width}")
+    _check_width(width)
     if not 0 <= value < 1 << width:
         raise KeyBitsError(f"key must satisfy 0 <= key < 2**{width}, got {value}")
     return format(value, f"0{width}b")
@@ -72,6 +80,7 @@ def key_bits_from_flags(flags, width=24):
 
     Used by tier 3, where flag ``i`` is the result for oracle ``i``.
     """
+    _check_width(width)
     flags = list(flags)
     if len(flags) != width:
         raise KeyBitsError(f"expected {width} flags, got {len(flags)}")
@@ -116,6 +125,7 @@ def ciphertext_to_bytes(ciphertext_hex):
 
 def decrypt_key_bits(key_bits, width, ciphertext_hex):
     """Decrypt with a ready-made ``width``-bit key string."""
+    _check_width(width)
     key_bits = validate_key_bits(key_bits, width)
     data = ciphertext_to_bytes(ciphertext_hex)
     try:
@@ -173,6 +183,7 @@ def decrypt_tier4(s, ciphertext_hex):
 
 def encrypt_key_bits(key_bits, width, plaintext):
     """Symmetric helper used only by round-trip tests: returns ciphertext hex."""
+    _check_width(width)
     key_bits = validate_key_bits(key_bits, width)
     data = plaintext.encode("utf-8")
     return xor_bytes(data, keystream(key_bits, len(data))).hex()

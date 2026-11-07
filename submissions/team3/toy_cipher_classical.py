@@ -72,6 +72,10 @@ def width_for(tier):
 
 
 def _check_width(key_bits):
+    if isinstance(key_bits, bool) or not isinstance(key_bits, int):
+        raise ToyCipherError(
+            f"key width must be an int, got {type(key_bits).__name__}"
+        )
     if key_bits not in WIDTHS.values():
         raise ToyCipherError(f"unsupported key width {key_bits}")
 
@@ -170,16 +174,24 @@ def decrypt_tier5(key, ciphertext_hex):
     return decrypt(5, key, ciphertext_hex)
 
 
+def _check_expected_checksum(expected_checksum):
+    """Validate the public checksum independently of any candidate key."""
+    if expected_checksum is None:
+        raise ToyCipherError("tier 6 needs the public checksum")
+    if isinstance(expected_checksum, bool) or not isinstance(expected_checksum, int):
+        raise ToyCipherError("expected_checksum must be an int")
+    if not 0 <= expected_checksum <= 255:
+        raise ToyCipherError("expected_checksum must be between 0 and 255")
+    return expected_checksum
+
+
 def decrypt_tier6(key, ciphertext_hex, expected_checksum):
     """Tier 6: decrypt, then enforce the public checksum filter.
 
     Raises ``ChecksumError`` for a candidate that decrypts to the wrong byte
     sum, which is the normal outcome for the ~64 keys matching the first byte.
     """
-    if isinstance(expected_checksum, bool) or not isinstance(expected_checksum, int):
-        raise ToyCipherError("expected_checksum must be an int")
-    if not 0 <= expected_checksum <= 255:
-        raise ToyCipherError("expected_checksum must be between 0 and 255")
+    _check_expected_checksum(expected_checksum)
     key = key_from_int(key, WIDTHS[6])
     plaintext = decrypt_bytes(6, key, ciphertext_hex)
     actual = checksum(plaintext)
@@ -212,8 +224,8 @@ def filter_candidates(tier, candidates, ciphertext_hex, expected_checksum=None):
     a checksum, so callers must still apply the tier's own acceptance rule.
     """
     width_for(tier)
-    if tier == 6 and expected_checksum is None:
-        raise ToyCipherError("tier 6 filtering needs the public checksum")
+    if tier == 6:
+        _check_expected_checksum(expected_checksum)
     ciphertext_to_bytes(ciphertext_hex)
     accepted = []
     for candidate in candidates:
