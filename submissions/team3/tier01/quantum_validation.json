@@ -1,0 +1,49 @@
+{
+  "status": "PASS_QUANTUM_ONLY",
+  "python": "3.12.14",
+  "qiskit": "2.6.1",
+  "qiskit_aer": "0.18.2",
+  "branch": "feature/quantum-circuits",
+  "tested_base_commit": "1623cf945dff3044580012d43b060521f14efd7c",
+  "shots": 1,
+  "basis_gates": [
+    "rz",
+    "sx",
+    "x",
+    "cx"
+  ],
+  "optimization_level": 1,
+  "seed_transpiler": 12345,
+  "aer_memory_limit_mb": 2048,
+  "aer_max_parallel_threads": 2,
+  "real_aer_runs": 1,
+  "key_recovered_from_measurement": true,
+  "plaintext_hash_verified": false,
+  "solve_status": "PENDING_CLASSICAL_INTEGRATION",
+  "secret_values_recorded": false,
+  "unit_tests_run": 9,
+  "unit_tests_passed": true,
+  "oracle_calls_before_transpilation": 1,
+  "logical_opaque_oracle_metrics": {
+    "qubits": 25,
+    "classical_bits": 24,
+    "gate_count": 51,
+    "gate_depth": 4,
+    "two_qubit_gate_count": 0,
+    "operation_count_including_measurements": 75,
+    "depth_including_measurements": 5
+  },
+  "executed_basis_circuit_metrics": {
+    "qubits": 25,
+    "classical_bits": 24,
+    "gate_count": 298,
+    "gate_depth": 44,
+    "two_qubit_gate_count": 151,
+    "operation_count_including_measurements": 322,
+    "depth_including_measurements": 45
+  },
+  "quantum_recovery_seconds": 18.796839,
+  "aer_success": true,
+  "aer_method": "statevector",
+  "process_peak_rss_mib": 620.809
+}
