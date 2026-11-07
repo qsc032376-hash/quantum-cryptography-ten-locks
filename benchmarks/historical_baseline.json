@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "commit": "868fb65e20c73a27bffc118f3617080df9cf2f8b",
+  "checker_status": "full for tiers 1-10",
+  "plaintext_sha256": "match for tiers 1-10",
+  "scoring_config_sha256": "16eea5d6bcd4ad44b60cd0b50a15d7c2fbdee98ec16b9fe5b61426a8f020a31e",
+  "hashes_file_sha256": "54bcd720b8b3fb665794c59e51d1e83747029578012fac7f2765e3474ac831e3",
+  "measurement_method": "Historical official Checker; circuit executed by solve; official scoring transpilation, max two-qubit gates then depth; no measurement gates",
+  "provenance": {"tiers_1_7": "docs/SUBMISSION_STATUS.md at a9860a35c1e92ca972bd307b9e11198aebcd0617", "tiers_8_9": "docs/TIER08_TIER09_INTEGRATION.md at 03c79a3606149051e6765f24fa49912427f38381", "tier_10": "docs/TIER10_INTEGRATION.md at 868fb65e20c73a27bffc118f3617080df9cf2f8b"},
+  "metrics": {
+    "1": {"two_qubit_gates":151,"depth":44,"total_gates":298,"active_qubits":25},
+    "2": {"two_qubit_gates":0,"depth":3,"total_gates":3,"active_qubits":1},
+    "3": {"two_qubit_gates":7808,"depth":8771,"total_gates":19497,"active_qubits":7},
+    "4": {"two_qubit_gates":183,"depth":195,"total_gates":455,"active_qubits":20},
+    "5": {"two_qubit_gates":21150,"depth":33055,"total_gates":58620,"active_qubits":19},
+    "6": {"two_qubit_gates":3000,"depth":5883,"total_gates":9534,"active_qubits":22},
+    "7": {"two_qubit_gates":230,"depth":271,"total_gates":760,"active_qubits":15},
+    "8": {"two_qubit_gates":49920,"depth":135160,"total_gates":148085,"active_qubits":18},
+    "9": {"two_qubit_gates":117739,"depth":316820,"total_gates":349949,"active_qubits":21},
+    "10": {"two_qubit_gates":107168,"depth":287674,"total_gates":317957,"active_qubits":19}
+  }
+}

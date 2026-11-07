@@ -6,3 +6,5 @@ reports/
 submissions_log.csv
 judging.csv
 partial.csv
+
+benchmarks/results/
