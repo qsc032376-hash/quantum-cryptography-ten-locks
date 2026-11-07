@@ -48,11 +48,15 @@ class DecodeError(ToyCipherError):
 
 
 class ChecksumError(ToyCipherError):
-    """A tier 6 candidate failed the public checksum filter."""
+    """A tier 6 candidate failed the public checksum filter.
+
+    The key is kept as an attribute for filtering but is deliberately left out
+    of the message, so printing the exception never logs a candidate key.
+    """
 
     def __init__(self, key, expected, actual):
         super().__init__(
-            f"key {key}: checksum {actual} does not match the public {expected}"
+            f"candidate checksum {actual} does not match the public {expected}"
         )
         self.key = key
         self.expected = expected
@@ -198,17 +202,28 @@ def matches_prefix(key, ciphertext_hex, prefix=b"QC", tier=5):
 def filter_candidates(tier, candidates, ciphertext_hex, expected_checksum=None):
     """Return the plaintexts of candidates that pass the tier's classical filter.
 
-    Tier 5 keeps every candidate whose plaintext is valid UTF-8 (the first two
-    bytes ``QC`` are checked by the quantum oracle); tier 6 additionally
-    requires the public checksum.  Bad candidates are skipped, not raised.
+    Tier 5 keeps every candidate that decrypts to valid UTF-8 (the two-byte
+    ``QC`` prefix is checked by the quantum oracle); tier 6 additionally requires
+    the public checksum.  Only per-candidate failures are skipped -- a wrong
+    tier, a missing checksum or a malformed ciphertext is a caller bug and is
+    raised before the loop.
+
+    The result is a *candidate* list, not a uniqueness proof: two keys can share
+    a checksum, so callers must still apply the tier's own acceptance rule.
     """
+    width_for(tier)
+    if tier == 6 and expected_checksum is None:
+        raise ToyCipherError("tier 6 filtering needs the public checksum")
+    ciphertext_to_bytes(ciphertext_hex)
     accepted = []
     for candidate in candidates:
         try:
             if tier == 6:
-                accepted.append(decrypt_tier6(candidate, ciphertext_hex, expected_checksum))
+                accepted.append(
+                    decrypt_tier6(candidate, ciphertext_hex, expected_checksum)
+                )
             else:
                 accepted.append(decrypt(tier, candidate, ciphertext_hex))
-        except (ToyCipherError, UnicodeDecodeError):
+        except (KeyFormatError, ChecksumError, DecodeError):
             continue
     return accepted
