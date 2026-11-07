@@ -1,0 +1,75 @@
+{
+  "status": "PASS_QUANTUM_AND_GF2_ONLY",
+  "python": "3.12.14",
+  "qiskit": "2.6.1",
+  "qiskit_aer": "0.18.2",
+  "branch": "feature/quantum-circuits",
+  "tested_base_commit": "c4d2a1046b0c8308e7831545b2bf010959a0b967",
+  "basis_gates": [
+    "rz",
+    "sx",
+    "x",
+    "cx"
+  ],
+  "optimization_level": 1,
+  "seed_transpiler": 12345,
+  "batch_shots": 32,
+  "max_shots": 128,
+  "aer_memory_limit_mb": 512,
+  "aer_max_parallel_threads": 2,
+  "timeout_seconds": 120,
+  "aer_run_calls": 1,
+  "shots_per_run": [
+    32
+  ],
+  "plaintext_hash_verified": false,
+  "solve_status": "PENDING_CLASSICAL_INTEGRATION",
+  "secret_values_recorded": false,
+  "unit_tests_run": 29,
+  "unit_tests_passed": true,
+  "oracle_calls_before_transpilation": 1,
+  "logical_opaque_oracle_metrics": {
+    "qubits": 20,
+    "classical_bits": 10,
+    "gate_count": 21,
+    "gate_depth": 3,
+    "two_qubit_gate_count": 0,
+    "active_gate_qubits": 20,
+    "operation_count_including_measurements": 31,
+    "depth_including_measurements": 4
+  },
+  "executed_basis_circuit_metrics": {
+    "qubits": 20,
+    "classical_bits": 10,
+    "gate_count": 455,
+    "gate_depth": 195,
+    "two_qubit_gate_count": 183,
+    "active_gate_qubits": 20,
+    "operation_count_including_measurements": 465,
+    "depth_including_measurements": 195
+  },
+  "recovery_diagnostics": {
+    "shots": 32,
+    "max_shots": 128,
+    "batch_shots": 32,
+    "aer_run_calls": 1,
+    "oracle_calls_per_circuit": 1,
+    "oracle_queries_including_shots": 32,
+    "rank": 9,
+    "nullity": 1,
+    "unique_nonzero_candidate": true,
+    "all_observed_equations_satisfied": true,
+    "distinct_equations": 29,
+    "rank_history": [
+      {
+        "shots": 32,
+        "cumulative_shots": 32,
+        "rank": 9
+      }
+    ]
+  },
+  "aer_success": true,
+  "period_recovered_from_measurements": true,
+  "quantum_validation_seconds": 0.207438,
+  "process_peak_rss_mib": 108.227
+}
