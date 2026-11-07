@@ -1,153 +1,163 @@
-# Qiskit Fall Fest 2026 @ Ohio State: Quantum Cryptography Challenge
+# Ten Locks, One Message
 
-Ten encrypted files, each opened by a quantum algorithm. Your team works out which one fits, builds the circuits, runs them on a simulator, recovers each key, and decrypts each file. Then you show how you did it. The ten decrypted lines, read in order, form a final message. Hosted by The Quantum Club at Ohio State.
+*Quantum Algorithms for Cryptography, Hidden Structure, and Secure Communication*
 
-| Tier | Folder | Title | Level |
-|---|---|---|---|
-| 1 | `tier01` | The Parity Vault | Warm-up |
-| 2 | `tier02` | Two Links | Easy |
-| 3 | `tier03` | Twenty-Four Seals | Easy |
-| 4 | `tier04` | The Echo | Medium |
-| 5 | `tier05` | The Small Safe | Medium |
-| 6 | `tier06` | The Bigger Safe | Medium to hard |
-| 7 | `tier07` | The Hidden Angle | Hard |
-| 8 | `tier08` | The Wrapped Key, N = 35 | Hard |
-| 9 | `tier09` | The Wrapped Key, N = 77 | Very hard |
-| 10 | `tier10` | The Handshake | Boss |
+[![Python](https://img.shields.io/badge/Python-3.12-blue)](requirements.txt) [![Qiskit](https://img.shields.io/badge/Qiskit-2.6.1-6929c4)](requirements.txt) [![Aer](https://img.shields.io/badge/Qiskit%20Aer-0.18.2-6929c4)](requirements.txt)
 
-The quantum algorithm behind each tier is not named anywhere. Each tier README says how its file is encoded and gives two optional hints, and working out which algorithm fits is part of the challenge.
+Ten cryptographic challenges connect quantum circuits with classical cryptanalysis and secure communication. The team's solutions execute circuits on Qiskit Aer, interpret measurements with classical postprocessing, and verify recovered plaintexts against SHA-256 hashes. The accompanying mathematical models explain the interference, hidden structure, and number theory behind those steps.
+
+**Recorded result:** 10/10 tiers received `full` in the team's local executions of the official Checker, with matching hashes. This is evidence from the frozen baseline, not a final competition judgment or ranking. The reports consolidate separate tier executions; they do not assert a single simultaneous ten-tier run.
 
 ## Contents
 
-| Path | Purpose |
-|---|---|
-| `README.md` | Setup, workflow, submission, and a scoring summary |
-| `CHALLENGE.md` | The challenge statement: story, the ten tiers, rules |
-| `SCORING.md` | The full rubric with worked examples |
-| `HELPERS.md` | What each supplied helper does and how to use its public interface |
-| `requirements.txt` | Pinned Qiskit, Aer, and tool versions |
-| `hashes.txt` | SHA-256 of each tier's plaintext, one line per tier |
-| `common/` | Shared helpers: keystream, hash checker, toy cipher |
-| `tier01/` to `tier10/` | One folder per tier: README, `locked.json`, helpers, starter notebook |
-| `references/` | Textbook and documentation links |
-| `submissions/TEAM_TEMPLATE/` | What your team copies and fills in |
-| `tools/` | The scoring settings and scripts, so you can see exactly how you are scored |
-| `.github/workflows/ci.yml` | Checks that the challenge files are intact |
+- [Project highlights](#project-highlights)
+- [The ten quantum locks](#the-ten-quantum-locks)
+- [How it works](#how-it-works)
+- [Mathematical foundations](#mathematical-foundations)
+- [Quantum circuit complexity](#quantum-circuit-complexity)
+- [Repository architecture](#repository-architecture)
+- [Installation and usage](#installation-and-usage)
+- [Verification and reproducibility](#verification-and-reproducibility)
+- [Circuit optimization](#circuit-optimization)
+- [Interactive web demo](#interactive-web-demo)
+- [Team](#team)
+- [Acknowledgments](#acknowledgments)
+- [Security and submission](#security-and-submission)
 
-## Getting started
+## Project highlights
 
-Python 3.12 is the tested version.
+- Ten locally verified `full` results, backed by recorded official Checker and SHA-256 evidence.
+- Quantum circuits executed on Aer using Bernstein–Vazirani, BB84, Deutsch–Jozsa, Simon, Grover search, quantum phase estimation (QPE), and Shor techniques.
+- Reproducible resource measurements under the official scoring configuration, with mathematical modeling and correctness analysis for each tier.
+- Modular quantum and classical components in the frozen solution baseline, with measurements driving classical recovery and verification.
 
-1. Clone [this repo](https://github.com/QuantumClub-OSU/Quantum-Cryptography-Challenge). Do not fork it.
+## The ten quantum locks
 
-   ```bash
-   git clone https://github.com/QuantumClub-OSU/Quantum-Cryptography-Challenge.git
-   cd Quantum-Cryptography-Challenge
-   ```
+`FULL` below denotes the recorded local official Checker result at the frozen baseline, [`release/ten-locks-v1` at `868fb65e20c73a27bffc118f3617080df9cf2f8b`](https://github.com/qsc032376-hash/quantum-cryptography-ten-locks/tree/868fb65e20c73a27bffc118f3617080df9cf2f8b); it is not a judge's final award. Each theory link describes the corresponding mathematical model.
 
-   If you don't use git, click **Code**, then **Download ZIP** on the repo page, and unzip it.
+| Tier | Algorithm | Mathematical objective | Verification |
+| --- | --- | --- | --- |
+| [1](docs/TIER01_THEORY.md) | Bernstein–Vazirani | Recover a hidden parity string. | FULL |
+| [2](docs/TIER02_THEORY.md) | BB84 | Identify the disturbed link and reconcile a key from the clean link. | FULL |
+| [3](docs/TIER03_THEORY.md) | Deutsch–Jozsa | Classify 24 promised constant or balanced functions. | FULL |
+| [4](docs/TIER04_THEORY.md) | Simon | Recover a hidden XOR period from linear equations over $\mathbb F_2$. | FULL |
+| [5](docs/TIER05_THEORY.md) | Grover | Search a reversible toy-cipher oracle for a 10-bit key. | FULL |
+| [6](docs/TIER06_THEORY.md) | Grover | Search a 14-bit key space with multiple candidates and a classical checksum. | FULL |
+| [7](docs/TIER07_THEORY.md) | QPE | Estimate a phase encoding a 14-bit integer. | FULL |
+| [8](docs/TIER08_THEORY.md) | Shor order finding | Factor an RSA modulus and unwrap its key. | FULL |
+| [9](docs/TIER09_THEORY.md) | Shor order finding | Factor a second RSA modulus using modular arithmetic and phase measurements. | FULL |
+| [10](docs/TIER10_THEORY.md) | Shor discrete logarithm | Recover a Diffie–Hellman exponent from measured group relations. | FULL |
 
-2. Create a virtual environment and install the requirements:
+## How it works
 
-   ```bash
-   python -m venv .venv
-   ```
-
-   Activate it with `source .venv/bin/activate` on macOS or Linux, or `.venv\Scripts\activate` on Windows. Then:
-
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-3. Check your setup from the repo root:
-
-   ```bash
-   python tools/check_setup.py
-   ```
-
-   This checks the required Qiskit/Aer versions, loads every supplied circuit file, and runs a small Aer circuit without solving a tier. If it fails, use the same virtual environment to reinstall with `python -m pip install -r requirements.txt`.
-
-4. Open `tier01/starter.ipynb` in Jupyter and run all cells. With no key set, the last cell prints `FAIL: tier 1 has no answer yet.` That is expected until you add a solution. Select the same Python environment as in step 3.
-
-## How to work a tier
-
-1. Read the tier's `README.md`.
-2. Build your circuit in `starter.ipynb` and run it on Aer. If you are not sure which technique applies, try the tier's hints and the sources in `references/`.
-3. Recover the key from your measurements.
-4. Decrypt, using the check cell at the end of the notebook.
-5. Move your work into `solve()` in `submissions/<team_name>/tierNN/solution.py`.
-
-## Submission
-
-1. Copy `submissions/TEAM_TEMPLATE` to `submissions/<team_name>/`.
-2. Put your solutions and your write-up there. Each `solution.py` has `solve()`, which builds and runs your circuit on Aer and returns the decrypted line, and `build_circuit()`, which returns your main circuit for diagrams only. Keep the import lines at the top of each template: the checker runs your file from the repo root, so the helper is `from tierNN import helper`, not `import helper` as in the notebooks.
-3. Link your write-up from your team README.
-4. Zip your team folder, `submissions/<team_name>/`, so the zip holds that one folder with the team name. Leave out everything else in the repo, and any `.venv`, `__pycache__`, or `.ipynb_checkpoints` folders.
-5. Upload the zip through the [submission form](https://docs.google.com/forms/d/e/1FAIpQLSeYZrd6v9SxdsHyUpgYfwjhpEHVlhk7JjN5nYaVMcpo3uj7FQ/viewform) before November 13, 2026 at 12:00 PM Eastern. The form asks you to sign in with a Google account to upload a file.
-
-We check your folder inside a fresh copy of this repo, so changes you make outside `submissions/<team_name>/` have no effect.
-
-**Keep your work private.** Do not push your solutions to GitHub or anywhere public, and do not open a pull request on this repo. Anything public can be seen by other teams.
-
-You may resubmit as many times as you like before November 13, 2026 at 12:00 PM Eastern. Only your latest submission is judged, and its form timestamp is its submission time.
-
-**Resubmitting resets your tiebreaker time.** See [Scoring](#scoring).
-
-## Scoring
-
-The total is 100 points. [SCORING.md](SCORING.md) has the full rubric.
-
-| Part | Points | Summary |
-|---|---|---|
-| Tiers solved | 40 | Tiers 1 to 10 are worth 1, 2, 2, 3, 4, 4, 5, 6, 6, 7. Full points need a matching hash and a circuit run during `solve()`. |
-| Simplicity | 15 | Simpler circuits score higher, compared with other teams on each tier. |
-| Presentation | 25 | Why each approach works, circuit design, clarity and delivery. |
-| Analysis | 20 | Classical versus quantum cost, scaling limits, and hardware or noise. |
-
-Brute force finds these keys instantly at these sizes, so the circuit is what is scored.
-
-Check your own numbers at any time:
-
-```bash
-python tools/check_submission.py submissions/<team> --metrics-only
+```mermaid
+flowchart LR
+    A[Cryptographic challenge] --> B[Quantum circuit]
+    B --> C[Aer simulation]
+    C --> D[Measurement]
+    D --> E[Classical postprocessing]
+    E --> F[Decrypt and verify SHA-256]
 ```
 
-The scored circuit is the largest one your `solve()` actually runs, not the one `build_circuit()` returns. Simplicity is relative to other teams, so it is final only after the deadline.
+The circuit prepares and transforms quantum states in an ideal simulator; measurements yield classical samples. Classical code then interprets those samples, reconstructs a candidate key or mathematical relation, decrypts the challenge data, and checks the result. A hash match verifies the recovered plaintext, while the circuit and measurement analysis explain the recovery method.
 
-A matching hash means the recovered text has the same SHA-256 fingerprint as the expected plaintext. It checks the answer; your measurement evidence and explanation establish how your circuit recovered it. See [the helper reference](HELPERS.md#checking-an-answer).
+## Mathematical foundations
 
-**Tie-breaker:** if two totals are within 0.01, the team whose final submission has the earliest time wins. A resubmission moves your time later. Time is used only for ties and earns no points.
+- **Hidden strings and interference.** Bernstein–Vazirani encodes $f_s(x)=s\cdot x\pmod 2$ as a phase; Hadamard interference reveals $s$. Deutsch–Jozsa uses the same phase-kickback principle to distinguish promised functions. Simon samples equations $y\cdot s=0\pmod 2$, solved classically over $\mathbb F_2$.
+- **Amplitude amplification.** For a marked fraction $M/N$, let $\sin^2\theta=M/N$. After $r$ ideal Grover iterations, the marked-state probability is $\sin^2((2r+1)\theta)$. The reversible oracle defines what is marked; classical checks distinguish candidates where needed.
+- **Phase estimation.** If $U|u\rangle=e^{2\pi i\phi}|u\rangle$, controlled powers of $U$ and an inverse quantum Fourier transform concentrate measurement probability near a binary approximation of $\phi$.
+- **Order and factorization.** Phase samples yield candidate denominators for the order $r$ of $a\bmod N$. When $r$ is even and the usual nontriviality conditions hold, $\gcd(a^{r/2}\pm1,N)$ can reveal factors; continued fractions and validation are classical.
+- **Discrete logarithms.** For $A=g^a$ in a group of order $r$, the function $f(x,z)=g^xA^z$ has hidden relations $\Delta x+a\Delta z\equiv0\pmod r$. Fourier sampling supplies information from which classical postprocessing recovers and checks a candidate exponent.
 
-## Presentation
+The linked tier documents give derivations, assumptions, and circuit details. BB84 instead uses basis matching and observed error rates to assess the channel.
 
-For each tier you attempted, cover:
+## Quantum circuit complexity
 
-- What the file hid, and how you worked out which approach fits.
-- Why that approach works.
-- The circuit diagram with qubit and gate counts.
-- The measurement result and how you extracted the key.
-- The classical cost.
+The figures below are the recorded official Checker metrics for the frozen baseline. The Checker scores the circuit executed in `solve()` with the most transpiled two-qubit gates, breaking ties by depth; Tier 2 uses the Channel measurement log. The scoring configuration uses `rz`, `sx`, `x`, and `cx`, optimization level 1, and transpiler seed 12345. Measurements, resets, and barriers are excluded from gate counts. These simulator/transpiler metrics do **not** demonstrate practical quantum advantage; shots, repeated executions, and classical preparation are additional costs.
 
-For unfinished tiers, give one slide on your attempt and where it got stuck. End with a scaling slide: what changes between these toy sizes and real key sizes, and what hardware would be needed.
+| Tier | Active qubits | Two-qubit gates | Circuit depth | Total gates |
+| --- | ---: | ---: | ---: | ---: |
+| 1 | 25 | 151 | 44 | 298 |
+| 2 | 1 | 0 | 3 | 3 |
+| 3 | 7 | 7,808 | 8,771 | 19,497 |
+| 4 | 20 | 183 | 195 | 455 |
+| 5 | 19 | 21,150 | 33,055 | 58,620 |
+| 6 | 22 | 3,000 | 5,883 | 9,534 |
+| 7 | 15 | 230 | 271 | 760 |
+| 8 | 18 | 49,920 | 135,160 | 148,085 |
+| 9 | 21 | 117,739 | 316,820 | 349,949 |
+| 10 | 19 | 107,168 | 287,674 | 317,957 |
 
-## Rules
+Sources: frozen reports for [Tiers 1–7](https://github.com/qsc032376-hash/quantum-cryptography-ten-locks/blob/868fb65e20c73a27bffc118f3617080df9cf2f8b/docs/SUBMISSION_STATUS.md), [Tiers 8–9](https://github.com/qsc032376-hash/quantum-cryptography-ten-locks/blob/868fb65e20c73a27bffc118f3617080df9cf2f8b/docs/TIER08_TIER09_INTEGRATION.md), and [Tier 10](https://github.com/qsc032376-hash/quantum-cryptography-ten-locks/blob/868fb65e20c73a27bffc118f3617080df9cf2f8b/docs/TIER10_INTEGRATION.md); methodology: [scoring rules](SCORING.md) and [optimization plan](docs/MATHEMATICAL_OPTIMIZATION_PLAN.md).
 
-The full rules are in [CHALLENGE.md](CHALLENGE.md). The short version:
+## Repository architecture
 
-- Do not share keys or answers across teams.
-- Do not edit `hashes.txt` or anything under `tools/`.
-- A tier needs a quantum circuit run in `solve()` to earn full credit.
-- Libraries and Qiskit's built-in circuits are allowed if you can explain every block.
+- [`docs/`](docs/) — theory for all ten tiers and the mathematical optimization plan on this branch.
+- [`tier01/`–`tier10/`](tier01/) — official challenge materials, helpers, and starter notebooks for each tier.
+- [`common/`](common/) — shared cryptographic and verification helpers.
+- [`submissions/TEAM_TEMPLATE/`](submissions/TEAM_TEMPLATE/) — official submission layout; the frozen baseline additionally contains `submissions/team3/`, with the team's circuits and classical modules.
+- [`tools/`](tools/) — official setup and submission checkers and scoring configuration.
+- [`references/`](references/) — documentation and research references. The frozen baseline also contains `tests/` and integration reports. There is no `benchmarks/` or `web/` directory on this branch.
 
-## Resources
+**Branch distinction:** `feature/mathematical-modeling` contains the theory and plan but does not contain the frozen baseline's team submission or tests. The baseline is a separate history; use a separate checkout for the commands below that refer to those files.
 
-- [references/](references/README.md): papers and notes.
-- [Qiskit documentation](https://docs.quantum.ibm.com/)
+## Installation and usage
 
-## Getting help
+Python 3.12 is the project's tested version. From a repository checkout, create an environment and install the exact versions in [`requirements.txt`](requirements.txt) (including Qiskit 2.6.1 and Aer 0.18.2):
 
-Ask in our Discord server: https://discord.gg/4jE3w3Pjn. Mentors are available Tuesdays and Thursdays anytime after 3:30 PM, Wednesdays and Fridays anytime after 1:35 PM, and 7 to 9 AM any day by request. For anything else, write to nelakurti.2@osu.edu.
+```bash
+python3.12 -m venv .venv
+source .venv/bin/activate          # Windows: .venv\Scripts\activate
+python -m pip install -r requirements.txt
+python tools/check_setup.py
+```
 
-## Teams and dates
+To inspect or reproduce the recorded team implementation without changing this branch or the release branch, create a detached worktree from the repository root and install the same requirements there:
 
-Teams have 3 to 5 members. The event runs November 6 to 13, 2026.
+```bash
+git worktree add --detach ../ten-locks-baseline 868fb65e20c73a27bffc118f3617080df9cf2f8b
+cd ../ten-locks-baseline
+python3.12 -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements.txt
+python -B tests/test_tier08_tier09_integration.py -v
+python -B tests/test_tier10_integration.py -v
+python -B tools/check_submission.py submissions/team3 --out /tmp/ten-locks-check
+```
+
+The tests above are the baseline integration tests documented in its reports. The last command executes the official Checker across the team folder and can take substantial simulation time; keep its output private. For circuit metrics only, use `python tools/check_submission.py submissions/team3 --metrics-only` in that baseline checkout. Metrics-only skips the hash check and is not a substitute for full verification. The command examples follow the repository and baseline reports; they were not rerun for this documentation-only change.
+
+For a new submission, copy `submissions/TEAM_TEMPLATE/` to `submissions/<team_name>/`, implement each tier's `solve()` and `build_circuit()`, and retain the template's repository-root imports. See [the challenge](CHALLENGE.md), [helper interfaces](HELPERS.md), and [scoring rules](SCORING.md). Start with a tier's README and notebook, run its circuit on Aer, interpret measurements, and transfer the solution into the team folder.
+
+## Verification and reproducibility
+
+The frozen reports record `full` and matching SHA-256 for each tier; earlier evidence was retained as later tiers were integrated. Renamed-team-directory isolation checks exercised local imports, including the documented checks for Tiers 7–10. The Checker independently hashes returned plaintext and records Aer execution; a matching hash alone does not establish the validity of the recovery method.
+
+Finite-shot sampling can fail or produce insufficient evidence, and a successful fixed-seed run does not guarantee success across seeds. The scoring transpiler seed is fixed at 12345; simulator and sampling seeds depend on the relevant implementation and challenge data. Reproduction requires the pinned dependencies, scoring configuration, baseline revision, and appropriate execution settings. Aer models simulation, not the noise and constraints of actual hardware.
+
+## Circuit optimization
+
+The [mathematical optimization plan](docs/MATHEMATICAL_OPTIMIZATION_PLAN.md) proposes proving equivalence before reducing depth or two-qubit gates, comparing against the frozen baseline under identical scoring settings, and checking correctness across seeds. These improvements are planned, not verified results. The frozen correct baseline remains the reference for regression and rollback.
+
+## Interactive web demo
+
+**Under development:** Guided Introduction → Ten Locks Dashboard → Circuit Visualization → Measurement Analysis → Verification. No web demo is implemented in this branch.
+
+## Team
+
+| Member | Contribution |
+| --- | --- |
+| Sicheng Qian | Mathematical Modeling & Optimization; Team Coordination |
+| Junqi Sheng | Quantum Circuit Design & Qiskit Implementation |
+| Youyang Shang | Classical Cryptography & Software Development |
+| Junrui Yu | Integration, Verification & Performance Benchmarking |
+
+## Acknowledgments
+
+We thank the Qiskit Fall Fest Ohio organizers and The Quantum Club at Ohio State for the challenge, and acknowledge [IBM Qiskit](https://docs.quantum.ibm.com/) and [Qiskit Aer](https://qiskit.github.io/qiskit-aer/) for the software used in this work. Additional sources are listed in [references](references/README.md).
+
+## Security and submission
+
+This is a private competition workspace. Keep challenge materials, hidden keys, recovered secrets, and decrypted messages private; do not publish solutions or open a public pull request. Do not modify official hashes or tools. The official rules require a circuit executed in `solve()` for full tier credit and allow classical postprocessing.
+
+Submit a zip containing only `submissions/<team_name>/`, including tier solutions, a linked `WRITEUP.md`, and presentation material as appropriate; exclude environments and caches. The organizers check the team folder in a fresh copy of the challenge. Upload through the [official submission form](https://docs.google.com/forms/d/e/1FAIpQLSeYZrd6v9SxdsHyUpgYfwjhpEHVlhk7JjN5nYaVMcpo3uj7FQ/viewform) by **November 13, 2026, 12:00 PM Eastern**. Resubmission replaces the previous submission and resets its tiebreaker time. Consult [CHALLENGE.md](CHALLENGE.md) and [SCORING.md](SCORING.md) for the complete rules and presentation requirements.
