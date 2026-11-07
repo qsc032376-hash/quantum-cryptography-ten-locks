@@ -12,6 +12,15 @@ This module turns a recovered key into that string, validates it, and applies
 the official ``keystream``/``xor_bytes`` helpers.  It builds no circuits.
 """
 
+import sys
+from pathlib import Path
+
+# Work from the repo root even when imported from a notebook or another cwd.
+# Derived from this file, so it survives renaming the team folder.
+_REPO_ROOT = Path(__file__).resolve().parents[2]
+if str(_REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(_REPO_ROOT))
+
 from common.crypto import keystream, xor_bytes
 
 WIDTHS = {3: 24, 4: 10}
@@ -122,9 +131,26 @@ def decrypt_key_bits(key_bits, width, ciphertext_hex):
         ) from error
 
 
+def _reject_zero_hidden_string(key_bits):
+    """Tier 4 requires a nonzero hidden string (Simon's promise)."""
+    if set(key_bits) == {"0"}:
+        raise KeyBitsError(
+            "tier 4 needs a nonzero hidden string s with 1 <= s < 2**10"
+        )
+    return key_bits
+
+
 def decrypt(tier, key_bits, ciphertext_hex):
-    """Decrypt tier 3 or tier 4 data from a key string of the right width."""
-    return decrypt_key_bits(key_bits, width_for(tier), ciphertext_hex)
+    """Decrypt tier 3 or tier 4 data from a key string of the right width.
+
+    For tier 4 an all-zero key string is rejected: the challenge's function is
+    2-to-1 under a nonzero hidden period, so ``s = 0`` cannot be a valid answer.
+    """
+    width = width_for(tier)
+    key_bits = validate_key_bits(key_bits, width)
+    if tier == 4:
+        _reject_zero_hidden_string(key_bits)
+    return decrypt_key_bits(key_bits, width, ciphertext_hex)
 
 
 def decrypt_tier3(flags, ciphertext_hex):
@@ -135,10 +161,14 @@ def decrypt_tier3(flags, ciphertext_hex):
 
 
 def decrypt_tier4(s, ciphertext_hex):
-    """Tier 4: the recovered 10-bit integer ``s``, written as ``format(s, "010b")``."""
-    return decrypt_key_bits(
-        key_bits_from_int(s, WIDTHS[4]), WIDTHS[4], ciphertext_hex
-    )
+    """Tier 4: the recovered 10-bit integer ``s``, written as ``format(s, "010b")``.
+
+    Only ``1 <= s < 2**10`` is accepted; ``s = 0`` is not a valid Simon hidden
+    string and raises ``KeyBitsError``.  Leading zeros of legal keys are kept.
+    """
+    key_bits = key_bits_from_int(s, WIDTHS[4])
+    _reject_zero_hidden_string(key_bits)
+    return decrypt_key_bits(key_bits, WIDTHS[4], ciphertext_hex)
 
 
 def encrypt_key_bits(key_bits, width, plaintext):

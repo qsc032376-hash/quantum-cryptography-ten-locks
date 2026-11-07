@@ -10,6 +10,15 @@ runs no simulations.  The XOR itself is delegated to
 single source of truth.
 """
 
+import sys
+from pathlib import Path
+
+# Work from the repo root even when imported from a notebook or another cwd.
+# Derived from this file, so it survives renaming the team folder.
+_REPO_ROOT = Path(__file__).resolve().parents[3]
+if str(_REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(_REPO_ROOT))
+
 from common.crypto import xor_repeating
 
 KEY_BITS = 24
