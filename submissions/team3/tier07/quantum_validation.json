@@ -1,0 +1,276 @@
+{
+  "status": "PASS_QPE_AND_QUANTUM_PHASE_CHECK",
+  "python": "3.12.14",
+  "qiskit": "2.6.1",
+  "qiskit_aer": "0.18.2",
+  "branch": "feature/quantum-circuits",
+  "tested_base_commit": "f6295ac89da27160d5fce213f799c9f5ef426e90",
+  "basis_gates": [
+    "rz",
+    "sx",
+    "x",
+    "cx"
+  ],
+  "optimization_level": 1,
+  "seed_transpiler": 12345,
+  "aer_memory_limit_mb": 512,
+  "aer_max_parallel_threads": 2,
+  "solve_timeout_seconds": 120,
+  "scoring_transpile_timeout_seconds": 120,
+  "real_aer_run_calls": 2,
+  "real_total_shots": 96,
+  "executions": [
+    {
+      "name": "tier07_qpe",
+      "shots": 64,
+      "seed_simulator": 707,
+      "basis_circuit_metrics": {
+        "qubits": 15,
+        "classical_bits": 14,
+        "gate_count": 758,
+        "gate_depth": 271,
+        "two_qubit_gate_count": 230,
+        "active_gate_qubits": 15,
+        "operation_count_including_measurements": 772,
+        "depth_including_measurements": 272
+      },
+      "executed_measurement_q_to_c": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          9,
+          9
+        ],
+        [
+          10,
+          10
+        ],
+        [
+          11,
+          11
+        ],
+        [
+          12,
+          12
+        ],
+        [
+          13,
+          13
+        ]
+      ],
+      "scored_circuit_metrics": {
+        "qubits": 15,
+        "classical_bits": 14,
+        "gate_count": 758,
+        "gate_depth": 271,
+        "two_qubit_gate_count": 230,
+        "active_gate_qubits": 15,
+        "operation_count_including_measurements": 772,
+        "depth_including_measurements": 272
+      }
+    },
+    {
+      "name": "tier07_phase_check",
+      "shots": 32,
+      "seed_simulator": 708,
+      "basis_circuit_metrics": {
+        "qubits": 15,
+        "classical_bits": 14,
+        "gate_count": 263,
+        "gate_depth": 166,
+        "two_qubit_gate_count": 27,
+        "active_gate_qubits": 15,
+        "operation_count_including_measurements": 277,
+        "depth_including_measurements": 166
+      },
+      "executed_measurement_q_to_c": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          9,
+          9
+        ],
+        [
+          10,
+          10
+        ],
+        [
+          11,
+          11
+        ],
+        [
+          12,
+          12
+        ],
+        [
+          13,
+          13
+        ]
+      ],
+      "scored_circuit_metrics": {
+        "qubits": 15,
+        "classical_bits": 14,
+        "gate_count": 263,
+        "gate_depth": 166,
+        "two_qubit_gate_count": 27,
+        "active_gate_qubits": 15,
+        "operation_count_including_measurements": 277,
+        "depth_including_measurements": 166
+      }
+    }
+  ],
+  "aer_success": true,
+  "phase_recovered_from_measurements": true,
+  "quantum_phase_consistency_verified": true,
+  "plaintext_hash_verified": false,
+  "solve_status": "PENDING_CLASSICAL_INTEGRATION",
+  "secret_values_recorded": false,
+  "stage": "complete",
+  "quantum_recovery_seconds": 0.1304,
+  "recovery_diagnostics": {
+    "phase_bits": 14,
+    "target_qubits": 1,
+    "qpe_measurement": {
+      "shots": 64,
+      "distinct_outcomes": 1,
+      "dominant_count": 64,
+      "dominant_probability": 1.0,
+      "conversion_methods_agree": true,
+      "leading_zero_width_preserved": true
+    },
+    "qpe_queries_per_shot": {
+      "controlled_power_blocks": 14,
+      "equivalent_base_U_applications": 16383,
+      "exponents": [
+        1,
+        2,
+        4,
+        8,
+        16,
+        32,
+        64,
+        128,
+        256,
+        512,
+        1024,
+        2048,
+        4096,
+        8192
+      ]
+    },
+    "phase_check_queries_per_shot": {
+      "controlled_power_blocks": 14,
+      "equivalent_base_U_applications": 16383,
+      "exponents": [
+        1,
+        2,
+        4,
+        8,
+        16,
+        32,
+        64,
+        128,
+        256,
+        512,
+        1024,
+        2048,
+        4096,
+        8192
+      ]
+    },
+    "phase_check_shots": 32,
+    "phase_check_all_zero_shots": 32,
+    "phase_check_passed": true,
+    "aer_run_calls": 2,
+    "total_shots": 96,
+    "controlled_power_blocks_shot_weighted": 1344,
+    "equivalent_base_U_applications_shot_weighted": 1572768,
+    "matrix_power_construction": "full complex 2x2 matrix; repeated squaring, no eigenspectrum",
+    "qpe_seconds": 0.092338,
+    "phase_check_seconds": 0.037955,
+    "elapsed_seconds": 0.130296,
+    "plaintext_hash_verified": false,
+    "secret_values_recorded": false
+  },
+  "single_scoring_circuit_execution_index": 0,
+  "single_scoring_circuit_metrics": {
+    "qubits": 15,
+    "classical_bits": 14,
+    "gate_count": 758,
+    "gate_depth": 271,
+    "two_qubit_gate_count": 230,
+    "active_gate_qubits": 15,
+    "operation_count_including_measurements": 772,
+    "depth_including_measurements": 272
+  },
+  "scoring_transpile_seconds": 0.02646,
+  "process_peak_rss_mib": 101.172
+}
