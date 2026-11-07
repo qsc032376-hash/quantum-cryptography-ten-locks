@@ -52,11 +52,28 @@ elif mode in ('cross', 'profile'):
         qiskit.transpile = qiskit.compiler.transpile = controlled_transpile
     observed, job_starts, solution_seeds = [], {}, {}
     original_loader = checker.load_solution
+    tier10_aggregate = {}
     def load_with_metadata(path):
         module = original_loader(path)
         for name in ('SEED_TRANSPILER', 'SEED_SIMULATOR', 'BASIS_SEED'):
             value = getattr(module, name, None)
             if isinstance(value, int): solution_seeds[name] = value
+        if mode == 'cross' and tier == 10 and callable(getattr(module, 'recover_exponent_with_diagnostics', None)):
+            original_recovery = module.recover_exponent_with_diagnostics
+            def observe_recovery():
+                recovery = original_recovery()
+                diagnostics = recovery.diagnostics
+                evidence = diagnostics.get('readout_evidence', {})
+                # Whitelist only aggregate integer counters; never retain outcomes or candidates.
+                for key in ('total_shots', 'distinct_outcomes', 'informative_shots',
+                            'uninformative_shots', 'inconsistent_shots', 'partial_equation_shots'):
+                    value = evidence.get(key)
+                    if type(value) is int and value >= 0: tier10_aggregate[key] = value
+                value = diagnostics.get('verified_informative_support_shots')
+                if type(value) is int and value >= 0:
+                    tier10_aggregate['verified_support_shots'] = value
+                return recovery
+            module.recover_exponent_with_diagnostics = observe_recovery
         return module
     checker.load_solution = load_with_metadata
     timing = {'result_wait_seconds': 0.0, 'aer_job_elapsed_seconds': 0.0, 'jobs_finished': 0}
@@ -104,6 +121,7 @@ elif mode in ('cross', 'profile'):
                                   'solution_declared_seeds': solution_seeds,
                                   'transpiler_seed': solution_seeds.get('SEED_TRANSPILER', 'solution default (not injected)'),
                                   'application_rng_seed': solution_seeds.get('BASIS_SEED', 'solution default (not injected)')}})
+    if tier10_aggregate: out['tier10_readout_aggregate'] = tier10_aggregate
     if mode == 'profile' and raw.get('unique_circuits') and not raw.get('serialize_error'):
         metrics_file = prefix + '.metrics.json'
         checker.worker_transpile(prefix + '.circuits', metrics_file)

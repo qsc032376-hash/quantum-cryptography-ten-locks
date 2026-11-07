@@ -40,7 +40,12 @@ def compare(baseline,candidate,target='two_qubit_gates', rules_reviewed=False, r
         a=(baseline.get('metrics') or {}).get(metric); b=(candidate.get('metrics') or {}).get(metric)
         changes[metric]=None if a is None or b is None else b-a
     checks=[baseline.get('official'),candidate.get('official')]
-    if any(x and (x.get('status') not in ('full',None) or x.get('hash_ok') is False) for x in checks):
+    candidate_check = candidate.get('official') or {}
+    # An absent, timed-out or errored check is missing evidence, not proof of failure.
+    # A broken baseline likewise cannot establish that the candidate regressed.
+    if candidate_check.get('status') in ('incorrect', 'circuit_only', 'no_circuit') or (
+        candidate_check.get('hash_ok') is False and candidate_check.get('status') not in ('timeout', 'error', None)
+    ):
         decision='REJECT'
     elif (not rules_reviewed or not reliability or not reliability_reviewed or any(not x or x.get('status')!='full' or x.get('hash_ok') is not True or x.get('flags') or x.get('metrics_status')!='ok' for x in checks)
           or any(changes[m] is None for m in METRICS)

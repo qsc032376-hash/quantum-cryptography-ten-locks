@@ -30,7 +30,7 @@ python benchmarks/circuit_benchmark.py --baseline release/ten-locks-v1 \
 
 `--official` 分别调用原始 Checker 的 `check_tier`，不注入种子，单独报告 `full` / 哈希 / flags 和官方指标。它需要额外运行两次求解；未指定时显示 `NOT MEASURED`。受测版本若绕过常规编译入口或 Aer backend，不能仅依据仪表结果判定种子受控；请人工检查，保持 `INCONCLUSIVE`。所记录的编译调用与官方测量并不构成规则合规证明。
 
-默认比较目标为双比特门，`--target depth`、`total_gates` 或 `active_qubits` 可改目标。`ACCEPT` 要求双方官方 `full`、SHA 匹配、无 flags、评分指标齐全且与仪表评分一致，预算内运行，目标指标下降、编译观测设置及应用 RNG 相同；还必须对两提交用至少 10 个相同且实际送入 Aer 的种子做全部通过的回归，并经人工审查题目规则与有限样本可靠性。把两个结果路径传给 `--baseline-regression`、`--candidate-regression`，完成审查后才传 `--rules-reviewed --reliability-reviewed`。这些选项是人工确认，不是自动证明。官方失败或未改善目标可导致 `REJECT`；证据缺失、复核标记、仪表不匹配或资源未测量时为 `INCONCLUSIVE`。独立比较运行并非正式裁判最终裁决。
+默认比较目标为双比特门，`--target depth`、`total_gates` 或 `active_qubits` 可改目标。`ACCEPT` 要求双方官方 `full`、SHA 匹配、无 flags、评分指标齐全且与仪表评分一致，预算内运行，目标指标下降、编译观测设置及应用 RNG 相同；还必须对两提交用至少 10 个相同且实际送入 Aer 的种子做全部通过的回归，并经人工审查题目规则与有限样本可靠性。把两个结果路径传给 `--baseline-regression`、`--candidate-regression`，完成审查后才传 `--rules-reviewed --reliability-reviewed`。这些选项是人工确认，不是自动证明。候选被官方确认错误、未执行电路或哈希不匹配，或证据齐全但目标未改善时为 `REJECT`；官方超时/错误、基线失败、证据缺失、复核标记、仪表不匹配或资源未测量时为 `INCONCLUSIVE`。独立比较运行并非正式裁判最终裁决。
 
 10/10 仅是有限样本；记录全部失败、样本数、补采样、耗时和条件，不能据此宣称真实失败率为零或推断噪声硬件成功率。可用独立更多种子和置信区间评估可靠性。不要循环直至成功或丢弃失败样本。
 

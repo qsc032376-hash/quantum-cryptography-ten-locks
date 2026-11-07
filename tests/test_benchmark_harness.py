@@ -60,6 +60,16 @@ class ComparisonTests(unittest.TestCase):
         self.assertEqual(cb.compare(a,b,rules_reviewed=True,reliability=True,reliability_reviewed=True)['recommendation'],'INCONCLUSIVE')
         b=self.item(9); b['official']['resource']['state']='timeout'
         self.assertEqual(cb.compare(a,b,rules_reviewed=True,reliability=True,reliability_reviewed=True)['recommendation'],'INCONCLUSIVE')
+    def test_timeout_error_and_broken_baseline_are_inconclusive(self):
+        a,b=self.item(10),self.item(9)
+        for status in ('timeout', 'error'):
+            b['official']['status']=status
+            b['official']['hash_ok']=None
+            self.assertEqual(cb.compare(a,b,rules_reviewed=True,reliability=True,reliability_reviewed=True)['recommendation'],'INCONCLUSIVE')
+        a,b=self.item(10),self.item(9)
+        a['official']['status']='incorrect'; a['official']['hash_ok']=False
+        self.assertEqual(cb.compare(a,b,rules_reviewed=True,reliability=True,reliability_reviewed=True)['recommendation'],'INCONCLUSIVE')
+
     def test_regression_evidence_requires_actual_distinct_forwarded_seeds(self):
         with tempfile.TemporaryDirectory() as d:
             f=Path(d)/'r.json'
