@@ -1,0 +1,73 @@
+{
+  "comparison_kind": "public static compiler counts, not an official measured score",
+  "parameters": {
+    "modulus": 77,
+    "base": 2,
+    "work_bits": 7,
+    "phase_bits": 14,
+    "controlled_multiplier_blocks": 14
+  },
+  "cached_by_public_multiplier": true,
+  "quantum_circuits_executed": 0,
+  "hidden_data_read": false,
+  "order_or_factors_computed": false,
+  "current_compiler": {
+    "native_controlled_x_blocks": 4564,
+    "control_count_histogram": {
+      "2": 234,
+      "3": 658,
+      "4": 1125,
+      "5": 1266,
+      "6": 924,
+      "7": 357
+    },
+    "histogram_includes_external_control": true,
+    "normalizing_x_count": 0,
+    "cx_estimate": null,
+    "basis_gate_score_source": "Use the real validator; no current-compiler CX estimate is made here"
+  },
+  "baseline_gray_path_compiler": {
+    "mcx7_blocks": 4897,
+    "normalizing_x_count": 44570,
+    "assumed_cx_upper_bound_per_exact_mcx7_dirty": 50,
+    "standard_iqft_cx_contribution": 203,
+    "static_cx_upper_bound_including_iqft": 245053,
+    "cx_bound_formula": "50 * mcx7_blocks + 203",
+    "actual_quantum_circuit_executed": false,
+    "official_transpiled_score_measured": false,
+    "cross_block_optimizations_included": false
+  },
+  "native_block_comparison": {
+    "fewer_current_controlled_x_blocks": 333,
+    "fraction_fewer": 0.06800081682662855,
+    "is_basis_gate_or_runtime_comparison": false,
+    "note": "Current blocks have mixed control counts; baseline blocks all have seven controls"
+  },
+  "static_statevector_memory_comparison": [
+    {
+      "layout": "14 counting + 7 work; no dedicated ancilla",
+      "qubits": 21,
+      "raw_double_precision_statevector_bytes": 33554432,
+      "raw_statevector_mib": 32,
+      "includes_simulator_or_compiler_overhead": false,
+      "benchmark_executed": false
+    },
+    {
+      "layout": "Same layout plus 3 clean ancillas",
+      "qubits": 24,
+      "raw_double_precision_statevector_bytes": 268435456,
+      "raw_statevector_mib": 256,
+      "includes_simulator_or_compiler_overhead": false,
+      "benchmark_executed": false
+    },
+    {
+      "layout": "Arithmetic route with 7-bit output buffer; excludes carry/comparison ancillas",
+      "qubits": 28,
+      "raw_double_precision_statevector_bytes": 4294967296,
+      "raw_statevector_mib": 4096,
+      "includes_simulator_or_compiler_overhead": false,
+      "benchmark_executed": false
+    }
+  ],
+  "resource_comparison_limit": "Raw statevector sizes only; this static comparison runs no benchmarks. Chosen 21-qubit real measurements are in quantum_validation.json. Arithmetic may require more qubits"
+}

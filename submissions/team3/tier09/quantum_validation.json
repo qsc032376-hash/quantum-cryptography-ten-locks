@@ -1,0 +1,216 @@
+{
+  "status": "PASS_QUANTUM_ORDER_FACTORIZATION_AND_SCORING",
+  "python": "3.12.14",
+  "qiskit": "2.6.1",
+  "qiskit_aer": "0.18.2",
+  "branch": "feature/quantum-circuits",
+  "tested_base_commit": "01b0c6a1c458a0362e9ece35d5a78d2d84295c17",
+  "scoring_basis_gates": [
+    "rz",
+    "sx",
+    "x",
+    "cx"
+  ],
+  "simulation_basis": "Aer statevector native basis",
+  "optimization_level": 1,
+  "seed_transpiler": 12345,
+  "aer_memory_limit_mb": 512,
+  "aer_max_parallel_threads": 2,
+  "solve_timeout_seconds": 120,
+  "scoring_transpile_timeout_seconds": 120,
+  "real_aer_run_calls": 1,
+  "real_total_shots": 64,
+  "executions": [
+    {
+      "shots": 64,
+      "seed_simulator": 909,
+      "native_circuit_metrics_not_scoring_metrics": {
+        "qubits": 21,
+        "classical_bits": 14,
+        "gate_count": 4691,
+        "gate_depth": 4593,
+        "two_qubit_gate_count": 98,
+        "active_gate_qubits": 21,
+        "operation_count_including_measurements": 4705,
+        "depth_including_measurements": 4594
+      },
+      "native_operation_counts": {
+        "mcx": 4330,
+        "ccx": 234,
+        "cp": 91,
+        "h": 28,
+        "measure": 14,
+        "swap": 7,
+        "x": 1
+      },
+      "executed_measurement_q_to_c": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          9,
+          9
+        ],
+        [
+          10,
+          10
+        ],
+        [
+          11,
+          11
+        ],
+        [
+          12,
+          12
+        ],
+        [
+          13,
+          13
+        ]
+      ],
+      "scored_circuit_metrics": {
+        "qubits": 21,
+        "classical_bits": 14,
+        "gate_count": 349949,
+        "gate_depth": 316820,
+        "two_qubit_gate_count": 117739,
+        "active_gate_qubits": 21,
+        "operation_count_including_measurements": 349963,
+        "depth_including_measurements": 316821
+      }
+    }
+  ],
+  "aer_success": true,
+  "factors_recovered_from_measurements": true,
+  "scoring_success": true,
+  "plaintext_hash_verified": false,
+  "solve_status": "PENDING_CLASSICAL_INTEGRATION",
+  "secret_values_recorded": false,
+  "stage": "complete",
+  "quantum_recovery_seconds": 7.595724,
+  "peak_rss_before_scoring_mib": 161.277,
+  "recovery_diagnostics": {
+    "modulus": 77,
+    "base": 2,
+    "phase_bits": 14,
+    "work_bits": 7,
+    "additional_qubits": 0,
+    "borrowed_qubits": 0,
+    "logical_opaque_metrics": {
+      "qubits": 21,
+      "classical_bits": 14,
+      "opaque_gate_count": 30,
+      "depth_including_measurements": 17
+    },
+    "simulation_operation_counts": {
+      "mcx": 4330,
+      "ccx": 234,
+      "cp": 91,
+      "h": 28,
+      "measure": 14,
+      "swap": 7,
+      "x": 1
+    },
+    "simulation_basis": "Aer statevector native basis (MCX retained)",
+    "queries_per_shot": {
+      "controlled_power_blocks": 14,
+      "equivalent_base_multiplications": 16383,
+      "exponents": [
+        1,
+        2,
+        4,
+        8,
+        16,
+        32,
+        64,
+        128,
+        256,
+        512,
+        1024,
+        2048,
+        4096,
+        8192
+      ]
+    },
+    "batches": [
+      {
+        "shots": 64,
+        "seed_simulator": 909,
+        "elapsed_seconds": 7.276264
+      }
+    ],
+    "aer_run_calls": 1,
+    "shots": 64,
+    "distinct_measured_outcomes": 33,
+    "recovered_order": 30,
+    "order_evidence": {
+      "measured_shots": 64,
+      "distinct_outcomes": 33,
+      "nonzero_shots": 60,
+      "accepted_phase_shots": 57,
+      "accepted_denominator_count": 7,
+      "lcm_candidate_count": 7,
+      "period_candidates_tested": 7,
+      "verified_order": 30,
+      "minimal_order_verified": true,
+      "verified_period_multiple": 30,
+      "minimality_prime_checks": 3
+    },
+    "modular_order_check": true,
+    "nontrivial_factors_verified": true,
+    "factors_recovered_from_measurements": true,
+    "controlled_power_blocks_shot_weighted": 896,
+    "equivalent_base_multiplications_shot_weighted": 1048512,
+    "build_and_transpile_seconds": 0.319089,
+    "elapsed_seconds": 7.595633,
+    "plaintext_hash_verified": false,
+    "secret_values_recorded": false
+  },
+  "single_scoring_circuit_execution_index": 0,
+  "single_scoring_circuit_metrics": {
+    "qubits": 21,
+    "classical_bits": 14,
+    "gate_count": 349949,
+    "gate_depth": 316820,
+    "two_qubit_gate_count": 117739,
+    "active_gate_qubits": 21,
+    "operation_count_including_measurements": 349963,
+    "depth_including_measurements": 316821
+  },
+  "scoring_transpile_seconds": 6.34604,
+  "scoring_source": "the exact native circuit passed to AerSimulator.run",
+  "process_peak_rss_mib": 377.336
+}
