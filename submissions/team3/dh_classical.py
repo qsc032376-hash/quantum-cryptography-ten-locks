@@ -9,9 +9,23 @@ satisfies the linear congruence
 
     k1 + a * k2 = 0  (mod order)
 
-so the classical job is to solve modular linear equations -- not RSA.  Several
-measurements may be needed; they are combined with the CRT, including the cases
-where ``k2`` is not invertible (coefficient not coprime with the order).
+The theory note (``docs/TIER10_THEORY.md``) writes the same relation as
+
+    u * a = v  (mod order)
+
+with ``u`` the X-register frequency and ``v`` the Z-register frequency.  The two
+forms are equivalent under ``k2 = u`` and ``k1 = -v mod order``; both are
+supported here.
+
+Raw QFT readouts are *not* frequencies.  Each register is ``m = 6`` bits wide
+(``L = 64`` points) while the group order is 41, so a readout ``y`` must be
+rounded to the nearest grid point first:
+
+    frequency = round(order * y / L) mod order
+
+``frequency_from_register`` and the ``*_from_counts`` helpers below apply that
+mapping and then build the ``(k1, k2)`` equation.  A wrong (off-peak) readout
+produces a wrong congruence, which the exponent check ``g**a == A`` rejects.
 
 This module returns plaintext only; the recovered exponent and secret stay
 local, so they cannot leak through logs.  Hashing and XOR are reused from
@@ -38,6 +52,9 @@ from rsa_classical import RSAError, mod_inverse  # noqa: E402
 
 PARAMETER_NAMES = ("p", "g", "order", "A", "B", "key_width_bits")
 
+REGISTER_BITS = 6
+QFT_SIZE = 1 << REGISTER_BITS
+
 __all__ = [
     "AmbiguousError",
     "CiphertextError",
@@ -47,12 +64,19 @@ __all__ = [
     "KeyBitsError",
     "NoSolutionError",
     "ParameterError",
+    "QFT_SIZE",
+    "REGISTER_BITS",
     "candidates_from_measurements",
     "decrypt",
+    "decrypt_from_counts",
     "decrypt_tier10",
     "decrypt_with_exponent",
+    "equation_from_counts",
     "equation_from_measurement",
+    "frequency_from_register",
     "key_bits_for",
+    "measurement_from_counts",
+    "measurement_from_readout",
     "recover_exponent",
     "shared_secret",
     "solve_congruences",
@@ -146,6 +170,106 @@ def equation_from_measurement(k1, k2, order):
         raise EquationError(str(error)) from error
     residue = (-(k1 // common) * inverse) % modulus
     return residue, modulus
+
+
+def _check_register_bits(register_bits):
+    if isinstance(register_bits, bool) or not isinstance(register_bits, int):
+        raise ParameterError(
+            f"register_bits must be an int, got {type(register_bits).__name__}"
+        )
+    if register_bits < 1:
+        raise ParameterError(f"register_bits must be positive, got {register_bits}")
+    return register_bits
+
+
+def frequency_from_register(reading, order, register_bits=REGISTER_BITS):
+    """Round one QFT readout to the nearest frequency modulo ``order``.
+
+    ``reading`` is the integer value ``y`` of a register with
+    ``0 <= y < 2**register_bits``.  The grid point is
+    ``round(order * y / 2**register_bits)`` computed in integer arithmetic, and
+    the result is reduced modulo ``order`` so ``41 -> 0`` wraps correctly.  The
+    raw readout must never be used as the frequency itself.
+    """
+    _check_register_bits(register_bits)
+    _require_int("reading", reading)
+    _require_int("order", order)
+    if order < 1:
+        raise ParameterError(f"order must be positive, got {order}")
+    size = 1 << register_bits
+    if not 0 <= reading < size:
+        raise ParameterError(f"reading must satisfy 0 <= y < {size}, got {reading}")
+    return ((2 * order * reading + size) // (2 * size)) % order
+
+
+def measurement_from_readout(y_x, y_z, order, register_bits=REGISTER_BITS):
+    """Convert the two register readouts into the ``(k1, k2)`` equation pair.
+
+    The theory note's ``u a = v (mod order)`` becomes ``k1 + a k2 = 0`` with
+    ``k2 = u`` and ``k1 = -v mod order``.
+    """
+    u = frequency_from_register(y_x, order, register_bits)
+    v = frequency_from_register(y_z, order, register_bits)
+    return (-v) % order, u
+
+
+def measurement_from_counts(
+    bitstring, order, register_bits=REGISTER_BITS, layout="xz"
+):
+    """Read one Qiskit counts string of a ``2 * register_bits`` register.
+
+    Qiskit prints ``c[n-1] ... c0`` (most significant character first), so
+    ``int(bitstring, 2)`` is the measured integer ``T``.  With ``layout="xz"``
+    (the theory note's wiring) the low ``register_bits`` bits are the X register
+    and the high bits are Z; ``layout="zx"`` swaps the two halves.
+    """
+    _check_register_bits(register_bits)
+    if layout not in ("xz", "zx"):
+        raise ParameterError(f"layout must be 'xz' or 'zx', got {layout!r}")
+    if not isinstance(bitstring, str):
+        raise ParameterError(
+            f"counts must be a bit string, got {type(bitstring).__name__}"
+        )
+    width = 2 * register_bits
+    if len(bitstring) != width:
+        raise ParameterError(f"counts must be {width} bits, got {len(bitstring)}")
+    if set(bitstring) - {"0", "1"}:
+        raise ParameterError("counts may only contain '0' and '1'")
+    total = int(bitstring, 2)
+    mask = (1 << register_bits) - 1
+    low, high = total & mask, total >> register_bits
+    if layout == "xz":
+        y_x, y_z = low, high
+    else:
+        y_x, y_z = high, low
+    return measurement_from_readout(y_x, y_z, order, register_bits)
+
+
+def equation_from_counts(
+    bitstring, order, register_bits=REGISTER_BITS, layout="xz"
+):
+    """Round a counts string and return its ``(residue, modulus)`` equation."""
+    k1, k2 = measurement_from_counts(bitstring, order, register_bits, layout)
+    return equation_from_measurement(k1, k2, order)
+
+
+def decrypt_from_counts(
+    readouts, public_parameters, ciphertext_hex, layout="xz"
+):
+    """Decrypt tier 10 from raw 12-bit Qiskit counts strings.
+
+    ``readouts`` is one counts string or an iterable of them; each is rounded
+    with :func:`frequency_from_register` before the equation is built, so raw
+    readouts are never mistaken for mod-41 frequencies.
+    """
+    params = validate_parameters(public_parameters)
+    if isinstance(readouts, str):
+        readouts = [readouts]
+    measurements = [
+        measurement_from_counts(text, params["order"], layout=layout)
+        for text in readouts
+    ]
+    return decrypt(measurements, params, ciphertext_hex)
 
 
 def solve_congruences(equations):
