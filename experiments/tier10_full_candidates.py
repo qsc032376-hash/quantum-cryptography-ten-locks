@@ -1,13 +1,13 @@
-"""Tier 10 candidate C, opt-in local benchmark; never changes Tier 9 code."""
+"""Benchmark full Tier 10 candidates A–F; never changes Tier 9 code."""
 import sys
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from qiskit import QuantumCircuit, transpile
 from qiskit_aer import AerSimulator
 from common import load_locked
-from submissions.team3.tier10.circuit import build_exponent_mapping, build_qpe_circuit
+from submissions.team3.tier10.circuit import build_exponent_mapping, build_qpe_qft_only
 from submissions.team3.tier07.qpe import build_inverse_qft
-from submissions.team3.tier10.shared_control import shared_circuit, shared_multiplier
+from submissions.team3.tier10.shared_control import (shared_circuit, combined_circuit, fanout_circuit, fanout_qft_circuit)
 
 
 
@@ -26,7 +26,7 @@ if __name__ == '__main__':
     from tools.check_submission import compute_metrics
     mode = sys.argv[1]
     p = load_locked(10)['public_parameters']
-    builder = {'A':baseline_circuit, 'B':build_qpe_circuit, 'C':shared_circuit}[mode]
+    builder = {'A':baseline_circuit, 'B':build_qpe_qft_only, 'C':shared_circuit, 'D':combined_circuit, 'E':fanout_circuit, 'F':fanout_qft_circuit}[mode]
     start=time.perf_counter()
     circuit=builder(p['p'],p['g'],p['A'])
     simulator=AerSimulator(method='statevector', max_memory_mb=512, max_parallel_threads=2)

@@ -70,7 +70,7 @@ def build_exponent_mapping(
     return circuit
 
 
-def build_qpe_circuit(
+def build_qpe_qft_only(
     p, g, A, register_bits=REGISTER_BITS, work_bits=WORK_BITS,
 ) -> QuantumCircuit:
     """Prepare work |1>, sample both Fourier registers, and measure qj into cj.
@@ -107,6 +107,15 @@ def build_qpe_circuit(
     circuit.append(inverse_qft, range(register_bits, 2 * register_bits))
     circuit.measure(range(2 * register_bits), range(2 * register_bits))
     return circuit
+
+
+def build_qpe_circuit(
+    p, g, A, register_bits=REGISTER_BITS, work_bits=WORK_BITS,
+) -> QuantumCircuit:
+    """Exact shared-fanout and swap-absorbed sampling, preserving counts layout."""
+    _validate_parameters(p, g, A, register_bits, work_bits)
+    from .shared_control import fanout_qft_circuit
+    return fanout_qft_circuit(p, g, A, register_bits, work_bits)
 
 
 def count_group_powers(circuit) -> dict:
