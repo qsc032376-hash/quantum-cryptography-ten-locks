@@ -1,0 +1,98 @@
+{
+  "aer": "0.18.2",
+  "baseline_sha": "41c7c6775b8fc499c2acdd878b4829bd17e1210d",
+  "build_seconds": 0.065406,
+  "compilation_seconds": 0.258931,
+  "configuration": {
+    "basis": [
+      "rz",
+      "sx",
+      "x",
+      "cx"
+    ],
+    "coupling_map": null,
+    "max_memory_mb": 512,
+    "max_parallel_threads": 2,
+    "optimization_level": 1,
+    "seed_transpiler": 12345
+  },
+  "peak_rss_raw": 419020800,
+  "peak_rss_unit": "bytes",
+  "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+  "python": "3.13.9",
+  "qiskit": "2.6.1",
+  "records": [
+    {
+      "aer_and_recovery_seconds": 27.655438,
+      "error_type": null,
+      "pass": true,
+      "seed": 800,
+      "shots": 64
+    },
+    {
+      "aer_and_recovery_seconds": 30.555225,
+      "error_type": null,
+      "pass": true,
+      "seed": 801,
+      "shots": 64
+    },
+    {
+      "aer_and_recovery_seconds": 30.976009,
+      "error_type": null,
+      "pass": true,
+      "seed": 802,
+      "shots": 64
+    },
+    {
+      "aer_and_recovery_seconds": 30.636937,
+      "error_type": null,
+      "pass": true,
+      "seed": 803,
+      "shots": 64
+    },
+    {
+      "aer_and_recovery_seconds": 33.875066,
+      "error_type": null,
+      "pass": true,
+      "seed": 804,
+      "shots": 64
+    },
+    {
+      "aer_and_recovery_seconds": 32.549062,
+      "error_type": null,
+      "pass": true,
+      "seed": 805,
+      "shots": 64
+    },
+    {
+      "aer_and_recovery_seconds": 33.116307,
+      "error_type": null,
+      "pass": true,
+      "seed": 806,
+      "shots": 64
+    },
+    {
+      "aer_and_recovery_seconds": 28.379921,
+      "error_type": null,
+      "pass": true,
+      "seed": 807,
+      "shots": 64
+    },
+    {
+      "aer_and_recovery_seconds": 28.587503,
+      "error_type": null,
+      "pass": true,
+      "seed": 808,
+      "shots": 64
+    },
+    {
+      "aer_and_recovery_seconds": 29.513873,
+      "error_type": null,
+      "pass": true,
+      "seed": 809,
+      "shots": 64
+    }
+  ],
+  "tier": 8,
+  "variant": "baseline"
+}

@@ -1,0 +1,37 @@
+{
+  "aer": "0.18.2",
+  "baseline_sha": "41c7c6775b8fc499c2acdd878b4829bd17e1210d",
+  "build_seconds": 0.003151,
+  "compilation_seconds": 0.078567,
+  "configuration": {
+    "basis": [
+      "rz",
+      "sx",
+      "x",
+      "cx"
+    ],
+    "coupling_map": null,
+    "max_memory_mb": 512,
+    "max_parallel_threads": 2,
+    "optimization_level": 1,
+    "seed_transpiler": 12345
+  },
+  "peak_rss_raw": 235257856,
+  "peak_rss_unit": "bytes",
+  "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+  "python": "3.13.9",
+  "qiskit": "2.6.1",
+  "records": [
+    {
+      "aer_and_recovery_seconds": 13.06714,
+      "aer_seconds": 13.065695,
+      "error_type": null,
+      "pass": true,
+      "recovery_seconds": 0.001436,
+      "seed": 900,
+      "shots": 128
+    }
+  ],
+  "tier": 5,
+  "variant": "candidate"
+}
