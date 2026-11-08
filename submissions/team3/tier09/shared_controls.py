@@ -5,7 +5,7 @@ from operator import itemgetter
 from qiskit import QuantumCircuit
 from qiskit.circuit.library import MCXGate
 
-from .modular import _compiled_operations
+from .global_permutation import _compiled_operations
 
 
 def build_controlled_multiplier(multiplier, modulus, work_bits=7):
