@@ -1,0 +1,309 @@
+{
+  "schema_version": 1,
+  "kind": "tier05_constant_folding_optimization",
+  "date": "2026-11-08",
+  "baseline_commit": "868fb65e20c73a27bffc118f3617080df9cf2f8b",
+  "candidate_benchmark_snapshot": "0b73a3bfc539624580ff6ea301d849b4e998bc04",
+  "candidate_snapshot_note": "Temporary immutable Git snapshot; final production and test files must match the SHA-256 manifest. Documentation and this aggregate report are added after measurement.",
+  "mathematical_reference_commit": "8b6d36c31b8d42b0c1aa6c5c375c21a58a8cd03c",
+  "audit_reference_commit": "5390daffd586e60c8c48f7808c1e276284899a49",
+  "benchmark_harness_commit": "0f8e0b0e8a42f1a68b27c52446c346401823099e",
+  "tested_source_sha256": {
+    "submissions/team3/tier05/oracle.py": "0bdff3317ddfe1e41e003795e13480e990a92728823c5c427ba030a2453b8b0c",
+    "tests/test_tier05_constant_folding.py": "ee185987c1995d46972f88e58739541804fe36684e048c99ee0e3d1be1cfb86e",
+    "tests/fixtures/tier05_release_oracle.py": "9c423bc5f05c42719cf9b37d0e705f792eaef8ed6ed870845c6aa5e905c695bb"
+  },
+  "scope": {
+    "protected_paths_identical_to_release": [
+      "tools",
+      "common",
+      "hashes.txt",
+      "requirements.txt",
+      "tier01",
+      "tier02",
+      "tier03",
+      "tier04",
+      "tier05",
+      "tier06",
+      "tier07",
+      "tier08",
+      "tier09",
+      "tier10",
+      "submissions/team3/tier01",
+      "submissions/team3/tier02",
+      "submissions/team3/tier03",
+      "submissions/team3/tier04",
+      "submissions/team3/tier06",
+      "submissions/team3/tier07",
+      "submissions/team3/tier08",
+      "submissions/team3/tier09",
+      "submissions/team3/tier10",
+      "submissions/team3/tier05/solution.py",
+      "submissions/team3/toy_cipher_classical.py"
+    ],
+    "production_paths_changed": [
+      "submissions/team3/tier05/oracle.py"
+    ],
+    "release_branch_modified": false,
+    "other_tiers_rerun": false
+  },
+  "preserved": {
+    "grover_iterations": 25,
+    "shots_per_real_solve": 128,
+    "qubits": 19,
+    "classical_bits": 10,
+    "oracle_queries_per_shot": 25,
+    "shot_weighted_queries_per_real_solve": 3200,
+    "predicate": "both public bytes QC",
+    "q_to_c": "q[j] -> c[j], integer conversion without reversal",
+    "diffuser_unchanged": true,
+    "exact_dirty_comparison_unchanged": true,
+    "full_byte_transform_api_unchanged": true,
+    "solution_and_classical_module_unchanged": true
+  },
+  "equivalence": {
+    "domain": "arbitrary coherent key register tensor zero work and flag",
+    "kind": "exact phase action on the promised clean-auxiliary subspace, hence identical 25-round full key distribution",
+    "full_operator_equivalence_on_nonzero_clean_work_claimed": false,
+    "new_test_count_with_passing_evidence": 10,
+    "existing_integration_tests_passed": 2,
+    "initial_new_tests_run": 9,
+    "initial_test_fixture_failures": 1,
+    "targeted_followup_tests_passed": 6,
+    "failure_cause": "Qiskit compose hoists the known suffix diffuser global phase onto an earlier amplitude snapshot; test now removes only the known suffix metadata from that snapshot",
+    "production_change_to_resolve_test_failure": false,
+    "synthetic_aer_calls": 2,
+    "synthetic_circuits_initial": 8,
+    "synthetic_circuits_targeted_recheck": 2,
+    "synthetic_shots_per_circuit": 1,
+    "maximum_synthetic_grover_rounds": 1,
+    "synthetic_ciphertext_cases": 4,
+    "key_amplitudes_checked_per_case": 1024,
+    "assertion_tolerance": 2e-10,
+    "rounded_error_observations": {
+      "initial_old_new_phase_amplitude_max": 1.81e-16,
+      "initial_key_probability_max": 1.44e-16,
+      "corrected_QC_phase_vs_analytic_max": 8.87e-16,
+      "corrected_QC_old_new_phase_max": 1.54e-16,
+      "corrected_QC_probability_max": 1.4e-16,
+      "corrected_QC_one_round_amplitude_max": 1.39e-15,
+      "clean_auxiliary_probability_defect_max": 2.65e-14
+    }
+  },
+  "structural_delta": {
+    "ccx_removed_per_phase_block": 36,
+    "cx_removed_per_phase_block": 24,
+    "ccx_removed_at_25_rounds": 900,
+    "cx_removed_at_25_rounds": 600,
+    "official_cx_reduction_is_measured_not_inferred": true
+  },
+  "benchmark": {
+    "comparison": {
+      "changes": {
+        "active_qubits": 0,
+        "depth": -3552,
+        "total_gates": -16409,
+        "two_qubit_gates": -6000
+      },
+      "paired_multiseed_evidence": false,
+      "recommendation": "INCONCLUSIVE",
+      "reliability_reviewed": false,
+      "rules_reviewed": true,
+      "target_metric": "two_qubit_gates"
+    },
+    "environment": {
+      "numpy": "2.5.4",
+      "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+      "psutil": "7.2.2",
+      "python": "3.12.14",
+      "qiskit": "2.6.1",
+      "qiskit-aer": "0.18.2"
+    },
+    "kind": "circuit_comparison",
+    "profile_simulator_seed": 2026,
+    "refs": {
+      "baseline": {
+        "aer_timing": {
+          "aer_job_elapsed_seconds": 23.217101051999634,
+          "jobs_finished": 1,
+          "result_wait_seconds": 23.211473922998266
+        },
+        "application_rng_seed": "solution default (not injected)",
+        "commit": "868fb65e20c73a27bffc118f3617080df9cf2f8b",
+        "exception_class": null,
+        "instrumentation_verified": true,
+        "metrics": {
+          "active_qubits": 19,
+          "depth": 33055,
+          "total_gates": 58620,
+          "two_qubit_gates": 21150
+        },
+        "native_transpilation_calls": [
+          {
+            "backend_class": "AerSimulator",
+            "basis_gates": [
+              "rz",
+              "sx",
+              "x",
+              "cx"
+            ],
+            "coupling_map": null,
+            "optimization_level": 1,
+            "seed_transpiler": 12345,
+            "target": null
+          }
+        ],
+        "official": {
+          "circuit_executed": true,
+          "circuits_executed": 1,
+          "flags": [],
+          "hash_ok": true,
+          "metrics": {
+            "active_qubits": 19,
+            "depth": 33055,
+            "total_gates": 58620,
+            "two_qubit_gates": 21150
+          },
+          "metrics_status": "ok",
+          "oracle_calls": null,
+          "resource": {
+            "memory_limit_mb": 1024,
+            "peak_rss_bytes_sampled": 256667648,
+            "state": "ok",
+            "timeout_seconds": 370.0,
+            "wall_seconds": 25.7959
+          },
+          "solve_seconds": 23.739,
+          "status": "full",
+          "unique_circuits": 1
+        },
+        "profile_hash_ok": true,
+        "resource": {
+          "memory_limit_mb": 1024,
+          "peak_rss_bytes_sampled": 248426496,
+          "state": "ok",
+          "timeout_seconds": 120.0,
+          "wall_seconds": 25.0273
+        },
+        "scoring_transpile_seconds": 0.2672272019990487,
+        "shots_total": 128,
+        "solve_seconds": 23.409
+      },
+      "candidate": {
+        "aer_timing": {
+          "aer_job_elapsed_seconds": 28.914795782999136,
+          "jobs_finished": 1,
+          "result_wait_seconds": 28.909054722997098
+        },
+        "application_rng_seed": "solution default (not injected)",
+        "commit": "0b73a3bfc539624580ff6ea301d849b4e998bc04",
+        "exception_class": null,
+        "instrumentation_verified": true,
+        "metrics": {
+          "active_qubits": 19,
+          "depth": 29503,
+          "total_gates": 42211,
+          "two_qubit_gates": 15150
+        },
+        "native_transpilation_calls": [
+          {
+            "backend_class": "AerSimulator",
+            "basis_gates": [
+              "rz",
+              "sx",
+              "x",
+              "cx"
+            ],
+            "coupling_map": null,
+            "optimization_level": 1,
+            "seed_transpiler": 12345,
+            "target": null
+          }
+        ],
+        "official": {
+          "circuit_executed": true,
+          "circuits_executed": 1,
+          "flags": [],
+          "hash_ok": true,
+          "metrics": {
+            "active_qubits": 19,
+            "depth": 29503,
+            "total_gates": 42211,
+            "two_qubit_gates": 15150
+          },
+          "metrics_status": "ok",
+          "oracle_calls": null,
+          "resource": {
+            "memory_limit_mb": 1024,
+            "peak_rss_bytes_sampled": 234381312,
+            "state": "ok",
+            "timeout_seconds": 370.0,
+            "wall_seconds": 22.2201
+          },
+          "solve_seconds": 20.577,
+          "status": "full",
+          "unique_circuits": 1
+        },
+        "profile_hash_ok": true,
+        "resource": {
+          "memory_limit_mb": 1024,
+          "peak_rss_bytes_sampled": 219959296,
+          "state": "ok",
+          "timeout_seconds": 120.0,
+          "wall_seconds": 30.3016
+        },
+        "scoring_transpile_seconds": 0.170513369001128,
+        "shots_total": 128,
+        "solve_seconds": 29.067
+      }
+    },
+    "schema_version": 1,
+    "scoring_config_git_blob": "4f502a2b80ba79134f70db490997b4f959a6cf0c",
+    "tier": 5
+  },
+  "renamed_directory_checker": {
+    "candidate_snapshot": "0b73a3bfc539624580ff6ea301d849b4e998bc04",
+    "renamed_team": "renamed-tier05-validation",
+    "original_team_directory_removed": true,
+    "source_files_match_working_candidate": true,
+    "secret_values_recorded": false,
+    "checker_exit_code": 0,
+    "official": {
+      "status": "full",
+      "hash_ok": true,
+      "circuit_executed": true,
+      "circuits_executed": 1,
+      "unique_circuits": 1,
+      "metrics": {
+        "active_qubits": 19,
+        "depth": 29503,
+        "total_gates": 42211,
+        "two_qubit_gates": 15150
+      },
+      "metrics_status": "ok",
+      "oracle_calls": null,
+      "flags": [],
+      "solve_seconds": 22.639
+    },
+    "scoring_config_sha256": "16eea5d6bcd4ad44b60cd0b50a15d7c2fbdee98ec16b9fe5b61426a8f020a31e",
+    "wall_seconds": 24.9137
+  },
+  "real_challenge_executions": {
+    "baseline_profile": 1,
+    "baseline_official": 1,
+    "candidate_profile": 1,
+    "candidate_official": 1,
+    "candidate_renamed_official": 1,
+    "total_aer_executions": 5,
+    "baseline_shots": 256,
+    "candidate_shots": 384,
+    "supplemental_sampling_or_retry": 0,
+    "paired_ten_seed_campaign_run": false
+  },
+  "secret_values_recorded": false,
+  "limitations": [
+    "Harness recommendation remains INCONCLUSIVE because paired ten-seed evidence and reliability-reviewed gate are not supplied; measured correctness and resource gates pass.",
+    "One paired profile is not a statistically reliable runtime comparison.",
+    "No noisy-hardware validation."
+  ]
+}

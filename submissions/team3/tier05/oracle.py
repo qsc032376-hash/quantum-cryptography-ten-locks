@@ -10,6 +10,7 @@ from math import pi
 from qiskit import QuantumCircuit
 from qiskit.synthesis import synth_mcx_n_clean_m15, synth_mcx_n_dirty_i15
 
+from common.toy_cipher import inverse_permute, inverse_sbox_layer
 from tier05 import helper
 
 
@@ -97,6 +98,32 @@ def _dirty_comparison_gate():
     return synthesized.to_gate(label="exact_mcx8_dirty"), wires
 
 
+def _build_mask_transform(byte_index: int) -> QuantumCircuit:
+    """XOR the rotated-key mask into work; omit the public byte constant.
+
+    Work bit j holds mask bit j (before S-box/PERM). All key-dependent
+    operations remain reversible quantum CX/CCX gates. This exact XOR map
+    preserves the key and flag and works on arbitrary work-register inputs.
+    """
+    if type(byte_index) is not int:
+        raise TypeError("byte_index must be an integer, not bool")
+    if byte_index < 0:
+        raise ValueError("byte_index must be nonnegative")
+    circuit = QuantumCircuit(N_QUBITS, name=f"tier05_mask_{byte_index}")
+    shift = (3 * byte_index) % KEY_BITS
+    rotated_key = tuple(KEY_QUBITS[(j - shift) % KEY_BITS] for j in range(KEY_BITS))
+    for operation, *indices in helper.mask_gates(KEY_BITS):
+        if operation == "cx":
+            key_bit, work_bit = indices
+            circuit.cx(rotated_key[key_bit], WORK_QUBITS[work_bit])
+        elif operation == "ccx":
+            key_a, key_b, work_bit = indices
+            circuit.ccx(rotated_key[key_a], rotated_key[key_b], WORK_QUBITS[work_bit])
+        else:
+            raise ValueError("Unsupported operation in the public mask description")
+    return circuit
+
+
 def build_phase_oracle(ciphertext: bytes) -> QuantumCircuit:
     """Apply -1 iff the first two decrypted bytes are QC, with clean work.
 
@@ -105,31 +132,44 @@ def build_phase_oracle(ciphertext: bytes) -> QuantumCircuit:
     First compute the Q comparison into the flag and uncompute its byte.
     Then compute C and phase-flip only when both comparisons hold. Finally
     uncompute C and reverse the entire first comparison, restoring all work.
+
+    For each PUBLIC target byte b, decrypt(c,i)==b is equivalent to
+    mask(rot_i(key)) == c XOR RC_i XOR S^-1(PERM^-1(b)). Only those public
+    constants are evaluated classically. Folding the S-box/PERM out of the
+    comparison preserves the full phase action on zero work/flag, including
+    arbitrary key superpositions; it does not search for or encode any key.
+    The general build_byte_transform API remains unchanged.
     """
     if not isinstance(ciphertext, bytes):
         raise TypeError("ciphertext must be bytes")
     if len(ciphertext) < 2:
         raise ValueError("The Tier 5 oracle requires at least two ciphertext bytes")
 
-    first_byte = build_byte_transform(ciphertext[0], 0)
-    second_byte = build_byte_transform(ciphertext[1], 1)
+    targets = tuple(
+        ciphertext[index]
+        ^ ((helper.ROUND_CONSTANT * index) % 256)
+        ^ inverse_sbox_layer(inverse_permute(known_byte))
+        for index, known_byte in enumerate(b"QC")
+    )
+    first_byte = _build_mask_transform(0)
+    second_byte = _build_mask_transform(1)
     comparison_gate, comparison_wires = _dirty_comparison_gate()
 
     first_check = QuantumCircuit(N_QUBITS, name="tier05_first_byte_check")
     first_check.compose(first_byte, inplace=True)
-    _comparison_x(first_check, ord("Q"))
+    _comparison_x(first_check, targets[0])
     first_check.append(comparison_gate, comparison_wires)
-    _comparison_x(first_check, ord("Q"))
+    _comparison_x(first_check, targets[0])
     first_check.compose(first_byte.inverse(), inplace=True)
 
     circuit = QuantumCircuit(N_QUBITS, name=ORACLE_NAME)
     circuit.compose(first_check, inplace=True)
     circuit.compose(second_byte, inplace=True)
-    _comparison_x(circuit, ord("C"))
+    _comparison_x(circuit, targets[1])
     circuit.h(FLAG_QUBIT)
     circuit.append(comparison_gate, comparison_wires)
     circuit.h(FLAG_QUBIT)
-    _comparison_x(circuit, ord("C"))
+    _comparison_x(circuit, targets[1])
     circuit.compose(second_byte.inverse(), inplace=True)
     circuit.compose(first_check.inverse(), inplace=True)
     return circuit
