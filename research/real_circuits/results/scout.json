@@ -1,0 +1,1175 @@
+{
+  "refs": {
+    "tier5_8": "0988ac44d88d08cc12258f2010afaf792dd53e7b",
+    "tier7": "7aef6e714dbbc8d222ef168b4bd691078f823b6e"
+  },
+  "official_checker_run": false,
+  "records": [
+    {
+      "case": "tier5_mask0",
+      "method": "source_gf2",
+      "baseline": {
+        "two_qubit_gates": 64,
+        "total_gates": 160,
+        "depth": 120,
+        "allocated_qubits": 19,
+        "active_qubits": 18,
+        "compilation_seconds": 0.001315832996624522
+      },
+      "candidate": {
+        "two_qubit_gates": 64,
+        "total_gates": 160,
+        "depth": 120,
+        "allocated_qubits": 19,
+        "active_qubits": 18,
+        "compilation_seconds": 0.0011093329958384857
+      },
+      "pass_seconds": 0.0012234999885549769,
+      "solve_compile_seconds": 0.0014278330054366961,
+      "stats": {
+        "windows": 8,
+        "accepted": 0,
+        "removed_cx": 0,
+        "max_window_wires": 3
+      }
+    },
+    {
+      "case": "tier5_mask0",
+      "method": "source_cancel",
+      "baseline": {
+        "two_qubit_gates": 64,
+        "total_gates": 160,
+        "depth": 120,
+        "allocated_qubits": 19,
+        "active_qubits": 18,
+        "compilation_seconds": 0.001315832996624522
+      },
+      "candidate": {
+        "two_qubit_gates": 64,
+        "total_gates": 160,
+        "depth": 120,
+        "allocated_qubits": 19,
+        "active_qubits": 18,
+        "compilation_seconds": 0.0012903339957119897
+      },
+      "pass_seconds": 0.00015241699293255806,
+      "solve_compile_seconds": 0.0016751250077504665,
+      "stats": {
+        "removed_instructions": 0
+      }
+    },
+    {
+      "case": "tier5_mask0",
+      "method": "compiled_cancel",
+      "baseline": {
+        "two_qubit_gates": 64,
+        "total_gates": 160,
+        "depth": 120,
+        "allocated_qubits": 19,
+        "active_qubits": 18,
+        "compilation_seconds": 0.001315832996624522
+      },
+      "candidate": {
+        "two_qubit_gates": 64,
+        "total_gates": 160,
+        "depth": 120,
+        "allocated_qubits": 19,
+        "active_qubits": 18,
+        "compilation_seconds": 0.0014512089983327314
+      },
+      "pass_seconds": 0.0013148339930921793,
+      "solve_compile_seconds": 0.0027284589887131006,
+      "stats": {
+        "removed_instructions": 0
+      }
+    },
+    {
+      "case": "tier5_mask0",
+      "method": "compiled_gf2",
+      "baseline": {
+        "two_qubit_gates": 64,
+        "total_gates": 160,
+        "depth": 120,
+        "allocated_qubits": 19,
+        "active_qubits": 18,
+        "compilation_seconds": 0.001315832996624522
+      },
+      "candidate": {
+        "two_qubit_gates": 64,
+        "total_gates": 160,
+        "depth": 120,
+        "allocated_qubits": 19,
+        "active_qubits": 18,
+        "compilation_seconds": 0.0014042090042494237
+      },
+      "pass_seconds": 0.005994958002702333,
+      "solve_compile_seconds": 0.0018669999990379438,
+      "stats": {
+        "windows": 48,
+        "accepted": 0,
+        "removed_cx": 0,
+        "max_window_wires": 3
+      }
+    },
+    {
+      "case": "tier5_mask1",
+      "method": "source_gf2",
+      "baseline": {
+        "two_qubit_gates": 64,
+        "total_gates": 160,
+        "depth": 120,
+        "allocated_qubits": 19,
+        "active_qubits": 18,
+        "compilation_seconds": 0.0012465419858926907
+      },
+      "candidate": {
+        "two_qubit_gates": 64,
+        "total_gates": 160,
+        "depth": 120,
+        "allocated_qubits": 19,
+        "active_qubits": 18,
+        "compilation_seconds": 0.001172666990896687
+      },
+      "pass_seconds": 0.0011034579947590828,
+      "solve_compile_seconds": 0.0019004170026164502,
+      "stats": {
+        "windows": 8,
+        "accepted": 0,
+        "removed_cx": 0,
+        "max_window_wires": 3
+      }
+    },
+    {
+      "case": "tier5_mask1",
+      "method": "source_cancel",
+      "baseline": {
+        "two_qubit_gates": 64,
+        "total_gates": 160,
+        "depth": 120,
+        "allocated_qubits": 19,
+        "active_qubits": 18,
+        "compilation_seconds": 0.0012465419858926907
+      },
+      "candidate": {
+        "two_qubit_gates": 64,
+        "total_gates": 160,
+        "depth": 120,
+        "allocated_qubits": 19,
+        "active_qubits": 18,
+        "compilation_seconds": 0.0011242089967709035
+      },
+      "pass_seconds": 0.00015049999637994915,
+      "solve_compile_seconds": 0.0015412909997394308,
+      "stats": {
+        "removed_instructions": 0
+      }
+    },
+    {
+      "case": "tier5_mask1",
+      "method": "compiled_cancel",
+      "baseline": {
+        "two_qubit_gates": 64,
+        "total_gates": 160,
+        "depth": 120,
+        "allocated_qubits": 19,
+        "active_qubits": 18,
+        "compilation_seconds": 0.0012465419858926907
+      },
+      "candidate": {
+        "two_qubit_gates": 64,
+        "total_gates": 160,
+        "depth": 120,
+        "allocated_qubits": 19,
+        "active_qubits": 18,
+        "compilation_seconds": 0.0013473329890985042
+      },
+      "pass_seconds": 0.001141417000326328,
+      "solve_compile_seconds": 0.001196666999021545,
+      "stats": {
+        "removed_instructions": 0
+      }
+    },
+    {
+      "case": "tier5_mask1",
+      "method": "compiled_gf2",
+      "baseline": {
+        "two_qubit_gates": 64,
+        "total_gates": 160,
+        "depth": 120,
+        "allocated_qubits": 19,
+        "active_qubits": 18,
+        "compilation_seconds": 0.0012465419858926907
+      },
+      "candidate": {
+        "two_qubit_gates": 64,
+        "total_gates": 160,
+        "depth": 120,
+        "allocated_qubits": 19,
+        "active_qubits": 18,
+        "compilation_seconds": 0.0011915420036530122
+      },
+      "pass_seconds": 0.0048782499943627045,
+      "solve_compile_seconds": 0.0013433330022962764,
+      "stats": {
+        "windows": 48,
+        "accepted": 0,
+        "removed_cx": 0,
+        "max_window_wires": 3
+      }
+    },
+    {
+      "case": "tier5_diffuser",
+      "method": "source_gf2",
+      "baseline": {
+        "two_qubit_gates": 48,
+        "total_gates": 220,
+        "depth": 114,
+        "allocated_qubits": 19,
+        "active_qubits": 14,
+        "compilation_seconds": 0.0011475840001367033
+      },
+      "candidate": {
+        "two_qubit_gates": 48,
+        "total_gates": 220,
+        "depth": 114,
+        "allocated_qubits": 19,
+        "active_qubits": 14,
+        "compilation_seconds": 0.0010820840107044205
+      },
+      "pass_seconds": 0.0001750840019667521,
+      "solve_compile_seconds": 0.001534875002107583,
+      "stats": {
+        "windows": 0,
+        "accepted": 0,
+        "removed_cx": 0,
+        "max_window_wires": 0
+      }
+    },
+    {
+      "case": "tier5_diffuser",
+      "method": "source_cancel",
+      "baseline": {
+        "two_qubit_gates": 48,
+        "total_gates": 220,
+        "depth": 114,
+        "allocated_qubits": 19,
+        "active_qubits": 14,
+        "compilation_seconds": 0.0011475840001367033
+      },
+      "candidate": {
+        "two_qubit_gates": 48,
+        "total_gates": 220,
+        "depth": 114,
+        "allocated_qubits": 19,
+        "active_qubits": 14,
+        "compilation_seconds": 0.0014495420036837459
+      },
+      "pass_seconds": 0.0004785000055562705,
+      "solve_compile_seconds": 0.0017324590007774532,
+      "stats": {
+        "removed_instructions": 0
+      }
+    },
+    {
+      "case": "tier5_diffuser",
+      "method": "compiled_cancel",
+      "baseline": {
+        "two_qubit_gates": 48,
+        "total_gates": 220,
+        "depth": 114,
+        "allocated_qubits": 19,
+        "active_qubits": 14,
+        "compilation_seconds": 0.0011475840001367033
+      },
+      "candidate": {
+        "two_qubit_gates": 48,
+        "total_gates": 220,
+        "depth": 114,
+        "allocated_qubits": 19,
+        "active_qubits": 14,
+        "compilation_seconds": 0.001808916000300087
+      },
+      "pass_seconds": 0.001474875010899268,
+      "solve_compile_seconds": 0.0018103330075973645,
+      "stats": {
+        "removed_instructions": 0
+      }
+    },
+    {
+      "case": "tier5_diffuser",
+      "method": "compiled_gf2",
+      "baseline": {
+        "two_qubit_gates": 48,
+        "total_gates": 220,
+        "depth": 114,
+        "allocated_qubits": 19,
+        "active_qubits": 14,
+        "compilation_seconds": 0.0011475840001367033
+      },
+      "candidate": {
+        "two_qubit_gates": 48,
+        "total_gates": 220,
+        "depth": 114,
+        "allocated_qubits": 19,
+        "active_qubits": 14,
+        "compilation_seconds": 0.0013651249901158735
+      },
+      "pass_seconds": 0.011042957994504832,
+      "solve_compile_seconds": 0.0024438749969704077,
+      "stats": {
+        "windows": 48,
+        "accepted": 0,
+        "removed_cx": 0,
+        "max_window_wires": 2
+      }
+    },
+    {
+      "case": "tier5_phase_oracle",
+      "method": "source_gf2",
+      "baseline": {
+        "two_qubit_gates": 540,
+        "total_gates": 1428,
+        "depth": 1025,
+        "allocated_qubits": 19,
+        "active_qubits": 19,
+        "compilation_seconds": 0.002408208994893357
+      },
+      "candidate": {
+        "two_qubit_gates": 540,
+        "total_gates": 1428,
+        "depth": 1025,
+        "allocated_qubits": 19,
+        "active_qubits": 19,
+        "compilation_seconds": 0.0024695829924894497
+      },
+      "pass_seconds": 0.00964229200326372,
+      "solve_compile_seconds": 0.003114709004876204,
+      "stats": {
+        "windows": 46,
+        "accepted": 0,
+        "removed_cx": 0,
+        "max_window_wires": 5
+      }
+    },
+    {
+      "case": "tier5_phase_oracle",
+      "method": "source_cancel",
+      "baseline": {
+        "two_qubit_gates": 540,
+        "total_gates": 1428,
+        "depth": 1025,
+        "allocated_qubits": 19,
+        "active_qubits": 19,
+        "compilation_seconds": 0.002408208994893357
+      },
+      "candidate": {
+        "two_qubit_gates": 540,
+        "total_gates": 1428,
+        "depth": 1025,
+        "allocated_qubits": 19,
+        "active_qubits": 19,
+        "compilation_seconds": 0.0016824170015752316
+      },
+      "pass_seconds": 0.0014107919996604323,
+      "solve_compile_seconds": 0.005140666995430365,
+      "stats": {
+        "removed_instructions": 0
+      }
+    },
+    {
+      "case": "tier5_phase_oracle",
+      "method": "compiled_cancel",
+      "baseline": {
+        "two_qubit_gates": 540,
+        "total_gates": 1428,
+        "depth": 1025,
+        "allocated_qubits": 19,
+        "active_qubits": 19,
+        "compilation_seconds": 0.002408208994893357
+      },
+      "candidate": {
+        "two_qubit_gates": 540,
+        "total_gates": 1428,
+        "depth": 1025,
+        "allocated_qubits": 19,
+        "active_qubits": 19,
+        "compilation_seconds": 0.0014744590007467195
+      },
+      "pass_seconds": 0.009041084005730227,
+      "solve_compile_seconds": 0.0017430000007152557,
+      "stats": {
+        "removed_instructions": 0
+      }
+    },
+    {
+      "case": "tier5_phase_oracle",
+      "method": "compiled_gf2",
+      "baseline": {
+        "two_qubit_gates": 540,
+        "total_gates": 1428,
+        "depth": 1025,
+        "allocated_qubits": 19,
+        "active_qubits": 19,
+        "compilation_seconds": 0.002408208994893357
+      },
+      "candidate": {
+        "two_qubit_gates": 536,
+        "total_gates": 1424,
+        "depth": 1015,
+        "allocated_qubits": 19,
+        "active_qubits": 19,
+        "compilation_seconds": 0.001501374994404614
+      },
+      "pass_seconds": 0.0322787079931004,
+      "solve_compile_seconds": 0.0016462500061606988,
+      "stats": {
+        "windows": 390,
+        "accepted": 8,
+        "removed_cx": 4,
+        "max_window_wires": 5
+      }
+    },
+    {
+      "case": "tier5_full",
+      "method": "source_gf2",
+      "baseline": {
+        "two_qubit_gates": 14700,
+        "total_gates": 41086,
+        "depth": 28478,
+        "allocated_qubits": 19,
+        "active_qubits": 19,
+        "compilation_seconds": 0.016395625003497116
+      },
+      "candidate": {
+        "two_qubit_gates": 14700,
+        "total_gates": 41086,
+        "depth": 28478,
+        "allocated_qubits": 19,
+        "active_qubits": 19,
+        "compilation_seconds": 0.015665124999941327
+      },
+      "pass_seconds": 0.000626958004431799,
+      "solve_compile_seconds": 0.029563457996118814,
+      "stats": {
+        "windows": 0,
+        "accepted": 0,
+        "removed_cx": 0,
+        "max_window_wires": 0
+      }
+    },
+    {
+      "case": "tier5_full",
+      "method": "source_cancel",
+      "baseline": {
+        "two_qubit_gates": 14700,
+        "total_gates": 41086,
+        "depth": 28478,
+        "allocated_qubits": 19,
+        "active_qubits": 19,
+        "compilation_seconds": 0.016395625003497116
+      },
+      "candidate": {
+        "two_qubit_gates": 14700,
+        "total_gates": 41086,
+        "depth": 28478,
+        "allocated_qubits": 19,
+        "active_qubits": 19,
+        "compilation_seconds": 0.015619833997334354
+      },
+      "pass_seconds": 0.0008090839983196929,
+      "solve_compile_seconds": 0.030225541995605454,
+      "stats": {
+        "removed_instructions": 0
+      }
+    },
+    {
+      "case": "tier5_full",
+      "method": "compiled_cancel",
+      "baseline": {
+        "two_qubit_gates": 14700,
+        "total_gates": 41086,
+        "depth": 28478,
+        "allocated_qubits": 19,
+        "active_qubits": 19,
+        "compilation_seconds": 0.016395625003497116
+      },
+      "candidate": {
+        "two_qubit_gates": 14700,
+        "total_gates": 41086,
+        "depth": 28478,
+        "allocated_qubits": 19,
+        "active_qubits": 19,
+        "compilation_seconds": 0.015073624992510304
+      },
+      "pass_seconds": 0.26300012500723824,
+      "solve_compile_seconds": 0.015791124998941086,
+      "stats": {
+        "removed_instructions": 0
+      }
+    },
+    {
+      "case": "tier5_full",
+      "method": "compiled_gf2",
+      "baseline": {
+        "two_qubit_gates": 14700,
+        "total_gates": 41086,
+        "depth": 28478,
+        "allocated_qubits": 19,
+        "active_qubits": 19,
+        "compilation_seconds": 0.016395625003497116
+      },
+      "candidate": {
+        "two_qubit_gates": 14552,
+        "total_gates": 40938,
+        "depth": 28132,
+        "allocated_qubits": 19,
+        "active_qubits": 19,
+        "compilation_seconds": 0.015074583003297448
+      },
+      "pass_seconds": 0.9007976669963682,
+      "solve_compile_seconds": 0.01634074999310542,
+      "stats": {
+        "windows": 10879,
+        "accepted": 248,
+        "removed_cx": 148,
+        "max_window_wires": 5
+      }
+    },
+    {
+      "case": "tier8_public_multiplier_2",
+      "method": "source_gf2",
+      "baseline": {
+        "two_qubit_gates": 4212,
+        "total_gates": 12816,
+        "depth": 12171,
+        "allocated_qubits": 9,
+        "active_qubits": 9,
+        "compilation_seconds": 0.005864165999810211
+      },
+      "candidate": {
+        "two_qubit_gates": 4212,
+        "total_gates": 12816,
+        "depth": 12171,
+        "allocated_qubits": 9,
+        "active_qubits": 9,
+        "compilation_seconds": 0.005967499993857928
+      },
+      "pass_seconds": 0.0040785000019241124,
+      "solve_compile_seconds": 0.014182708997395821,
+      "stats": {
+        "windows": 0,
+        "accepted": 0,
+        "removed_cx": 0,
+        "max_window_wires": 0
+      }
+    },
+    {
+      "case": "tier8_public_multiplier_2",
+      "method": "source_cancel",
+      "baseline": {
+        "two_qubit_gates": 4212,
+        "total_gates": 12816,
+        "depth": 12171,
+        "allocated_qubits": 9,
+        "active_qubits": 9,
+        "compilation_seconds": 0.005864165999810211
+      },
+      "candidate": {
+        "two_qubit_gates": 4212,
+        "total_gates": 12816,
+        "depth": 12171,
+        "allocated_qubits": 9,
+        "active_qubits": 9,
+        "compilation_seconds": 0.00589712499640882
+      },
+      "pass_seconds": 0.0034956659947056323,
+      "solve_compile_seconds": 0.013095290996716358,
+      "stats": {
+        "removed_instructions": 746
+      }
+    },
+    {
+      "case": "tier8_public_multiplier_2",
+      "method": "compiled_cancel",
+      "baseline": {
+        "two_qubit_gates": 4212,
+        "total_gates": 12816,
+        "depth": 12171,
+        "allocated_qubits": 9,
+        "active_qubits": 9,
+        "compilation_seconds": 0.005864165999810211
+      },
+      "candidate": {
+        "two_qubit_gates": 4212,
+        "total_gates": 12816,
+        "depth": 12171,
+        "allocated_qubits": 9,
+        "active_qubits": 9,
+        "compilation_seconds": 0.005850083005498163
+      },
+      "pass_seconds": 0.06586808299471159,
+      "solve_compile_seconds": 0.0060329580010147765,
+      "stats": {
+        "removed_instructions": 0
+      }
+    },
+    {
+      "case": "tier8_public_multiplier_2",
+      "method": "compiled_gf2",
+      "baseline": {
+        "two_qubit_gates": 4212,
+        "total_gates": 12816,
+        "depth": 12171,
+        "allocated_qubits": 9,
+        "active_qubits": 9,
+        "compilation_seconds": 0.005864165999810211
+      },
+      "candidate": {
+        "two_qubit_gates": 4212,
+        "total_gates": 12816,
+        "depth": 12171,
+        "allocated_qubits": 9,
+        "active_qubits": 9,
+        "compilation_seconds": 0.005807916997582652
+      },
+      "pass_seconds": 0.28974599999492057,
+      "solve_compile_seconds": 0.006515834000310861,
+      "stats": {
+        "windows": 4212,
+        "accepted": 0,
+        "removed_cx": 0,
+        "max_window_wires": 2
+      }
+    },
+    {
+      "case": "tier8_public_multiplier_4",
+      "method": "source_gf2",
+      "baseline": {
+        "two_qubit_gates": 3888,
+        "total_gates": 11837,
+        "depth": 11235,
+        "allocated_qubits": 9,
+        "active_qubits": 9,
+        "compilation_seconds": 0.005428333999589086
+      },
+      "candidate": {
+        "two_qubit_gates": 3888,
+        "total_gates": 11837,
+        "depth": 11235,
+        "allocated_qubits": 9,
+        "active_qubits": 9,
+        "compilation_seconds": 0.0054667080112267286
+      },
+      "pass_seconds": 0.003065333003178239,
+      "solve_compile_seconds": 0.01238174999889452,
+      "stats": {
+        "windows": 0,
+        "accepted": 0,
+        "removed_cx": 0,
+        "max_window_wires": 0
+      }
+    },
+    {
+      "case": "tier8_public_multiplier_4",
+      "method": "source_cancel",
+      "baseline": {
+        "two_qubit_gates": 3888,
+        "total_gates": 11837,
+        "depth": 11235,
+        "allocated_qubits": 9,
+        "active_qubits": 9,
+        "compilation_seconds": 0.005428333999589086
+      },
+      "candidate": {
+        "two_qubit_gates": 3888,
+        "total_gates": 11837,
+        "depth": 11235,
+        "allocated_qubits": 9,
+        "active_qubits": 9,
+        "compilation_seconds": 0.005450541997561231
+      },
+      "pass_seconds": 0.003049167004064657,
+      "solve_compile_seconds": 0.012119082995923236,
+      "stats": {
+        "removed_instructions": 646
+      }
+    },
+    {
+      "case": "tier8_public_multiplier_4",
+      "method": "compiled_cancel",
+      "baseline": {
+        "two_qubit_gates": 3888,
+        "total_gates": 11837,
+        "depth": 11235,
+        "allocated_qubits": 9,
+        "active_qubits": 9,
+        "compilation_seconds": 0.005428333999589086
+      },
+      "candidate": {
+        "two_qubit_gates": 3888,
+        "total_gates": 11837,
+        "depth": 11235,
+        "allocated_qubits": 9,
+        "active_qubits": 9,
+        "compilation_seconds": 0.0054874580091563985
+      },
+      "pass_seconds": 0.08446870899933856,
+      "solve_compile_seconds": 0.005976458007353358,
+      "stats": {
+        "removed_instructions": 0
+      }
+    },
+    {
+      "case": "tier8_public_multiplier_4",
+      "method": "compiled_gf2",
+      "baseline": {
+        "two_qubit_gates": 3888,
+        "total_gates": 11837,
+        "depth": 11235,
+        "allocated_qubits": 9,
+        "active_qubits": 9,
+        "compilation_seconds": 0.005428333999589086
+      },
+      "candidate": {
+        "two_qubit_gates": 3888,
+        "total_gates": 11837,
+        "depth": 11235,
+        "allocated_qubits": 9,
+        "active_qubits": 9,
+        "compilation_seconds": 0.00551545899361372
+      },
+      "pass_seconds": 0.2715399169974262,
+      "solve_compile_seconds": 0.0058023340097861364,
+      "stats": {
+        "windows": 3888,
+        "accepted": 0,
+        "removed_cx": 0,
+        "max_window_wires": 2
+      }
+    },
+    {
+      "case": "tier8_public_multiplier_16",
+      "method": "source_gf2",
+      "baseline": {
+        "two_qubit_gates": 3456,
+        "total_gates": 10526,
+        "depth": 9987,
+        "allocated_qubits": 9,
+        "active_qubits": 9,
+        "compilation_seconds": 0.005160417000297457
+      },
+      "candidate": {
+        "two_qubit_gates": 3456,
+        "total_gates": 10526,
+        "depth": 9987,
+        "allocated_qubits": 9,
+        "active_qubits": 9,
+        "compilation_seconds": 0.005043958008172922
+      },
+      "pass_seconds": 0.002591875003417954,
+      "solve_compile_seconds": 0.01151541700528469,
+      "stats": {
+        "windows": 0,
+        "accepted": 0,
+        "removed_cx": 0,
+        "max_window_wires": 0
+      }
+    },
+    {
+      "case": "tier8_public_multiplier_16",
+      "method": "source_cancel",
+      "baseline": {
+        "two_qubit_gates": 3456,
+        "total_gates": 10526,
+        "depth": 9987,
+        "allocated_qubits": 9,
+        "active_qubits": 9,
+        "compilation_seconds": 0.005160417000297457
+      },
+      "candidate": {
+        "two_qubit_gates": 3456,
+        "total_gates": 10526,
+        "depth": 9987,
+        "allocated_qubits": 9,
+        "active_qubits": 9,
+        "compilation_seconds": 0.0050437080062692985
+      },
+      "pass_seconds": 0.0025615409977035597,
+      "solve_compile_seconds": 0.01115145900985226,
+      "stats": {
+        "removed_instructions": 528
+      }
+    },
+    {
+      "case": "tier8_public_multiplier_16",
+      "method": "compiled_cancel",
+      "baseline": {
+        "two_qubit_gates": 3456,
+        "total_gates": 10526,
+        "depth": 9987,
+        "allocated_qubits": 9,
+        "active_qubits": 9,
+        "compilation_seconds": 0.005160417000297457
+      },
+      "candidate": {
+        "two_qubit_gates": 3456,
+        "total_gates": 10526,
+        "depth": 9987,
+        "allocated_qubits": 9,
+        "active_qubits": 9,
+        "compilation_seconds": 0.004937459001666866
+      },
+      "pass_seconds": 0.05420112500723917,
+      "solve_compile_seconds": 0.005197209000471048,
+      "stats": {
+        "removed_instructions": 0
+      }
+    },
+    {
+      "case": "tier8_public_multiplier_16",
+      "method": "compiled_gf2",
+      "baseline": {
+        "two_qubit_gates": 3456,
+        "total_gates": 10526,
+        "depth": 9987,
+        "allocated_qubits": 9,
+        "active_qubits": 9,
+        "compilation_seconds": 0.005160417000297457
+      },
+      "candidate": {
+        "two_qubit_gates": 3456,
+        "total_gates": 10526,
+        "depth": 9987,
+        "allocated_qubits": 9,
+        "active_qubits": 9,
+        "compilation_seconds": 0.005002290999982506
+      },
+      "pass_seconds": 0.23815299999841955,
+      "solve_compile_seconds": 0.005520292004803196,
+      "stats": {
+        "windows": 3456,
+        "accepted": 0,
+        "removed_cx": 0,
+        "max_window_wires": 2
+      }
+    },
+    {
+      "case": "tier8_public_multiplier_11",
+      "method": "source_gf2",
+      "baseline": {
+        "two_qubit_gates": 3456,
+        "total_gates": 10516,
+        "depth": 9987,
+        "allocated_qubits": 9,
+        "active_qubits": 9,
+        "compilation_seconds": 0.005583125006523915
+      },
+      "candidate": {
+        "two_qubit_gates": 3456,
+        "total_gates": 10516,
+        "depth": 9987,
+        "allocated_qubits": 9,
+        "active_qubits": 9,
+        "compilation_seconds": 0.005344374993001111
+      },
+      "pass_seconds": 0.002631583993206732,
+      "solve_compile_seconds": 0.011387999998987652,
+      "stats": {
+        "windows": 0,
+        "accepted": 0,
+        "removed_cx": 0,
+        "max_window_wires": 0
+      }
+    },
+    {
+      "case": "tier8_public_multiplier_11",
+      "method": "source_cancel",
+      "baseline": {
+        "two_qubit_gates": 3456,
+        "total_gates": 10516,
+        "depth": 9987,
+        "allocated_qubits": 9,
+        "active_qubits": 9,
+        "compilation_seconds": 0.005583125006523915
+      },
+      "candidate": {
+        "two_qubit_gates": 3456,
+        "total_gates": 10516,
+        "depth": 9987,
+        "allocated_qubits": 9,
+        "active_qubits": 9,
+        "compilation_seconds": 0.00523037499806378
+      },
+      "pass_seconds": 0.0026436670013936237,
+      "solve_compile_seconds": 0.011763291986426339,
+      "stats": {
+        "removed_instructions": 532
+      }
+    },
+    {
+      "case": "tier8_public_multiplier_11",
+      "method": "compiled_cancel",
+      "baseline": {
+        "two_qubit_gates": 3456,
+        "total_gates": 10516,
+        "depth": 9987,
+        "allocated_qubits": 9,
+        "active_qubits": 9,
+        "compilation_seconds": 0.005583125006523915
+      },
+      "candidate": {
+        "two_qubit_gates": 3456,
+        "total_gates": 10516,
+        "depth": 9987,
+        "allocated_qubits": 9,
+        "active_qubits": 9,
+        "compilation_seconds": 0.005197333011892624
+      },
+      "pass_seconds": 0.05448687500029337,
+      "solve_compile_seconds": 0.005548041997826658,
+      "stats": {
+        "removed_instructions": 0
+      }
+    },
+    {
+      "case": "tier8_public_multiplier_11",
+      "method": "compiled_gf2",
+      "baseline": {
+        "two_qubit_gates": 3456,
+        "total_gates": 10516,
+        "depth": 9987,
+        "allocated_qubits": 9,
+        "active_qubits": 9,
+        "compilation_seconds": 0.005583125006523915
+      },
+      "candidate": {
+        "two_qubit_gates": 3456,
+        "total_gates": 10516,
+        "depth": 9987,
+        "allocated_qubits": 9,
+        "active_qubits": 9,
+        "compilation_seconds": 0.005343582990462892
+      },
+      "pass_seconds": 0.26120099998661317,
+      "solve_compile_seconds": 0.005720333007047884,
+      "stats": {
+        "windows": 3456,
+        "accepted": 0,
+        "removed_cx": 0,
+        "max_window_wires": 2
+      }
+    },
+    {
+      "case": "tier8_full",
+      "method": "source_gf2",
+      "baseline": {
+        "two_qubit_gates": 42792,
+        "total_gates": 130171,
+        "depth": 123300,
+        "allocated_qubits": 18,
+        "active_qubits": 18,
+        "compilation_seconds": 0.056295792004675604
+      },
+      "candidate": {
+        "two_qubit_gates": 42792,
+        "total_gates": 130171,
+        "depth": 123300,
+        "allocated_qubits": 18,
+        "active_qubits": 18,
+        "compilation_seconds": 0.05619579099584371
+      },
+      "pass_seconds": 0.00026233399694319814,
+      "solve_compile_seconds": 0.14221441600238904,
+      "stats": {
+        "windows": 0,
+        "accepted": 0,
+        "removed_cx": 0,
+        "max_window_wires": 0
+      }
+    },
+    {
+      "case": "tier8_full",
+      "method": "source_cancel",
+      "baseline": {
+        "two_qubit_gates": 42792,
+        "total_gates": 130171,
+        "depth": 123300,
+        "allocated_qubits": 18,
+        "active_qubits": 18,
+        "compilation_seconds": 0.056295792004675604
+      },
+      "candidate": {
+        "two_qubit_gates": 42792,
+        "total_gates": 130171,
+        "depth": 123300,
+        "allocated_qubits": 18,
+        "active_qubits": 18,
+        "compilation_seconds": 0.05393808300141245
+      },
+      "pass_seconds": 0.00036054200609214604,
+      "solve_compile_seconds": 0.1370980000065174,
+      "stats": {
+        "removed_instructions": 0
+      }
+    },
+    {
+      "case": "tier8_full",
+      "method": "compiled_cancel",
+      "baseline": {
+        "two_qubit_gates": 42792,
+        "total_gates": 130171,
+        "depth": 123300,
+        "allocated_qubits": 18,
+        "active_qubits": 18,
+        "compilation_seconds": 0.056295792004675604
+      },
+      "candidate": {
+        "two_qubit_gates": 42792,
+        "total_gates": 130171,
+        "depth": 123300,
+        "allocated_qubits": 18,
+        "active_qubits": 18,
+        "compilation_seconds": 0.05246837499726098
+      },
+      "pass_seconds": 0.6775830839906121,
+      "solve_compile_seconds": 0.05443658299918752,
+      "stats": {
+        "removed_instructions": 0
+      }
+    },
+    {
+      "case": "tier8_full",
+      "method": "compiled_gf2",
+      "baseline": {
+        "two_qubit_gates": 42792,
+        "total_gates": 130171,
+        "depth": 123300,
+        "allocated_qubits": 18,
+        "active_qubits": 18,
+        "compilation_seconds": 0.056295792004675604
+      },
+      "candidate": {
+        "two_qubit_gates": 42792,
+        "total_gates": 130171,
+        "depth": 123300,
+        "allocated_qubits": 18,
+        "active_qubits": 18,
+        "compilation_seconds": 0.057135207985993475
+      },
+      "pass_seconds": 3.0689676249894546,
+      "solve_compile_seconds": 0.055739250004990026,
+      "stats": {
+        "windows": 42792,
+        "accepted": 0,
+        "removed_cx": 0,
+        "max_window_wires": 2
+      }
+    },
+    {
+      "case": "tier7_qft_core",
+      "method": "source_gf2",
+      "baseline": {
+        "two_qubit_gates": 182,
+        "total_gates": 497,
+        "depth": 105,
+        "allocated_qubits": 14,
+        "active_qubits": 14,
+        "compilation_seconds": 0.0014646250056102872
+      },
+      "candidate": {
+        "two_qubit_gates": 182,
+        "total_gates": 497,
+        "depth": 105,
+        "allocated_qubits": 14,
+        "active_qubits": 14,
+        "compilation_seconds": 0.0012585829972522333
+      },
+      "pass_seconds": 0.000818041997263208,
+      "solve_compile_seconds": 0.0015477499982807785,
+      "stats": {
+        "windows": 0,
+        "accepted": 0,
+        "removed_cx": 0,
+        "max_window_wires": 0
+      }
+    },
+    {
+      "case": "tier7_qft_core",
+      "method": "source_cancel",
+      "baseline": {
+        "two_qubit_gates": 182,
+        "total_gates": 497,
+        "depth": 105,
+        "allocated_qubits": 14,
+        "active_qubits": 14,
+        "compilation_seconds": 0.0014646250056102872
+      },
+      "candidate": {
+        "two_qubit_gates": 182,
+        "total_gates": 497,
+        "depth": 105,
+        "allocated_qubits": 14,
+        "active_qubits": 14,
+        "compilation_seconds": 0.0012562920019263402
+      },
+      "pass_seconds": 0.0008077499951468781,
+      "solve_compile_seconds": 0.0014775839954381809,
+      "stats": {
+        "removed_instructions": 0
+      }
+    },
+    {
+      "case": "tier7_qft_core",
+      "method": "compiled_cancel",
+      "baseline": {
+        "two_qubit_gates": 182,
+        "total_gates": 497,
+        "depth": 105,
+        "allocated_qubits": 14,
+        "active_qubits": 14,
+        "compilation_seconds": 0.0014646250056102872
+      },
+      "candidate": {
+        "two_qubit_gates": 182,
+        "total_gates": 497,
+        "depth": 105,
+        "allocated_qubits": 14,
+        "active_qubits": 14,
+        "compilation_seconds": 0.0014075829967623577
+      },
+      "pass_seconds": 0.008730166999157518,
+      "solve_compile_seconds": 0.002591374999610707,
+      "stats": {
+        "removed_instructions": 0
+      }
+    },
+    {
+      "case": "tier7_qft_core",
+      "method": "compiled_gf2",
+      "baseline": {
+        "two_qubit_gates": 182,
+        "total_gates": 497,
+        "depth": 105,
+        "allocated_qubits": 14,
+        "active_qubits": 14,
+        "compilation_seconds": 0.0014646250056102872
+      },
+      "candidate": {
+        "two_qubit_gates": 182,
+        "total_gates": 497,
+        "depth": 105,
+        "allocated_qubits": 14,
+        "active_qubits": 14,
+        "compilation_seconds": 0.001339499998721294
+      },
+      "pass_seconds": 0.014118999999482185,
+      "solve_compile_seconds": 0.001303665994782932,
+      "stats": {
+        "windows": 182,
+        "accepted": 0,
+        "removed_cx": 0,
+        "max_window_wires": 2
+      }
+    }
+  ]
+}

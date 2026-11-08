@@ -1,0 +1,29 @@
+{
+  "config_sha256": "16eea5d6bcd4ad44b60cd0b50a15d7c2fbdee98ec16b9fe5b61426a8f020a31e",
+  "hashes_sha256": "54bcd720b8b3fb665794c59e51d1e83747029578012fac7f2765e3474ac831e3",
+  "mode": "full",
+  "qiskit": "2.6.1",
+  "qiskit_aer": "0.18.2",
+  "sha": null,
+  "submitted_at": null,
+  "team": "checked_combined",
+  "tiers": {
+    "5": {
+      "circuit_executed": true,
+      "circuits_executed": 1,
+      "flags": [],
+      "hash_ok": true,
+      "metrics": {
+        "active_qubits": 19,
+        "depth": 27282,
+        "total_gates": 41088,
+        "two_qubit_gates": 14552
+      },
+      "metrics_status": "ok",
+      "oracle_calls": null,
+      "solve_seconds": 13.39,
+      "status": "full",
+      "unique_circuits": 1
+    }
+  }
+}

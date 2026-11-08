@@ -1,0 +1,24 @@
+{
+  "gf2_windows": {
+    "windows": 10879,
+    "accepted": 248,
+    "removed_cx": 148,
+    "max_window_wires": 5
+  },
+  "exhaustive_operator_windows": 248,
+  "combined_gf2_windows": {
+    "windows": 10806,
+    "accepted": 248,
+    "removed_cx": 148,
+    "max_window_wires": 5
+  },
+  "combined_exhaustive_operator_windows": 248,
+  "max_gf2_operator_error": 0.0,
+  "same_non_cx_operations": true,
+  "measurement_mapping_preserved": true,
+  "global_phase_preserved": true,
+  "mcx9_clean_basis_columns": 1024,
+  "mcx9_ancillas": 2,
+  "max_mcx9_amplitude_error": 5.3327322186276366e-15,
+  "seconds": 6.1284470000100555
+}

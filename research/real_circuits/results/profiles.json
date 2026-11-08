@@ -1,0 +1,66 @@
+{
+  "baseline": {
+    "hash_ok": true,
+    "solve_seconds": 13.257576207994134,
+    "compilation_seconds": [
+      0.0908267920021899
+    ],
+    "research_pass_seconds": [],
+    "aer_calls": [
+      {
+        "seed_simulator": 2026,
+        "shots": 128,
+        "success": true,
+        "aer_seconds": 13.157604666994303
+      }
+    ],
+    "source_sha256": {
+      "tier05/solution.py": "b8b0a6ae7ebc677e4395b783491fabafce70f744eba0de8118b6be0662a3f208",
+      "tier05/oracle.py": "99b3aa98b2445faf9e4fe868c09d95dd278b4c5b542fb54065061cb965bed016"
+    }
+  },
+  "gf2": {
+    "hash_ok": true,
+    "solve_seconds": 15.068884666005033,
+    "compilation_seconds": [
+      0.05918133301020134
+    ],
+    "research_pass_seconds": [
+      0.9117722079972737
+    ],
+    "aer_calls": [
+      {
+        "seed_simulator": 2026,
+        "shots": 128,
+        "success": true,
+        "aer_seconds": 14.084007707991987
+      }
+    ],
+    "source_sha256": {
+      "tier05/solution.py": "a1669e22914981dc8eaed688e7020342c737ebea13fb6b236736e7b12d64d441",
+      "tier05/oracle.py": "99b3aa98b2445faf9e4fe868c09d95dd278b4c5b542fb54065061cb965bed016"
+    }
+  },
+  "combined": {
+    "hash_ok": true,
+    "solve_seconds": 14.339264750000439,
+    "compilation_seconds": [
+      0.053352500006440096
+    ],
+    "research_pass_seconds": [
+      0.8884671660052845
+    ],
+    "aer_calls": [
+      {
+        "seed_simulator": 2026,
+        "shots": 128,
+        "success": true,
+        "aer_seconds": 13.383727917011129
+      }
+    ],
+    "source_sha256": {
+      "tier05/solution.py": "a1669e22914981dc8eaed688e7020342c737ebea13fb6b236736e7b12d64d441",
+      "tier05/oracle.py": "a0dc8eb857809b03589f34a7d762ab03ffd794391313b15b13b3f4a54fb26fc4"
+    }
+  }
+}

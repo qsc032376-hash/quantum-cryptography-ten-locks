@@ -1,0 +1,169 @@
+{
+  "templates": [
+    {
+      "controls": 8,
+      "budget": 3,
+      "contract": "dirty",
+      "workspace": 3,
+      "synthesis": "synth_mcx_n_dirty_m15",
+      "two_qubit_gates": 52,
+      "total_gates": 158,
+      "depth": 155,
+      "allocated_qubits": 12,
+      "active_qubits": 12,
+      "compilation_seconds": 0.10727354200207628
+    },
+    {
+      "controls": 8,
+      "budget": 3,
+      "contract": "dirty",
+      "workspace": 1,
+      "synthesis": "synth_mcx_1_dirty_kg24",
+      "two_qubit_gates": 78,
+      "total_gates": 273,
+      "depth": 189,
+      "allocated_qubits": 10,
+      "active_qubits": 10,
+      "compilation_seconds": 0.0016537089977646247
+    },
+    {
+      "controls": 8,
+      "budget": 3,
+      "contract": "dirty",
+      "workspace": 2,
+      "synthesis": "synth_mcx_2_dirty_kg24",
+      "two_qubit_gates": 78,
+      "total_gates": 267,
+      "depth": 133,
+      "allocated_qubits": 11,
+      "active_qubits": 11,
+      "compilation_seconds": 0.001562166988151148
+    },
+    {
+      "controls": 6,
+      "budget": 2,
+      "contract": "dirty",
+      "workspace": 2,
+      "synthesis": "synth_mcx_n_dirty_m15",
+      "two_qubit_gates": 36,
+      "total_gates": 110,
+      "depth": 107,
+      "allocated_qubits": 9,
+      "active_qubits": 9,
+      "compilation_seconds": 0.0012935830018250272
+    },
+    {
+      "controls": 6,
+      "budget": 2,
+      "contract": "dirty",
+      "workspace": 1,
+      "synthesis": "synth_mcx_1_dirty_kg24",
+      "two_qubit_gates": 54,
+      "total_gates": 185,
+      "depth": 133,
+      "allocated_qubits": 8,
+      "active_qubits": 8,
+      "compilation_seconds": 0.0013089579879306257
+    },
+    {
+      "controls": 6,
+      "budget": 2,
+      "contract": "dirty",
+      "workspace": 2,
+      "synthesis": "synth_mcx_2_dirty_kg24",
+      "two_qubit_gates": 54,
+      "total_gates": 179,
+      "depth": 129,
+      "allocated_qubits": 9,
+      "active_qubits": 9,
+      "compilation_seconds": 0.001316249996307306
+    },
+    {
+      "controls": 9,
+      "budget": 4,
+      "contract": "clean",
+      "workspace": 4,
+      "synthesis": "synth_mcx_n_clean_m15",
+      "two_qubit_gates": 48,
+      "total_gates": 166,
+      "depth": 114,
+      "allocated_qubits": 14,
+      "active_qubits": 14,
+      "compilation_seconds": 0.0013563329994212836
+    },
+    {
+      "controls": 9,
+      "budget": 4,
+      "contract": "clean",
+      "workspace": 1,
+      "synthesis": "synth_mcx_1_clean_kg24",
+      "two_qubit_gates": 48,
+      "total_gates": 172,
+      "depth": 120,
+      "allocated_qubits": 11,
+      "active_qubits": 11,
+      "compilation_seconds": 0.0012553749984363094
+    },
+    {
+      "controls": 9,
+      "budget": 4,
+      "contract": "clean",
+      "workspace": 2,
+      "synthesis": "synth_mcx_2_clean_kg24",
+      "two_qubit_gates": 48,
+      "total_gates": 172,
+      "depth": 80,
+      "allocated_qubits": 12,
+      "active_qubits": 12,
+      "compilation_seconds": 0.0012426670000422746
+    }
+  ],
+  "qft": [
+    {
+      "tier": "tier8",
+      "boundary_reversal_detected": false
+    },
+    {
+      "tier": "tier7",
+      "boundary_reversal_detected": false
+    }
+  ],
+  "full_tier5": [
+    {
+      "method": "two_clean_only",
+      "scoring": {
+        "two_qubit_gates": 14700,
+        "total_gates": 41236,
+        "depth": 27628,
+        "allocated_qubits": 19,
+        "active_qubits": 19,
+        "compilation_seconds": 0.015739792012027465
+      },
+      "solve_compile": {
+        "two_qubit_gates": 14700,
+        "total_gates": 41236,
+        "depth": 27628,
+        "allocated_qubits": 19,
+        "active_qubits": 19,
+        "compilation_seconds": 0.03182316699530929
+      }
+    },
+    {
+      "method": "two_clean_and_gf2",
+      "scoring": {
+        "two_qubit_gates": 14552,
+        "total_gates": 41088,
+        "depth": 27282,
+        "allocated_qubits": 19,
+        "active_qubits": 19,
+        "compilation_seconds": 0.0173809169937158
+      },
+      "gf2_stats": {
+        "windows": 10806,
+        "accepted": 248,
+        "removed_cx": 148,
+        "max_window_wires": 5
+      }
+    }
+  ]
+}
