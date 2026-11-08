@@ -1,0 +1,141 @@
+{
+  "snapshot": "0988ac44d88d08cc12258f2010afaf792dd53e7b",
+  "research_candidate": "4d79b7fa66d0acd4786d71be3c3ac2d291618c69",
+  "transition": "inverse(mask0); mask1",
+  "original_terms": 48,
+  "unique_terms": 48,
+  "cancelled_term_pairs": 0,
+  "odd_terms": 48,
+  "all_1024_key_branches_equal": true,
+  "method": "ANF parity of key-controlled XORs; targets do not control any gate",
+  "baseline": {
+    "source_ops": {
+      "cx": 32,
+      "ccx": 16
+    },
+    "native_cx": 128,
+    "scored": {
+      "two_qubit_gates": 126,
+      "total_gates": 318,
+      "depth": 201,
+      "allocated_qubits": 19,
+      "active_qubits": 18
+    },
+    "gf2_removed": 2,
+    "compile_seconds": 0.0494333750102669
+  },
+  "fusion": {
+    "source_ops": {
+      "cx": 32,
+      "ccx": 16
+    },
+    "native_cx": 128,
+    "scored": {
+      "two_qubit_gates": 128,
+      "total_gates": 310,
+      "depth": 120,
+      "allocated_qubits": 19,
+      "active_qubits": 18
+    },
+    "gf2_removed": 0,
+    "compile_seconds": 0.019166083991876803
+  },
+  "gf2_linear_then_quadratic": {
+    "source_ops": {
+      "cx": 32,
+      "ccx": 16
+    },
+    "native_cx": 128,
+    "scored": {
+      "two_qubit_gates": 128,
+      "total_gates": 280,
+      "depth": 98,
+      "allocated_qubits": 19,
+      "active_qubits": 18
+    },
+    "gf2_removed": 0,
+    "compile_seconds": 0.018971541998325847
+  },
+  "linear_gf2_accepted": false,
+  "representative_complex_operator_max_error": 0.0,
+  "19_qubit_superposition_max_error": 0.0,
+  "limitations": "No comparisons crossed; arbitrary work, flag and borrowed key wires are unchanged except for proven work XOR.",
+  "full_oracle_baseline": {
+    "source_ops": {
+      "cx": 96,
+      "ccx": 48,
+      "x": 20,
+      "circuit-551": 2,
+      "h": 2,
+      "circuit-551_dg": 1
+    },
+    "native_cx": 540,
+    "scored": {
+      "two_qubit_gates": 536,
+      "total_gates": 1424,
+      "depth": 1015,
+      "allocated_qubits": 19,
+      "active_qubits": 19
+    },
+    "gf2_removed": 4,
+    "compile_seconds": 0.019854583995766006
+  },
+  "full_oracle_fused": {
+    "source_ops": {
+      "cx": 96,
+      "ccx": 48,
+      "x": 20,
+      "circuit-540": 2,
+      "h": 2,
+      "circuit-540_dg": 1
+    },
+    "native_cx": 540,
+    "scored": {
+      "two_qubit_gates": 540,
+      "total_gates": 1356,
+      "depth": 840,
+      "allocated_qubits": 19,
+      "active_qubits": 19
+    },
+    "gf2_removed": 0,
+    "compile_seconds": 0.01996637500997167
+  },
+  "measurement_map_verified": true,
+  "full_grover_baseline": {
+    "source_ops": {
+      "tier05_phase_oracle": 25,
+      "tier05_diffuser": 25,
+      "h": 10,
+      "measure": 10
+    },
+    "native_cx": 14700,
+    "scored": {
+      "two_qubit_gates": 14552,
+      "total_gates": 40938,
+      "depth": 28132,
+      "allocated_qubits": 19,
+      "active_qubits": 19
+    },
+    "gf2_removed": 148,
+    "compile_seconds": 0.04944095799874049
+  },
+  "full_grover_fused": {
+    "source_ops": {
+      "tier05_phase_oracle": 25,
+      "tier05_diffuser": 25,
+      "h": 10,
+      "measure": 10
+    },
+    "native_cx": 14700,
+    "scored": {
+      "two_qubit_gates": 14652,
+      "total_gates": 39238,
+      "depth": 23757,
+      "allocated_qubits": 19,
+      "active_qubits": 19
+    },
+    "gf2_removed": 48,
+    "compile_seconds": 0.05072654099785723
+  },
+  "whole_equivalence": "exact operator substitution F=A^-1 B and inverse; all comparison operations unchanged"
+}
