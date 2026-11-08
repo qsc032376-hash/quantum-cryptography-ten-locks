@@ -1,12 +1,12 @@
 # v2 发布就绪审计
 
-**结论：READY_WITH_CAVEATS。** 对现有官方 Checker 的单团队、每关新进程模型，未发现阻断性提交问题；同进程多团队隔离缺陷和 Tier 10 独立报告缺口须保留。工程就绪不等于已经提交或获得比赛平台裁定；未上传 ZIP，也未创建正式 release。
+**结论：BLOCKED（提交材料不完整）。** 复核官方提交说明后，现有 v2 ZIP 缺少要求的团队 `README.md` 与 `WRITEUP.md`：前者须链接后者，后者须含逐关与扩展性章节。此前 `READY_WITH_CAVEATS` 仅依据代码与 Checker 审计，未充分核对提交材料，现予更正。算法 Checker 证据未变；未上传 ZIP，也未创建正式 release。完整待办见 [最终提交清单](FINAL_SUBMISSION_CHECKLIST.md)。
 
 ## 来源与既有验证
 
 - 审计目标：`integration/optimized-v2-candidate@0cd8adc025e89fa190836e9295f6b5ffa482e17a`；父提交为冻结回退 `release/ten-locks-v1@868fb65e20c73a27bffc118f3617080df9cf2f8b`。v1→v2 diff 仅有集成报告及两个生产文件。
 - Tier 5 `oracle.py` 与 [`804b9dd`](https://github.com/qsc032376-hash/quantum-cryptography-ten-locks/commit/804b9dd349a40edd834fd06dfb2ceb09c6658bfc) 字节相同；[独立验收 `ab96767`](https://github.com/qsc032376-hash/quantum-cryptography-ten-locks/blob/ab9676749e00da904d0b8076811a2407d3b7205f/docs/TIER05_INDEPENDENT_ACCEPTANCE.md) 给出人工 ACCEPT、官方 Checker 和五组配对种子证据，明确不是零失败率证明。
-- Tier 10 `dh_classical.py` 与 [`44766ba`](https://github.com/qsc032376-hash/quantum-cryptography-ten-locks/commit/44766baa3f9ba5859cc32f45fc53feaf8807af4b) 字节相同；该提交只含源码变更。检索仓库当前远端分支的文档及测试路径后，未找到针对该提交的独立验收报告。[作者的接口交接说明](https://github.com/qsc032376-hash/quantum-cryptography-ten-locks/blob/dad1190f29ad5ac015fde7ffcee28f2cdc248983/docs/TIER10_CLASSICAL_INTERFACE.md)描述容错并自述测试，不能视为独立报告；不补造历史结果。本次复用 [v2 集成记录](OPTIMIZED_V2_CANDIDATE.md)中的 4 项合成集成测试、额外人工参数检查与真实 Checker 证据。
+- Tier 10 `dh_classical.py` 与 [`44766ba`](https://github.com/qsc032376-hash/quantum-cryptography-ten-locks/commit/44766baa3f9ba5859cc32f45fc53feaf8807af4b) 字节相同；该提交只含源码变更；独立历史验收报告标记为 **EVIDENCE_NOT_ARCHIVED**。检索仓库当前远端分支和本地工作树后未找到该报告。已原样归档 [作者接口交接说明](TIER10_CLASSICAL_INTERFACE.md)，来源 `dad1190f29ad5ac015fde7ffcee28f2cdc248983`，其 DH 源码与 `44766ba` 及 v2 对应文件字节相同；说明内的噪声方程测试是作者自述，并非已找到的独立验收报告。没有补造历史结果。本次复用 [v2 集成记录](OPTIMIZED_V2_CANDIDATE.md)中的 4 项合成集成测试、额外人工参数检查与真实 Checker 证据。
 - Tier 1–4、6–9、Tier 10 量子电路和正式 `solve()`、官方代码及配置未变。Tier 5 保留 25 次量子 Oracle；Tier 10 仍运行量子电路。v2 集成记录保存的实际 Tier 10 电路 QPY 与 v1 记录字节一致。
 
 原 v2 [集成报告](OPTIMIZED_V2_CANDIDATE.md)中的完整官方 Checker：**10/10 `full`、10/10 SHA-256 匹配、指标齐全、flags 空**。审计读取了仍存在的原始本地 Checker JSON：`sha` 元数据字段当时未指定；为核对身份，本次把当时实际检查的改名团队副本中 27 个跟踪文件逐字节与 `0cd8adc` 比较，全部一致。它是本地官方 Checker 运行记录，并非比赛平台提交证明。本次没有重复完整 Checker 或 Tier 5 配对种子。
@@ -32,7 +32,7 @@
 
 现有 v2 `ten-locks-v2-team3-draft.zip` 的 SHA-256：`9e4fb149f67898e737ebf88a197b2df22a0035cafa015ede3c86383e1f31f49a`。复用 [`2ebf7a1` 的既有打包脚本](https://github.com/qsc032376-hash/quantum-cryptography-ten-locks/blob/2ebf7a1f64bf5450ca862d2e6dba2eaf7718e1d0/tools/package_release_draft.py)，只在运行时传入精确 commit `0cd8adc` 和当前仓库根目录，在临时目录重建；本机输出与现有 ZIP **逐字节相同**。压缩器版本可能影响跨环境字节复现，应同时核验文件内容。
 
-独立解压验证：ZIP 恰有一个 `team3/` 顶层目录、25 个 `.py` 文件，清单等于精确提交中团队源码排除仅供本地运行的两个 Tier 1 测试/验证文件；CRC、无重复/越界路径和每个文件与提交的逐字节比较均通过。改名后在干净子进程按 Checker 风格加载十关及共享依赖，10/10 通过。无文档、日志、缓存、环境、官方锁文件或额外依赖被打包；常见 PEM 私钥、云访问令牌及常见 API token 特征扫描未命中。该扫描和来源核对不能数学证明不存在所有可能的秘密；未输出或检查真实隐藏密钥/明文。ZIP 解压后的完整 Checker 本轮没有重跑，原有全量结果来自字节一致的团队源码副本。
+独立解压验证：ZIP 恰有一个 `team3/` 顶层目录、25 个 `.py` 文件，清单等于精确提交中团队源码排除仅供本地运行的两个 Tier 1 测试/验证文件；CRC、无重复/越界路径和每个文件与提交的逐字节比较均通过。改名后在干净子进程按 Checker 风格加载十关及共享依赖，10/10 通过。没有日志、缓存、环境、官方锁文件或额外依赖被打包；但 ZIP 同时缺少官方要求的团队 README 和 WRITEUP，故仅是源码草稿而非完整提交包。常见 PEM 私钥、云访问令牌及常见 API token 特征扫描未命中。该扫描和来源核对不能数学证明不存在所有可能的秘密；未输出或检查真实隐藏密钥/明文。ZIP 解压后的完整 Checker 本轮没有重跑，原有全量结果来自字节一致的团队源码副本。
 
 v1 回退 `ten-locks-v1-team3-draft.zip` 仍在，SHA-256 与原记录一致：`62351aca20d8fac24723aaf1418620e60b425db0d3c5f28a020da63d82bc3e3a`。未上传比赛平台。
 
@@ -53,6 +53,10 @@ with tempfile.TemporaryDirectory() as tmp:
 PY
 ```
 
-## 剩余风险
+## 阻断项与非阻断风险
+
+**阻断：** 现有 v2 和 v1 回退 ZIP 均为源码草稿；须补齐团队 README、完整 WRITEUP 及其链接，核对展示材料后在不改已验证源码的前提下重新组包、检查并记录新摘要。提交负责人未在本任务中指定，待团队确认。
+
+**非阻断（当前官方 Checker 模型）：** 同进程多团队共享模块污染、独立 Tier 10 历史验收报告未归档、有限采样和通用部分方程的有界候选展开。
 
 现有固定种子 Aer 验证、五组 Tier 5 配对种子和合成测试均是有限理想模拟证据；不保证其他种子或真实硬件。Tier 10 经典修复的独立历史报告仍缺失，且其通用部分方程处理存在有界候选展开；本次正式 Tier 10 路径只传入已验证的完整模数见证。正式提交前应确认平台确实使用上述新进程模型，并保留回退包。
