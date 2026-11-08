@@ -1,0 +1,19 @@
+{
+  "release_commit": "868fb65e20c73a27bffc118f3617080df9cf2f8b",
+  "max_dense_matrix_qubits": 9,
+  "max_matrix_absolute_error": 3.819169221830326e-14,
+  "max_statevector_absolute_error": 7.125808233721244e-16,
+  "max_shor_amplitude_difference": 5.0310528047114645e-15,
+  "max_shor_measurement_probability_difference": 1.3322676295501878e-14,
+  "artificial_aer_run_calls": 1,
+  "artificial_aer_circuits": 6,
+  "aer_threads": 2,
+  "aer_memory_limit_mb": 512,
+  "real_tier08_executions": 0,
+  "independent_mcx6": {
+    "qubits": 9,
+    "columns": 512,
+    "max_complex_error": 3.774758283725532e-15
+  },
+  "suite_tests": 8
+}

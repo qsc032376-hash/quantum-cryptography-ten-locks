@@ -1,0 +1,164 @@
+{
+  "comparison": {
+    "changes": {
+      "active_qubits": 0,
+      "depth": -11840,
+      "total_gates": -17895,
+      "two_qubit_gates": -7110
+    },
+    "paired_multiseed_evidence": true,
+    "recommendation": "ACCEPT",
+    "reliability_reviewed": true,
+    "rules_reviewed": true,
+    "target_metric": "two_qubit_gates"
+  },
+  "environment": {
+    "numpy": "2.5.4",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "psutil": "7.2.2",
+    "python": "3.12.10",
+    "qiskit": "2.6.1",
+    "qiskit-aer": "0.18.2"
+  },
+  "kind": "circuit_comparison",
+  "profile_simulator_seed": 808,
+  "refs": {
+    "baseline": {
+      "aer_timing": {
+        "aer_job_elapsed_seconds": 13.085577900055796,
+        "jobs_finished": 1,
+        "result_wait_seconds": 13.069981700042263
+      },
+      "application_rng_seed": "solution default (not injected)",
+      "commit": "73f4dbe330de3098acb368464d3f5606c30259f8",
+      "exception_class": null,
+      "instrumentation_verified": true,
+      "metrics": {
+        "active_qubits": 18,
+        "depth": 135160,
+        "total_gates": 148085,
+        "two_qubit_gates": 49920
+      },
+      "native_transpilation_calls": [
+        {
+          "backend_class": null,
+          "basis_gates": [
+            "rz",
+            "sx",
+            "x",
+            "cx"
+          ],
+          "coupling_map": null,
+          "optimization_level": 1,
+          "seed_transpiler": 12345,
+          "target": null
+        }
+      ],
+      "official": {
+        "circuit_executed": true,
+        "circuits_executed": 1,
+        "flags": [],
+        "hash_ok": true,
+        "metrics": {
+          "active_qubits": 18,
+          "depth": 135160,
+          "total_gates": 148085,
+          "two_qubit_gates": 49920
+        },
+        "metrics_status": "ok",
+        "oracle_calls": null,
+        "resource": {
+          "memory_limit_mb": 1536,
+          "peak_rss_bytes_sampled": 481730560,
+          "state": "ok",
+          "timeout_seconds": 370.0,
+          "wall_seconds": 15.906
+        },
+        "solve_seconds": 13.356,
+        "status": "full",
+        "unique_circuits": 1
+      },
+      "profile_hash_ok": true,
+      "resource": {
+        "memory_limit_mb": 1536,
+        "peak_rss_bytes_sampled": 445911040,
+        "state": "ok",
+        "timeout_seconds": 120.0,
+        "wall_seconds": 15.281
+      },
+      "scoring_transpile_seconds": 0.32621049997396767,
+      "shots_total": 64,
+      "solve_seconds": 13.438
+    },
+    "candidate": {
+      "aer_timing": {
+        "aer_job_elapsed_seconds": 13.70137199992314,
+        "jobs_finished": 1,
+        "result_wait_seconds": 13.69350660010241
+      },
+      "application_rng_seed": "solution default (not injected)",
+      "commit": "072adc8ce83e1e13f96812154b5b90d9a2915275",
+      "exception_class": null,
+      "instrumentation_verified": true,
+      "metrics": {
+        "active_qubits": 18,
+        "depth": 123320,
+        "total_gates": 130190,
+        "two_qubit_gates": 42810
+      },
+      "native_transpilation_calls": [
+        {
+          "backend_class": null,
+          "basis_gates": [
+            "rz",
+            "sx",
+            "x",
+            "cx"
+          ],
+          "coupling_map": null,
+          "optimization_level": 1,
+          "seed_transpiler": 12345,
+          "target": null
+        }
+      ],
+      "official": {
+        "circuit_executed": true,
+        "circuits_executed": 1,
+        "flags": [],
+        "hash_ok": true,
+        "metrics": {
+          "active_qubits": 18,
+          "depth": 123320,
+          "total_gates": 130190,
+          "two_qubit_gates": 42810
+        },
+        "metrics_status": "ok",
+        "oracle_calls": null,
+        "resource": {
+          "memory_limit_mb": 1536,
+          "peak_rss_bytes_sampled": 448155648,
+          "state": "ok",
+          "timeout_seconds": 370.0,
+          "wall_seconds": 15.687
+        },
+        "solve_seconds": 13.279,
+        "status": "full",
+        "unique_circuits": 1
+      },
+      "profile_hash_ok": true,
+      "resource": {
+        "memory_limit_mb": 1536,
+        "peak_rss_bytes_sampled": 429199360,
+        "state": "ok",
+        "timeout_seconds": 120.0,
+        "wall_seconds": 15.703
+      },
+      "scoring_transpile_seconds": 0.26822359999641776,
+      "shots_total": 64,
+      "solve_seconds": 14.009
+    }
+  },
+  "schema_version": 1,
+  "scoring_config_git_blob": "4f502a2b80ba79134f70db490997b4f959a6cf0c",
+  "tier": 8
+}

@@ -10,7 +10,7 @@ from functools import lru_cache
 from math import gcd
 
 from qiskit import QuantumCircuit
-from qiskit.synthesis import synth_mcx_n_dirty_i15
+from qiskit.synthesis import synth_mcx_n_dirty_i15, synth_mcx_n_dirty_m15
 
 
 def _validate_width(work_bits: int):
@@ -46,7 +46,13 @@ def permutation_table(multiplier: int, modulus: int, work_bits: int) -> list[int
 
 @lru_cache(maxsize=16)
 def _mcx_template(controls: int) -> QuantumCircuit:
-    """Private synthesis template; wire order is controls, target, ancillas."""
+    """Exact MCX; wire order is controls, target, restored dirty ancillas.
+
+    For four or more controls, Maslov's complete synthesis needs fewer
+    dirty wires than the Iten template. Its internal relative-phase pieces
+    cancel; the returned operation is an exact MCX, not an action-only or
+    relative-phase substitute. Keep the original no-ancilla small cases.
+    """
     if controls == 1:
         circuit = QuantumCircuit(2)
         circuit.cx(0, 1)
@@ -55,6 +61,8 @@ def _mcx_template(controls: int) -> QuantumCircuit:
         circuit = QuantumCircuit(3)
         circuit.ccx(0, 1, 2)
         return circuit
+    if controls >= 4:
+        return synth_mcx_n_dirty_m15(controls)
     return synth_mcx_n_dirty_i15(controls, relative_phase=False, action_only=False)
 
 

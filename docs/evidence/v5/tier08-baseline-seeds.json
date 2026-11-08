@@ -1,0 +1,411 @@
+{
+  "commit": "73f4dbe330de3098acb368464d3f5606c30259f8",
+  "environment": {
+    "numpy": "2.5.4",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "psutil": "7.2.2",
+    "python": "3.12.10",
+    "qiskit": "2.6.1",
+    "qiskit-aer": "0.18.2"
+  },
+  "kind": "cross_seed_regression",
+  "limits": {
+    "memory_mb": 1536,
+    "per_run_seconds": 120.0,
+    "total_seconds": 1250.0
+  },
+  "runs": [
+    {
+      "aer_calls": 1,
+      "aer_circuits_observed": 1,
+      "aer_timing": {
+        "aer_job_elapsed_seconds": 12.997092500096187,
+        "jobs_finished": 1,
+        "result_wait_seconds": 12.987217900110409
+      },
+      "circuits_executed": 1,
+      "hash_ok": true,
+      "native_transpilation_calls": null,
+      "not_implemented": false,
+      "resource": {
+        "memory_limit_mb": 1536,
+        "peak_rss_bytes_sampled": 443330560,
+        "state": "ok",
+        "timeout_seconds": 120.0,
+        "wall_seconds": 16.344
+      },
+      "seed": 800,
+      "seed_metadata": {
+        "actual_forwarded_simulator_seeds": [
+          800
+        ],
+        "application_rng_seed": "solution default (not injected)",
+        "requested_simulator_seed": 800,
+        "solution_declared_seeds": {
+          "SEED_SIMULATOR": 808,
+          "SEED_TRANSPILER": 12345
+        },
+        "transpiler_seed": 12345
+      },
+      "shots_known": true,
+      "shots_total": 64,
+      "solve_seconds": 13.384,
+      "status": "PASS",
+      "tier": 8,
+      "unique_circuits": 1
+    },
+    {
+      "aer_calls": 1,
+      "aer_circuits_observed": 1,
+      "aer_timing": {
+        "aer_job_elapsed_seconds": 12.996704200049862,
+        "jobs_finished": 1,
+        "result_wait_seconds": 12.98900689999573
+      },
+      "circuits_executed": 1,
+      "hash_ok": true,
+      "native_transpilation_calls": null,
+      "not_implemented": false,
+      "resource": {
+        "memory_limit_mb": 1536,
+        "peak_rss_bytes_sampled": 455188480,
+        "state": "ok",
+        "timeout_seconds": 120.0,
+        "wall_seconds": 14.844
+      },
+      "seed": 801,
+      "seed_metadata": {
+        "actual_forwarded_simulator_seeds": [
+          801
+        ],
+        "application_rng_seed": "solution default (not injected)",
+        "requested_simulator_seed": 801,
+        "solution_declared_seeds": {
+          "SEED_SIMULATOR": 808,
+          "SEED_TRANSPILER": 12345
+        },
+        "transpiler_seed": 12345
+      },
+      "shots_known": true,
+      "shots_total": 64,
+      "solve_seconds": 13.295,
+      "status": "PASS",
+      "tier": 8,
+      "unique_circuits": 1
+    },
+    {
+      "aer_calls": 1,
+      "aer_circuits_observed": 1,
+      "aer_timing": {
+        "aer_job_elapsed_seconds": 13.009946499951184,
+        "jobs_finished": 1,
+        "result_wait_seconds": 12.990654399851337
+      },
+      "circuits_executed": 1,
+      "hash_ok": true,
+      "native_transpilation_calls": null,
+      "not_implemented": false,
+      "resource": {
+        "memory_limit_mb": 1536,
+        "peak_rss_bytes_sampled": 457474048,
+        "state": "ok",
+        "timeout_seconds": 120.0,
+        "wall_seconds": 14.812
+      },
+      "seed": 802,
+      "seed_metadata": {
+        "actual_forwarded_simulator_seeds": [
+          802
+        ],
+        "application_rng_seed": "solution default (not injected)",
+        "requested_simulator_seed": 802,
+        "solution_declared_seeds": {
+          "SEED_SIMULATOR": 808,
+          "SEED_TRANSPILER": 12345
+        },
+        "transpiler_seed": 12345
+      },
+      "shots_known": true,
+      "shots_total": 64,
+      "solve_seconds": 13.339,
+      "status": "PASS",
+      "tier": 8,
+      "unique_circuits": 1
+    },
+    {
+      "aer_calls": 1,
+      "aer_circuits_observed": 1,
+      "aer_timing": {
+        "aer_job_elapsed_seconds": 13.037146999966353,
+        "jobs_finished": 1,
+        "result_wait_seconds": 13.017440600087866
+      },
+      "circuits_executed": 1,
+      "hash_ok": true,
+      "native_transpilation_calls": null,
+      "not_implemented": false,
+      "resource": {
+        "memory_limit_mb": 1536,
+        "peak_rss_bytes_sampled": 456441856,
+        "state": "ok",
+        "timeout_seconds": 120.0,
+        "wall_seconds": 14.938
+      },
+      "seed": 803,
+      "seed_metadata": {
+        "actual_forwarded_simulator_seeds": [
+          803
+        ],
+        "application_rng_seed": "solution default (not injected)",
+        "requested_simulator_seed": 803,
+        "solution_declared_seeds": {
+          "SEED_SIMULATOR": 808,
+          "SEED_TRANSPILER": 12345
+        },
+        "transpiler_seed": 12345
+      },
+      "shots_known": true,
+      "shots_total": 64,
+      "solve_seconds": 13.347,
+      "status": "PASS",
+      "tier": 8,
+      "unique_circuits": 1
+    },
+    {
+      "aer_calls": 1,
+      "aer_circuits_observed": 1,
+      "aer_timing": {
+        "aer_job_elapsed_seconds": 13.027527600061148,
+        "jobs_finished": 1,
+        "result_wait_seconds": 13.01008850010112
+      },
+      "circuits_executed": 1,
+      "hash_ok": true,
+      "native_transpilation_calls": null,
+      "not_implemented": false,
+      "resource": {
+        "memory_limit_mb": 1536,
+        "peak_rss_bytes_sampled": 455450624,
+        "state": "ok",
+        "timeout_seconds": 120.0,
+        "wall_seconds": 14.797
+      },
+      "seed": 804,
+      "seed_metadata": {
+        "actual_forwarded_simulator_seeds": [
+          804
+        ],
+        "application_rng_seed": "solution default (not injected)",
+        "requested_simulator_seed": 804,
+        "solution_declared_seeds": {
+          "SEED_SIMULATOR": 808,
+          "SEED_TRANSPILER": 12345
+        },
+        "transpiler_seed": 12345
+      },
+      "shots_known": true,
+      "shots_total": 64,
+      "solve_seconds": 13.372,
+      "status": "PASS",
+      "tier": 8,
+      "unique_circuits": 1
+    },
+    {
+      "aer_calls": 1,
+      "aer_circuits_observed": 1,
+      "aer_timing": {
+        "aer_job_elapsed_seconds": 12.919419399928302,
+        "jobs_finished": 1,
+        "result_wait_seconds": 12.901065899990499
+      },
+      "circuits_executed": 1,
+      "hash_ok": true,
+      "native_transpilation_calls": null,
+      "not_implemented": false,
+      "resource": {
+        "memory_limit_mb": 1536,
+        "peak_rss_bytes_sampled": 455176192,
+        "state": "ok",
+        "timeout_seconds": 120.0,
+        "wall_seconds": 14.625
+      },
+      "seed": 805,
+      "seed_metadata": {
+        "actual_forwarded_simulator_seeds": [
+          805
+        ],
+        "application_rng_seed": "solution default (not injected)",
+        "requested_simulator_seed": 805,
+        "solution_declared_seeds": {
+          "SEED_SIMULATOR": 808,
+          "SEED_TRANSPILER": 12345
+        },
+        "transpiler_seed": 12345
+      },
+      "shots_known": true,
+      "shots_total": 64,
+      "solve_seconds": 13.211,
+      "status": "PASS",
+      "tier": 8,
+      "unique_circuits": 1
+    },
+    {
+      "aer_calls": 1,
+      "aer_circuits_observed": 1,
+      "aer_timing": {
+        "aer_job_elapsed_seconds": 12.925331700127572,
+        "jobs_finished": 1,
+        "result_wait_seconds": 12.918931600172073
+      },
+      "circuits_executed": 1,
+      "hash_ok": true,
+      "native_transpilation_calls": null,
+      "not_implemented": false,
+      "resource": {
+        "memory_limit_mb": 1536,
+        "peak_rss_bytes_sampled": 452718592,
+        "state": "ok",
+        "timeout_seconds": 120.0,
+        "wall_seconds": 14.687
+      },
+      "seed": 806,
+      "seed_metadata": {
+        "actual_forwarded_simulator_seeds": [
+          806
+        ],
+        "application_rng_seed": "solution default (not injected)",
+        "requested_simulator_seed": 806,
+        "solution_declared_seeds": {
+          "SEED_SIMULATOR": 808,
+          "SEED_TRANSPILER": 12345
+        },
+        "transpiler_seed": 12345
+      },
+      "shots_known": true,
+      "shots_total": 64,
+      "solve_seconds": 13.235,
+      "status": "PASS",
+      "tier": 8,
+      "unique_circuits": 1
+    },
+    {
+      "aer_calls": 1,
+      "aer_circuits_observed": 1,
+      "aer_timing": {
+        "aer_job_elapsed_seconds": 12.922925599850714,
+        "jobs_finished": 1,
+        "result_wait_seconds": 12.915188899962232
+      },
+      "circuits_executed": 1,
+      "hash_ok": true,
+      "native_transpilation_calls": null,
+      "not_implemented": false,
+      "resource": {
+        "memory_limit_mb": 1536,
+        "peak_rss_bytes_sampled": 457084928,
+        "state": "ok",
+        "timeout_seconds": 120.0,
+        "wall_seconds": 14.688
+      },
+      "seed": 807,
+      "seed_metadata": {
+        "actual_forwarded_simulator_seeds": [
+          807
+        ],
+        "application_rng_seed": "solution default (not injected)",
+        "requested_simulator_seed": 807,
+        "solution_declared_seeds": {
+          "SEED_SIMULATOR": 808,
+          "SEED_TRANSPILER": 12345
+        },
+        "transpiler_seed": 12345
+      },
+      "shots_known": true,
+      "shots_total": 64,
+      "solve_seconds": 13.21,
+      "status": "PASS",
+      "tier": 8,
+      "unique_circuits": 1
+    },
+    {
+      "aer_calls": 1,
+      "aer_circuits_observed": 1,
+      "aer_timing": {
+        "aer_job_elapsed_seconds": 12.92165830009617,
+        "jobs_finished": 1,
+        "result_wait_seconds": 12.909381800098345
+      },
+      "circuits_executed": 1,
+      "hash_ok": true,
+      "native_transpilation_calls": null,
+      "not_implemented": false,
+      "resource": {
+        "memory_limit_mb": 1536,
+        "peak_rss_bytes_sampled": 457785344,
+        "state": "ok",
+        "timeout_seconds": 120.0,
+        "wall_seconds": 14.687
+      },
+      "seed": 808,
+      "seed_metadata": {
+        "actual_forwarded_simulator_seeds": [
+          808
+        ],
+        "application_rng_seed": "solution default (not injected)",
+        "requested_simulator_seed": 808,
+        "solution_declared_seeds": {
+          "SEED_SIMULATOR": 808,
+          "SEED_TRANSPILER": 12345
+        },
+        "transpiler_seed": 12345
+      },
+      "shots_known": true,
+      "shots_total": 64,
+      "solve_seconds": 13.237,
+      "status": "PASS",
+      "tier": 8,
+      "unique_circuits": 1
+    },
+    {
+      "aer_calls": 1,
+      "aer_circuits_observed": 1,
+      "aer_timing": {
+        "aer_job_elapsed_seconds": 12.913758999900892,
+        "jobs_finished": 1,
+        "result_wait_seconds": 12.90281999995932
+      },
+      "circuits_executed": 1,
+      "hash_ok": true,
+      "native_transpilation_calls": null,
+      "not_implemented": false,
+      "resource": {
+        "memory_limit_mb": 1536,
+        "peak_rss_bytes_sampled": 454868992,
+        "state": "ok",
+        "timeout_seconds": 120.0,
+        "wall_seconds": 14.657
+      },
+      "seed": 809,
+      "seed_metadata": {
+        "actual_forwarded_simulator_seeds": [
+          809
+        ],
+        "application_rng_seed": "solution default (not injected)",
+        "requested_simulator_seed": 809,
+        "solution_declared_seeds": {
+          "SEED_SIMULATOR": 808,
+          "SEED_TRANSPILER": 12345
+        },
+        "transpiler_seed": 12345
+      },
+      "shots_known": true,
+      "shots_total": 64,
+      "solve_seconds": 13.218,
+      "status": "PASS",
+      "tier": 8,
+      "unique_circuits": 1
+    }
+  ],
+  "schema_version": 1,
+  "seed_policy": "AerBackend.run injected requested seed plus call index modulo 2^32; application RNG and transpiler untouched"
+}
