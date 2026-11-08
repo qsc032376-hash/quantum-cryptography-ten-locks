@@ -70,13 +70,13 @@ def build_exponent_mapping(
     return circuit
 
 
-def build_qpe_circuit(
+def build_qpe_qft_only(
     p, g, A, register_bits=REGISTER_BITS, work_bits=WORK_BITS,
 ) -> QuantumCircuit:
     """Prepare work |1>, sample both Fourier registers, and measure qj into cj.
 
-    Both inverse QFTs include their bit-order swaps. The low t classical
-    bits are X and the high t bits are Z; the displayed bitstring must not
+    Both inverse QFT swap networks are absorbed into control wiring. The low
+    t classical bits are X and the high t bits are Z; the displayed bitstring must not
     be reversed. With A=g**a, ideal frequency labels obey v=a*u modulo the
     group order. Finite-grid rounding requires separate classical validation.
     """
@@ -87,12 +87,35 @@ def build_qpe_circuit(
     circuit.x(2 * register_bits)
     circuit.h(range(2 * register_bits))
     # Composition keeps power blocks at the outer level for truthful counting.
-    circuit.compose(mapping, inplace=True)
-    inverse_qft = build_inverse_qft(register_bits).to_gate()
+    # U' = S U S, with S reversing both count registers. H|0> is S-invariant,
+    # so the remaining inverse-QFT body D produces the same physical output
+    # as D S U. Preserve the standalone mapping and inverse-QFT contracts.
+    reversed_controls = [*range(register_bits - 1, -1, -1),
+                         *range(2 * register_bits - 1, register_bits - 1, -1)]
+    circuit.compose(
+        mapping, qubits=[*reversed_controls, *range(2 * register_bits, circuit.num_qubits)],
+        inplace=True,
+    )
+    full_qft = build_inverse_qft(register_bits)
+    qft_body = QuantumCircuit(register_bits, name="tier10_inverse_qft_body")
+    for instruction in full_qft.data:
+        if instruction.operation.name != "swap":
+            qft_body.append(instruction.operation,
+                            [full_qft.find_bit(bit).index for bit in instruction.qubits])
+    inverse_qft = qft_body.to_gate()
     circuit.append(inverse_qft, range(register_bits))
     circuit.append(inverse_qft, range(register_bits, 2 * register_bits))
     circuit.measure(range(2 * register_bits), range(2 * register_bits))
     return circuit
+
+
+def build_qpe_circuit(
+    p, g, A, register_bits=REGISTER_BITS, work_bits=WORK_BITS,
+) -> QuantumCircuit:
+    """Exact shared-fanout and swap-absorbed sampling, preserving counts layout."""
+    _validate_parameters(p, g, A, register_bits, work_bits)
+    from .shared_control import fanout_qft_circuit
+    return fanout_qft_circuit(p, g, A, register_bits, work_bits)
 
 
 def count_group_powers(circuit) -> dict:
