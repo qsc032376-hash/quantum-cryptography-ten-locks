@@ -31,11 +31,15 @@ def solve():
 
 
 def main():
-    p=argparse.ArgumentParser();p.add_argument('--variant',required=True,choices=('baseline','clean'));p.add_argument('--seed',required=True,type=int,choices=range(1000,10001,1000));p.add_argument('--output',required=True,type=Path);p.add_argument('--preflight',action='store_true');a=p.parse_args()
+    p=argparse.ArgumentParser();p.add_argument('--variant',required=True,choices=('original','baseline','clean'));p.add_argument('--seed',required=True,type=int,choices=range(1000,10001,1000));p.add_argument('--output',required=True,type=Path);p.add_argument('--preflight',action='store_true');a=p.parse_args()
     if a.output.exists():p.error('result already exists')
     if not a.output.parent.is_dir():p.error('output directory missing')
     if not a.preflight and not os.environ.get('SLURM_JOB_ID'):p.error('must run in a Slurm allocation')
     with tempfile.TemporaryDirectory(prefix='tier05_osc_',dir=os.environ.get('TMPDIR')) as d:
+        if a.variant=='original':
+            import research.tier05_joint_mcx.validate as validation
+            install=validation.install_variant
+            validation.install_variant=lambda team,variant: install(team,'baseline')
         team=prepare(d,'seedcheck',a.variant=='clean')
         with (team/'tier05/solution.py').open('a') as f:f.write(PATCH)
         if a.preflight:
