@@ -22,6 +22,7 @@ Ten cryptographic challenges connect quantum circuits with classical cryptanalys
 - [Interactive web demo](#interactive-web-demo)
 - [Team](#team)
 - [Acknowledgments](#acknowledgments)
+- [Competition write-up](#competition-write-up)
 - [Security and submission](#security-and-submission)
 
 ## Project highlights
@@ -156,6 +157,10 @@ v5 integrates Tier 5 public-constant folding, Tier 8 exact M15 multi-controlled 
 ## Acknowledgments
 
 We thank the Qiskit Fall Fest Ohio organizers and The Quantum Club at Ohio State for the challenge, and acknowledge [IBM Qiskit](https://docs.quantum.ibm.com/) and [Qiskit Aer](https://qiskit.github.io/qiskit-aer/) for the software used in this work. Additional sources are listed in [references](references/README.md).
+
+## Competition write-up
+
+The [Team 3 README](submissions/team3/README.md) links the [competition WRITEUP](submissions/team3/WRITEUP.md) at the official `submissions/<team_name>/` location. It contains a section for every tier, resource summaries, circuit sketches, mathematical recovery, scaling and noise discussion. This documentation checkout does not contain the verified v5 `solution.py` files; the two documents must be placed beside the verified v5 team modules when preparing the private submission folder. The public v5 evidence omits secret-bearing raw outcome histograms, so the write-up identifies the confidential readout appendix still needed for final submission.
 
 ## Security and submission
 
