@@ -1,0 +1,264 @@
+{
+  "relative_phase_fragment": {
+    "full_operator_max_error": 0.0,
+    "exact": {
+      "native_cx": 13,
+      "scored": {
+        "two_qubit_gates": 13,
+        "total_gates": 43,
+        "depth": 27,
+        "allocated_qubits": 4,
+        "active_qubits": 4
+      },
+      "gf2_removed": 0,
+      "compile_and_pass_seconds": 0.03663462499389425
+    },
+    "relative": {
+      "native_cx": 7,
+      "scored": {
+        "two_qubit_gates": 7,
+        "total_gates": 29,
+        "depth": 23,
+        "allocated_qubits": 4,
+        "active_qubits": 4
+      },
+      "gf2_removed": 0,
+      "compile_and_pass_seconds": 0.02063970900780987
+    },
+    "qualification": "valid here because the intermediate controlled-Z is diagonal; not established across actual mask transitions"
+  },
+  "source_commit": "0988ac44d88d08cc12258f2010afaf792dd53e7b",
+  "candidate_reference": "4d79b7fa66d0acd4786d71be3c3ac2d291618c69",
+  "clean_pair_operator_error_3_controls": 6.739160481952441e-16,
+  "pair8_random_superposition_error": 5.742956581555481e-17,
+  "hypothetical_pair_baseline": {
+    "native_cx": 104,
+    "scored": {
+      "two_qubit_gates": 104,
+      "total_gates": 310,
+      "depth": 307,
+      "allocated_qubits": 13,
+      "active_qubits": 12
+    },
+    "gf2_removed": 0,
+    "compile_and_pass_seconds": 0.027788084000349045
+  },
+  "hypothetical_pair_joint": {
+    "native_cx": 62,
+    "scored": {
+      "two_qubit_gates": 62,
+      "total_gates": 186,
+      "depth": 183,
+      "allocated_qubits": 13,
+      "active_qubits": 13
+    },
+    "gf2_removed": 0,
+    "compile_and_pass_seconds": 0.026980832990375347
+  },
+  "note": "pair is hypothetical: actual comparisons are separated by work-changing masks",
+  "templates": {
+    "m15": {
+      "borrowed": 3,
+      "block": {
+        "native_cx": 52,
+        "scored": {
+          "two_qubit_gates": 52,
+          "total_gates": 158,
+          "depth": 155,
+          "allocated_qubits": 12,
+          "active_qubits": 12
+        },
+        "gf2_removed": 0,
+        "compile_and_pass_seconds": 0.02425637500709854
+      },
+      "small_exact_operator_error": 1.1102687678961034e-15,
+      "oracle": {
+        "native_cx": 540,
+        "scored": {
+          "two_qubit_gates": 536,
+          "total_gates": 1424,
+          "depth": 1015,
+          "allocated_qubits": 19,
+          "active_qubits": 19
+        },
+        "gf2_removed": 4,
+        "compile_and_pass_seconds": 0.06567625000025146
+      },
+      "full": {
+        "native_cx": 14700,
+        "scored": {
+          "two_qubit_gates": 14552,
+          "total_gates": 40938,
+          "depth": 28132,
+          "allocated_qubits": 19,
+          "active_qubits": 19
+        },
+        "gf2_removed": 148,
+        "compile_and_pass_seconds": 0.9256306250026682
+      }
+    },
+    "i15": {
+      "borrowed": 6,
+      "block": {
+        "native_cx": 58,
+        "scored": {
+          "two_qubit_gates": 58,
+          "total_gates": 173,
+          "depth": 165,
+          "allocated_qubits": 15,
+          "active_qubits": 15
+        },
+        "gf2_removed": 0,
+        "compile_and_pass_seconds": 0.0262764579965733
+      },
+      "small_exact_operator_error": 0.0,
+      "oracle": {
+        "native_cx": 558,
+        "scored": {
+          "two_qubit_gates": 554,
+          "total_gates": 1469,
+          "depth": 1056,
+          "allocated_qubits": 19,
+          "active_qubits": 19
+        },
+        "gf2_removed": 4,
+        "compile_and_pass_seconds": 0.05347800000163261
+      },
+      "full": {
+        "native_cx": 15150,
+        "scored": {
+          "two_qubit_gates": 15002,
+          "total_gates": 42063,
+          "depth": 29157,
+          "allocated_qubits": 19,
+          "active_qubits": 19
+        },
+        "gf2_removed": 148,
+        "compile_and_pass_seconds": 0.9445644160005031
+      }
+    },
+    "kg1": {
+      "borrowed": 1,
+      "block": {
+        "native_cx": 78,
+        "scored": {
+          "two_qubit_gates": 78,
+          "total_gates": 273,
+          "depth": 189,
+          "allocated_qubits": 10,
+          "active_qubits": 10
+        },
+        "gf2_removed": 0,
+        "compile_and_pass_seconds": 0.026469041011296213
+      },
+      "small_exact_operator_error": 1.5734004140558605e-15,
+      "oracle": {
+        "native_cx": 618,
+        "scored": {
+          "two_qubit_gates": 614,
+          "total_gates": 1739,
+          "depth": 1089,
+          "allocated_qubits": 19,
+          "active_qubits": 19
+        },
+        "gf2_removed": 4,
+        "compile_and_pass_seconds": 0.07265108299907297
+      },
+      "full": {
+        "native_cx": 16650,
+        "scored": {
+          "two_qubit_gates": 16502,
+          "total_gates": 48813,
+          "depth": 29982,
+          "allocated_qubits": 19,
+          "active_qubits": 19
+        },
+        "gf2_removed": 148,
+        "compile_and_pass_seconds": 1.1028388749982696
+      }
+    },
+    "kg2": {
+      "borrowed": 2,
+      "block": {
+        "native_cx": 78,
+        "scored": {
+          "two_qubit_gates": 78,
+          "total_gates": 267,
+          "depth": 133,
+          "allocated_qubits": 11,
+          "active_qubits": 11
+        },
+        "gf2_removed": 0,
+        "compile_and_pass_seconds": 0.02687145800155122
+      },
+      "small_exact_operator_error": 1.5734004140558605e-15,
+      "oracle": {
+        "native_cx": 618,
+        "scored": {
+          "two_qubit_gates": 614,
+          "total_gates": 1721,
+          "depth": 953,
+          "allocated_qubits": 19,
+          "active_qubits": 19
+        },
+        "gf2_removed": 4,
+        "compile_and_pass_seconds": 0.05999066600634251
+      },
+      "full": {
+        "native_cx": 16650,
+        "scored": {
+          "two_qubit_gates": 16502,
+          "total_gates": 48363,
+          "depth": 26582,
+          "allocated_qubits": 19,
+          "active_qubits": 19
+        },
+        "gf2_removed": 148,
+        "compile_and_pass_seconds": 1.088065333009581
+      }
+    }
+  },
+  "clean_small_operator_error": 1.777751048199311e-15,
+  "clean8_all_512_complex_columns_max_error": 5.10702591327572e-15,
+  "extra_clean_alternative": {
+    "clean_ancillas": 3,
+    "block": {
+      "native_cx": 42,
+      "scored": {
+        "two_qubit_gates": 42,
+        "total_gates": 144,
+        "depth": 106,
+        "allocated_qubits": 12,
+        "active_qubits": 12
+      },
+      "gf2_removed": 0,
+      "compile_and_pass_seconds": 0.0238514579978073
+    },
+    "full_circuit": "research-only, extra 3 clean qubits",
+    "oracle": {
+      "native_cx": 510,
+      "scored": {
+        "two_qubit_gates": 506,
+        "total_gates": 1346,
+        "depth": 667,
+        "allocated_qubits": 22,
+        "active_qubits": 22
+      },
+      "gf2_removed": 4,
+      "compile_and_pass_seconds": 0.05216399999335408
+    },
+    "full": {
+      "native_cx": 13950,
+      "scored": {
+        "two_qubit_gates": 13802,
+        "total_gates": 38556,
+        "depth": 19480,
+        "allocated_qubits": 22,
+        "active_qubits": 22
+      },
+      "gf2_removed": 148,
+      "compile_and_pass_seconds": 0.8599964580062078
+    }
+  },
+  "measurement_mapping_and_25_iterations_verified": true
+}

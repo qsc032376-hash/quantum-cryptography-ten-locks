@@ -1,0 +1,58 @@
+[
+  {
+    "seed": 1000,
+    "variant": "baseline",
+    "solve_seconds": 13.6293,
+    "hash_ok": true,
+    "runs": [
+      {
+        "forwarded_seed": 1000,
+        "shots": 128,
+        "circuits": 1
+      }
+    ],
+    "status": "PASS"
+  },
+  {
+    "seed": 1000,
+    "variant": "clean",
+    "solve_seconds": 90.0753,
+    "hash_ok": true,
+    "runs": [
+      {
+        "forwarded_seed": 1000,
+        "shots": 128,
+        "circuits": 1
+      }
+    ],
+    "status": "PASS"
+  },
+  {
+    "seed": 2000,
+    "variant": "baseline",
+    "solve_seconds": 14.8872,
+    "hash_ok": true,
+    "runs": [
+      {
+        "forwarded_seed": 2000,
+        "shots": 128,
+        "circuits": 1
+      }
+    ],
+    "status": "PASS"
+  },
+  {
+    "seed": 2000,
+    "variant": "clean",
+    "solve_seconds": 88.5873,
+    "hash_ok": true,
+    "runs": [
+      {
+        "forwarded_seed": 2000,
+        "shots": 128,
+        "circuits": 1
+      }
+    ],
+    "status": "PASS"
+  }
+]

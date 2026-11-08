@@ -1,0 +1,15 @@
+{
+  "status": "full",
+  "hash_ok": true,
+  "metrics_status": "ok",
+  "metrics": {
+    "active_qubits": 22,
+    "depth": 19480,
+    "total_gates": 38556,
+    "two_qubit_gates": 13802
+  },
+  "flags": [],
+  "solve_seconds": 92.391,
+  "circuits_executed": 1,
+  "process_returncode": 0
+}
