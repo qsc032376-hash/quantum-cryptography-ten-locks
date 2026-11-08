@@ -52,7 +52,7 @@ elif mode in ('cross', 'profile'):
         qiskit.transpile = qiskit.compiler.transpile = controlled_transpile
     observed, job_starts, solution_seeds = [], {}, {}
     original_loader = checker.load_solution
-    tier10_aggregate = {}
+    tier10_aggregate, tier05_aggregate = {}, {}
     def load_with_metadata(path):
         module = original_loader(path)
         for name in ('SEED_TRANSPILER', 'SEED_SIMULATOR', 'BASIS_SEED'):
@@ -74,6 +74,17 @@ elif mode in ('cross', 'profile'):
                     tier10_aggregate['verified_support_shots'] = value
                 return recovery
             module.recover_exponent_with_diagnostics = observe_recovery
+        if mode == 'cross' and tier == 5 and callable(getattr(module, 'recover_key_with_diagnostics', None)):
+            original_recovery = module.recover_key_with_diagnostics
+            def observe_tier05():
+                result = original_recovery()
+                diagnostics = result[1]
+                # Store aggregate counts only; the measured key is never recorded.
+                for key in ('shots', 'distinct_measured_candidates', 'prefix_valid_candidates', 'prefix_success_shots'):
+                    value = diagnostics.get(key)
+                    if type(value) is int and value >= 0: tier05_aggregate[key] = value
+                return result
+            module.recover_key_with_diagnostics = observe_tier05
         return module
     checker.load_solution = load_with_metadata
     timing = {'result_wait_seconds': 0.0, 'aer_job_elapsed_seconds': 0.0, 'jobs_finished': 0}
@@ -122,6 +133,7 @@ elif mode in ('cross', 'profile'):
                                   'transpiler_seed': solution_seeds.get('SEED_TRANSPILER', 'solution default (not injected)'),
                                   'application_rng_seed': solution_seeds.get('BASIS_SEED', 'solution default (not injected)')}})
     if tier10_aggregate: out['tier10_readout_aggregate'] = tier10_aggregate
+    if tier05_aggregate: out['tier05_readout_aggregate'] = tier05_aggregate
     if mode == 'profile' and raw.get('unique_circuits') and not raw.get('serialize_error'):
         metrics_file = prefix + '.metrics.json'
         checker.worker_transpile(prefix + '.circuits', metrics_file)
