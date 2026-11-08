@@ -6,7 +6,7 @@
 
 Ten cryptographic challenges connect quantum circuits with classical cryptanalysis and secure communication. The team's solutions execute circuits on Qiskit Aer, interpret measurements with classical postprocessing, and verify recovered plaintexts against SHA-256 hashes. The accompanying mathematical models explain the interference, hidden structure, and number theory behind those steps.
 
-**Verified candidate:** [`integration/optimized-v4-candidate@73f4dbe`](https://github.com/qsc032376-hash/quantum-cryptography-ten-locks/tree/73f4dbe330de3098acb368464d3f5606c30259f8). Its complete renamed-directory official Checker run recorded 10/10 `full`, matching SHA-256, valid metrics and no flags. This is local verification, not a final competition judgment or ranking. The mathematical branch contains documentation, not the v4 submission.
+**Verified candidate:** [`integration/optimized-v5-candidate@41c7c67`](https://github.com/qsc032376-hash/quantum-cryptography-ten-locks/tree/41c7c6775b8fc499c2acdd878b4829bd17e1210d). Its complete renamed-directory official Checker run recorded 10/10 `full`, matching SHA-256, valid metrics and no flags. This is local verification, not a final competition judgment or ranking. The mathematical branch contains documentation, not the v5 submission.
 
 ## Contents
 
@@ -26,14 +26,14 @@ Ten cryptographic challenges connect quantum circuits with classical cryptanalys
 
 ## Project highlights
 
-- Ten `full` results in the verified v4 full-package Checker run, backed by recorded SHA-256 evidence.
+- Ten `full` results in the verified v5 full-package Checker run, backed by recorded SHA-256 evidence.
 - Quantum circuits executed on Aer using Bernstein–Vazirani, BB84, Deutsch–Jozsa, Simon, Grover search, quantum phase estimation (QPE), and Shor techniques.
 - Reproducible resource measurements under the official scoring configuration, with mathematical modeling and correctness analysis for each tier.
-- Modular quantum and classical components in the verified v4 candidate, with measurements driving classical recovery and verification.
+- Modular quantum and classical components in the verified v5 candidate, with measurements driving classical recovery and verification.
 
 ## The ten quantum locks
 
-`FULL` below denotes the local full-package official Checker result for v4 at `73f4dbe`; it is not a judge's final award. Each theory link describes the corresponding mathematical model.
+`FULL` below denotes the local full-package official Checker result for v5 at `41c7c67`; it is not a judge's final award. Each theory link describes the corresponding mathematical model.
 
 | Tier | Algorithm | Mathematical objective | Verification |
 | --- | --- | --- | --- |
@@ -73,7 +73,7 @@ The linked tier documents give derivations, assumptions, and circuit details. BB
 
 ## Quantum circuit complexity
 
-The figures below are the recorded official Checker metrics for the verified v4 candidate. The Checker scores the circuit executed in `solve()` with the most transpiled two-qubit gates, breaking ties by depth; Tier 2 uses the Channel measurement log. The scoring configuration uses `rz`, `sx`, `x`, and `cx`, optimization level 1, and transpiler seed 12345. Measurements, resets, and barriers are excluded from gate counts. These simulator/transpiler metrics do **not** demonstrate practical quantum advantage; shots, repeated executions, and classical preparation are additional costs.
+The figures below are the recorded official Checker metrics for the verified v5 candidate. The Checker scores the circuit executed in `solve()` with the most transpiled two-qubit gates, breaking ties by depth; Tier 2 uses the Channel measurement log. The scoring configuration uses `rz`, `sx`, `x`, and `cx`, optimization level 1, and transpiler seed 12345. Measurements, resets, and barriers are excluded from gate counts. These simulator/transpiler metrics do **not** demonstrate practical quantum advantage; shots, repeated executions, and classical preparation are additional costs.
 
 | Tier | Active qubits | Two-qubit gates | Circuit depth | Total gates |
 | --- | ---: | ---: | ---: | ---: |
@@ -84,22 +84,22 @@ The figures below are the recorded official Checker metrics for the verified v4 
 | 5 | 19 | 15,150 | 29,503 | 42,211 |
 | 6 | 22 | 3,000 | 5,883 | 9,534 |
 | 7 | 15 | 230 | 271 | 763 |
-| 8 | 18 | 49,920 | 135,160 | 148,085 |
+| 8 | 18 | 42,810 | 123,320 | 130,190 |
 | 9 | 21 | 89,075 | 235,048 | 263,601 |
 | 10 | 19 | 82,804 | 218,263 | 245,153 |
 
-The ten separately scored circuits sum to **248,321 two-qubit gates** and **633,141 per-tier depth**; this is not the depth of one combined circuit. The historical v1 figures are 307,349 and 787,876, respectively; those recorded runs used a different environment, so the comparison is not a controlled timing experiment. See the [v4 integration report](https://github.com/qsc032376-hash/quantum-cryptography-ten-locks/blob/73f4dbe330de3098acb368464d3f5606c30259f8/docs/OPTIMIZED_V4_CANDIDATE.md), its [Checker evidence](https://github.com/qsc032376-hash/quantum-cryptography-ten-locks/blob/73f4dbe330de3098acb368464d3f5606c30259f8/docs/evidence/v4/report.json), and the [final analysis](docs/FINAL_QUANTUM_ANALYSIS.md).
+The ten separately scored circuits sum to **241,211 two-qubit gates** and **621,301 per-tier depth**; this is not the depth of one combined circuit. The historical v1 figures are 307,349 and 787,876, respectively; those recorded runs used a different environment, so the comparison is not a controlled timing experiment. See the [v5 integration report](https://github.com/qsc032376-hash/quantum-cryptography-ten-locks/blob/41c7c6775b8fc499c2acdd878b4829bd17e1210d/docs/OPTIMIZED_V5_READINESS.md), its [Checker evidence](https://github.com/qsc032376-hash/quantum-cryptography-ten-locks/blob/41c7c6775b8fc499c2acdd878b4829bd17e1210d/docs/evidence/v5/report.json), and the [final analysis](docs/FINAL_QUANTUM_ANALYSIS.md).
 
 ## Repository architecture
 
 - [`docs/`](docs/) — theory for all ten tiers and the mathematical optimization plan on this branch.
 - [`tier01/`–`tier10/`](tier01/) — official challenge materials, helpers, and starter notebooks for each tier.
 - [`common/`](common/) — shared cryptographic and verification helpers.
-- [`submissions/TEAM_TEMPLATE/`](submissions/TEAM_TEMPLATE/) — official submission layout; the verified v4 candidate additionally contains `submissions/team3/`, with the team's circuits and classical modules.
+- [`submissions/TEAM_TEMPLATE/`](submissions/TEAM_TEMPLATE/) — official submission layout; the verified v5 candidate additionally contains `submissions/team3/`, with the team's circuits and classical modules.
 - [`tools/`](tools/) — official setup and submission checkers and scoring configuration.
-- [`references/`](references/) — documentation and research references. The v4 candidate also contains `tests/` and integration reports. There is no `benchmarks/` or `web/` directory on this branch.
+- [`references/`](references/) — documentation and research references. The v5 candidate also contains `tests/` and integration reports. There is no `benchmarks/` or `web/` directory on this branch.
 
-**Branch distinction:** `feature/mathematical-modeling` contains analysis and prototype work but does not contain the v4 team submission or tests. The v4 candidate is a separate history; use a separate checkout for the commands below that refer to those files.
+**Branch distinction:** `feature/mathematical-modeling` contains analysis and prototype work but does not contain the v5 team submission or tests. The v5 candidate is a separate history; use a separate checkout for the commands below that refer to those files.
 
 ## Installation and usage
 
@@ -112,12 +112,12 @@ python -m pip install -r requirements.txt
 python tools/check_setup.py
 ```
 
-To reproduce v4 without changing this branch or a verified branch, fetch the candidate and create a detached worktree from the repository root:
+To reproduce v5 without changing this branch or a verified branch, fetch the candidate and create a detached worktree from the repository root:
 
 ```bash
-git fetch origin integration/optimized-v4-candidate
-git worktree add --detach ../ten-locks-v4 73f4dbe330de3098acb368464d3f5606c30259f8
-cd ../ten-locks-v4
+git fetch origin integration/optimized-v5-candidate
+git worktree add --detach ../ten-locks-v5 41c7c6775b8fc499c2acdd878b4829bd17e1210d
+cd ../ten-locks-v5
 python3.12 -m venv .venv
 source .venv/bin/activate
 python -m pip install -r requirements.txt
@@ -126,19 +126,19 @@ python -B tests/test_tier10_integration.py -v
 python -B tools/check_submission.py submissions/team3 --out /tmp/ten-locks-check
 ```
 
-The tests above are v4 integration tests; they are not a substitute for the complete official check. The last command executes the official Checker across the team folder and can take substantial simulation time; keep its output private. For circuit metrics only, use `python tools/check_submission.py submissions/team3 --metrics-only` in the v4 checkout. Metrics-only skips the hash check and is not a substitute for full verification. The command examples follow the repository and v4 integration report; they were not rerun for this documentation-only change.
+The tests above are v5 integration tests; they are not a substitute for the complete official check. The last command executes the official Checker across the team folder and can take substantial simulation time; keep its output private. For circuit metrics only, use `python tools/check_submission.py submissions/team3 --metrics-only` in the v5 checkout. Metrics-only skips the hash check and is not a substitute for full verification. The command examples follow the repository and v5 integration report; they were not rerun for this documentation-only change.
 
 For a new submission, copy `submissions/TEAM_TEMPLATE/` to `submissions/<team_name>/`, implement each tier's `solve()` and `build_circuit()`, and retain the template's repository-root imports. See [the challenge](CHALLENGE.md), [helper interfaces](HELPERS.md), and [scoring rules](SCORING.md). Start with a tier's README and notebook, run its circuit on Aer, interpret measurements, and transfer the solution into the team folder.
 
 ## Verification and reproducibility
 
-The v4 report records a single full-package `full` and matching SHA-256 for every tier after a renamed-directory import check. Earlier v1 evidence and v4 evidence are separate. The Checker independently hashes returned plaintext and records Aer execution; a matching hash alone does not establish the validity of the recovery method.
+The v5 report records a single full-package `full` and matching SHA-256 for every tier after a renamed-directory import check. Earlier v1 evidence and v5 evidence are separate. The Checker independently hashes returned plaintext and records Aer execution; a matching hash alone does not establish the validity of the recovery method.
 
 Finite-shot sampling can fail or produce insufficient evidence, and a successful fixed-seed run does not guarantee success across seeds. The scoring transpiler seed is fixed at 12345; simulator and sampling seeds depend on the relevant implementation and challenge data. Reproduction requires the pinned dependencies, scoring configuration, candidate revision, and appropriate execution settings. Aer models simulation, not the noise and constraints of actual hardware.
 
 ## Circuit optimization
 
-v4 integrates Tier 5 public-constant folding, Tier 9 exact shared-predicate fanout, and Tier 10 ancilla-free fanout plus inverse-QFT wire relabeling. The [final mathematical analysis](docs/FINAL_QUANTUM_ANALYSIS.md) distinguishes proofs, synthetic tests and Checker evidence; the [presentation script and judge Q&A](docs/FINAL_PRESENTATION_SCRIPT.md) summarize the result. The [optimization plan](docs/MATHEMATICAL_OPTIMIZATION_PLAN.md) is historical research, not proof that every proposal was implemented. Tier 8 is unchanged in v4; prospective v5 work is not claimed as integrated.
+v5 integrates Tier 5 public-constant folding, Tier 8 exact M15 multi-controlled X synthesis, Tier 9 exact shared-predicate fanout, and Tier 10 ancilla-free fanout plus inverse-QFT wire relabeling. The [final mathematical analysis](docs/FINAL_QUANTUM_ANALYSIS.md) distinguishes proofs, synthetic tests and Checker evidence; the [presentation script and judge Q&A](docs/FINAL_PRESENTATION_SCRIPT.md) summarize the result. The [optimization plan](docs/MATHEMATICAL_OPTIMIZATION_PLAN.md) is historical research, not proof that every proposal was implemented. The Tier 8 change is supported by an [independent ten-seed acceptance](https://github.com/qsc032376-hash/quantum-cryptography-ten-locks/blob/41c7c6775b8fc499c2acdd878b4829bd17e1210d/docs/TIER08_INDEPENDENT_ACCEPTANCE.md) and the full v5 Checker run; proposed Tier 3/6 changes are not claimed as integrated. The v5 draft has not been uploaded to the competition platform.
 
 ## Interactive web demo
 
