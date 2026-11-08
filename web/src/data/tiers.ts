@@ -57,6 +57,8 @@ export interface TierData {
   postprocessing: string;
   caveat?: string;
   metrics: TierMetrics;
+  /** Verified v2 candidate metrics, only where they differ from v1. */
+  metricsV2?: TierMetrics;
   circuit: CircuitSpec;
   histogram: HistogramBin[];
   /** Long-form sections are only written for the three priority tiers. */
@@ -228,6 +230,7 @@ export const tiers: TierData[] = [
     caveat:
       "The oracle must be a real reversible circuit; measuring random keys and checking them classically is explicitly disallowed.",
     metrics: { twoQubitGates: 21150, depth: 33055, totalGates: 58620, activeQubits: 19 },
+    metricsV2: { twoQubitGates: 15150, depth: 29503, totalGates: 42211, activeQubits: 19 },
     circuit: {
       shownWires: ["k0", "k1", "k2", "… 7 key qubits", "data (8+)"],
       totalWires: 19,
@@ -450,14 +453,64 @@ export const tiers: TierData[] = [
   },
 ];
 
-export const tierMap = new Map(tiers.map((tier) => [tier.id, tier]));
+export type Version = "v1" | "v2";
 
-export function totalTwoQubitGates(): number {
-  return tiers.reduce((sum, tier) => sum + tier.metrics.twoQubitGates, 0);
+export const versionLabels: Record<
+  Version,
+  { name: string; tag: string; detail: string }
+> = {
+  v1: {
+    name: "v1 — Frozen Baseline",
+    tag: "v1 · baseline",
+    detail: "release/ten-locks-v1 (frozen submission)",
+  },
+  v2: {
+    name: "v2 — Verified Optimized Candidate",
+    tag: "v2 · candidate",
+    detail: "integration/optimized-v2-candidate (not submitted)",
+  },
+};
+
+export const depthAggregateNote =
+  "The depth figure is the sum of ten separate circuits, not the depth of a single physical circuit.";
+
+/** Metrics for the selected version; unchanged tiers inherit the v1 record. */
+export function metricsFor(tier: TierData, version: Version): TierMetrics {
+  if (version === "v2" && tier.metricsV2) {
+    return tier.metricsV2;
+  }
+  return tier.metrics;
 }
 
-export function totalDepth(): number {
-  return tiers.reduce((sum, tier) => sum + tier.metrics.depth, 0);
+export const tierMap = new Map(tiers.map((tier) => [tier.id, tier]));
+
+export interface AggregateMetrics {
+  twoQubitGates: number;
+  depth: number;
+  totalGates: number;
+}
+
+/** Totals recomputed from the per-tier records of the selected version. */
+export function aggregateFor(version: Version): AggregateMetrics {
+  return tiers.reduce<AggregateMetrics>(
+    (total, tier) => {
+      const metrics = metricsFor(tier, version);
+      return {
+        twoQubitGates: total.twoQubitGates + metrics.twoQubitGates,
+        depth: total.depth + metrics.depth,
+        totalGates: total.totalGates + metrics.totalGates,
+      };
+    },
+    { twoQubitGates: 0, depth: 0, totalGates: 0 },
+  );
+}
+
+export function totalTwoQubitGates(version: Version = "v1"): number {
+  return aggregateFor(version).twoQubitGates;
+}
+
+export function totalDepth(version: Version = "v1"): number {
+  return aggregateFor(version).depth;
 }
 
 export const presentationTiers = [1, 5, 10];

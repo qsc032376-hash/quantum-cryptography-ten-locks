@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import type { TierData } from "../data/tiers";
+import { metricsFor, versionLabels, type TierData, type Version } from "../data/tiers";
 import { CheckerPanel } from "./CheckerPanel";
 import { CircuitDiagram } from "./CircuitDiagram";
 import { ComplexityBars } from "./ComplexityBars";
@@ -8,11 +8,13 @@ import { Tier5Comparison } from "./Tier5Comparison";
 
 interface TierDetailProps {
   tier: TierData;
+  version: Version;
   onClose: () => void;
 }
 
-export function TierDetail({ tier, onClose }: TierDetailProps) {
+export function TierDetail({ tier, version, onClose }: TierDetailProps) {
   const closeRef = useRef<HTMLButtonElement>(null);
+  const metrics = metricsFor(tier, version);
 
   useEffect(() => {
     closeRef.current?.focus();
@@ -37,6 +39,9 @@ export function TierDetail({ tier, onClose }: TierDetailProps) {
             <p className="eyebrow">
               Tier {String(tier.id).padStart(2, "0")} · {tier.level} · {tier.points} pts
             </p>
+            <span className="data-badge is-version" title={versionLabels[version].detail}>
+              {version.toUpperCase()} · {version === "v1" ? "frozen baseline" : "candidate"}
+            </span>
             <h2 id={`tier-${tier.id}-title`}>
               {tier.codename}
               <span className="detail-algorithm">{tier.algorithm}</span>
@@ -101,7 +106,7 @@ export function TierDetail({ tier, onClose }: TierDetailProps) {
               <h3 id={`tier-${tier.id}-complexity-title`}>Circuit complexity</h3>
               <span className="data-badge is-recorded">Recorded</span>
             </div>
-            <ComplexityBars metrics={tier.metrics} />
+            <ComplexityBars metrics={metrics} />
           </section>
 
           {tier.id === 5 ? (
@@ -110,7 +115,7 @@ export function TierDetail({ tier, onClose }: TierDetailProps) {
                 <h3 id={`tier-${tier.id}-compare-title`}>Optimization preview</h3>
                 <span className="data-badge is-candidate">Independent candidate</span>
               </div>
-              <Tier5Comparison />
+              <Tier5Comparison version={version} />
             </section>
           ) : null}
         </div>

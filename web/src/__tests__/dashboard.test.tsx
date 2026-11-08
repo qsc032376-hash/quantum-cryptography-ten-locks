@@ -1,12 +1,12 @@
-import { render, screen, within } from "@testing-library/react";
+import { screen, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { describe, expect, it } from "vitest";
-import App from "../App";
+import { renderDashboard } from "../test/helpers";
 
 describe("dashboard navigation", () => {
   it("renders one card per tier and opens a detail view", async () => {
     const user = userEvent.setup();
-    render(<App />);
+    renderDashboard();
 
     const cards = screen.getAllByRole("button", { name: /^open tier \d+:/i });
     expect(cards).toHaveLength(10);
@@ -19,7 +19,7 @@ describe("dashboard navigation", () => {
 
   it("returns to the dashboard from the detail footer", async () => {
     const user = userEvent.setup();
-    render(<App />);
+    renderDashboard();
 
     await user.click(screen.getByRole("button", { name: /open tier 7: the hidden angle/i }));
     expect(screen.getByRole("dialog")).toBeInTheDocument();
@@ -32,7 +32,7 @@ describe("dashboard navigation", () => {
 
   it("closes the detail with the escape key", async () => {
     const user = userEvent.setup();
-    render(<App />);
+    renderDashboard();
 
     await user.click(screen.getByRole("button", { name: /open tier 1: the parity vault/i }));
     expect(screen.getByRole("dialog")).toBeInTheDocument();

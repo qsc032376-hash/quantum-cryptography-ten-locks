@@ -1,11 +1,11 @@
-import { render, screen, within } from "@testing-library/react";
+import { screen, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { describe, expect, it } from "vitest";
-import App from "../App";
+import { renderDashboard } from "../test/helpers";
 
 async function openTier(name: RegExp) {
   const user = userEvent.setup();
-  render(<App />);
+  renderDashboard();
   await user.click(screen.getByRole("button", { name }));
   return { user, dialog: screen.getByRole("dialog") };
 }

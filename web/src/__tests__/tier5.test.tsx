@@ -1,12 +1,12 @@
-import { render, screen, within } from "@testing-library/react";
+import { screen, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { describe, expect, it } from "vitest";
-import App from "../App";
+import { renderDashboard } from "../test/helpers";
 
 describe("tier 5 before/after comparison", () => {
   it("shows both runs, the improvements, and the independent status", async () => {
     const user = userEvent.setup();
-    render(<App />);
+    renderDashboard();
 
     await user.click(screen.getByRole("button", { name: /open tier 5: the small safe/i }));
     const dialog = screen.getByRole("dialog");
@@ -27,7 +27,7 @@ describe("tier 5 before/after comparison", () => {
 
   it("does not present the optimized circuit as the frozen release", async () => {
     const user = userEvent.setup();
-    render(<App />);
+    renderDashboard();
     await user.click(screen.getByRole("button", { name: /open tier 5: the small safe/i }));
 
     const dialog = screen.getByRole("dialog");
