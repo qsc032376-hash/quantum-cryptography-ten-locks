@@ -1,0 +1,377 @@
+{
+  "environment": {
+    "numpy": "2.3.5",
+    "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+    "python": "3.13.9",
+    "qiskit": "2.6.1"
+  },
+  "mcx": [
+    {
+      "active_qubits": 4,
+      "allocated_qubits": 4,
+      "ancilla_contract": "none",
+      "compilation_seconds": 0.002800457994453609,
+      "controls": 3,
+      "depth": 37,
+      "family": "noaux_hp24",
+      "max_amplitude_error": 2.788015058251482e-15,
+      "total_gates": 48,
+      "two_qubit_gates": 20,
+      "workspace": 0
+    },
+    {
+      "active_qubits": 5,
+      "allocated_qubits": 5,
+      "ancilla_contract": "clean",
+      "compilation_seconds": 0.0014467919972958043,
+      "controls": 3,
+      "depth": 30,
+      "family": "one_clean_kg24",
+      "max_amplitude_error": 3.361130335999624e-15,
+      "total_gates": 40,
+      "two_qubit_gates": 12,
+      "workspace": 1
+    },
+    {
+      "active_qubits": 5,
+      "allocated_qubits": 6,
+      "ancilla_contract": "clean",
+      "compilation_seconds": 0.001292958011617884,
+      "controls": 3,
+      "depth": 30,
+      "family": "two_clean_kg24",
+      "max_amplitude_error": 3.361130335999624e-15,
+      "total_gates": 40,
+      "two_qubit_gates": 12,
+      "workspace": 2
+    },
+    {
+      "active_qubits": 5,
+      "allocated_qubits": 5,
+      "ancilla_contract": "dirty",
+      "compilation_seconds": 0.01735795800050255,
+      "controls": 3,
+      "depth": 38,
+      "family": "one_dirty_kg24",
+      "max_amplitude_error": 1.7849606959274807e-15,
+      "total_gates": 53,
+      "two_qubit_gates": 18,
+      "workspace": 1
+    },
+    {
+      "active_qubits": 5,
+      "allocated_qubits": 6,
+      "ancilla_contract": "dirty",
+      "compilation_seconds": 0.012584458992932923,
+      "controls": 3,
+      "depth": 38,
+      "family": "two_dirty_kg24",
+      "max_amplitude_error": 1.7849606959274807e-15,
+      "total_gates": 53,
+      "two_qubit_gates": 18,
+      "workspace": 2
+    },
+    {
+      "active_qubits": 5,
+      "allocated_qubits": 5,
+      "ancilla_contract": "none",
+      "compilation_seconds": 0.01521879099891521,
+      "controls": 4,
+      "depth": 98,
+      "family": "noaux_hp24",
+      "max_amplitude_error": 2.6280462726191307e-15,
+      "total_gates": 124,
+      "two_qubit_gates": 48,
+      "workspace": 0
+    },
+    {
+      "active_qubits": 6,
+      "allocated_qubits": 7,
+      "ancilla_contract": "clean",
+      "compilation_seconds": 0.011361249999026768,
+      "controls": 4,
+      "depth": 48,
+      "family": "two_clean_kg24",
+      "max_amplitude_error": 3.578669578716354e-15,
+      "total_gates": 62,
+      "two_qubit_gates": 18,
+      "workspace": 2
+    },
+    {
+      "active_qubits": 6,
+      "allocated_qubits": 6,
+      "ancilla_contract": "dirty",
+      "compilation_seconds": 0.017644749997998588,
+      "controls": 4,
+      "depth": 77,
+      "family": "one_dirty_kg24",
+      "max_amplitude_error": 1.0271361443343112e-14,
+      "total_gates": 97,
+      "two_qubit_gates": 30,
+      "workspace": 1
+    },
+    {
+      "active_qubits": 6,
+      "allocated_qubits": 7,
+      "ancilla_contract": "dirty",
+      "compilation_seconds": 0.0039127909985836595,
+      "controls": 4,
+      "depth": 77,
+      "family": "two_dirty_kg24",
+      "max_amplitude_error": 1.029907598152506e-14,
+      "total_gates": 97,
+      "two_qubit_gates": 30,
+      "workspace": 2
+    },
+    {
+      "active_qubits": 6,
+      "allocated_qubits": 6,
+      "ancilla_contract": "none",
+      "compilation_seconds": 0.02361920899420511,
+      "controls": 5,
+      "depth": 156,
+      "family": "noaux_hp24",
+      "max_amplitude_error": 6.027533324913433e-15,
+      "total_gates": 223,
+      "two_qubit_gates": 88,
+      "workspace": 0
+    },
+    {
+      "active_qubits": 7,
+      "allocated_qubits": 8,
+      "ancilla_contract": "clean",
+      "compilation_seconds": 0.022942625000723638,
+      "controls": 5,
+      "depth": 60,
+      "family": "two_clean_kg24",
+      "max_amplitude_error": 2.442500361762195e-15,
+      "total_gates": 84,
+      "two_qubit_gates": 24,
+      "workspace": 2
+    },
+    {
+      "active_qubits": 7,
+      "allocated_qubits": 7,
+      "ancilla_contract": "dirty",
+      "compilation_seconds": 0.0019965419924119487,
+      "controls": 5,
+      "depth": 109,
+      "family": "one_dirty_kg24",
+      "max_amplitude_error": 7.820193313255309e-15,
+      "total_gates": 141,
+      "two_qubit_gates": 42,
+      "workspace": 1
+    },
+    {
+      "active_qubits": 7,
+      "allocated_qubits": 8,
+      "ancilla_contract": "dirty",
+      "compilation_seconds": 0.014222791010979563,
+      "controls": 5,
+      "depth": 101,
+      "family": "two_dirty_kg24",
+      "max_amplitude_error": 4.44383759830794e-15,
+      "total_gates": 141,
+      "two_qubit_gates": 42,
+      "workspace": 2
+    }
+  ],
+  "official_checker_run": false,
+  "pairs": [
+    {
+      "after": {
+        "active_qubits": 6,
+        "allocated_qubits": 6,
+        "compilation_seconds": 0.001482499996200204,
+        "depth": 13,
+        "total_gates": 19,
+        "two_qubit_gates": 19
+      },
+      "before": {
+        "active_qubits": 6,
+        "allocated_qubits": 6,
+        "compilation_seconds": 0.10826154200185556,
+        "depth": 27,
+        "total_gates": 36,
+        "two_qubit_gates": 36
+      },
+      "case": "gf2_seed144_6w_40cx",
+      "contract": "exact unitary",
+      "guard_accepted": true,
+      "logical_after": {
+        "active_qubits": 6,
+        "allocated_qubits": 6,
+        "depth": 13,
+        "total_gates": 19,
+        "two_qubit_gates": 19
+      },
+      "logical_before": {
+        "active_qubits": 6,
+        "allocated_qubits": 6,
+        "depth": 29,
+        "total_gates": 40,
+        "two_qubit_gates": 40
+      },
+      "max_amplitude_error": 0.0
+    },
+    {
+      "after": {
+        "active_qubits": 3,
+        "allocated_qubits": 4,
+        "compilation_seconds": 0.0012595830048667267,
+        "depth": 2,
+        "total_gates": 3,
+        "two_qubit_gates": 1
+      },
+      "before": {
+        "active_qubits": 4,
+        "allocated_qubits": 4,
+        "compilation_seconds": 0.0025396669952897355,
+        "depth": 4,
+        "total_gates": 5,
+        "two_qubit_gates": 3
+      },
+      "case": "commutable_inverse_window",
+      "contract": "exact unitary",
+      "logical_after": {
+        "active_qubits": 3,
+        "allocated_qubits": 4,
+        "depth": 2,
+        "total_gates": 3,
+        "two_qubit_gates": 1
+      },
+      "logical_before": {
+        "active_qubits": 4,
+        "allocated_qubits": 4,
+        "depth": 5,
+        "total_gates": 9,
+        "two_qubit_gates": 3
+      },
+      "max_amplitude_error": 0.0,
+      "removed": 6
+    },
+    {
+      "after": {
+        "active_qubits": 5,
+        "allocated_qubits": 5,
+        "compilation_seconds": 0.0017448329890612513,
+        "depth": 46,
+        "total_gates": 71,
+        "two_qubit_gates": 19
+      },
+      "before": {
+        "active_qubits": 5,
+        "allocated_qubits": 5,
+        "compilation_seconds": 0.003477374993963167,
+        "depth": 49,
+        "total_gates": 74,
+        "two_qubit_gates": 22
+      },
+      "case": "input_reversal_3count_2work",
+      "contract": "candidate = original * R; equal on R-invariant input",
+      "logical_after": {
+        "active_qubits": 5,
+        "allocated_qubits": 5,
+        "depth": 11,
+        "total_gates": 16,
+        "two_qubit_gates": 7
+      },
+      "logical_before": {
+        "active_qubits": 5,
+        "allocated_qubits": 5,
+        "depth": 12,
+        "total_gates": 17,
+        "two_qubit_gates": 8
+      },
+      "max_amplitude_error": 3.5108334685767007e-16
+    },
+    {
+      "after": {
+        "active_qubits": 3,
+        "allocated_qubits": 3,
+        "compilation_seconds": 0.003270041008363478,
+        "depth": 17,
+        "total_gates": 20,
+        "two_qubit_gates": 6
+      },
+      "before": {
+        "active_qubits": 3,
+        "allocated_qubits": 3,
+        "compilation_seconds": 0.002791457998682745,
+        "depth": 20,
+        "total_gates": 23,
+        "two_qubit_gates": 9
+      },
+      "case": "output_reversal_3w",
+      "contract": "original = R * core; remap readout",
+      "logical_after": {
+        "active_qubits": 3,
+        "allocated_qubits": 3,
+        "depth": 5,
+        "total_gates": 6,
+        "two_qubit_gates": 3
+      },
+      "logical_before": {
+        "active_qubits": 3,
+        "allocated_qubits": 3,
+        "depth": 6,
+        "total_gates": 7,
+        "two_qubit_gates": 4
+      },
+      "max_amplitude_error": 0.0,
+      "measurement_map": {
+        "0": 2,
+        "1": 1,
+        "2": 0
+      }
+    },
+    {
+      "after": {
+        "active_qubits": 3,
+        "allocated_qubits": 3,
+        "compilation_seconds": 0.0046460840094368905,
+        "depth": 18,
+        "total_gates": 22,
+        "two_qubit_gates": 9
+      },
+      "before": {
+        "active_qubits": 3,
+        "allocated_qubits": 3,
+        "compilation_seconds": 0.0019855410064337775,
+        "depth": 13,
+        "total_gates": 18,
+        "two_qubit_gates": 6
+      },
+      "case": "corrected_relative_toffoli",
+      "contract": "exact unitary",
+      "logical_after": {
+        "active_qubits": 3,
+        "allocated_qubits": 3,
+        "depth": 2,
+        "total_gates": 2,
+        "two_qubit_gates": 0
+      },
+      "logical_before": {
+        "active_qubits": 3,
+        "allocated_qubits": 3,
+        "depth": 1,
+        "total_gates": 1,
+        "two_qubit_gates": 0
+      },
+      "max_amplitude_error": 3.760904537726381e-15
+    }
+  ],
+  "research_only": true,
+  "settings": {
+    "basis_gates": [
+      "rz",
+      "sx",
+      "x",
+      "cx"
+    ],
+    "coupling_map": null,
+    "initial_layout": null,
+    "optimization_level": 1,
+    "seed_transpiler": 12345
+  }
+}
