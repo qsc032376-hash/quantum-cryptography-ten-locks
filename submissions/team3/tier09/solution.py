@@ -25,7 +25,7 @@ if not __package__:
 from ..rsa_classical import CiphertextError, DecodeError, KeyBitsError, RSAError, decrypt_tier9
 from ..tier07.qpe import build_inverse_qft
 from ..tier08.order import InsufficientMeasurements, recover_order, factors_from_order
-from .modular import build_controlled_multiplier
+from .shared_controls import build_controlled_multiplier
 
 PHASE_BITS = 14
 WORK_BITS = 7
