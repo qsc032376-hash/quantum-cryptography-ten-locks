@@ -1,0 +1,92 @@
+[
+  {
+    "hash_ok": true,
+    "solve_seconds": 19.092,
+    "circuits_executed": 1,
+    "unique_circuits": 1,
+    "not_implemented": false,
+    "shots_total": 128,
+    "aer_circuits_observed": 1,
+    "shots_known": true,
+    "aer_calls": 1,
+    "aer_timing": {
+      "result_wait_seconds": 18.54095789999701,
+      "aer_job_elapsed_seconds": 18.55278589995578,
+      "jobs_finished": 1
+    },
+    "native_transpilation_calls": null,
+    "seed_metadata": {
+      "requested_simulator_seed": 1000,
+      "actual_forwarded_simulator_seeds": [
+        1000
+      ],
+      "solution_declared_seeds": {
+        "SEED_TRANSPILER": 12345,
+        "SEED_SIMULATOR": 1010
+      },
+      "transpiler_seed": 12345,
+      "application_rng_seed": "solution default (not injected)"
+    },
+    "tier10_readout_aggregate": {
+      "total_shots": 128,
+      "distinct_outcomes": 85,
+      "informative_shots": 124,
+      "uninformative_shots": 2,
+      "inconsistent_shots": 2,
+      "partial_equation_shots": 0,
+      "verified_support_shots": 84
+    },
+    "resource": {
+      "state": "ok",
+      "wall_seconds": 20.125,
+      "peak_rss_bytes_sampled": 306528256,
+      "memory_limit_mb": 1536,
+      "timeout_seconds": 120
+    }
+  },
+  {
+    "hash_ok": true,
+    "solve_seconds": 18.918,
+    "circuits_executed": 1,
+    "unique_circuits": 1,
+    "not_implemented": false,
+    "shots_total": 128,
+    "aer_circuits_observed": 1,
+    "shots_known": true,
+    "aer_calls": 1,
+    "aer_timing": {
+      "result_wait_seconds": 18.389506899984553,
+      "aer_job_elapsed_seconds": 18.402545999968424,
+      "jobs_finished": 1
+    },
+    "native_transpilation_calls": null,
+    "seed_metadata": {
+      "requested_simulator_seed": 1001,
+      "actual_forwarded_simulator_seeds": [
+        1001
+      ],
+      "solution_declared_seeds": {
+        "SEED_TRANSPILER": 12345,
+        "SEED_SIMULATOR": 1010
+      },
+      "transpiler_seed": 12345,
+      "application_rng_seed": "solution default (not injected)"
+    },
+    "tier10_readout_aggregate": {
+      "total_shots": 128,
+      "distinct_outcomes": 83,
+      "informative_shots": 124,
+      "uninformative_shots": 4,
+      "inconsistent_shots": 0,
+      "partial_equation_shots": 0,
+      "verified_support_shots": 94
+    },
+    "resource": {
+      "state": "ok",
+      "wall_seconds": 19.969,
+      "peak_rss_bytes_sampled": 308854784,
+      "memory_limit_mb": 1536,
+      "timeout_seconds": 120
+    }
+  }
+]

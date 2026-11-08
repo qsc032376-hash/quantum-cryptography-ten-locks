@@ -1,0 +1,63 @@
+{
+  "whole_preflight": {
+    "v5": {
+      "two_qubit_gates": 82804,
+      "depth": 218263,
+      "total_gates": 245153,
+      "active_qubits": 19
+    },
+    "short": {
+      "two_qubit_gates": 46910,
+      "depth": 109763,
+      "total_gates": 132023,
+      "active_qubits": 19
+    },
+    "one_clean_kg24": {
+      "two_qubit_gates": 41964,
+      "depth": 86073,
+      "total_gates": 121861,
+      "active_qubits": 20
+    }
+  },
+  "isolated_first_power": {
+    "v5": {
+      "two_qubit_gates": 9486,
+      "depth": 17535,
+      "total_gates": 26979,
+      "active_qubits": 8
+    },
+    "short": {
+      "two_qubit_gates": 4994,
+      "depth": 9797,
+      "total_gates": 14046,
+      "active_qubits": 8
+    },
+    "explicit_noaux_v24": {
+      "two_qubit_gates": 9810,
+      "depth": 18072,
+      "total_gates": 24964,
+      "active_qubits": 8
+    },
+    "one_clean_kg24": {
+      "two_qubit_gates": 3196,
+      "depth": 6849,
+      "total_gates": 9463,
+      "active_qubits": 9
+    }
+  },
+  "clean_template_column_error": {
+    "4": 1.7763632702607964e-15,
+    "5": 2.776459470247217e-15,
+    "6": 4.330134611599226e-15,
+    "7": 5.774360565568046e-15
+  },
+  "uncompensated_rccx_vs_ccx_max_error": 2.0,
+  "edges": {
+    "current_order_commuting_matches": 0,
+    "best_commuting_boundary": 1,
+    "ordered_pairs_with_commuting_matches": 2,
+    "current_order_adjacent_pairs": 0,
+    "best_single_boundary": 0,
+    "ordered_pairs_with_overlap": 0
+  }
+}

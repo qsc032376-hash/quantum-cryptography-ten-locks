@@ -1,0 +1,24 @@
+{
+  "status": "full",
+  "hash_ok": true,
+  "circuit_executed": true,
+  "metrics": {
+    "two_qubit_gates": 41964,
+    "depth": 86073,
+    "total_gates": 121861,
+    "active_qubits": 20
+  },
+  "metrics_status": "ok",
+  "flags": [],
+  "solve_seconds": 23.301,
+  "circuits_executed": 1,
+  "unique_circuits": 1,
+  "oracle_calls": null,
+  "resource": {
+    "state": "ok",
+    "wall_seconds": 25.625,
+    "peak_rss_bytes_sampled": 332742656,
+    "memory_limit_mb": 1536,
+    "timeout_seconds": 300
+  }
+}
