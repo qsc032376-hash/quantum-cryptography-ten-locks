@@ -1,0 +1,363 @@
+{
+  "actual_challenge_execution_summary": {
+    "baseline_solves": 2,
+    "basis": "Profile observed jobs/shots; official recorded one executed circuit per solve and unchanged 64-shots-per-batch production source.",
+    "candidate_solves": 3,
+    "failed_retries": 0,
+    "shots_per_call": 64,
+    "supplemental_batches": 0,
+    "total_aer_calls": 5,
+    "total_shots": 320,
+    "total_solves": 5
+  },
+  "audit_commit": "5390daffd586e60c8c48f7808c1e276284899a49",
+  "baseline": "868fb65e20c73a27bffc118f3617080df9cf2f8b",
+  "benchmark": {
+    "comparison": {
+      "changes": {
+        "active_qubits": 0,
+        "depth": -11840,
+        "total_gates": -17895,
+        "two_qubit_gates": -7110
+      },
+      "paired_multiseed_evidence": false,
+      "recommendation": "INCONCLUSIVE",
+      "reliability_reviewed": false,
+      "rules_reviewed": true,
+      "target_metric": "two_qubit_gates"
+    },
+    "environment": {
+      "numpy": "2.5.4",
+      "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+      "psutil": "7.2.2",
+      "python": "3.12.14",
+      "qiskit": "2.6.1",
+      "qiskit-aer": "0.18.2"
+    },
+    "kind": "circuit_comparison",
+    "profile_simulator_seed": 2026,
+    "refs": {
+      "baseline": {
+        "aer_timing": {
+          "aer_job_elapsed_seconds": 56.651836960001674,
+          "jobs_finished": 1,
+          "result_wait_seconds": 56.644676094001625
+        },
+        "application_rng_seed": "solution default (not injected)",
+        "commit": "868fb65e20c73a27bffc118f3617080df9cf2f8b",
+        "exception_class": null,
+        "instrumentation_verified": true,
+        "metrics": {
+          "active_qubits": 18,
+          "depth": 135160,
+          "total_gates": 148085,
+          "two_qubit_gates": 49920
+        },
+        "native_transpilation_calls": [
+          {
+            "backend_class": null,
+            "basis_gates": [
+              "rz",
+              "sx",
+              "x",
+              "cx"
+            ],
+            "coupling_map": null,
+            "optimization_level": 1,
+            "seed_transpiler": 12345,
+            "target": null
+          }
+        ],
+        "official": {
+          "circuit_executed": true,
+          "circuits_executed": 1,
+          "flags": [],
+          "hash_ok": true,
+          "metrics": {
+            "active_qubits": 18,
+            "depth": 135160,
+            "total_gates": 148085,
+            "two_qubit_gates": 49920
+          },
+          "metrics_status": "ok",
+          "oracle_calls": null,
+          "resource": {
+            "memory_limit_mb": 1024,
+            "peak_rss_bytes_sampled": 497074176,
+            "state": "ok",
+            "timeout_seconds": 370.0,
+            "wall_seconds": 53.2759
+          },
+          "solve_seconds": 49.516,
+          "status": "full",
+          "unique_circuits": 1
+        },
+        "profile_hash_ok": true,
+        "resource": {
+          "memory_limit_mb": 1024,
+          "peak_rss_bytes_sampled": 484388864,
+          "state": "ok",
+          "timeout_seconds": 120.0,
+          "wall_seconds": 60.6363
+        },
+        "scoring_transpile_seconds": 0.722978301000694,
+        "shots_total": 64,
+        "solve_seconds": 57.296
+      },
+      "candidate": {
+        "aer_timing": {
+          "aer_job_elapsed_seconds": 30.9149207570008,
+          "jobs_finished": 1,
+          "result_wait_seconds": 30.908728409001924
+        },
+        "application_rng_seed": "solution default (not injected)",
+        "commit": "36277525627f4d54909a03af19298754eeb594cb",
+        "exception_class": null,
+        "instrumentation_verified": true,
+        "metrics": {
+          "active_qubits": 18,
+          "depth": 123320,
+          "total_gates": 130190,
+          "two_qubit_gates": 42810
+        },
+        "native_transpilation_calls": [
+          {
+            "backend_class": null,
+            "basis_gates": [
+              "rz",
+              "sx",
+              "x",
+              "cx"
+            ],
+            "coupling_map": null,
+            "optimization_level": 1,
+            "seed_transpiler": 12345,
+            "target": null
+          }
+        ],
+        "official": {
+          "circuit_executed": true,
+          "circuits_executed": 1,
+          "flags": [],
+          "hash_ok": true,
+          "metrics": {
+            "active_qubits": 18,
+            "depth": 123320,
+            "total_gates": 130190,
+            "two_qubit_gates": 42810
+          },
+          "metrics_status": "ok",
+          "oracle_calls": null,
+          "resource": {
+            "memory_limit_mb": 1024,
+            "peak_rss_bytes_sampled": 454144000,
+            "state": "ok",
+            "timeout_seconds": 370.0,
+            "wall_seconds": 58.8561
+          },
+          "solve_seconds": 55.848,
+          "status": "full",
+          "unique_circuits": 1
+        },
+        "profile_hash_ok": true,
+        "resource": {
+          "memory_limit_mb": 1024,
+          "peak_rss_bytes_sampled": 446492672,
+          "state": "ok",
+          "timeout_seconds": 120.0,
+          "wall_seconds": 34.03
+        },
+        "scoring_transpile_seconds": 0.5585618860022805,
+        "shots_total": 64,
+        "solve_seconds": 31.462
+      }
+    },
+    "schema_version": 1,
+    "scoring_config_git_blob": "4f502a2b80ba79134f70db490997b4f959a6cf0c",
+    "tier": 8
+  },
+  "benchmark_exit_code": 1,
+  "branch": "optimization/tier08-mcx",
+  "final_source_matches_tested_snapshot": true,
+  "harness_commit": "0f8e0b0e8a42f1a68b27c52446c346401823099e",
+  "local_template_transpilation": {
+    "configuration": "official basis, opt1, seed12345; qubits_initially_zero=False",
+    "experiments": [
+      {
+        "baseline": {
+          "depth": 29,
+          "dirty_qubits": 0,
+          "local_qubits": 4,
+          "total_gates": 34,
+          "two_qubit_gates": 14
+        },
+        "candidate": {
+          "depth": 29,
+          "dirty_qubits": 0,
+          "local_qubits": 4,
+          "total_gates": 34,
+          "two_qubit_gates": 14
+        },
+        "controls": 3
+      },
+      {
+        "baseline": {
+          "depth": 69,
+          "dirty_qubits": 2,
+          "local_qubits": 7,
+          "total_gates": 77,
+          "two_qubit_gates": 26
+        },
+        "candidate": {
+          "depth": 59,
+          "dirty_qubits": 1,
+          "local_qubits": 6,
+          "total_gates": 62,
+          "two_qubit_gates": 20
+        },
+        "controls": 4
+      },
+      {
+        "baseline": {
+          "depth": 93,
+          "dirty_qubits": 3,
+          "local_qubits": 9,
+          "total_gates": 101,
+          "two_qubit_gates": 34
+        },
+        "candidate": {
+          "depth": 83,
+          "dirty_qubits": 2,
+          "local_qubits": 8,
+          "total_gates": 86,
+          "two_qubit_gates": 28
+        },
+        "controls": 5
+      },
+      {
+        "baseline": {
+          "depth": 117,
+          "dirty_qubits": 4,
+          "local_qubits": 11,
+          "total_gates": 125,
+          "two_qubit_gates": 42
+        },
+        "candidate": {
+          "depth": 107,
+          "dirty_qubits": 2,
+          "local_qubits": 9,
+          "total_gates": 110,
+          "two_qubit_gates": 36
+        },
+        "controls": 6
+      }
+    ]
+  },
+  "recommendation": "INCONCLUSIVE",
+  "recommendation_reason": "Deterministic gate/depth gains and all requested correctness/Checker/renamed checks pass. Unchanged harness additionally requires at least ten paired seeds and reliability_reviewed; those broader statistical gates are not claimed.",
+  "relative_reduction_percent": {
+    "active_qubits": 0.0,
+    "depth": 8.759988162178159,
+    "total_gates": 12.084275922612013,
+    "two_qubit_gates": 14.242788461538462
+  },
+  "renamed_directory_check": {
+    "candidate_snapshot": "36277525627f4d54909a03af19298754eeb594cb",
+    "official": {
+      "circuit_executed": true,
+      "circuits_executed": 1,
+      "flags": [],
+      "hash_ok": true,
+      "metrics": {
+        "active_qubits": 18,
+        "depth": 123320,
+        "total_gates": 130190,
+        "two_qubit_gates": 42810
+      },
+      "metrics_status": "ok",
+      "oracle_calls": null,
+      "solve_seconds": 42.289,
+      "status": "full",
+      "unique_circuits": 1
+    },
+    "original_team_removed": true,
+    "resource": {
+      "memory_limit_mb": 1024,
+      "peak_rss_bytes_sampled": 534716416,
+      "sample_interval_ms": 20,
+      "state": "ok",
+      "timeout_seconds": 370,
+      "wall_seconds": 45.960168562000035
+    },
+    "team": "renamed_tier08_validation",
+    "tiers_tested": [
+      "8"
+    ]
+  },
+  "schema_version": 1,
+  "scope_preservation": {
+    "other_worktrees": {
+      "benchmark-harness": "0f8e0b0e8a42f1a68b27c52446c346401823099e",
+      "quantum-circuits": "5390daffd586e60c8c48f7808c1e276284899a49",
+      "tier05-optimization": "804b9dd349a40edd834fd06dfb2ceb09c6658bfc"
+    },
+    "protected_paths_byte_identical_to_release": true,
+    "remote_protected_refs_before": {
+      "integration/optimized-v2-candidate": "0cd8adc025e89fa190836e9295f6b5ffa482e17a",
+      "integration/optimized-v3-candidate": "04feb70e52f5522aa2976ca9c7df2e48f27f3cce",
+      "optimization/tier05-oracle": "804b9dd349a40edd834fd06dfb2ceb09c6658bfc",
+      "release/ten-locks-v1": "868fb65e20c73a27bffc118f3617080df9cf2f8b"
+    }
+  },
+  "secret_values_recorded": false,
+  "static_full_circuit_preflight": {
+    "baseline": {
+      "build_native_transpile_seconds": 0.5515489099998376,
+      "metrics": {
+        "active_qubits": 18,
+        "depth": 135160,
+        "total_gates": 148085,
+        "two_qubit_gates": 49920
+      },
+      "total_seconds": 1.0924704069984728
+    },
+    "candidate": {
+      "build_native_transpile_seconds": 0.6003143469970382,
+      "metrics": {
+        "active_qubits": 18,
+        "depth": 123320,
+        "total_gates": 130190,
+        "two_qubit_gates": 42810
+      },
+      "total_seconds": 1.1037390799974673
+    }
+  },
+  "synthetic_tests": {
+    "aer_memory_limit_mb": 512,
+    "aer_threads": 2,
+    "artificial_aer_circuits": 6,
+    "artificial_aer_run_calls": 1,
+    "command": "OPENBLAS_NUM_THREADS=2 OMP_NUM_THREADS=2 MKL_NUM_THREADS=2 python -B tests/test_tier08_mcx_optimization.py",
+    "elapsed_seconds": 6.892,
+    "fitted_global_phase": false,
+    "max_dense_matrix_qubits": 9,
+    "max_matrix_absolute_error": 3.819169221830326e-14,
+    "max_shor_amplitude_difference": 8.490514105847387e-15,
+    "max_shor_measurement_probability_difference": 4.6351811278100286e-14,
+    "max_statevector_absolute_error": 1.1971954997463785e-15,
+    "numerical_tolerance": 1e-09,
+    "real_tier08_executions": 0,
+    "release_commit": "868fb65e20c73a27bffc118f3617080df9cf2f8b",
+    "six_control_scope": "Fixed full-support complex entangled-state tests in common 11-qubit space, not exhaustive operator matrices.",
+    "tests_failed": 0,
+    "tests_passed": 8
+  },
+  "tested_candidate_snapshot": "36277525627f4d54909a03af19298754eeb594cb",
+  "tested_source_sha256": {
+    "submissions/team3/tier08/modular.py": "e8df9fa1f17be2be06ce1706407c5c50da13ec7d3a6068dfc53cda9ded8aab7f",
+    "tests/fixtures/tier08_release_modular.py": "d79f9c07e064c8bcaf18b7cd29ecd4422ab0d8e1370171d7016c7a49bd0f2330",
+    "tests/test_tier08_mcx_optimization.py": "82c15a6716875e3a360843f10d626485e1ffbd7a2debd2c055b4d960ff47ba9f"
+  },
+  "tier": 8,
+  "timing_conclusion": "Single paired profile improves Aer wall time, but unseeded official solve timing reverses direction; stable speedup not established."
+}
