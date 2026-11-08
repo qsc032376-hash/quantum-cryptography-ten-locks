@@ -1,0 +1,60 @@
+{
+  "commit": "00fee41ee8707ccdd2b6920dd95cc877d2d506bf",
+  "environment": {
+    "numpy": "2.5.4",
+    "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+    "psutil": "7.2.2",
+    "python": "3.13.9",
+    "qiskit": "2.6.1",
+    "qiskit-aer": "0.18.2"
+  },
+  "kind": "cross_seed_regression",
+  "limits": {
+    "memory_mb": 1024,
+    "per_run_seconds": 120.0,
+    "total_seconds": 180.0
+  },
+  "runs": [
+    {
+      "aer_calls": 1,
+      "aer_circuits_observed": 1,
+      "aer_timing": {
+        "aer_job_elapsed_seconds": 20.46311404199514,
+        "jobs_finished": 1,
+        "result_wait_seconds": 20.440164332991117
+      },
+      "circuits_executed": 1,
+      "hash_ok": true,
+      "native_transpilation_calls": null,
+      "not_implemented": false,
+      "resource": {
+        "memory_limit_mb": 1024,
+        "peak_rss_bytes_sampled": 141492224,
+        "state": "ok",
+        "timeout_seconds": 120.0,
+        "wall_seconds": 21.2462
+      },
+      "seed": 2000,
+      "seed_metadata": {
+        "actual_forwarded_simulator_seeds": [
+          2000
+        ],
+        "application_rng_seed": "solution default (not injected)",
+        "requested_simulator_seed": 2000,
+        "solution_declared_seeds": {
+          "SEED_SIMULATOR": 909,
+          "SEED_TRANSPILER": 12345
+        },
+        "transpiler_seed": 12345
+      },
+      "shots_known": true,
+      "shots_total": 64,
+      "solve_seconds": 20.721,
+      "status": "PASS",
+      "tier": 9,
+      "unique_circuits": 1
+    }
+  ],
+  "schema_version": 1,
+  "seed_policy": "AerBackend.run injected requested seed plus call index modulo 2^32; application RNG and transpiler untouched"
+}

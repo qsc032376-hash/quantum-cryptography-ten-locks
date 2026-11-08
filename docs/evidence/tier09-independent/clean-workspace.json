@@ -1,0 +1,76 @@
+{
+  "aer_run_calls": 0,
+  "auxiliary_one_inputs_claimed": false,
+  "cases": [
+    {
+      "clean_auxiliary_bits": 1,
+      "controls": 3,
+      "input_columns_checked": 16,
+      "max_absolute_error": 1.2291976620061184e-15,
+      "max_auxiliary_nonzero_amplitude": 2.7769339916055907e-16,
+      "operator_qubits": 5,
+      "template": "synth_mcx_1_clean_kg24"
+    },
+    {
+      "clean_auxiliary_bits": 1,
+      "controls": 5,
+      "input_columns_checked": 64,
+      "max_absolute_error": 2.4424978226265062e-15,
+      "max_auxiliary_nonzero_amplitude": 3.3344384431076044e-16,
+      "operator_qubits": 7,
+      "template": "synth_mcx_1_clean_kg24"
+    },
+    {
+      "clean_auxiliary_bits": 1,
+      "controls": 7,
+      "input_columns_checked": 256,
+      "max_absolute_error": 4.001450148109112e-15,
+      "max_auxiliary_nonzero_amplitude": 3.8878351185496677e-16,
+      "operator_qubits": 9,
+      "template": "synth_mcx_1_clean_kg24"
+    },
+    {
+      "clean_auxiliary_bits": 2,
+      "controls": 3,
+      "input_columns_checked": 16,
+      "max_absolute_error": 1.2291976620061184e-15,
+      "max_auxiliary_nonzero_amplitude": 2.7769339916055907e-16,
+      "operator_qubits": 6,
+      "template": "synth_mcx_2_clean_kg24"
+    },
+    {
+      "clean_auxiliary_bits": 2,
+      "controls": 5,
+      "input_columns_checked": 64,
+      "max_absolute_error": 2.442500361762195e-15,
+      "max_auxiliary_nonzero_amplitude": 3.3344384431076044e-16,
+      "operator_qubits": 8,
+      "template": "synth_mcx_2_clean_kg24"
+    },
+    {
+      "clean_auxiliary_bits": 2,
+      "controls": 7,
+      "input_columns_checked": 256,
+      "max_absolute_error": 3.99763931888515e-15,
+      "max_auxiliary_nonzero_amplitude": 3.344491923223597e-16,
+      "operator_qubits": 10,
+      "template": "synth_mcx_2_clean_kg24"
+    }
+  ],
+  "contract": "Exact complex operator columns for every clean-auxiliary-zero input",
+  "elapsed_seconds": 1.424275541008683,
+  "global_phase_fitted": false,
+  "max_auxiliary_nonzero_amplitude": 3.8878351185496677e-16,
+  "max_dense_operator_bytes": 16777216,
+  "max_dense_operator_qubits": 10,
+  "max_operator_absolute_error": 4.001450148109112e-15,
+  "numpy_version": "2.5.4",
+  "qiskit_version": "2.6.1",
+  "real_tier09_executions": 0,
+  "status": "PASS",
+  "test_errors": 0,
+  "test_failures": 0,
+  "test_methods_run": 2,
+  "test_source_sha256": "99a7e57bcbb084541190ea1e5f6796c9c2847265427fb5e84a20aaabb5b117d7",
+  "tolerance": 1e-10
+}

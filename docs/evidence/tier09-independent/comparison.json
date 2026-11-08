@@ -1,0 +1,154 @@
+{
+  "comparison": {
+    "changes": {
+      "active_qubits": 1,
+      "depth": -114806,
+      "total_gates": -95485,
+      "two_qubit_gates": -33076
+    },
+    "paired_multiseed_evidence": false,
+    "recommendation": "INCONCLUSIVE",
+    "reliability_reviewed": false,
+    "rules_reviewed": true,
+    "target_metric": "two_qubit_gates"
+  },
+  "environment": {
+    "numpy": "2.5.4",
+    "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+    "psutil": "7.2.2",
+    "python": "3.13.9",
+    "qiskit": "2.6.1",
+    "qiskit-aer": "0.18.2"
+  },
+  "kind": "circuit_comparison",
+  "profile_simulator_seed": 2026,
+  "refs": {
+    "baseline": {
+      "aer_timing": {
+        "aer_job_elapsed_seconds": 14.89604220900219,
+        "jobs_finished": 1,
+        "result_wait_seconds": 14.883579375004047
+      },
+      "application_rng_seed": "solution default (not injected)",
+      "commit": "41c7c6775b8fc499c2acdd878b4829bd17e1210d",
+      "exception_class": null,
+      "instrumentation_verified": true,
+      "metrics": {
+        "active_qubits": 21,
+        "depth": 235048,
+        "total_gates": 263601,
+        "two_qubit_gates": 89075
+      },
+      "native_transpilation_calls": [
+        {
+          "backend_class": "AerSimulator",
+          "basis_gates": null,
+          "coupling_map": null,
+          "optimization_level": 1,
+          "seed_transpiler": 12345,
+          "target": null
+        }
+      ],
+      "official": {
+        "circuit_executed": true,
+        "circuits_executed": 1,
+        "flags": [],
+        "hash_ok": true,
+        "metrics": {
+          "active_qubits": 21,
+          "depth": 235048,
+          "total_gates": 263601,
+          "two_qubit_gates": 89075
+        },
+        "metrics_status": "ok",
+        "oracle_calls": null,
+        "resource": {
+          "memory_limit_mb": 1024,
+          "peak_rss_bytes_sampled": 218660864,
+          "state": "ok",
+          "timeout_seconds": 370.0,
+          "wall_seconds": 15.8609
+        },
+        "solve_seconds": 14.188,
+        "status": "full",
+        "unique_circuits": 1
+      },
+      "profile_hash_ok": true,
+      "resource": {
+        "memory_limit_mb": 1024,
+        "peak_rss_bytes_sampled": 215924736,
+        "state": "ok",
+        "timeout_seconds": 120.0,
+        "wall_seconds": 16.2444
+      },
+      "scoring_transpile_seconds": 0.7322584580106195,
+      "shots_total": 64,
+      "solve_seconds": 15.013
+    },
+    "candidate": {
+      "aer_timing": {
+        "aer_job_elapsed_seconds": 21.69318858299812,
+        "jobs_finished": 1,
+        "result_wait_seconds": 21.6801359999954
+      },
+      "application_rng_seed": "solution default (not injected)",
+      "commit": "00fee41ee8707ccdd2b6920dd95cc877d2d506bf",
+      "exception_class": null,
+      "instrumentation_verified": true,
+      "metrics": {
+        "active_qubits": 22,
+        "depth": 120242,
+        "total_gates": 168116,
+        "two_qubit_gates": 55999
+      },
+      "native_transpilation_calls": [
+        {
+          "backend_class": "AerSimulator",
+          "basis_gates": null,
+          "coupling_map": null,
+          "optimization_level": 1,
+          "seed_transpiler": 12345,
+          "target": null
+        }
+      ],
+      "official": {
+        "circuit_executed": true,
+        "circuits_executed": 1,
+        "flags": [],
+        "hash_ok": true,
+        "metrics": {
+          "active_qubits": 22,
+          "depth": 120242,
+          "total_gates": 168116,
+          "two_qubit_gates": 55999
+        },
+        "metrics_status": "ok",
+        "oracle_calls": null,
+        "resource": {
+          "memory_limit_mb": 1024,
+          "peak_rss_bytes_sampled": 201080832,
+          "state": "ok",
+          "timeout_seconds": 370.0,
+          "wall_seconds": 21.1083
+        },
+        "solve_seconds": 19.069,
+        "status": "full",
+        "unique_circuits": 1
+      },
+      "profile_hash_ok": true,
+      "resource": {
+        "memory_limit_mb": 1024,
+        "peak_rss_bytes_sampled": 208322560,
+        "state": "ok",
+        "timeout_seconds": 120.0,
+        "wall_seconds": 22.8818
+      },
+      "scoring_transpile_seconds": 0.6564743339986308,
+      "shots_total": 64,
+      "solve_seconds": 21.815
+    }
+  },
+  "schema_version": 1,
+  "scoring_config_git_blob": "4f502a2b80ba79134f70db490997b4f959a6cf0c",
+  "tier": 9
+}
