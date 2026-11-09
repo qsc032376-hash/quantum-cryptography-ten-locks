@@ -27,7 +27,9 @@ def build_controlled_multiplier(multiplier, modulus, work_bits=7):
             continue
         # F X_p F also flips all secondary targets. F uses only work targets,
         # so it commutes with the condition and cancels on the disabled branch.
-        pivot, *others = targets
+        # The last target is an equally exact pivot and scores slightly better
+        # under the pinned Tier 9 compilation pipeline.
+        pivot, others = targets[-1], targets[:-1]
         for target in others:
             circuit.cx(pivot, target)
         circuit.append(gate, [*controls, pivot])

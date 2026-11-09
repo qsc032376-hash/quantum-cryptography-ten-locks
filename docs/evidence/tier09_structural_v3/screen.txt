@@ -1,0 +1,18 @@
+multipliers [2, 4, 9, 16, 25]
+operations 2 123 123 {7: 9, 6: 21, 5: 39, 4: 24, 3: 15, 2: 15}
+component 2 fixed {"two_qubit_gates": 1802, "depth": 3997, "total_gates": 5540, "active_qubits": 9}
+component 2 anchor {"two_qubit_gates": 10034, "depth": 23815, "total_gates": 31934, "active_qubits": 9}
+operations 4 261 261 {7: 10, 6: 55, 5: 82, 4: 61, 3: 37, 2: 16}
+component 4 fixed {"two_qubit_gates": 3198, "depth": 6904, "total_gates": 9615, "active_qubits": 9}
+component 4 anchor {"two_qubit_gates": 9304, "depth": 22103, "total_gates": 29534, "active_qubits": 9}
+operations 9 348 348 {7: 12, 6: 56, 5: 107, 4: 108, 3: 50, 2: 15}
+component 9 fixed {"two_qubit_gates": 4322, "depth": 9353, "total_gates": 13022, "active_qubits": 9}
+component 9 anchor {"two_qubit_gates": 9214, "depth": 21883, "total_gates": 29240, "active_qubits": 9}
+operations 16 387 387 {7: 14, 6: 59, 5: 116, 4: 110, 3: 61, 2: 27}
+component 16 fixed {"two_qubit_gates": 4644, "depth": 9985, "total_gates": 13946, "active_qubits": 9}
+component 16 anchor {"two_qubit_gates": 9314, "depth": 22129, "total_gates": 29575, "active_qubits": 9}
+operations 25 401 401 {7: 16, 6: 60, 5: 109, 4: 113, 3: 72, 2: 31}
+component 25 fixed {"two_qubit_gates": 4768, "depth": 10190, "total_gates": 14253, "active_qubits": 9}
+component 25 anchor {"two_qubit_gates": 9206, "depth": 21868, "total_gates": 29179, "active_qubits": 9}
+whole baseline {"two_qubit_gates": 55999, "depth": 120242, "total_gates": 168116, "active_qubits": 22} {"cx": 4052, "mcx": 2353, "ccx": 145, "cp": 91, "h": 28, "measure": 14, "swap": 7, "x": 1}
+whole commutation {"two_qubit_gates": 55999, "depth": 120242, "total_gates": 168116, "active_qubits": 22} {"cx": 4052, "mcx": 2353, "ccx": 145, "cp": 91, "h": 28, "measure": 14, "swap": 7, "x": 1}

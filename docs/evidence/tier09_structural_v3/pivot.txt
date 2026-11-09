@@ -1,0 +1,12 @@
+component 2 baseline {"two_qubit_gates": 1802, "depth": 3997, "total_gates": 5540, "active_qubits": 9}
+component 2 last_pivot {"two_qubit_gates": 1802, "depth": 3997, "total_gates": 5540, "active_qubits": 9}
+component 4 baseline {"two_qubit_gates": 3198, "depth": 6904, "total_gates": 9615, "active_qubits": 9}
+component 4 last_pivot {"two_qubit_gates": 3194, "depth": 6906, "total_gates": 9611, "active_qubits": 9}
+component 9 baseline {"two_qubit_gates": 4322, "depth": 9353, "total_gates": 13022, "active_qubits": 9}
+component 9 last_pivot {"two_qubit_gates": 4318, "depth": 9349, "total_gates": 13018, "active_qubits": 9}
+component 16 baseline {"two_qubit_gates": 4644, "depth": 9985, "total_gates": 13946, "active_qubits": 9}
+component 16 last_pivot {"two_qubit_gates": 4644, "depth": 9982, "total_gates": 13946, "active_qubits": 9}
+component 25 baseline {"two_qubit_gates": 4768, "depth": 10190, "total_gates": 14253, "active_qubits": 9}
+component 25 last_pivot {"two_qubit_gates": 4768, "depth": 10188, "total_gates": 14253, "active_qubits": 9}
+whole last_pivot {"two_qubit_gates": 55971, "depth": 120223, "total_gates": 168088, "active_qubits": 22}
+inverse_qft {"two_qubit_gates": 203, "depth": 108, "total_gates": 518, "active_qubits": 14}
