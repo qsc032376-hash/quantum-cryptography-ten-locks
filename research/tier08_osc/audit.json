@@ -1,0 +1,30 @@
+[
+  {
+    "multiplier": 2,
+    "columns": 512,
+    "complete_complex_operator_error": 1.5210055548898921e-13,
+    "inverse_error": 1.5210055548898921e-13,
+    "seconds": 11.596
+  },
+  {
+    "multiplier": 4,
+    "columns": 512,
+    "complete_complex_operator_error": 1.9229237884847733e-13,
+    "inverse_error": 1.9229237884847733e-13,
+    "seconds": 16.208
+  },
+  {
+    "multiplier": 11,
+    "columns": 512,
+    "complete_complex_operator_error": 2.9332212667508837e-13,
+    "inverse_error": 2.9332212667508837e-13,
+    "seconds": 23.711
+  },
+  {
+    "multiplier": 16,
+    "columns": 512,
+    "complete_complex_operator_error": 2.912116434743599e-13,
+    "inverse_error": 2.912116434743599e-13,
+    "seconds": 20.684
+  }
+]
