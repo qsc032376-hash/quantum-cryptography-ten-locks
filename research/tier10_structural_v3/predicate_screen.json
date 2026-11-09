@@ -1,0 +1,47 @@
+{
+  "baseline": {
+    "two_qubit_gates": 46910,
+    "depth": 109763,
+    "total_gates": 132023,
+    "active_qubits": 19
+  },
+  "screens": [
+    {
+      "variants": 2,
+      "metrics": {
+        "two_qubit_gates": 46770,
+        "depth": 109357,
+        "total_gates": 131449,
+        "active_qubits": 19
+      }
+    },
+    {
+      "variants": 4,
+      "metrics": {
+        "two_qubit_gates": 46372,
+        "depth": 109047,
+        "total_gates": 130547,
+        "active_qubits": 19
+      }
+    },
+    {
+      "variants": 8,
+      "metrics": {
+        "two_qubit_gates": 46152,
+        "depth": 108255,
+        "total_gates": 129874,
+        "active_qubits": 19
+      }
+    },
+    {
+      "variants": 16,
+      "metrics": {
+        "two_qubit_gates": 46038,
+        "depth": 107877,
+        "total_gates": 129606,
+        "active_qubits": 19
+      }
+    }
+  ],
+  "seconds": 5.634
+}

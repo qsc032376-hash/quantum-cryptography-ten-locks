@@ -1,0 +1,47 @@
+[
+  {
+    "index": 0,
+    "cycle": {
+      "two_qubit_gates": 16720,
+      "depth": 48643,
+      "total_gates": 50788,
+      "active_qubits": 11
+    },
+    "existing": {
+      "two_qubit_gates": 4994,
+      "depth": 9797,
+      "total_gates": 14046,
+      "active_qubits": 8
+    }
+  },
+  {
+    "index": 1,
+    "cycle": {
+      "two_qubit_gates": 16720,
+      "depth": 48643,
+      "total_gates": 50800,
+      "active_qubits": 11
+    },
+    "existing": {
+      "two_qubit_gates": 4782,
+      "depth": 10108,
+      "total_gates": 13506,
+      "active_qubits": 8
+    }
+  },
+  {
+    "index": 2,
+    "cycle": {
+      "two_qubit_gates": 16720,
+      "depth": 48643,
+      "total_gates": 50853,
+      "active_qubits": 11
+    },
+    "existing": {
+      "two_qubit_gates": 4062,
+      "depth": 8006,
+      "total_gates": 11259,
+      "active_qubits": 8
+    }
+  }
+]

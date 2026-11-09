@@ -1,0 +1,232 @@
+{
+  "blocks": [
+    {
+      "index": 0,
+      "logical_controls_histogram": {
+        "7": 8,
+        "1": 224,
+        "6": 20,
+        "5": 37,
+        "4": 39,
+        "3": 32,
+        "2": 17
+      },
+      "isolated_scoring": {
+        "two_qubit_gates": 4994,
+        "depth": 9797,
+        "total_gates": 14046,
+        "active_qubits": 8
+      }
+    },
+    {
+      "index": 1,
+      "logical_controls_histogram": {
+        "6": 19,
+        "7": 4,
+        "1": 342,
+        "5": 39,
+        "4": 44,
+        "3": 42,
+        "2": 35
+      },
+      "isolated_scoring": {
+        "two_qubit_gates": 4782,
+        "depth": 10108,
+        "total_gates": 13506,
+        "active_qubits": 8
+      }
+    },
+    {
+      "index": 2,
+      "logical_controls_histogram": {
+        "7": 6,
+        "6": 14,
+        "1": 234,
+        "5": 30,
+        "4": 32,
+        "3": 34,
+        "2": 19
+      },
+      "isolated_scoring": {
+        "two_qubit_gates": 4062,
+        "depth": 8006,
+        "total_gates": 11259,
+        "active_qubits": 8
+      }
+    },
+    {
+      "index": 3,
+      "logical_controls_histogram": {
+        "7": 6,
+        "6": 20,
+        "1": 186,
+        "5": 41,
+        "4": 33,
+        "3": 24,
+        "2": 30
+      },
+      "isolated_scoring": {
+        "two_qubit_gates": 4604,
+        "depth": 9462,
+        "total_gates": 13120,
+        "active_qubits": 8
+      }
+    },
+    {
+      "index": 4,
+      "logical_controls_histogram": {
+        "7": 6,
+        "6": 19,
+        "1": 300,
+        "5": 35,
+        "4": 44,
+        "3": 38,
+        "2": 39
+      },
+      "isolated_scoring": {
+        "two_qubit_gates": 4964,
+        "depth": 10083,
+        "total_gates": 13950,
+        "active_qubits": 8
+      }
+    },
+    {
+      "index": 5,
+      "logical_controls_histogram": {
+        "7": 6,
+        "1": 260,
+        "6": 19,
+        "5": 36,
+        "4": 44,
+        "3": 51,
+        "2": 54
+      },
+      "isolated_scoring": {
+        "two_qubit_gates": 5230,
+        "depth": 10534,
+        "total_gates": 14601,
+        "active_qubits": 8
+      }
+    },
+    {
+      "index": 6,
+      "logical_controls_histogram": {
+        "2": 43,
+        "1": 302,
+        "3": 44,
+        "4": 46,
+        "5": 34,
+        "6": 22,
+        "7": 4
+      },
+      "isolated_scoring": {
+        "two_qubit_gates": 4906,
+        "depth": 10278,
+        "total_gates": 13947,
+        "active_qubits": 8
+      }
+    },
+    {
+      "index": 7,
+      "logical_controls_histogram": {
+        "1": 326,
+        "2": 42,
+        "3": 45,
+        "4": 48,
+        "5": 40,
+        "6": 22,
+        "7": 6
+      },
+      "isolated_scoring": {
+        "two_qubit_gates": 5492,
+        "depth": 11351,
+        "total_gates": 15489,
+        "active_qubits": 8
+      }
+    },
+    {
+      "index": 8,
+      "logical_controls_histogram": {
+        "2": 48,
+        "1": 340,
+        "3": 41,
+        "4": 38,
+        "5": 39,
+        "6": 22,
+        "7": 4
+      },
+      "isolated_scoring": {
+        "two_qubit_gates": 4908,
+        "depth": 10290,
+        "total_gates": 13907,
+        "active_qubits": 8
+      }
+    },
+    {
+      "index": 9,
+      "logical_controls_histogram": {
+        "1": 280,
+        "2": 39,
+        "3": 37,
+        "4": 44,
+        "5": 39,
+        "6": 21,
+        "7": 6
+      },
+      "isolated_scoring": {
+        "two_qubit_gates": 5146,
+        "depth": 10640,
+        "total_gates": 14549,
+        "active_qubits": 8
+      }
+    },
+    {
+      "index": 10,
+      "logical_controls_histogram": {
+        "2": 46,
+        "1": 346,
+        "3": 38,
+        "4": 40,
+        "5": 38,
+        "6": 21,
+        "7": 8
+      },
+      "isolated_scoring": {
+        "two_qubit_gates": 5502,
+        "depth": 10774,
+        "total_gates": 15314,
+        "active_qubits": 8
+      }
+    },
+    {
+      "index": 11,
+      "logical_controls_histogram": {
+        "1": 376,
+        "2": 54,
+        "3": 44,
+        "4": 43,
+        "5": 37,
+        "6": 21,
+        "7": 6
+      },
+      "isolated_scoring": {
+        "two_qubit_gates": 5360,
+        "depth": 10870,
+        "total_gates": 14942,
+        "active_qubits": 8
+      }
+    }
+  ],
+  "qft_isolated": {
+    "two_qubit_gates": 30,
+    "depth": 41,
+    "total_gates": 93,
+    "active_qubits": 6
+  },
+  "whole": {
+    "two_qubit_gates": 46910,
+    "depth": 109763,
+    "total_gates": 132023,
+    "active_qubits": 19
+  }
+}

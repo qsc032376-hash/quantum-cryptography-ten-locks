@@ -1,0 +1,21 @@
+{
+  "baseline": {
+    "two_qubit_gates": 46910,
+    "depth": 109763,
+    "total_gates": 132023,
+    "active_qubits": 19
+  },
+  "candidate": {
+    "two_qubit_gates": 46910,
+    "depth": 109781,
+    "total_gates": 132024,
+    "active_qubits": 19
+  },
+  "dirty_mcx_histogram": {
+    "7": 70,
+    "6": 240,
+    "5": 445,
+    "4": 495
+  },
+  "seconds": 1.421
+}

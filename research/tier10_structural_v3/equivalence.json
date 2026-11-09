@@ -1,0 +1,79 @@
+{
+  "blocks": [
+    {
+      "block": 0,
+      "basis_columns": 256,
+      "superposition_error": 2.317590979407606e-14,
+      "inverse_error": 4.614370915438464e-14
+    },
+    {
+      "block": 1,
+      "basis_columns": 256,
+      "superposition_error": 2.627475742004521e-14,
+      "inverse_error": 5.300926730066787e-14
+    },
+    {
+      "block": 2,
+      "basis_columns": 256,
+      "superposition_error": 2.1955594542655306e-14,
+      "inverse_error": 4.415660860045519e-14
+    },
+    {
+      "block": 3,
+      "basis_columns": 256,
+      "superposition_error": 1.7031935952924167e-14,
+      "inverse_error": 3.472849504828582e-14
+    },
+    {
+      "block": 4,
+      "basis_columns": 256,
+      "superposition_error": 2.366483926773864e-14,
+      "inverse_error": 4.7724564182059324e-14
+    },
+    {
+      "block": 5,
+      "basis_columns": 256,
+      "superposition_error": 2.6548266111989992e-14,
+      "inverse_error": 5.35068182874779e-14
+    },
+    {
+      "block": 6,
+      "basis_columns": 256,
+      "superposition_error": 2.6699666359474362e-14,
+      "inverse_error": 5.298978454512858e-14
+    },
+    {
+      "block": 7,
+      "basis_columns": 256,
+      "superposition_error": 2.6803308925417683e-14,
+      "inverse_error": 5.364159942560593e-14
+    },
+    {
+      "block": 8,
+      "basis_columns": 256,
+      "superposition_error": 2.4510060174330766e-14,
+      "inverse_error": 4.8272955306129816e-14
+    },
+    {
+      "block": 9,
+      "basis_columns": 256,
+      "superposition_error": 2.4226786113467897e-14,
+      "inverse_error": 4.868411039109414e-14
+    },
+    {
+      "block": 10,
+      "basis_columns": 256,
+      "superposition_error": 3.222541131436039e-14,
+      "inverse_error": 6.398250183956077e-14
+    },
+    {
+      "block": 11,
+      "basis_columns": 256,
+      "superposition_error": 2.3242855480699184e-14,
+      "inverse_error": 4.6032118003383877e-14
+    }
+  ],
+  "measurement_mapping_preserved": true,
+  "guard_exhaustive_available_lt": 128,
+  "guard_variants": 16
+}
