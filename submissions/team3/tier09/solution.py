@@ -1,4 +1,4 @@
-"""Tier 9 order finding using exact, ancilla-free native MCX permutations.
+"""Tier 9 order finding with exact native MCX and clean synthesis workspace.
 
 QFT and measured-order mathematics are reused unchanged from earlier tiers.
 Aer receives native gates; the official scorer separately expands the actual
@@ -11,7 +11,7 @@ from pathlib import Path
 import sys
 import time
 
-from qiskit import QuantumCircuit, transpile
+from qiskit import QuantumCircuit, QuantumRegister, transpile
 from qiskit_aer import AerSimulator
 
 from common import is_correct, load_locked
@@ -29,6 +29,7 @@ from .shared_controls import build_controlled_multiplier
 
 PHASE_BITS = 14
 WORK_BITS = 7
+SYNTHESIS_WORK_BITS = 1
 BASE = 2
 SHOTS_PER_BATCH = 64
 MAX_BATCHES = 2
@@ -47,10 +48,13 @@ def _public_parameters():
 
 
 def build_circuit(*, modulus=None, base=BASE, phase_bits=PHASE_BITS, work_bits=WORK_BITS):
-    """14 counting wires, 7 work wires; no auxiliary or borrowed wires.
+    """14 counting wires, 7 work wires, and one zero-initialized workspace.
 
     Work bit zero starts at one. Count qj controls multiplication by the
     public pow(base, 2**j, modulus), then the full inverse QFT maps qj to cj.
+    The extra wire is part of the actual circuit sent to Aer. Native MCX
+    leaves it idle; official basis synthesis may use and restore it as a
+    clean ancilla. It is not appended only to a separate scoring circuit.
     Smaller explicit dimensions support synthetic tests only.
     """
     if modulus is None:
@@ -64,6 +68,7 @@ def build_circuit(*, modulus=None, base=BASE, phase_bits=PHASE_BITS, work_bits=W
     if type(work_bits) is not int or work_bits < 1 or modulus > (1 << work_bits):
         raise ValueError("Modulus does not fit the work register")
     circuit = QuantumCircuit(phase_bits + work_bits, phase_bits, name="tier09_order_finding")
+    circuit.add_register(QuantumRegister(SYNTHESIS_WORK_BITS, "synthesis_work"))
     work = list(range(phase_bits, phase_bits + work_bits))
     circuit.x(work[0])
     circuit.h(range(phase_bits))
@@ -165,7 +170,8 @@ def recover_factors_with_diagnostics():
         diagnostics = {
             "modulus": modulus, "base": BASE,
             "phase_bits": PHASE_BITS, "work_bits": WORK_BITS,
-            "additional_qubits": 0, "borrowed_qubits": 0,
+            "additional_qubits": SYNTHESIS_WORK_BITS, "borrowed_qubits": 0,
+            "clean_synthesis_workspace_qubits": SYNTHESIS_WORK_BITS,
             "logical_opaque_metrics": logical,
             "simulation_operation_counts": native_counts,
             "simulation_basis": "Aer statevector native basis (MCX retained)",
