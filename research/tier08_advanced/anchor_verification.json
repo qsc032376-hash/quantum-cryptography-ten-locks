@@ -1,0 +1,110 @@
+{
+  "basis": [
+    "rz",
+    "sx",
+    "x",
+    "cx"
+  ],
+  "optimization_level": 1,
+  "seed_transpiler": 12345,
+  "multipliers": [
+    {
+      "multiplier": 2,
+      "basis_branches": 512,
+      "max_superposition_error": 0.0,
+      "baseline": {
+        "two_qubit_gates": 4212,
+        "depth": 12171,
+        "total_gates": 12816,
+        "active_qubits": 9
+      },
+      "candidate": {
+        "two_qubit_gates": 4212,
+        "depth": 12171,
+        "total_gates": 12816,
+        "active_qubits": 9
+      },
+      "old_exact_mcx6": 117,
+      "new_exact_mcx6": 117
+    },
+    {
+      "multiplier": 4,
+      "basis_branches": 512,
+      "max_superposition_error": 3.280776253944416e-15,
+      "baseline": {
+        "two_qubit_gates": 3888,
+        "depth": 11235,
+        "total_gates": 11837,
+        "active_qubits": 9
+      },
+      "candidate": {
+        "two_qubit_gates": 3600,
+        "depth": 10403,
+        "total_gates": 10975,
+        "active_qubits": 9
+      },
+      "old_exact_mcx6": 108,
+      "new_exact_mcx6": 100
+    },
+    {
+      "multiplier": 11,
+      "basis_branches": 512,
+      "max_superposition_error": 5.7181351313156854e-15,
+      "baseline": {
+        "two_qubit_gates": 3456,
+        "depth": 9987,
+        "total_gates": 10516,
+        "active_qubits": 9
+      },
+      "candidate": {
+        "two_qubit_gates": 2952,
+        "depth": 8531,
+        "total_gates": 8994,
+        "active_qubits": 9
+      },
+      "old_exact_mcx6": 96,
+      "new_exact_mcx6": 82
+    },
+    {
+      "multiplier": 16,
+      "basis_branches": 512,
+      "max_superposition_error": 6.503243941398939e-15,
+      "baseline": {
+        "two_qubit_gates": 3456,
+        "depth": 9987,
+        "total_gates": 10526,
+        "active_qubits": 9
+      },
+      "candidate": {
+        "two_qubit_gates": 2952,
+        "depth": 8531,
+        "total_gates": 9008,
+        "active_qubits": 9
+      },
+      "old_exact_mcx6": 96,
+      "new_exact_mcx6": 82
+    }
+  ],
+  "full": {
+    "baseline": {
+      "two_qubit_gates": 42792,
+      "depth": 123300,
+      "total_gates": 130171,
+      "active_qubits": 18,
+      "build_and_score_seconds": 0.3875597080041189
+    },
+    "candidate": {
+      "two_qubit_gates": 37464,
+      "depth": 107908,
+      "total_gates": 114109,
+      "active_qubits": 18,
+      "build_and_score_seconds": 0.33799612501752563
+    }
+  },
+  "inverse_qft_isolated": {
+    "two_qubit_gates": 132,
+    "depth": 89,
+    "total_gates": 366,
+    "active_qubits": 12
+  }
+}

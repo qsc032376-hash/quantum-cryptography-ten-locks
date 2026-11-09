@@ -1,0 +1,58 @@
+{
+  "blocks": [
+    {
+      "a": 2,
+      "cost": 1804,
+      "basis_branches": 512,
+      "max_error": 2.891132258587876e-14,
+      "metrics": {
+        "two_qubit_gates": 1804,
+        "depth": 4582,
+        "total_gates": 5205,
+        "active_qubits": 9
+      }
+    },
+    {
+      "a": 4,
+      "cost": 2448,
+      "basis_branches": 512,
+      "max_error": 1.7874004813639518e-14,
+      "metrics": {
+        "two_qubit_gates": 2448,
+        "depth": 6123,
+        "total_gates": 7028,
+        "active_qubits": 9
+      }
+    },
+    {
+      "a": 11,
+      "cost": 2952,
+      "basis_branches": 512,
+      "max_error": 5.7181351313156854e-15,
+      "metrics": {
+        "two_qubit_gates": 2952,
+        "depth": 8531,
+        "total_gates": 8994,
+        "active_qubits": 9
+      }
+    },
+    {
+      "a": 16,
+      "cost": 2952,
+      "basis_branches": 512,
+      "max_error": 6.503243941398939e-15,
+      "metrics": {
+        "two_qubit_gates": 2952,
+        "depth": 8531,
+        "total_gates": 9008,
+        "active_qubits": 9
+      }
+    }
+  ],
+  "full": {
+    "two_qubit_gates": 33904,
+    "depth": 96055,
+    "total_gates": 102561,
+    "active_qubits": 18
+  }
+}

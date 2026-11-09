@@ -141,15 +141,99 @@ def build_controlled_multiplier(
     for anchor in range(len(table)):
         if anchor in seen:
             continue
-        seen.add(anchor)
-        current = table[anchor]
-        # Append (anchor, p(anchor)), (anchor, p^2(anchor)), ... in that
-        # order to realize p. Traversal is only a generic permutation compiler;
-        # no cycle length is recorded or used as an order-finding result.
-        while current != anchor:
-            if current in seen:
-                raise RuntimeError("The public mapping is not a disjoint-cycle permutation")
+        cycle = []
+        current = anchor
+        while current not in seen:
             seen.add(current)
-            _append_basis_transposition(circuit, anchor, current, work, dirty, mcx)
+            cycle.append(current)
             current = table[current]
+        if current != anchor:
+            raise RuntimeError("The public mapping is not a disjoint-cycle permutation")
+        if len(cycle) < 2:
+            continue
+        # A cycle can start at any of its elements. A transposition at Hamming
+        # distance d costs 2*d-1 adjacent swaps, independent of path ordering.
+        # Choose an exact minimum-cost anchor, then traverse the same cycle.
+        anchor = min(cycle, key=lambda x: (sum((x ^ y).bit_count() for y in cycle), x))
+        first = cycle.index(anchor)
+        ordered = cycle[first:] + cycle[:first]
+        for current in ordered[1:]:
+            _append_basis_transposition(circuit, anchor, current, work, dirty, mcx)
     return circuit
+
+
+@lru_cache(maxsize=32)
+def _template_cx_cost(controls: int) -> int:
+    """Estimate native CX for the exact template, under the pinned basis."""
+    from qiskit import transpile
+    native = transpile(_mcx_template(controls), basis_gates=['rz', 'sx', 'x', 'cx'],
+                       optimization_level=1, seed_transpiler=12345, num_processes=1)
+    return native.count_ops().get('cx', 0)
+
+
+def _fixed_mask_multiplier(table, work_bits):
+    """Exact full-domain row elimination using external-controlled X gates.
+
+    The table is transformed to identity with positive controls; the reverse
+    self-inverse operation sequence implements the table. Every gate includes
+    the external control. All otherwise unused work wires may be borrowed dirty.
+    """
+    outputs = list(table)
+    ops = []
+
+    def eliminate(mask, target):
+        if mask & (1 << target):
+            raise ValueError('Target overlaps control')
+        ops.append((mask, target))
+        for row, value in enumerate(outputs):
+            if value & mask == mask:
+                outputs[row] = value ^ (1 << target)
+
+    for row in range(len(outputs)):
+        initial = outputs[row]
+        for bit in range(work_bits):
+            if row & ~initial & (1 << bit):
+                eliminate(initial, bit)
+        surplus = outputs[row] & ~row
+        for bit in range(work_bits):
+            if surplus & (1 << bit):
+                eliminate(row, bit)
+    if outputs != list(range(len(outputs))):
+        raise ValueError('Public permutation elimination failed')
+
+    dirty_count = dirty_qubit_count(work_bits)
+    circuit = QuantumCircuit(1 + work_bits + dirty_count,
+                             name='tier08_controlled_modular_multiply')
+    total = 0
+    for mask, target_bit in reversed(ops):
+        controls = [0] + [bit + 1 for bit in range(work_bits) if mask & (1 << bit)]
+        target = target_bit + 1
+        template = _mcx_template(len(controls))
+        needed = template.num_qubits - len(controls) - 1
+        available = [wire for wire in range(1, circuit.num_qubits)
+                     if wire != target and wire not in controls]
+        if len(available) < needed:
+            return None, None
+        circuit.append(template.to_gate(label=f'exact_mcx_{len(controls)}'),
+                       controls + [target] + available[:needed])
+        total += _template_cx_cost(len(controls))
+    return circuit, total
+
+
+_anchor_multiplier = build_controlled_multiplier
+
+
+def build_controlled_multiplier(multiplier: int, modulus: int, work_bits: int = 6) -> QuantumCircuit:
+    """Choose the lower estimated native-CX exact implementation per block.
+
+    Both choices implement the same full controlled permutation and restore
+    borrowed wires. The selection depends only on public circuit parameters.
+    """
+    anchor = _anchor_multiplier(multiplier, modulus, work_bits)
+    table = permutation_table(multiplier, modulus, work_bits)
+    candidate, cost = _fixed_mask_multiplier(table, work_bits)
+    if candidate is None:
+        return anchor
+    anchor_mcx_count = sum(item.operation.name != 'x' for item in anchor.data)
+    anchor_cost = anchor_mcx_count * _template_cx_cost(work_bits)
+    return candidate if cost < anchor_cost else anchor

@@ -1,0 +1,38 @@
+[
+  {
+    "controls": 1,
+    "total_qubits": 2,
+    "basis_columns": 4,
+    "max_complex_error": 0.0
+  },
+  {
+    "controls": 2,
+    "total_qubits": 3,
+    "basis_columns": 8,
+    "max_complex_error": 0.0
+  },
+  {
+    "controls": 3,
+    "total_qubits": 4,
+    "basis_columns": 16,
+    "max_complex_error": 3.3306690738754696e-16
+  },
+  {
+    "controls": 4,
+    "total_qubits": 6,
+    "basis_columns": 64,
+    "max_complex_error": 2.220480609063464e-15
+  },
+  {
+    "controls": 5,
+    "total_qubits": 8,
+    "basis_columns": 256,
+    "max_complex_error": 2.9976021664879227e-15
+  },
+  {
+    "controls": 6,
+    "total_qubits": 9,
+    "basis_columns": 512,
+    "max_complex_error": 3.7789485511476095e-15
+  }
+]
