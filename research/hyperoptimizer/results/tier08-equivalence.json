@@ -1,0 +1,36 @@
+{
+  "blocks": [
+    {
+      "multiplier": 2,
+      "columns": 128,
+      "forward_error": 1.732202654082926e-14,
+      "inverse_error": 1.7098920837387794e-14,
+      "global_phase_fitted": false
+    },
+    {
+      "multiplier": 4,
+      "columns": 128,
+      "forward_error": 2.886751977314818e-14,
+      "inverse_error": 2.831130976498771e-14,
+      "global_phase_fitted": false
+    },
+    {
+      "multiplier": 11,
+      "columns": 128,
+      "forward_error": 6.017432606679523e-14,
+      "inverse_error": 6.01753044497262e-14,
+      "global_phase_fitted": false
+    },
+    {
+      "multiplier": 16,
+      "columns": 128,
+      "forward_error": 6.01753044497262e-14,
+      "inverse_error": 6.017432606679523e-14,
+      "global_phase_fitted": false
+    }
+  ],
+  "prepared_18qubit_state_error": 9.617455107051883e-14,
+  "phase_fitted": false,
+  "borrowed_wires": "two declared idle wires are untouched by the source block; compiler exact MCX contracts apply",
+  "measurement_mapping_preserved": true
+}
