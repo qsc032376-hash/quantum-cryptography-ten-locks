@@ -1,0 +1,18 @@
+{
+  "approved_commit": "ce75c0721622d363e77912191a52a02c34f92472",
+  "independent_audit_commit": "5b86f71c058193ea0b94070d76524ecef2455fe7",
+  "audit_branch": "audit/v63-final-zip-verification",
+  "official_upstream_repository": "https://github.com/QuantumClub-OSU/Quantum-Cryptography-Challenge",
+  "official_upstream_commit": "340e1ce18cafa69f4cea906f88f93741738dc0fa",
+  "documented_fresh_base": "fce7c3950d06bb4d23e3c057b4625f901c396de4",
+  "documented_base_difference_from_original_official": [
+    "docs/TIER01_THEORY.md"
+  ],
+  "independent_audit_vs_approved_protected_changes": [],
+  "approved_team_tree": "b965048fa4d7db33876b33c60e5a9e206085f1ee",
+  "approved_archive_blob": "723d19c562253b780d1ccd4586180b095d385707",
+  "expected_windows_path_accessible_in_this_executor": false,
+  "windows_path_note": "No access to the user Windows drive. Located the same approved filename in the pinned Git commit and independently retrieved matching raw bytes from GitHub. No assertion about bytes currently on the Windows desktop.",
+  "no_approved_archive_regeneration": true,
+  "fresh_upstream_clone": true
+}

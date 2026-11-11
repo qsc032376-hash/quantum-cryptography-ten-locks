@@ -1,0 +1,50 @@
+{
+  "started_at": "2026-11-11T18:36:49.704918-05:00",
+  "finished_at": "2026-11-11T18:40:22.331676-05:00",
+  "command": [
+    "/workspace/work/tier01-venv/bin/python",
+    "-I",
+    "tools/check_submission.py",
+    "submissions/team3",
+    "--out",
+    "/workspace/work/v63-final-zip-audit/docs/v63-final-verification/checker"
+  ],
+  "cwd": "/workspace/work/v63-fresh-official",
+  "exit_code": 0,
+  "resource_state": "ok",
+  "wall_seconds": 212.62716280200038,
+  "sampled_process_tree_peak_rss_bytes": 728137728,
+  "sampled_process_tree_peak_rss_mib": 694.40625,
+  "sample_period_ms": 20,
+  "resource_note": "Sampled sum of process RSS can miss peaks or double-count shared pages.",
+  "outer_wall_limit_seconds": 2700,
+  "outer_memory_limit_mib": 8192,
+  "official_solve_timeout_seconds": 120,
+  "official_transpile_timeout_seconds": 120,
+  "official_startup_grace_seconds": 60,
+  "official_limits_modified": false,
+  "python": "3.12.14",
+  "executable": "/workspace/work/tier01-venv/bin/python",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "packages": {
+    "qiskit": "2.6.1",
+    "qiskit-aer": "0.18.2",
+    "numpy": "2.5.4",
+    "pyyaml": "6.0.3",
+    "psutil": "7.2.2",
+    "matplotlib": null,
+    "pylatexenc": null,
+    "notebook": null,
+    "ipykernel": null
+  },
+  "thread_environment": {
+    "OMP_NUM_THREADS": "2",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "QISKIT_PARALLEL": "FALSE"
+  },
+  "checker_patched": false,
+  "submission_patched": false,
+  "simulation_seed_overridden": false,
+  "optional_notebook_plotting_components_required": false
+}

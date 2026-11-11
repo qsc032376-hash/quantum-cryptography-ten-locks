@@ -1,0 +1,16 @@
+{
+  "approved_commit": "ce75c0721622d363e77912191a52a02c34f92472",
+  "approved_existing_tracked_files_changed": [],
+  "official_upstream_tracked_files_changed": [],
+  "archive_sha256_after_all_checks": "64c0e648010b3e601d3696e051b7f31ed4bbe8d3b8039c22b10fb2a4c7806c94",
+  "audit_new_files_limited_to": [
+    "docs/V63_FINAL_ZIP_VERIFICATION.md",
+    "docs/v63-final-verification/"
+  ],
+  "full_checker_runs_this_audit": 1,
+  "additional_aer_diagnostic_runs": 0,
+  "zip_rebuilt": false,
+  "production_optimized": false,
+  "submission_form_sent": false,
+  "audit_decision": "INCONCLUSIVE"
+}

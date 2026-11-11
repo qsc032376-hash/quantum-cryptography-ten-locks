@@ -1,0 +1,213 @@
+{
+  "source_commit": "ce75c0721622d363e77912191a52a02c34f92472",
+  "historical_evidence": [
+    {
+      "path": "docs/v61-evidence/full-checker/report.json",
+      "raw_sha256": "3bf07091d8593eef908ab82fc4e8bb7797410b72c7bec086471f60f1fc1e3a83",
+      "tiers_5_6_7": {
+        "5": {
+          "metrics": {
+            "active_qubits": 19,
+            "depth": 28132,
+            "total_gates": 40938,
+            "two_qubit_gates": 14552
+          },
+          "status": "full",
+          "hash_ok": true
+        },
+        "6": {
+          "metrics": {
+            "active_qubits": 22,
+            "depth": 5691,
+            "total_gates": 8680,
+            "two_qubit_gates": 3000
+          },
+          "status": "full",
+          "hash_ok": true
+        },
+        "7": {
+          "metrics": {
+            "active_qubits": 15,
+            "depth": 153,
+            "total_gates": 527,
+            "two_qubit_gates": 209
+          },
+          "status": "full",
+          "hash_ok": true
+        }
+      },
+      "config_sha256": "16eea5d6bcd4ad44b60cd0b50a15d7c2fbdee98ec16b9fe5b61426a8f020a31e",
+      "qiskit": "2.6.1",
+      "qiskit_aer": "0.18.2"
+    },
+    {
+      "path": "docs/v61-evidence/baseline-diagnostics.json",
+      "raw_sha256": "b7cceed223581a0e0695b60bb35f4b9be73a4fe588bac3c97b19e0cf3dc8761e",
+      "tiers_5_6_7": {
+        "6": {
+          "metrics": {
+            "two_qubit_gates": 3000,
+            "depth": 5691,
+            "total_gates": 8680,
+            "active_qubits": 22
+          },
+          "status": "full",
+          "hash_ok": true
+        },
+        "7": {
+          "metrics": {
+            "two_qubit_gates": 209,
+            "depth": 266,
+            "total_gates": 724,
+            "active_qubits": 15
+          },
+          "status": "full",
+          "hash_ok": true
+        }
+      },
+      "config_sha256": null,
+      "qiskit": null,
+      "qiskit_aer": null
+    },
+    {
+      "path": "docs/v62-evidence/full-checker/report.json",
+      "raw_sha256": "f02fd7c3a61c576c673a1ada0dd5deea590a419cf7e88a565d8434b1da9776a0",
+      "tiers_5_6_7": {
+        "5": {
+          "metrics": {
+            "active_qubits": 19,
+            "depth": 28132,
+            "total_gates": 40938,
+            "two_qubit_gates": 14552
+          },
+          "status": "full",
+          "hash_ok": true
+        },
+        "6": {
+          "metrics": {
+            "active_qubits": 22,
+            "depth": 5715,
+            "total_gates": 8752,
+            "two_qubit_gates": 3000
+          },
+          "status": "full",
+          "hash_ok": true
+        },
+        "7": {
+          "metrics": {
+            "active_qubits": 15,
+            "depth": 154,
+            "total_gates": 536,
+            "two_qubit_gates": 209
+          },
+          "status": "full",
+          "hash_ok": true
+        }
+      },
+      "config_sha256": "16eea5d6bcd4ad44b60cd0b50a15d7c2fbdee98ec16b9fe5b61426a8f020a31e",
+      "qiskit": "2.6.1",
+      "qiskit_aer": "0.18.2"
+    },
+    {
+      "path": "docs/v63-evidence/compiler-replay.json",
+      "raw_sha256": "fc963f23e0e29db8ad6e875dec2c4129797b242b5da04e06b2e063f575c4f24c"
+    },
+    {
+      "path": "docs/v63-evidence/candidate-checker/report.json",
+      "raw_sha256": "d38b1a77639455ca1188ebc4a70be664f14b2a1fe7c3ebe4c854faa8538c582a",
+      "tiers_5_6_7": {
+        "5": {
+          "metrics": {
+            "active_qubits": 19,
+            "depth": 19703,
+            "total_gates": 28413,
+            "two_qubit_gates": 10950
+          },
+          "status": "full",
+          "hash_ok": true
+        },
+        "6": {
+          "metrics": {
+            "active_qubits": 22,
+            "depth": 5715,
+            "total_gates": 8752,
+            "two_qubit_gates": 3000
+          },
+          "status": "full",
+          "hash_ok": true
+        },
+        "7": {
+          "metrics": {
+            "active_qubits": 15,
+            "depth": 154,
+            "total_gates": 536,
+            "two_qubit_gates": 209
+          },
+          "status": "full",
+          "hash_ok": true
+        }
+      },
+      "config_sha256": "16eea5d6bcd4ad44b60cd0b50a15d7c2fbdee98ec16b9fe5b61426a8f020a31e",
+      "qiskit": "2.6.1",
+      "qiskit_aer": "0.18.2"
+    },
+    {
+      "path": "docs/v63-evidence/zip-checker/report.json",
+      "raw_sha256": "8a8bc7f615e5ab667b925ebdcea7c47da228587479f27dbe6ae0ec7325665740",
+      "tiers_5_6_7": {
+        "5": {
+          "metrics": {
+            "active_qubits": 19,
+            "depth": 19703,
+            "total_gates": 28413,
+            "two_qubit_gates": 10950
+          },
+          "status": "full",
+          "hash_ok": true
+        },
+        "6": {
+          "metrics": {
+            "active_qubits": 22,
+            "depth": 5715,
+            "total_gates": 8752,
+            "two_qubit_gates": 3000
+          },
+          "status": "full",
+          "hash_ok": true
+        },
+        "7": {
+          "metrics": {
+            "active_qubits": 15,
+            "depth": 154,
+            "total_gates": 536,
+            "two_qubit_gates": 209
+          },
+          "status": "full",
+          "hash_ok": true
+        }
+      },
+      "config_sha256": "16eea5d6bcd4ad44b60cd0b50a15d7c2fbdee98ec16b9fe5b61426a8f020a31e",
+      "qiskit": "2.6.1",
+      "qiskit_aer": "0.18.2"
+    }
+  ],
+  "finding": "Unchanged runtime files have previously produced differing one-qubit gate counts/depth under reported pinned core versions. This does not establish the exact root cause of the fresh differences or make them equal to the requested reference.",
+  "source_reports": [
+    "docs/V61_INTEGRATION_REPORT.md",
+    "docs/V62_INTEGRATION_REPORT.md",
+    "docs/V63_INTEGRATION_REPORT.md"
+  ],
+  "same_runtime_hashes_confirmed_by_read_only_reference_audit": [
+    "team3/tier06/oracle.py",
+    "team3/tier06/solution.py",
+    "team3/tier07/solution.py",
+    "team3/tier07/qpe.py"
+  ],
+  "hypotheses_not_proven": [
+    "floating-point angle simplification",
+    "compiler native-library/platform behavior",
+    "compiler thread behavior"
+  ],
+  "zip_corruption_evidence": false,
+  "json_or_line_endings_changed": false
+}

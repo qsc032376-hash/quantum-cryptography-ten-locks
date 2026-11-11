@@ -1,0 +1,367 @@
+{
+  "purpose": "Read-only compile diagnostic after actual fresh Checker metric differences",
+  "environment": {
+    "python": "3.12.14",
+    "qiskit": "2.6.1",
+    "qiskit_aer": "0.18.2",
+    "numpy": "2.5.4"
+  },
+  "thread_and_hash_environment": {
+    "OMP_NUM_THREADS": "2",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "QISKIT_PARALLEL": "FALSE",
+    "PYTHONHASHSEED": "0",
+    "RAYON_NUM_THREADS": null
+  },
+  "rayon_changed": false,
+  "transpiler_seed": 12345,
+  "precompile_optimization_level": 2,
+  "official_scoring_optimization_level": 1,
+  "replays_per_tier": 2,
+  "worker_timeout_seconds": 30,
+  "actual_aer_run_calls": 0,
+  "submission_or_checker_modified": false,
+  "circuits_or_private_parameters_saved": false,
+  "results": [
+    {
+      "tier": 5,
+      "rows": [
+        {
+          "circuit": "sole_Grover_circuit",
+          "scope": "FULL_COMPILATION_PIPELINE: sole real solver circuit, without Aer execution",
+          "precompile_metrics": {
+            "two_qubit_gates": 11000,
+            "depth": 19703,
+            "total_gates": 28413,
+            "active_qubits": 19
+          },
+          "precompile_count_ops": {
+            "rz": 12301,
+            "cx": 11000,
+            "sx": 4862,
+            "x": 250,
+            "measure": 10
+          },
+          "official_basis_metrics": {
+            "two_qubit_gates": 10950,
+            "depth": 19703,
+            "total_gates": 28363,
+            "active_qubits": 19
+          },
+          "official_basis_count_ops": {
+            "rz": 12301,
+            "cx": 10950,
+            "sx": 4862,
+            "x": 250,
+            "measure": 10
+          },
+          "precompile_seconds": 2.9916369570019015,
+          "scoring_compile_seconds": 0.12341580399879604
+        }
+      ],
+      "aer_run_calls": 0,
+      "scope": "FULL_COMPILATION_PIPELINE: sole real solver circuit, without Aer execution",
+      "replay": 1,
+      "status": "PASS"
+    },
+    {
+      "tier": 5,
+      "rows": [
+        {
+          "circuit": "sole_Grover_circuit",
+          "scope": "FULL_COMPILATION_PIPELINE: sole real solver circuit, without Aer execution",
+          "precompile_metrics": {
+            "two_qubit_gates": 11000,
+            "depth": 19703,
+            "total_gates": 28413,
+            "active_qubits": 19
+          },
+          "precompile_count_ops": {
+            "rz": 12301,
+            "cx": 11000,
+            "sx": 4862,
+            "x": 250,
+            "measure": 10
+          },
+          "official_basis_metrics": {
+            "two_qubit_gates": 10950,
+            "depth": 19703,
+            "total_gates": 28363,
+            "active_qubits": 19
+          },
+          "official_basis_count_ops": {
+            "rz": 12301,
+            "cx": 10950,
+            "sx": 4862,
+            "x": 250,
+            "measure": 10
+          },
+          "precompile_seconds": 2.499081218000356,
+          "scoring_compile_seconds": 0.10805992499808781
+        }
+      ],
+      "aer_run_calls": 0,
+      "scope": "FULL_COMPILATION_PIPELINE: sole real solver circuit, without Aer execution",
+      "replay": 2,
+      "status": "PASS"
+    },
+    {
+      "tier": 6,
+      "rows": [
+        {
+          "circuit": "actual_calibration_builder",
+          "scope": "PARTIAL: search uses documented nominal 12 rounds, not a recovered calibration outcome; cannot certify actual scored-winner identity",
+          "precompile_metrics": {
+            "two_qubit_gates": 436,
+            "depth": 819,
+            "total_gates": 1206,
+            "active_qubits": 23
+          },
+          "precompile_count_ops": {
+            "rz": 574,
+            "cx": 436,
+            "sx": 196,
+            "measure": 1
+          },
+          "official_basis_metrics": {
+            "two_qubit_gates": 436,
+            "depth": 819,
+            "total_gates": 1206,
+            "active_qubits": 23
+          },
+          "official_basis_count_ops": {
+            "rz": 574,
+            "cx": 436,
+            "sx": 196,
+            "measure": 1
+          },
+          "precompile_seconds": 0.023088606001692824,
+          "scoring_compile_seconds": 0.008504823999828659
+        },
+        {
+          "circuit": "nominal_12_round_search_builder",
+          "scope": "PARTIAL: search uses documented nominal 12 rounds, not a recovered calibration outcome; cannot certify actual scored-winner identity",
+          "precompile_metrics": {
+            "two_qubit_gates": 3000,
+            "depth": 5691,
+            "total_gates": 8680,
+            "active_qubits": 22
+          },
+          "precompile_count_ops": {
+            "rz": 4178,
+            "cx": 3000,
+            "sx": 1502,
+            "measure": 14
+          },
+          "official_basis_metrics": {
+            "two_qubit_gates": 3000,
+            "depth": 5691,
+            "total_gates": 8680,
+            "active_qubits": 22
+          },
+          "official_basis_count_ops": {
+            "rz": 4178,
+            "cx": 3000,
+            "sx": 1502,
+            "measure": 14
+          },
+          "precompile_seconds": 0.06844062200252665,
+          "scoring_compile_seconds": 0.03189679700153647
+        }
+      ],
+      "aer_run_calls": 0,
+      "scope": "PARTIAL: search uses documented nominal 12 rounds, not a recovered calibration outcome; cannot certify actual scored-winner identity",
+      "replay": 1,
+      "status": "PASS"
+    },
+    {
+      "tier": 6,
+      "rows": [
+        {
+          "circuit": "actual_calibration_builder",
+          "scope": "PARTIAL: search uses documented nominal 12 rounds, not a recovered calibration outcome; cannot certify actual scored-winner identity",
+          "precompile_metrics": {
+            "two_qubit_gates": 436,
+            "depth": 819,
+            "total_gates": 1206,
+            "active_qubits": 23
+          },
+          "precompile_count_ops": {
+            "rz": 574,
+            "cx": 436,
+            "sx": 196,
+            "measure": 1
+          },
+          "official_basis_metrics": {
+            "two_qubit_gates": 436,
+            "depth": 819,
+            "total_gates": 1206,
+            "active_qubits": 23
+          },
+          "official_basis_count_ops": {
+            "rz": 574,
+            "cx": 436,
+            "sx": 196,
+            "measure": 1
+          },
+          "precompile_seconds": 0.028406667999661295,
+          "scoring_compile_seconds": 0.0070684090023860335
+        },
+        {
+          "circuit": "nominal_12_round_search_builder",
+          "scope": "PARTIAL: search uses documented nominal 12 rounds, not a recovered calibration outcome; cannot certify actual scored-winner identity",
+          "precompile_metrics": {
+            "two_qubit_gates": 3000,
+            "depth": 5691,
+            "total_gates": 8680,
+            "active_qubits": 22
+          },
+          "precompile_count_ops": {
+            "rz": 4178,
+            "cx": 3000,
+            "sx": 1502,
+            "measure": 14
+          },
+          "official_basis_metrics": {
+            "two_qubit_gates": 3000,
+            "depth": 5691,
+            "total_gates": 8680,
+            "active_qubits": 22
+          },
+          "official_basis_count_ops": {
+            "rz": 4178,
+            "cx": 3000,
+            "sx": 1502,
+            "measure": 14
+          },
+          "precompile_seconds": 0.07667419900099048,
+          "scoring_compile_seconds": 0.033264391000557225
+        }
+      ],
+      "aer_run_calls": 0,
+      "scope": "PARTIAL: search uses documented nominal 12 rounds, not a recovered calibration outcome; cannot certify actual scored-winner identity",
+      "replay": 2,
+      "status": "PASS"
+    },
+    {
+      "tier": 7,
+      "rows": [
+        {
+          "circuit": "actual_first_QPE_builder",
+          "scope": "PARTIAL: first real QPE circuit only; second phase-check depends on measured private k and is intentionally skipped",
+          "precompile_metrics": {
+            "two_qubit_gates": 209,
+            "depth": 155,
+            "total_gates": 533,
+            "active_qubits": 15
+          },
+          "precompile_count_ops": {
+            "rz": 267,
+            "cx": 209,
+            "sx": 31,
+            "x": 26,
+            "measure": 14
+          },
+          "official_basis_metrics": {
+            "two_qubit_gates": 209,
+            "depth": 155,
+            "total_gates": 533,
+            "active_qubits": 15
+          },
+          "official_basis_count_ops": {
+            "rz": 267,
+            "cx": 209,
+            "sx": 31,
+            "x": 26,
+            "measure": 14
+          },
+          "precompile_seconds": 0.03767669800072326,
+          "scoring_compile_seconds": 0.005427821997727733
+        }
+      ],
+      "aer_run_calls": 0,
+      "scope": "PARTIAL: first real QPE circuit only; second phase-check depends on measured private k and is intentionally skipped",
+      "replay": 1,
+      "status": "PASS"
+    },
+    {
+      "tier": 7,
+      "rows": [
+        {
+          "circuit": "actual_first_QPE_builder",
+          "scope": "PARTIAL: first real QPE circuit only; second phase-check depends on measured private k and is intentionally skipped",
+          "precompile_metrics": {
+            "two_qubit_gates": 209,
+            "depth": 155,
+            "total_gates": 533,
+            "active_qubits": 15
+          },
+          "precompile_count_ops": {
+            "rz": 267,
+            "cx": 209,
+            "sx": 31,
+            "x": 26,
+            "measure": 14
+          },
+          "official_basis_metrics": {
+            "two_qubit_gates": 209,
+            "depth": 155,
+            "total_gates": 533,
+            "active_qubits": 15
+          },
+          "official_basis_count_ops": {
+            "rz": 267,
+            "cx": 209,
+            "sx": 31,
+            "x": 26,
+            "measure": 14
+          },
+          "precompile_seconds": 0.03267208599936566,
+          "scoring_compile_seconds": 0.005025552000006428
+        }
+      ],
+      "aer_run_calls": 0,
+      "scope": "PARTIAL: first real QPE circuit only; second phase-check depends on measured private k and is intentionally skipped",
+      "replay": 2,
+      "status": "PASS"
+    }
+  ],
+  "paired_comparison": {
+    "5": {
+      "sole_Grover_circuit": {
+        "input_qpy_bytes_identical": false,
+        "precompile_metrics_identical": true,
+        "scored_metrics_identical": true,
+        "scored_count_ops_identical": true
+      }
+    },
+    "6": {
+      "actual_calibration_builder": {
+        "input_qpy_bytes_identical": true,
+        "precompile_metrics_identical": true,
+        "scored_metrics_identical": true,
+        "scored_count_ops_identical": true
+      },
+      "nominal_12_round_search_builder": {
+        "input_qpy_bytes_identical": false,
+        "precompile_metrics_identical": true,
+        "scored_metrics_identical": true,
+        "scored_count_ops_identical": true
+      }
+    },
+    "7": {
+      "actual_first_QPE_builder": {
+        "input_qpy_bytes_identical": false,
+        "precompile_metrics_identical": true,
+        "scored_metrics_identical": true,
+        "scored_count_ops_identical": true
+      }
+    }
+  },
+  "compiler_sensitivity_note": "The installed Optimize1qGatesDecomposition documents Rayon threading; OneQubitEulerDecomposer uses an angle simplification tolerance. These are possible diagnostic mechanisms, NOT an established cause.",
+  "status": "DIAGNOSTIC_COMPLETE",
+  "input_identity_note": "QPY byte inequality is not a proof of different unitary action; this diagnostic does not inspect or normalize opaque gate internals/identifiers. Where input_qpy_bytes_identical is false, do not claim identical serialized inputs or establish compiler nondeterminism.",
+  "observed_conclusion": "All paired precompile/scored metrics and count_ops agreed. Each replayed main circuit reproduces the new Checker metrics, not the approved historical totals. No same-environment metric variability observed in this bounded sample; cross-environment cause remains unresolved.",
+  "script_sha256": "dd2c8af38890c6e8844f8ea11354b0d64ab89507c7b8542a70e3fd67ee143397"
+}

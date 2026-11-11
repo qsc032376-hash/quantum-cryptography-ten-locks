@@ -1,0 +1,25 @@
+{
+  "repository": "qsc032376-hash/quantum-cryptography-ten-locks",
+  "approved_commit": "ce75c0721622d363e77912191a52a02c34f92472",
+  "repository_path": "drafts/ten-locks-team3-v6.3-rc.zip",
+  "method": "GitHub connector fetch_file, encoding=base64; decoded transport bytes without archive rewrite",
+  "retrieved_bytes": 101354,
+  "expected_sha256": "64c0e648010b3e601d3696e051b7f31ed4bbe8d3b8039c22b10fb2a4c7806c94",
+  "authenticated_account_independent_access_not_verified": true,
+  "status": "VERIFIED",
+  "commit_pinned_download_url": "https://github.com/qsc032376-hash/quantum-cryptography-ten-locks/raw/ce75c0721622d363e77912191a52a02c34f92472/drafts/ten-locks-team3-v6.3-rc.zip",
+  "commit_pinned_blob_url": "https://github.com/qsc032376-hash/quantum-cryptography-ten-locks/blob/ce75c0721622d363e77912191a52a02c34f92472/drafts/ten-locks-team3-v6.3-rc.zip",
+  "private_repository_access_required": true,
+  "previous_attempt": {
+    "method": "gh api GitHub Contents API with raw media type",
+    "exit_code": 1,
+    "status": "DOWNLOAD_FAILED"
+  },
+  "github_blob_sha": "723d19c562253b780d1ccd4586180b095d385707",
+  "actual_sha256": "64c0e648010b3e601d3696e051b7f31ed4bbe8d3b8039c22b10fb2a4c7806c94",
+  "hash_matches": true,
+  "shareable_copy_location": "/workspace/outputs/v63-final-verification/ten-locks-team3-v6.3-rc.zip",
+  "saved_copy_sha256": "64c0e648010b3e601d3696e051b7f31ed4bbe8d3b8039c22b10fb2a4c7806c94",
+  "download_access_verified_for": "current authorized GitHub connector account",
+  "sicheng_account_access_verified": false
+}

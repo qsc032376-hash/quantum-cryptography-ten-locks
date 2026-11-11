@@ -1,0 +1,298 @@
+{
+  "approved_commit": "ce75c0721622d363e77912191a52a02c34f92472",
+  "verified_zip_sha256": "64c0e648010b3e601d3696e051b7f31ed4bbe8d3b8039c22b10fb2a4c7806c94",
+  "status": "INCONCLUSIVE",
+  "archive_and_functional_checks_pass": true,
+  "exact_reference_metrics_reproduced": false,
+  "ready_for_submission_under_requested_criteria": false,
+  "core_failures": [],
+  "checked_at": "2026-11-11T18:49:19.251756-05:00",
+  "failures": [
+    "tier 5: all_four_metrics_match",
+    "tier 6: all_four_metrics_match",
+    "tier 7: all_four_metrics_match",
+    "totals differ"
+  ],
+  "tiers": {
+    "1": {
+      "full": true,
+      "hash_match": true,
+      "zero_flags": true,
+      "actual_aer_execution": true,
+      "valid_metrics": true,
+      "all_four_metrics_match": true,
+      "metrics": {
+        "active_qubits": 25,
+        "depth": 44,
+        "total_gates": 298,
+        "two_qubit_gates": 151
+      },
+      "expected_metrics": {
+        "active_qubits": 25,
+        "depth": 44,
+        "total_gates": 298,
+        "two_qubit_gates": 151
+      },
+      "solve_seconds": 20.583,
+      "circuits_executed": 1,
+      "unique_circuits": 1,
+      "oracle_calls": 1,
+      "status": "full",
+      "flags": []
+    },
+    "2": {
+      "full": true,
+      "hash_match": true,
+      "zero_flags": true,
+      "actual_aer_execution": true,
+      "valid_metrics": true,
+      "all_four_metrics_match": true,
+      "metrics": {
+        "active_qubits": 1,
+        "depth": 3,
+        "total_gates": 3,
+        "two_qubit_gates": 0
+      },
+      "expected_metrics": {
+        "active_qubits": 1,
+        "depth": 3,
+        "total_gates": 3,
+        "two_qubit_gates": 0
+      },
+      "solve_seconds": 3.747,
+      "circuits_executed": 2048,
+      "unique_circuits": 2,
+      "oracle_calls": null,
+      "status": "full",
+      "flags": []
+    },
+    "3": {
+      "full": true,
+      "hash_match": true,
+      "zero_flags": true,
+      "actual_aer_execution": true,
+      "valid_metrics": true,
+      "all_four_metrics_match": true,
+      "metrics": {
+        "active_qubits": 7,
+        "depth": 8771,
+        "total_gates": 19497,
+        "two_qubit_gates": 7808
+      },
+      "expected_metrics": {
+        "active_qubits": 7,
+        "depth": 8771,
+        "total_gates": 19497,
+        "two_qubit_gates": 7808
+      },
+      "solve_seconds": 11.467,
+      "circuits_executed": 24,
+      "unique_circuits": 24,
+      "oracle_calls": 1,
+      "status": "full",
+      "flags": []
+    },
+    "4": {
+      "full": true,
+      "hash_match": true,
+      "zero_flags": true,
+      "actual_aer_execution": true,
+      "valid_metrics": true,
+      "all_four_metrics_match": true,
+      "metrics": {
+        "active_qubits": 20,
+        "depth": 195,
+        "total_gates": 455,
+        "two_qubit_gates": 183
+      },
+      "expected_metrics": {
+        "active_qubits": 20,
+        "depth": 195,
+        "total_gates": 455,
+        "two_qubit_gates": 183
+      },
+      "solve_seconds": 0.201,
+      "circuits_executed": 1,
+      "unique_circuits": 1,
+      "oracle_calls": null,
+      "status": "full",
+      "flags": []
+    },
+    "5": {
+      "full": true,
+      "hash_match": true,
+      "zero_flags": true,
+      "actual_aer_execution": true,
+      "valid_metrics": true,
+      "all_four_metrics_match": false,
+      "metrics": {
+        "active_qubits": 19,
+        "depth": 19703,
+        "total_gates": 28363,
+        "two_qubit_gates": 10950
+      },
+      "expected_metrics": {
+        "active_qubits": 19,
+        "depth": 19703,
+        "total_gates": 28413,
+        "two_qubit_gates": 10950
+      },
+      "solve_seconds": 25.151,
+      "circuits_executed": 1,
+      "unique_circuits": 1,
+      "oracle_calls": null,
+      "status": "full",
+      "flags": []
+    },
+    "6": {
+      "full": true,
+      "hash_match": true,
+      "zero_flags": true,
+      "actual_aer_execution": true,
+      "valid_metrics": true,
+      "all_four_metrics_match": false,
+      "metrics": {
+        "active_qubits": 22,
+        "depth": 5691,
+        "total_gates": 8680,
+        "two_qubit_gates": 3000
+      },
+      "expected_metrics": {
+        "active_qubits": 22,
+        "depth": 5715,
+        "total_gates": 8752,
+        "two_qubit_gates": 3000
+      },
+      "solve_seconds": 63.948,
+      "circuits_executed": 2,
+      "unique_circuits": 2,
+      "oracle_calls": null,
+      "status": "full",
+      "flags": []
+    },
+    "7": {
+      "full": true,
+      "hash_match": true,
+      "zero_flags": true,
+      "actual_aer_execution": true,
+      "valid_metrics": true,
+      "all_four_metrics_match": false,
+      "metrics": {
+        "active_qubits": 15,
+        "depth": 155,
+        "total_gates": 533,
+        "two_qubit_gates": 209
+      },
+      "expected_metrics": {
+        "active_qubits": 15,
+        "depth": 154,
+        "total_gates": 536,
+        "two_qubit_gates": 209
+      },
+      "solve_seconds": 0.132,
+      "circuits_executed": 2,
+      "unique_circuits": 2,
+      "oracle_calls": null,
+      "status": "full",
+      "flags": []
+    },
+    "8": {
+      "full": true,
+      "hash_match": true,
+      "zero_flags": true,
+      "actual_aer_execution": true,
+      "valid_metrics": true,
+      "all_four_metrics_match": true,
+      "metrics": {
+        "active_qubits": 18,
+        "depth": 18804,
+        "total_gates": 22861,
+        "two_qubit_gates": 7856
+      },
+      "expected_metrics": {
+        "active_qubits": 18,
+        "depth": 18804,
+        "total_gates": 22861,
+        "two_qubit_gates": 7856
+      },
+      "solve_seconds": 6.052,
+      "circuits_executed": 1,
+      "unique_circuits": 1,
+      "oracle_calls": null,
+      "status": "full",
+      "flags": []
+    },
+    "9": {
+      "full": true,
+      "hash_match": true,
+      "zero_flags": true,
+      "actual_aer_execution": true,
+      "valid_metrics": true,
+      "all_four_metrics_match": true,
+      "metrics": {
+        "active_qubits": 22,
+        "depth": 71632,
+        "total_gates": 102830,
+        "two_qubit_gates": 34186
+      },
+      "expected_metrics": {
+        "active_qubits": 22,
+        "depth": 71632,
+        "total_gates": 102830,
+        "two_qubit_gates": 34186
+      },
+      "solve_seconds": 38.316,
+      "circuits_executed": 1,
+      "unique_circuits": 1,
+      "oracle_calls": null,
+      "status": "full",
+      "flags": []
+    },
+    "10": {
+      "full": true,
+      "hash_match": true,
+      "zero_flags": true,
+      "actual_aer_execution": true,
+      "valid_metrics": true,
+      "all_four_metrics_match": true,
+      "metrics": {
+        "active_qubits": 19,
+        "depth": 92604,
+        "total_gates": 111337,
+        "two_qubit_gates": 38823
+      },
+      "expected_metrics": {
+        "active_qubits": 19,
+        "depth": 92604,
+        "total_gates": 111337,
+        "two_qubit_gates": 38823
+      },
+      "solve_seconds": 10.077,
+      "circuits_executed": 1,
+      "unique_circuits": 1,
+      "oracle_calls": null,
+      "status": "full",
+      "flags": []
+    }
+  },
+  "totals": {
+    "two_qubit_gates": 103166,
+    "depth": 217602,
+    "total_gates": 294857
+  },
+  "totals_note": "Depth is a sum of ten separate circuit depths, not one combined circuit depth; active qubits are per tier, not summed.",
+  "full_count": 10,
+  "hash_match_count": 10,
+  "actual_aer_tier_count": 10,
+  "flagged_tier_count": 0,
+  "timeout_count": 0,
+  "post_run_archive_unchanged": true,
+  "post_run_extracted_members_unchanged": true,
+  "post_run_official_files_unchanged": true,
+  "post_run_download_copy_unchanged": true,
+  "reference_report": "ce75c0721622d363e77912191a52a02c34f92472:docs/v63-evidence/zip-checker/report.json",
+  "fresh_report_sha256": "3a27ff942b8d15f130fdeb4bd14fb4ccb255380394b3292446f8658d06d6db65",
+  "checker_source_sha256": "d6e1351600f69739d3f481c7fae6292bd6ab1d83c141997aafd8a848d5d1cd36",
+  "simulation_kind": "Classical Qiskit Aer execution of the submitted quantum circuits; not quantum hardware.",
+  "form_submitted": false
+}
