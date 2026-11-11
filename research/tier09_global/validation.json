@@ -1,0 +1,159 @@
+{
+  "official_checker": {
+    "status": "full",
+    "hash_ok": true,
+    "circuits_executed": 1,
+    "solve_seconds": 31.054,
+    "flags": [],
+    "metrics_status": "ok",
+    "metrics": {
+      "active_qubits": 22,
+      "depth": 71632,
+      "total_gates": 102830,
+      "two_qubit_gates": 34186
+    }
+  },
+  "block_operator_max_error": 1.326e-13,
+  "paired_seeds": {
+    "baseline": [
+      {
+        "mode": "base",
+        "seed": 1000,
+        "seeds_seen": [
+          1000
+        ],
+        "ok": true,
+        "sha256": "918b9d2f1db5a369d2863b707dc21107c36292b406b5f5e63905667b48ed66ef",
+        "total_seconds": 40.13,
+        "compile_seconds": 0.35,
+        "aer_seconds": 39.62,
+        "peak_mb": 93.4
+      },
+      {
+        "mode": "base",
+        "seed": 2000,
+        "seeds_seen": [
+          2000
+        ],
+        "ok": true,
+        "sha256": "918b9d2f1db5a369d2863b707dc21107c36292b406b5f5e63905667b48ed66ef",
+        "total_seconds": 40.35,
+        "compile_seconds": 0.35,
+        "aer_seconds": 39.84,
+        "peak_mb": 92.1
+      },
+      {
+        "mode": "base",
+        "seed": 3000,
+        "seeds_seen": [
+          3000
+        ],
+        "ok": true,
+        "sha256": "918b9d2f1db5a369d2863b707dc21107c36292b406b5f5e63905667b48ed66ef",
+        "total_seconds": 40.65,
+        "compile_seconds": 0.28,
+        "aer_seconds": 40.18,
+        "peak_mb": 92.9
+      },
+      {
+        "mode": "base",
+        "seed": 4000,
+        "seeds_seen": [
+          4000
+        ],
+        "ok": true,
+        "sha256": "918b9d2f1db5a369d2863b707dc21107c36292b406b5f5e63905667b48ed66ef",
+        "total_seconds": 40.64,
+        "compile_seconds": 0.27,
+        "aer_seconds": 40.22,
+        "peak_mb": 92.9
+      },
+      {
+        "mode": "base",
+        "seed": 5000,
+        "seeds_seen": [
+          5000
+        ],
+        "ok": true,
+        "sha256": "918b9d2f1db5a369d2863b707dc21107c36292b406b5f5e63905667b48ed66ef",
+        "total_seconds": 40.69,
+        "compile_seconds": 0.34,
+        "aer_seconds": 40.19,
+        "peak_mb": 92.5
+      }
+    ],
+    "candidate": [
+      {
+        "mode": "cand",
+        "seed": 1000,
+        "seeds_seen": [
+          1000
+        ],
+        "ok": true,
+        "sha256": "918b9d2f1db5a369d2863b707dc21107c36292b406b5f5e63905667b48ed66ef",
+        "total_seconds": 31.89,
+        "compile_seconds": 0.34,
+        "aer_seconds": 31.42,
+        "peak_mb": 94.8
+      },
+      {
+        "mode": "cand",
+        "seed": 2000,
+        "seeds_seen": [
+          2000
+        ],
+        "ok": true,
+        "sha256": "918b9d2f1db5a369d2863b707dc21107c36292b406b5f5e63905667b48ed66ef",
+        "total_seconds": 31.81,
+        "compile_seconds": 0.29,
+        "aer_seconds": 31.37,
+        "peak_mb": 93.9
+      },
+      {
+        "mode": "cand",
+        "seed": 3000,
+        "seeds_seen": [
+          3000
+        ],
+        "ok": true,
+        "sha256": "918b9d2f1db5a369d2863b707dc21107c36292b406b5f5e63905667b48ed66ef",
+        "total_seconds": 31.77,
+        "compile_seconds": 0.39,
+        "aer_seconds": 31.23,
+        "peak_mb": 93.5
+      },
+      {
+        "mode": "cand",
+        "seed": 4000,
+        "seeds_seen": [
+          4000
+        ],
+        "ok": true,
+        "sha256": "918b9d2f1db5a369d2863b707dc21107c36292b406b5f5e63905667b48ed66ef",
+        "total_seconds": 20.46,
+        "compile_seconds": 0.3,
+        "aer_seconds": 20.02,
+        "peak_mb": 93.4
+      },
+      {
+        "mode": "cand",
+        "seed": 5000,
+        "seeds_seen": [
+          5000
+        ],
+        "ok": true,
+        "sha256": "918b9d2f1db5a369d2863b707dc21107c36292b406b5f5e63905667b48ed66ef",
+        "total_seconds": 12.65,
+        "compile_seconds": 0.13,
+        "aer_seconds": 12.47,
+        "peak_mb": 94.2
+      }
+    ]
+  },
+  "summary": {
+    "baseline_mean_seconds": 40.49,
+    "candidate_mean_seconds": 25.72,
+    "baseline_mean_peak_mb": 92.8,
+    "candidate_mean_peak_mb": 94.0
+  }
+}
