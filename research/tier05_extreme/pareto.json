@@ -1,0 +1,305 @@
+{
+  "static_resource_compile_frontier": [
+    9,
+    10,
+    11,
+    13,
+    14
+  ],
+  "measured_six_dimension_frontier": [
+    0,
+    14
+  ],
+  "rows": [
+    {
+      "index": 0,
+      "config": {
+        "relative_mask": false,
+        "relative_compare": false,
+        "level": 1,
+        "gf2": true
+      },
+      "metrics": {
+        "two_qubit_gates": 14552,
+        "depth": 28132,
+        "total_gates": 40938,
+        "active_qubits": 19
+      },
+      "compile_seconds": 1.1174143750104122,
+      "solve_seconds": 13.8064,
+      "aer_job_seconds": 12.830031408404466,
+      "peak_rss_mib": 212.89375
+    },
+    {
+      "index": 1,
+      "config": {
+        "relative_mask": false,
+        "relative_compare": false,
+        "level": 2,
+        "gf2": true
+      },
+      "metrics": {
+        "two_qubit_gates": 14552,
+        "depth": 27707,
+        "total_gates": 38187,
+        "active_qubits": 19
+      },
+      "compile_seconds": 1.1317309589940123,
+      "solve_seconds": null,
+      "aer_job_seconds": null,
+      "peak_rss_mib": null
+    },
+    {
+      "index": 2,
+      "config": {
+        "relative_mask": false,
+        "relative_compare": true,
+        "level": 1,
+        "gf2": true
+      },
+      "metrics": {
+        "two_qubit_gates": 14452,
+        "depth": 27932,
+        "total_gates": 40738,
+        "active_qubits": 19
+      },
+      "compile_seconds": 1.0805908750044182,
+      "solve_seconds": null,
+      "aer_job_seconds": null,
+      "peak_rss_mib": null
+    },
+    {
+      "index": 3,
+      "config": {
+        "relative_mask": false,
+        "relative_compare": true,
+        "level": 2,
+        "gf2": true
+      },
+      "metrics": {
+        "two_qubit_gates": 14452,
+        "depth": 27132,
+        "total_gates": 37613,
+        "active_qubits": 19
+      },
+      "compile_seconds": 1.0407399579999037,
+      "solve_seconds": null,
+      "aer_job_seconds": null,
+      "peak_rss_mib": null
+    },
+    {
+      "index": 4,
+      "config": {
+        "relative_mask": true,
+        "relative_compare": false,
+        "level": 1,
+        "gf2": true
+      },
+      "metrics": {
+        "two_qubit_gates": 11100,
+        "depth": 23478,
+        "total_gates": 32686,
+        "active_qubits": 19
+      },
+      "compile_seconds": 0.8162481249892153,
+      "solve_seconds": null,
+      "aer_job_seconds": null,
+      "peak_rss_mib": null
+    },
+    {
+      "index": 5,
+      "config": {
+        "relative_mask": true,
+        "relative_compare": false,
+        "level": 2,
+        "gf2": true
+      },
+      "metrics": {
+        "two_qubit_gates": 11100,
+        "depth": 22953,
+        "total_gates": 31030,
+        "active_qubits": 19
+      },
+      "compile_seconds": 0.8496075409930199,
+      "solve_seconds": null,
+      "aer_job_seconds": null,
+      "peak_rss_mib": null
+    },
+    {
+      "index": 6,
+      "config": {
+        "relative_mask": true,
+        "relative_compare": true,
+        "level": 1,
+        "gf2": true
+      },
+      "metrics": {
+        "two_qubit_gates": 11000,
+        "depth": 23278,
+        "total_gates": 32486,
+        "active_qubits": 19
+      },
+      "compile_seconds": 0.8133912920020521,
+      "solve_seconds": null,
+      "aer_job_seconds": null,
+      "peak_rss_mib": null
+    },
+    {
+      "index": 7,
+      "config": {
+        "relative_mask": true,
+        "relative_compare": true,
+        "level": 2,
+        "gf2": true
+      },
+      "metrics": {
+        "two_qubit_gates": 11000,
+        "depth": 22278,
+        "total_gates": 30263,
+        "active_qubits": 19
+      },
+      "compile_seconds": 0.8187798750004731,
+      "solve_seconds": null,
+      "aer_job_seconds": null,
+      "peak_rss_mib": null
+    },
+    {
+      "index": 8,
+      "config": {
+        "relative_mask": true,
+        "relative_compare": true,
+        "level": 3,
+        "gf2": true
+      },
+      "metrics": {
+        "two_qubit_gates": 11000,
+        "depth": 22278,
+        "total_gates": 30263,
+        "active_qubits": 19
+      },
+      "compile_seconds": 0.8033467500354163,
+      "solve_seconds": null,
+      "aer_job_seconds": null,
+      "peak_rss_mib": null
+    },
+    {
+      "index": 9,
+      "config": {
+        "relative_mask": true,
+        "relative_compare": true,
+        "level": 1,
+        "gf2": false
+      },
+      "metrics": {
+        "two_qubit_gates": 11000,
+        "depth": 23653,
+        "total_gates": 32486,
+        "active_qubits": 19
+      },
+      "compile_seconds": 0.1038655829615891,
+      "solve_seconds": null,
+      "aer_job_seconds": null,
+      "peak_rss_mib": null
+    },
+    {
+      "index": 10,
+      "config": {
+        "relative_mask": true,
+        "relative_compare": true,
+        "level": 2,
+        "gf2": false
+      },
+      "metrics": {
+        "two_qubit_gates": 11000,
+        "depth": 22653,
+        "total_gates": 30263,
+        "active_qubits": 19
+      },
+      "compile_seconds": 0.16047433397034183,
+      "solve_seconds": null,
+      "aer_job_seconds": null,
+      "peak_rss_mib": null
+    },
+    {
+      "index": 11,
+      "config": {
+        "fused": true,
+        "order": 0,
+        "pivot_last": false,
+        "level": 2,
+        "gf2": true
+      },
+      "metrics": {
+        "two_qubit_gates": 11025,
+        "depth": 19378,
+        "total_gates": 28413,
+        "active_qubits": 19
+      },
+      "compile_seconds": 0.8178097080090083,
+      "solve_seconds": null,
+      "aer_job_seconds": null,
+      "peak_rss_mib": null
+    },
+    {
+      "index": 12,
+      "config": {
+        "fused": true,
+        "order": 0,
+        "pivot_last": true,
+        "level": 2,
+        "gf2": true
+      },
+      "metrics": {
+        "two_qubit_gates": 11125,
+        "depth": 19678,
+        "total_gates": 28638,
+        "active_qubits": 19
+      },
+      "compile_seconds": 0.7754327500006184,
+      "solve_seconds": null,
+      "aer_job_seconds": null,
+      "peak_rss_mib": null
+    },
+    {
+      "index": 13,
+      "config": {
+        "fused": true,
+        "order": 1,
+        "pivot_last": false,
+        "level": 2,
+        "gf2": true
+      },
+      "metrics": {
+        "two_qubit_gates": 11000,
+        "depth": 19628,
+        "total_gates": 28363,
+        "active_qubits": 19
+      },
+      "compile_seconds": 0.7750692919944413,
+      "solve_seconds": null,
+      "aer_job_seconds": null,
+      "peak_rss_mib": null
+    },
+    {
+      "index": 14,
+      "config": {
+        "fused": true,
+        "order": 1,
+        "pivot_last": true,
+        "level": 2,
+        "gf2": true
+      },
+      "metrics": {
+        "two_qubit_gates": 10950,
+        "depth": 19703,
+        "total_gates": 28363,
+        "active_qubits": 19
+      },
+      "compile_seconds": 0.7707302090129815,
+      "solve_seconds": 13.9504,
+      "aer_job_seconds": 13.162539574608672,
+      "peak_rss_mib": 205.0375
+    }
+  ],
+  "runtime_definition": "observed mean Aer job elapsed; not pure simulation kernel"
+}

@@ -1,0 +1,541 @@
+{
+  "source_commit": "0126267863e1bfe58b0fe8933fcb4cd943d933e7",
+  "baseline_commit": "c4455782ea9388d5897fc27270f42dd3786ed35d",
+  "harness_commit": "ab9676749e00da904d0b8076811a2407d3b7205f",
+  "candidate_sha256": "b9e76ca661752e60c4fcf899ecaf9c0b55151123d573f41cd27a56315901adaa",
+  "wrapper_sha256": "37409f28dc0160898489a2adc8cfa882f0aaf5620fd85dad9b07a9ae679b4950",
+  "environment": {
+    "python": "3.12.16",
+    "platform": "macOS-27.0.1-arm64-arm-64bit",
+    "qiskit": "2.6.1",
+    "qiskit-aer": "0.18.2",
+    "numpy": "2.5.4",
+    "psutil": "7.2.2"
+  },
+  "official": {
+    "baseline": {
+      "status": "full",
+      "hash_ok": true,
+      "circuit_executed": true,
+      "metrics": {
+        "two_qubit_gates": 14552,
+        "depth": 28132,
+        "total_gates": 40938,
+        "active_qubits": 19
+      },
+      "metrics_status": "ok",
+      "flags": [],
+      "solve_seconds": 14.7,
+      "circuits_executed": 1,
+      "unique_circuits": 1,
+      "oracle_calls": null,
+      "resource": {
+        "state": "ok",
+        "wall_seconds": 16.1493,
+        "peak_rss_bytes_sampled": 247775232,
+        "memory_limit_mb": 2048,
+        "timeout_seconds": 370
+      }
+    },
+    "candidate": {
+      "status": "full",
+      "hash_ok": true,
+      "circuit_executed": true,
+      "metrics": {
+        "two_qubit_gates": 10950,
+        "depth": 19703,
+        "total_gates": 28363,
+        "active_qubits": 19
+      },
+      "metrics_status": "ok",
+      "flags": [],
+      "solve_seconds": 13.999,
+      "circuits_executed": 1,
+      "unique_circuits": 1,
+      "oracle_calls": null,
+      "resource": {
+        "state": "ok",
+        "wall_seconds": 15.167,
+        "peak_rss_bytes_sampled": 247283712,
+        "memory_limit_mb": 2048,
+        "timeout_seconds": 370
+      }
+    }
+  },
+  "paired": [
+    {
+      "variant": "baseline",
+      "seed": 5100,
+      "status": "PASS",
+      "result": {
+        "hash_ok": true,
+        "solve_seconds": 13.879,
+        "circuits_executed": 1,
+        "unique_circuits": 1,
+        "not_implemented": false,
+        "shots_total": 128,
+        "aer_circuits_observed": 1,
+        "shots_known": true,
+        "aer_calls": 1,
+        "aer_timing": {
+          "result_wait_seconds": 12.9094377909787,
+          "aer_job_elapsed_seconds": 12.915847999975085,
+          "jobs_finished": 1
+        },
+        "native_transpilation_calls": null,
+        "seed_metadata": {
+          "requested_simulator_seed": 5100,
+          "actual_forwarded_simulator_seeds": [
+            5100
+          ],
+          "solution_declared_seeds": {
+            "SEED_TRANSPILER": 12345
+          },
+          "transpiler_seed": 12345,
+          "application_rng_seed": "solution default (not injected)"
+        },
+        "tier05_readout_aggregate": {
+          "shots": 128,
+          "distinct_measured_candidates": 1,
+          "prefix_valid_candidates": 1,
+          "prefix_success_shots": 128
+        },
+        "resource": {
+          "state": "ok",
+          "wall_seconds": 14.5322,
+          "peak_rss_bytes_sampled": 224002048,
+          "memory_limit_mb": 2048,
+          "timeout_seconds": 120
+        }
+      }
+    },
+    {
+      "variant": "candidate",
+      "seed": 5100,
+      "status": "PASS",
+      "result": {
+        "hash_ok": true,
+        "solve_seconds": 13.959,
+        "circuits_executed": 1,
+        "unique_circuits": 1,
+        "not_implemented": false,
+        "shots_total": 128,
+        "aer_circuits_observed": 1,
+        "shots_known": true,
+        "aer_calls": 1,
+        "aer_timing": {
+          "result_wait_seconds": 13.133267708995845,
+          "aer_job_elapsed_seconds": 13.139687000017148,
+          "jobs_finished": 1
+        },
+        "native_transpilation_calls": null,
+        "seed_metadata": {
+          "requested_simulator_seed": 5100,
+          "actual_forwarded_simulator_seeds": [
+            5100
+          ],
+          "solution_declared_seeds": {
+            "SEED_TRANSPILER": 12345
+          },
+          "transpiler_seed": 12345,
+          "application_rng_seed": "solution default (not injected)"
+        },
+        "tier05_readout_aggregate": {
+          "shots": 128,
+          "distinct_measured_candidates": 1,
+          "prefix_valid_candidates": 1,
+          "prefix_success_shots": 128
+        },
+        "resource": {
+          "state": "ok",
+          "wall_seconds": 14.6361,
+          "peak_rss_bytes_sampled": 225443840,
+          "memory_limit_mb": 2048,
+          "timeout_seconds": 120
+        }
+      }
+    },
+    {
+      "variant": "baseline",
+      "seed": 5101,
+      "status": "PASS",
+      "result": {
+        "hash_ok": true,
+        "solve_seconds": 13.776,
+        "circuits_executed": 1,
+        "unique_circuits": 1,
+        "not_implemented": false,
+        "shots_total": 128,
+        "aer_circuits_observed": 1,
+        "shots_known": true,
+        "aer_calls": 1,
+        "aer_timing": {
+          "result_wait_seconds": 12.820141625008546,
+          "aer_job_elapsed_seconds": 12.826527292025276,
+          "jobs_finished": 1
+        },
+        "native_transpilation_calls": null,
+        "seed_metadata": {
+          "requested_simulator_seed": 5101,
+          "actual_forwarded_simulator_seeds": [
+            5101
+          ],
+          "solution_declared_seeds": {
+            "SEED_TRANSPILER": 12345
+          },
+          "transpiler_seed": 12345,
+          "application_rng_seed": "solution default (not injected)"
+        },
+        "tier05_readout_aggregate": {
+          "shots": 128,
+          "distinct_measured_candidates": 2,
+          "prefix_valid_candidates": 1,
+          "prefix_success_shots": 127
+        },
+        "resource": {
+          "state": "ok",
+          "wall_seconds": 14.4262,
+          "peak_rss_bytes_sampled": 223805440,
+          "memory_limit_mb": 2048,
+          "timeout_seconds": 120
+        }
+      }
+    },
+    {
+      "variant": "candidate",
+      "seed": 5101,
+      "status": "PASS",
+      "result": {
+        "hash_ok": true,
+        "solve_seconds": 13.868,
+        "circuits_executed": 1,
+        "unique_circuits": 1,
+        "not_implemented": false,
+        "shots_total": 128,
+        "aer_circuits_observed": 1,
+        "shots_known": true,
+        "aer_calls": 1,
+        "aer_timing": {
+          "result_wait_seconds": 13.080284165975172,
+          "aer_job_elapsed_seconds": 13.086667458002921,
+          "jobs_finished": 1
+        },
+        "native_transpilation_calls": null,
+        "seed_metadata": {
+          "requested_simulator_seed": 5101,
+          "actual_forwarded_simulator_seeds": [
+            5101
+          ],
+          "solution_declared_seeds": {
+            "SEED_TRANSPILER": 12345
+          },
+          "transpiler_seed": 12345,
+          "application_rng_seed": "solution default (not injected)"
+        },
+        "tier05_readout_aggregate": {
+          "shots": 128,
+          "distinct_measured_candidates": 2,
+          "prefix_valid_candidates": 1,
+          "prefix_success_shots": 127
+        },
+        "resource": {
+          "state": "ok",
+          "wall_seconds": 14.4206,
+          "peak_rss_bytes_sampled": 222871552,
+          "memory_limit_mb": 2048,
+          "timeout_seconds": 120
+        }
+      }
+    },
+    {
+      "variant": "baseline",
+      "seed": 5102,
+      "status": "PASS",
+      "result": {
+        "hash_ok": true,
+        "solve_seconds": 13.729,
+        "circuits_executed": 1,
+        "unique_circuits": 1,
+        "not_implemented": false,
+        "shots_total": 128,
+        "aer_circuits_observed": 1,
+        "shots_known": true,
+        "aer_calls": 1,
+        "aer_timing": {
+          "result_wait_seconds": 12.767468124977313,
+          "aer_job_elapsed_seconds": 12.773887459014077,
+          "jobs_finished": 1
+        },
+        "native_transpilation_calls": null,
+        "seed_metadata": {
+          "requested_simulator_seed": 5102,
+          "actual_forwarded_simulator_seeds": [
+            5102
+          ],
+          "solution_declared_seeds": {
+            "SEED_TRANSPILER": 12345
+          },
+          "transpiler_seed": 12345,
+          "application_rng_seed": "solution default (not injected)"
+        },
+        "tier05_readout_aggregate": {
+          "shots": 128,
+          "distinct_measured_candidates": 1,
+          "prefix_valid_candidates": 1,
+          "prefix_success_shots": 128
+        },
+        "resource": {
+          "state": "ok",
+          "wall_seconds": 14.3751,
+          "peak_rss_bytes_sampled": 222789632,
+          "memory_limit_mb": 2048,
+          "timeout_seconds": 120
+        }
+      }
+    },
+    {
+      "variant": "candidate",
+      "seed": 5102,
+      "status": "PASS",
+      "result": {
+        "hash_ok": true,
+        "solve_seconds": 13.917,
+        "circuits_executed": 1,
+        "unique_circuits": 1,
+        "not_implemented": false,
+        "shots_total": 128,
+        "aer_circuits_observed": 1,
+        "shots_known": true,
+        "aer_calls": 1,
+        "aer_timing": {
+          "result_wait_seconds": 13.141109874995891,
+          "aer_job_elapsed_seconds": 13.14750483300304,
+          "jobs_finished": 1
+        },
+        "native_transpilation_calls": null,
+        "seed_metadata": {
+          "requested_simulator_seed": 5102,
+          "actual_forwarded_simulator_seeds": [
+            5102
+          ],
+          "solution_declared_seeds": {
+            "SEED_TRANSPILER": 12345
+          },
+          "transpiler_seed": 12345,
+          "application_rng_seed": "solution default (not injected)"
+        },
+        "tier05_readout_aggregate": {
+          "shots": 128,
+          "distinct_measured_candidates": 1,
+          "prefix_valid_candidates": 1,
+          "prefix_success_shots": 128
+        },
+        "resource": {
+          "state": "ok",
+          "wall_seconds": 14.4874,
+          "peak_rss_bytes_sampled": 223985664,
+          "memory_limit_mb": 2048,
+          "timeout_seconds": 120
+        }
+      }
+    },
+    {
+      "variant": "baseline",
+      "seed": 5103,
+      "status": "PASS",
+      "result": {
+        "hash_ok": true,
+        "solve_seconds": 13.837,
+        "circuits_executed": 1,
+        "unique_circuits": 1,
+        "not_implemented": false,
+        "shots_total": 128,
+        "aer_circuits_observed": 1,
+        "shots_known": true,
+        "aer_calls": 1,
+        "aer_timing": {
+          "result_wait_seconds": 12.777296415995806,
+          "aer_job_elapsed_seconds": 12.783711291034706,
+          "jobs_finished": 1
+        },
+        "native_transpilation_calls": null,
+        "seed_metadata": {
+          "requested_simulator_seed": 5103,
+          "actual_forwarded_simulator_seeds": [
+            5103
+          ],
+          "solution_declared_seeds": {
+            "SEED_TRANSPILER": 12345
+          },
+          "transpiler_seed": 12345,
+          "application_rng_seed": "solution default (not injected)"
+        },
+        "tier05_readout_aggregate": {
+          "shots": 128,
+          "distinct_measured_candidates": 1,
+          "prefix_valid_candidates": 1,
+          "prefix_success_shots": 128
+        },
+        "resource": {
+          "state": "ok",
+          "wall_seconds": 14.4708,
+          "peak_rss_bytes_sampled": 221986816,
+          "memory_limit_mb": 2048,
+          "timeout_seconds": 120
+        }
+      }
+    },
+    {
+      "variant": "candidate",
+      "seed": 5103,
+      "status": "PASS",
+      "result": {
+        "hash_ok": true,
+        "solve_seconds": 13.938,
+        "circuits_executed": 1,
+        "unique_circuits": 1,
+        "not_implemented": false,
+        "shots_total": 128,
+        "aer_circuits_observed": 1,
+        "shots_known": true,
+        "aer_calls": 1,
+        "aer_timing": {
+          "result_wait_seconds": 13.162517457967624,
+          "aer_job_elapsed_seconds": 13.168911915970966,
+          "jobs_finished": 1
+        },
+        "native_transpilation_calls": null,
+        "seed_metadata": {
+          "requested_simulator_seed": 5103,
+          "actual_forwarded_simulator_seeds": [
+            5103
+          ],
+          "solution_declared_seeds": {
+            "SEED_TRANSPILER": 12345
+          },
+          "transpiler_seed": 12345,
+          "application_rng_seed": "solution default (not injected)"
+        },
+        "tier05_readout_aggregate": {
+          "shots": 128,
+          "distinct_measured_candidates": 1,
+          "prefix_valid_candidates": 1,
+          "prefix_success_shots": 128
+        },
+        "resource": {
+          "state": "ok",
+          "wall_seconds": 14.5082,
+          "peak_rss_bytes_sampled": 223739904,
+          "memory_limit_mb": 2048,
+          "timeout_seconds": 120
+        }
+      }
+    },
+    {
+      "variant": "baseline",
+      "seed": 5104,
+      "status": "PASS",
+      "result": {
+        "hash_ok": true,
+        "solve_seconds": 13.811,
+        "circuits_executed": 1,
+        "unique_circuits": 1,
+        "not_implemented": false,
+        "shots_total": 128,
+        "aer_circuits_observed": 1,
+        "shots_known": true,
+        "aer_calls": 1,
+        "aer_timing": {
+          "result_wait_seconds": 12.843774457986001,
+          "aer_job_elapsed_seconds": 12.850182999973185,
+          "jobs_finished": 1
+        },
+        "native_transpilation_calls": null,
+        "seed_metadata": {
+          "requested_simulator_seed": 5104,
+          "actual_forwarded_simulator_seeds": [
+            5104
+          ],
+          "solution_declared_seeds": {
+            "SEED_TRANSPILER": 12345
+          },
+          "transpiler_seed": 12345,
+          "application_rng_seed": "solution default (not injected)"
+        },
+        "tier05_readout_aggregate": {
+          "shots": 128,
+          "distinct_measured_candidates": 1,
+          "prefix_valid_candidates": 1,
+          "prefix_success_shots": 128
+        },
+        "resource": {
+          "state": "ok",
+          "wall_seconds": 14.4678,
+          "peak_rss_bytes_sampled": 223592448,
+          "memory_limit_mb": 2048,
+          "timeout_seconds": 120
+        }
+      }
+    },
+    {
+      "variant": "candidate",
+      "seed": 5104,
+      "status": "PASS",
+      "result": {
+        "hash_ok": true,
+        "solve_seconds": 14.07,
+        "circuits_executed": 1,
+        "unique_circuits": 1,
+        "not_implemented": false,
+        "shots_total": 128,
+        "aer_circuits_observed": 1,
+        "shots_known": true,
+        "aer_calls": 1,
+        "aer_timing": {
+          "result_wait_seconds": 13.26350675005233,
+          "aer_job_elapsed_seconds": 13.269926666049287,
+          "jobs_finished": 1
+        },
+        "native_transpilation_calls": null,
+        "seed_metadata": {
+          "requested_simulator_seed": 5104,
+          "actual_forwarded_simulator_seeds": [
+            5104
+          ],
+          "solution_declared_seeds": {
+            "SEED_TRANSPILER": 12345
+          },
+          "transpiler_seed": 12345,
+          "application_rng_seed": "solution default (not injected)"
+        },
+        "tier05_readout_aggregate": {
+          "shots": 128,
+          "distinct_measured_candidates": 1,
+          "prefix_valid_candidates": 1,
+          "prefix_success_shots": 128
+        },
+        "resource": {
+          "state": "ok",
+          "wall_seconds": 14.6486,
+          "peak_rss_bytes_sampled": 178946048,
+          "memory_limit_mb": 2048,
+          "timeout_seconds": 120
+        }
+      }
+    }
+  ],
+  "summary": {
+    "baseline": {
+      "passes": 5,
+      "mean_solve_seconds": 13.8064,
+      "mean_aer_job_seconds": 12.830031408404466,
+      "mean_sampled_rss_mib": 212.89375
+    },
+    "candidate": {
+      "passes": 5,
+      "mean_solve_seconds": 13.9504,
+      "mean_aer_job_seconds": 13.162539574608672,
+      "mean_sampled_rss_mib": 205.0375
+    }
+  }
+}

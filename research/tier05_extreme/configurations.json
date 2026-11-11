@@ -1,0 +1,141 @@
+[
+  {
+    "config": {
+      "relative_mask": false,
+      "relative_compare": false,
+      "level": 1,
+      "gf2": true
+    },
+    "fingerprint": "7e839938b28af9c013a27176b97c30e605c6813f03ff2ab05dd2672f89ddfec4"
+  },
+  {
+    "config": {
+      "relative_mask": false,
+      "relative_compare": false,
+      "level": 2,
+      "gf2": true
+    },
+    "fingerprint": "154c6e7edca2aeff1729e3d343081583a0054dbee5cdd1476941805c1a82fc56"
+  },
+  {
+    "config": {
+      "relative_mask": false,
+      "relative_compare": true,
+      "level": 1,
+      "gf2": true
+    },
+    "fingerprint": "96c3c3998d0a44fbf8c112fe85f7e7a05f2a6586bf822c3d78648b159a12ff0f"
+  },
+  {
+    "config": {
+      "relative_mask": false,
+      "relative_compare": true,
+      "level": 2,
+      "gf2": true
+    },
+    "fingerprint": "fa62845166386d59ea962dd91c0625e5d2858f2112ff777144e51dfb801b4852"
+  },
+  {
+    "config": {
+      "relative_mask": true,
+      "relative_compare": false,
+      "level": 1,
+      "gf2": true
+    },
+    "fingerprint": "2d03ed03d1bb33bd760fb818dec7a91055a1d8b117917d9d5d1aedef4f6104ed"
+  },
+  {
+    "config": {
+      "relative_mask": true,
+      "relative_compare": false,
+      "level": 2,
+      "gf2": true
+    },
+    "fingerprint": "1abd7818d960c3bbeb7ff1a43acfaee51220c5a051c649d76d6f8515fd03abdd"
+  },
+  {
+    "config": {
+      "relative_mask": true,
+      "relative_compare": true,
+      "level": 1,
+      "gf2": true
+    },
+    "fingerprint": "b442829c6dfc4ad640fbba736aa207d7cdb87794fcf5adef68aca74c8eec8c17"
+  },
+  {
+    "config": {
+      "relative_mask": true,
+      "relative_compare": true,
+      "level": 2,
+      "gf2": true
+    },
+    "fingerprint": "22831acda95bdee870b335a7f505d2beb665ba713437ac28575959f03197d392"
+  },
+  {
+    "config": {
+      "relative_mask": true,
+      "relative_compare": true,
+      "level": 3,
+      "gf2": true
+    },
+    "fingerprint": "e1d8b352e0a9897ad021631e3d89f202ecb4db36299a7067b5057a7c7c95bbf6"
+  },
+  {
+    "config": {
+      "relative_mask": true,
+      "relative_compare": true,
+      "level": 1,
+      "gf2": false
+    },
+    "fingerprint": "b4a441e43d5ffa2e7a8f86ea393b3d4be77b68acc50e40622edc4eaac663aca9"
+  },
+  {
+    "config": {
+      "relative_mask": true,
+      "relative_compare": true,
+      "level": 2,
+      "gf2": false
+    },
+    "fingerprint": "bfbe06682bb4db5aea064d82f00d29f713c38d7d7e3a22c9fc9ed91ca612e918"
+  },
+  {
+    "config": {
+      "fused": true,
+      "order": 0,
+      "pivot_last": false,
+      "level": 2,
+      "gf2": true
+    },
+    "fingerprint": "578dc4d4ea93e2f1f14a1932fa6f52900bf513c5d25a3cf5f8a1cda3a1cf65ff"
+  },
+  {
+    "config": {
+      "fused": true,
+      "order": 0,
+      "pivot_last": true,
+      "level": 2,
+      "gf2": true
+    },
+    "fingerprint": "53de84e6c1076d540beacbd36ab480fa6f5ea4772f60e303745e990fd560fe11"
+  },
+  {
+    "config": {
+      "fused": true,
+      "order": 1,
+      "pivot_last": false,
+      "level": 2,
+      "gf2": true
+    },
+    "fingerprint": "e66426a7a767a70a008beea7885eb36849e36db997b0713e22b40874b89857e5"
+  },
+  {
+    "config": {
+      "fused": true,
+      "order": 1,
+      "pivot_last": true,
+      "level": 2,
+      "gf2": true
+    },
+    "fingerprint": "bdbf758d5c182798600d9105f33a47cdcb558f17579cdf0e6179f115faef0dd1"
+  }
+]
