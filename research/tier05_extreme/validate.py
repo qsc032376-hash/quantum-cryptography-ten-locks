@@ -10,11 +10,11 @@ PATCH='''
 _original_build = build_circuit
 _original_transpile = transpile
 _original_phase = oracle.build_phase_oracle
-from research.tier05_extreme.search import fused_oracle
 import json as _json
 _config = _json.loads((Path(__file__).resolve().parents[3] / "research/tier05_extreme/candidate.json").read_text())
 def build_circuit(*, ciphertext=None, iterations=ITERATIONS):
     from unittest.mock import patch
+    from research.tier05_extreme.search import fused_oracle
     with patch.object(oracle, "build_phase_oracle", lambda c: fused_oracle(c, _config["order"], _config["pivot_last"])):
         return _original_build(ciphertext=ciphertext, iterations=iterations)
 def transpile(*args, **kwargs):
@@ -31,6 +31,9 @@ def main():
   base=Path(tmp)/'baseline';cand=Path(tmp)/'candidate';base.mkdir();cand.mkdir();snapshot(baseline,base);snapshot(source,cand)
   with (cand/'submissions/team3/tier05/solution.py').open('a') as f:f.write(PATCH)
   for label,tree in [('baseline',base),('candidate',cand)]:
+   prior=OUT/'validation-attempt1.json'
+   if label=='baseline' and prior.exists():
+    result['official'][label]=json.loads(prior.read_text())['official']['baseline'];save();continue
    entry=run_worker('official',tree,5,None,370,2048);result['official'][label]=entry;save();print('official',label,entry.get('status'),entry.get('metrics'),flush=True)
    if entry.get('status')!='full':return
   for seed in range(5100,5105):
