@@ -1,0 +1,82 @@
+{
+  "5": {
+    "source": "97fcc0c7d6dec3b7385dc237d47d89d4d6ffd15c",
+    "evidence": "research/tier05_extreme/validation.json",
+    "evidence_sha256": "580d582449c210499cb518ca807d802f244ebca460bbf434276bb24f542ad654",
+    "metrics": {
+      "two_qubit_gates": 10950,
+      "depth": 19703,
+      "total_gates": 28363,
+      "active_qubits": 19
+    },
+    "status": "RELIABILITY_VALIDATED",
+    "evidence_reused": true,
+    "new_candidate": false,
+    "paired_pass_counts": {
+      "baseline": 5,
+      "candidate": 5
+    },
+    "this_study": "No new circuit; prior fixed-commit acceptance reused"
+  },
+  "9": {
+    "source": "d294a5a6f26b8abe96b1117928f8857e95750040",
+    "evidence": "research/tier09_global/validation.json",
+    "evidence_sha256": "6b59639b9068889eefca927368f033c6135a7f35f71c69c972af537ca6832a22",
+    "metrics": {
+      "active_qubits": 22,
+      "depth": 71632,
+      "total_gates": 102830,
+      "two_qubit_gates": 34186
+    },
+    "status": "RELIABILITY_VALIDATED",
+    "evidence_reused": true,
+    "new_candidate": false,
+    "paired_pass_counts": {
+      "baseline": 5,
+      "candidate": 5
+    },
+    "this_study": "No new circuit; prior fixed-commit acceptance reused"
+  },
+  "10": {
+    "source": "7edfe872aec8651ca28e1721ef4e322ba942d113",
+    "evidence": "research/tier10_global/validation.json",
+    "evidence_sha256": "9a9586ebed0dcf8607e508b0c4f5e1d959133b9c65b796ad833f935bffc5cf07",
+    "metrics": {
+      "two_qubit_gates": 38823,
+      "depth": 92604,
+      "total_gates": 111337,
+      "active_qubits": 19
+    },
+    "status": "RELIABILITY_VALIDATED",
+    "evidence_reused": true,
+    "new_candidate": false,
+    "paired_pass_counts": {
+      "baseline": 10,
+      "candidate": 10
+    },
+    "this_study": "No new circuit; prior fixed-commit acceptance reused"
+  },
+  "8": {
+    "source": "38129a2c34a6585ed76653090e438c9254ec301d",
+    "status": "RELIABILITY_VALIDATED",
+    "evidence_reused": false,
+    "new_candidate": true,
+    "metrics": {
+      "two_qubit_gates": 11316,
+      "depth": 26509,
+      "total_gates": 31778,
+      "active_qubits": 18
+    },
+    "completed_stages": [
+      "SYMBOLICALLY_VALID",
+      "OPERATOR_VERIFIED",
+      "COMPILED",
+      "CHECKER_FULL",
+      "RELIABILITY_VALIDATED"
+    ],
+    "paired_pass_counts": {
+      "baseline": 5,
+      "candidate": 5
+    }
+  }
+}

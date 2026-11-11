@@ -8,6 +8,11 @@ from research.hyperoptimizer.experiments.tier08 import builder
 from submissions.team3.tier08.modular import permutation_table
 OUT=ROOT/'research/hyperoptimizer/results'
 def main():
+ checkpoint=OUT/'search-checkpoint.json';candidate_path=OUT/'tier08-candidate.json'
+ if '--fresh' not in sys.argv and checkpoint.exists() and candidate_path.exists():
+  saved=json.loads(checkpoint.read_text())
+  if len(saved.get('configs',[]))==36 and saved.get('candidate_sha256')==hashlib.sha256(candidate_path.read_bytes()).hexdigest():
+   print('Verified completed content-addressed checkpoint; use --fresh to regenerate');return
  start=time.perf_counter();rng=random.Random(20261112);selected={};seen=set();trials=[];screens=[];cache={}
  ds=sorted({pow(2,1<<j,35) for j in range(12)})
  for index in range(36):
@@ -34,5 +39,5 @@ def main():
    result={'prefix':index+1,**score(builder(selected))};screens.append(result);print(result,flush=True)
    if len(screens)==1 or result['metrics']['two_qubit_gates']<min(x['metrics']['two_qubit_gates'] for x in screens[:-1]):
     (OUT/'tier08-candidate.json').write_text(json.dumps({'blocks':selected,'screen':result},indent=2)+'\n')
-  (OUT/'search-checkpoint.json').write_text(json.dumps({'seed':20261112,'configs':trials,'cache':cache,'screens':screens,'seconds':time.perf_counter()-start},indent=2)+'\n')
+  (OUT/'search-checkpoint.json').write_text(json.dumps({'seed':20261112,'configs':trials,'cache':cache,'screens':screens,'seconds':time.perf_counter()-start,'candidate_sha256':hashlib.sha256((OUT/'tier08-candidate.json').read_bytes()).hexdigest()},indent=2)+'\n')
 if __name__=='__main__':main()

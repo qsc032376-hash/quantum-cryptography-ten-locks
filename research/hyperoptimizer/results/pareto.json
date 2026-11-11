@@ -1,0 +1,72 @@
+{
+  "numeric_frontier": [
+    "baseline",
+    "candidate"
+  ],
+  "reason": "Candidate adds a runtime cache while improving resources and sampled runtime; categorical audit risk is not assigned invented numerical weights.",
+  "rows": [
+    {
+      "label": "baseline",
+      "metrics": {
+        "two_qubit_gates": 33904,
+        "depth": 96055,
+        "total_gates": 102561,
+        "active_qubits": 18
+      },
+      "solve_seconds": 22.7594,
+      "compile_seconds": 0.3048085000482388,
+      "peak_rss_mib": 364.95,
+      "cache_bytes": 0,
+      "reproducibility_risk": "audited baseline",
+      "mean_aer_job_seconds": 22.537790433003103
+    },
+    {
+      "label": "candidate",
+      "metrics": {
+        "two_qubit_gates": 11316,
+        "depth": 26509,
+        "total_gates": 31778,
+        "active_qubits": 18
+      },
+      "solve_seconds": 6.341,
+      "compile_seconds": 0.10646291699958965,
+      "peak_rss_mib": 174.88125,
+      "cache_bytes": 17588,
+      "reproducibility_risk": "pinned research cache; independent integration audit pending",
+      "mean_aer_job_seconds": 6.273027616611216
+    }
+  ],
+  "static_screens": [
+    {
+      "prefix": 12,
+      "metrics": {
+        "two_qubit_gates": 11596,
+        "depth": 27443,
+        "total_gates": 32731,
+        "active_qubits": 18
+      },
+      "compile_seconds": 0.12192475004121661
+    },
+    {
+      "prefix": 24,
+      "metrics": {
+        "two_qubit_gates": 11316,
+        "depth": 26509,
+        "total_gates": 31778,
+        "active_qubits": 18
+      },
+      "compile_seconds": 0.10646291699958965
+    },
+    {
+      "prefix": 36,
+      "metrics": {
+        "two_qubit_gates": 11316,
+        "depth": 26509,
+        "total_gates": 31778,
+        "active_qubits": 18
+      },
+      "compile_seconds": 0.10640545800561085
+    }
+  ],
+  "unknown_other_tier_current_environment_measurements": null
+}

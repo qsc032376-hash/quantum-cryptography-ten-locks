@@ -1,0 +1,9 @@
+{
+  "metrics": {
+    "two_qubit_gates": 33904,
+    "depth": 96055,
+    "total_gates": 102561,
+    "active_qubits": 18
+  },
+  "compile_seconds": 0.3048085000482388
+}
