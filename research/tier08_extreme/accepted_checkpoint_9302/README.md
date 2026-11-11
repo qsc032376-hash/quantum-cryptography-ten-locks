@@ -1,0 +1,1 @@
+Verified checkpoint before the user requested additional exploration:9302CX/21902depth/26475gates/18qubits; officialFULL and10pairedPASS. Runtime copies are for preservation, not separate production imports.

@@ -1,0 +1,187 @@
+{
+  "qiskit": "2.6.1",
+  "scoring_options": {
+    "basis_gates": [
+      "rz",
+      "sx",
+      "x",
+      "cx"
+    ],
+    "coupling_map": null,
+    "initial_layout": null,
+    "optimization_level": 1,
+    "seed_transpiler": 12345
+  },
+  "primitive_compilation_budget": 10,
+  "compiled_templates": 10,
+  "existing_small_cases": {
+    "1": "CX; 1 CX",
+    "2": "CCX; 6 CX",
+    "3": "exact Iten; 14 CX"
+  },
+  "small_cases_note": "Inherited measured costs from Stage A; not recompiled here.",
+  "results": [
+    {
+      "family": "m15_dirty",
+      "controls": 4,
+      "local_qubits": 6,
+      "dirty_ancillas": 1,
+      "metrics": {
+        "two_qubit_gates": 20,
+        "depth": 59,
+        "total_gates": 62,
+        "active_qubits": 6
+      },
+      "compile_seconds": 0.053517432999797165,
+      "role": "existing_exact_template_baseline"
+    },
+    {
+      "family": "m15_dirty",
+      "controls": 6,
+      "local_qubits": 9,
+      "dirty_ancillas": 2,
+      "metrics": {
+        "two_qubit_gates": 36,
+        "depth": 107,
+        "total_gates": 110,
+        "active_qubits": 9
+      },
+      "compile_seconds": 0.02590725099798874,
+      "role": "existing_exact_template_baseline"
+    },
+    {
+      "family": "iten_dirty",
+      "controls": 4,
+      "local_qubits": 7,
+      "dirty_ancillas": 2,
+      "metrics": {
+        "two_qubit_gates": 26,
+        "depth": 69,
+        "total_gates": 77,
+        "active_qubits": 7
+      },
+      "compile_seconds": 0.013276616999064572,
+      "cx_change_against_m15": 6,
+      "role": "alternative",
+      "recommendation": "do_not_promote_no_isolated_cx_improvement"
+    },
+    {
+      "family": "iten_dirty",
+      "controls": 6,
+      "local_qubits": 11,
+      "dirty_ancillas": 4,
+      "metrics": {
+        "two_qubit_gates": 42,
+        "depth": 117,
+        "total_gates": 125,
+        "active_qubits": 11
+      },
+      "compile_seconds": 0.0076785310011473484,
+      "cx_change_against_m15": 6,
+      "role": "alternative",
+      "recommendation": "do_not_promote_no_isolated_cx_improvement"
+    },
+    {
+      "family": "kg24_one_dirty",
+      "controls": 4,
+      "local_qubits": 6,
+      "dirty_ancillas": 1,
+      "metrics": {
+        "two_qubit_gates": 30,
+        "depth": 77,
+        "total_gates": 97,
+        "active_qubits": 6
+      },
+      "compile_seconds": 0.008114955999189988,
+      "cx_change_against_m15": 10,
+      "role": "alternative",
+      "recommendation": "do_not_promote_no_isolated_cx_improvement"
+    },
+    {
+      "family": "kg24_one_dirty",
+      "controls": 6,
+      "local_qubits": 8,
+      "dirty_ancillas": 1,
+      "metrics": {
+        "two_qubit_gates": 54,
+        "depth": 133,
+        "total_gates": 185,
+        "active_qubits": 8
+      },
+      "compile_seconds": 0.009528259000944672,
+      "cx_change_against_m15": 18,
+      "role": "alternative",
+      "recommendation": "do_not_promote_no_isolated_cx_improvement"
+    },
+    {
+      "family": "kg24_two_dirty",
+      "controls": 6,
+      "local_qubits": 9,
+      "dirty_ancillas": 2,
+      "metrics": {
+        "two_qubit_gates": 54,
+        "depth": 129,
+        "total_gates": 179,
+        "active_qubits": 9
+      },
+      "compile_seconds": 0.013651025998115074,
+      "cx_change_against_m15": 18,
+      "role": "alternative",
+      "recommendation": "do_not_promote_no_isolated_cx_improvement"
+    },
+    {
+      "family": "v24_noaux",
+      "controls": 4,
+      "local_qubits": 5,
+      "dirty_ancillas": 0,
+      "metrics": {
+        "two_qubit_gates": 36,
+        "depth": 81,
+        "total_gates": 97,
+        "active_qubits": 5
+      },
+      "compile_seconds": 0.00998149299994111,
+      "cx_change_against_m15": 16,
+      "role": "alternative",
+      "recommendation": "do_not_promote_no_isolated_cx_improvement"
+    },
+    {
+      "family": "v24_noaux",
+      "controls": 6,
+      "local_qubits": 7,
+      "dirty_ancillas": 0,
+      "metrics": {
+        "two_qubit_gates": 140,
+        "depth": 238,
+        "total_gates": 355,
+        "active_qubits": 7
+      },
+      "compile_seconds": 0.01867572900300729,
+      "cx_change_against_m15": 104,
+      "role": "alternative",
+      "recommendation": "do_not_promote_no_isolated_cx_improvement"
+    },
+    {
+      "family": "native_mcx",
+      "controls": 6,
+      "local_qubits": 7,
+      "dirty_ancillas": 0,
+      "metrics": {
+        "two_qubit_gates": 122,
+        "depth": 140,
+        "total_gates": 308,
+        "active_qubits": 7
+      },
+      "compile_seconds": 0.01085730200065882,
+      "cx_change_against_m15": 86,
+      "role": "alternative",
+      "recommendation": "do_not_promote_no_isolated_cx_improvement"
+    }
+  ],
+  "elapsed_seconds": 0.1744810009986395,
+  "scope": "isolated exact templates; not full circuits, no Aer jobs or secret data",
+  "borrowed_wire_contract": "All extra wires are dirty. They may be entangled and must be restored.",
+  "clean_alternatives_excluded": "Counting wires are not known-zero workspace; no extra logical qubits allowed.",
+  "fanout_note": "F; MCX; F^-1 is exact for arbitrary pivot/target states. Pivot choice affects local compiler cancellation; whole-circuit screens decide.",
+  "source_sha256": "9568243fca88c472208475788a40cf13b99f205b0808ebf8b855a5c86937425e"
+}

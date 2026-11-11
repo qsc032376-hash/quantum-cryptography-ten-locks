@@ -1,0 +1,24 @@
+{
+  "baseline": "c4455782ea9388d5897fc27270f42dd3786ed35d",
+  "selected_label": "boolean_third_native_first_work_first",
+  "static_metrics": {
+    "two_qubit_gates": 9302,
+    "depth": 21902,
+    "total_gates": 26475,
+    "active_qubits": 18
+  },
+  "emission": {
+    "mode": "native",
+    "pivot": "first",
+    "allocation": "work_first"
+  },
+  "source_operations_sha256": "5069da9fe306f83b3bbb8df1849c09ed013cebbeab2c336cbeab0cc31c0902de",
+  "selected_json_sha256": "24cdf578e4a4ed1adb0ab8b404417b887aa16cd94ba38f5a81c325c130ab9d78",
+  "production_files_sha256": {
+    "submissions/team3/tier08/modular.py": "0a1d5054465df651ccd75165070bea81e60b4c0d6ea4afccfe83d57556f905a8",
+    "submissions/team3/tier08/extreme_synthesis.py": "f32f03cae1c0c69ea0a5b7f004e76d0b0a526df5ce5ce53b1230e3875562224f"
+  },
+  "status": "selected; validation verdict is recorded separately",
+  "reserved_dirty_local_slots": 2,
+  "native_block_dirty_slots_used": 0
+}

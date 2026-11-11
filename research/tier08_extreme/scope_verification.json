@@ -1,0 +1,13 @@
+{
+  "baseline": "c4455782ea9388d5897fc27270f42dd3786ed35d",
+  "modified_tracked_files": [
+    "submissions/team3/tier08/modular.py"
+  ],
+  "protected_tracked_file_count": 97,
+  "all_protected_files_identical": true,
+  "runtime_candidate": {
+    "submissions/team3/tier08/modular.py": "0a1d5054465df651ccd75165070bea81e60b4c0d6ea4afccfe83d57556f905a8",
+    "submissions/team3/tier08/extreme_synthesis.py": "05de0badc51b92a1422d1471d2697e50108b9915b3f54a13a0eba2e7584a8187"
+  },
+  "scope": "Only Tier8 scoped runtime dispatch/new cache, research artifacts and report; no releases, official files or ZIP modified."
+}

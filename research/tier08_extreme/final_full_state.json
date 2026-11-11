@@ -1,0 +1,36 @@
+{
+  "status": "PASS",
+  "basis_amplitudes_compared": 262144,
+  "prepared_state_only": true,
+  "dense_whole_operator_claimed": false,
+  "global_phase_alignment": false,
+  "max_complex_amplitude_error": 1.8512479511260988e-13,
+  "max_joint_probability_error": 1.5990681001554208e-14,
+  "max_count_register_marginal_error": 1.758593271006248e-13,
+  "tolerance": 1e-08,
+  "runs": {
+    "baseline": {
+      "status": "PASS",
+      "qubits": 18,
+      "compile_seconds": 0.899896961000195,
+      "aer_seconds": 45.78605415399943,
+      "wall_seconds": 46.687571971997386
+    },
+    "candidate": {
+      "status": "PASS",
+      "qubits": 18,
+      "compile_seconds": 0.15895113499936997,
+      "aer_seconds": 9.57660351499726,
+      "wall_seconds": 9.73737173200061
+    }
+  },
+  "private_arrays_written": false,
+  "measurement_circuits_modified": false,
+  "method": "Remove final measurements for validation only; compile full prepared circuits as production, then save statevectors in RAM.",
+  "runtime_sha256": {
+    "submissions/team3/tier08/extreme_synthesis.py": "05de0badc51b92a1422d1471d2697e50108b9915b3f54a13a0eba2e7584a8187",
+    "submissions/team3/tier08/solution.py": "8c377d9f3fa6d4f10190faf15d9889d1bea0fe0b782a1cebafc2bd48f7547abe",
+    "submissions/team3/tier08/order.py": "60385abbf4731717a39d0ce209088b21c0450b90aec8ea3e27e4c0d7132480e5",
+    "submissions/team3/tier08/modular.py": "0a1d5054465df651ccd75165070bea81e60b4c0d6ea4afccfe83d57556f905a8"
+  }
+}

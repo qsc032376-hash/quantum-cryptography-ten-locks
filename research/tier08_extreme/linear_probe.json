@@ -1,0 +1,47 @@
+{
+  "label": "boolean_third_native_linear",
+  "selected_file": "third_selected.json",
+  "source_operations_sha256": "5069da9fe306f83b3bbb8df1849c09ed013cebbeab2c336cbeab0cc31c0902de",
+  "emission": {
+    "mode": "native",
+    "pivot": "first",
+    "allocation": "work_first"
+  },
+  "linear_stats": {
+    "windows": 8974,
+    "accepted": 0,
+    "removed_cx": 0,
+    "max_window_wires": 5
+  },
+  "all_linear_certificates_exact": true,
+  "linear_source_sha256": "841416dc715cec11983908be1f3362cb049b638ef0f8786964ec4bc44d36dcff",
+  "whole": {
+    "metrics": {
+      "two_qubit_gates": 9302,
+      "depth": 21902,
+      "total_gates": 26475,
+      "active_qubits": 18
+    },
+    "compile_seconds": 2.848484822003229,
+    "solve_transpile_seconds": 0.1723564960011572,
+    "scoring_and_linear_seconds": 2.6761301280021144
+  },
+  "powers": {
+    "controlled_power_blocks": 12,
+    "equivalent_base_multiplications": 4095,
+    "exponents": [
+      1,
+      2,
+      4,
+      8,
+      16,
+      32,
+      64,
+      128,
+      256,
+      512,
+      1024,
+      2048
+    ]
+  }
+}

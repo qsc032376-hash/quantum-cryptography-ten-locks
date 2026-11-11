@@ -1,0 +1,323 @@
+{
+  "candidate_count": 17,
+  "original_whole_count": 12,
+  "authorized_extension_whole_count": 5,
+  "selected_name": "adaptive_native_last",
+  "selected_final_runtime_status": "PASS: final_validation.json; 5/5 new paired seeds",
+  "static_dimensions": [
+    "two_qubit_gates",
+    "depth",
+    "total_gates",
+    "active_qubits"
+  ],
+  "static_pareto_frontier": [
+    "adaptive_native_first",
+    "adaptive_native_last",
+    "adaptive_dirty_last_external"
+  ],
+  "static_plus_compilation_dimensions": [
+    "two_qubit_gates",
+    "depth",
+    "total_gates",
+    "active_qubits",
+    "compile_seconds"
+  ],
+  "static_plus_compilation_pareto_frontier": [
+    "adaptive_native_first",
+    "adaptive_native_last",
+    "adaptive_dirty_last_external"
+  ],
+  "timing_note": "Single observed compilation times are environment/load-sensitive and separate from solve runtime. Unknown runtime/RSS is null, never zero. Final candidate measurements must not inherit9302-CX fallback evidence.",
+  "baseline_control": {
+    "commit": "c4455782ea9388d5897fc27270f42dd3786ed35d",
+    "metrics": {
+      "two_qubit_gates": 33904,
+      "depth": 96055,
+      "total_gates": 102561,
+      "active_qubits": 18
+    },
+    "mean_paired_solve_seconds": 51.4852,
+    "mean_paired_sampled_peak_rss_mib": 351.010546875,
+    "runtime_evidence": "validation.json: baseline arm of original ten paired seeds"
+  },
+  "measured_runtime_frontier_in_original_paired_study": [
+    "boolean_third_native_first_work_first"
+  ],
+  "runtime_scope": "Two separately paired studies: original9302tenpairs and final7856fivepairs. Compare each against its own baseline arm; no direct paired9302-vs7856 runtime claim.",
+  "candidates": [
+    {
+      "name": "first_whole",
+      "source": "whole_candidates.json",
+      "metrics": {
+        "two_qubit_gates": 9832,
+        "depth": 23297,
+        "total_gates": 28142,
+        "active_qubits": 18
+      },
+      "compile_seconds": 0.23397744999965653,
+      "mean_paired_solve_seconds": null,
+      "mean_paired_sampled_peak_rss_mib": null,
+      "runtime_evidence": null
+    },
+    {
+      "name": "first_native_whole",
+      "source": "whole_candidates.json",
+      "metrics": {
+        "two_qubit_gates": 9828,
+        "depth": 22958,
+        "total_gates": 28107,
+        "active_qubits": 18
+      },
+      "compile_seconds": 0.8610090679976565,
+      "mean_paired_solve_seconds": null,
+      "mean_paired_sampled_peak_rss_mib": null,
+      "runtime_evidence": null
+    },
+    {
+      "name": "first_last_whole",
+      "source": "whole_candidates.json",
+      "metrics": {
+        "two_qubit_gates": 9812,
+        "depth": 23313,
+        "total_gates": 28127,
+        "active_qubits": 18
+      },
+      "compile_seconds": 0.4202587569998286,
+      "mean_paired_solve_seconds": null,
+      "mean_paired_sampled_peak_rss_mib": null,
+      "runtime_evidence": null
+    },
+    {
+      "name": "scored_blocks_dirty_first_work_first",
+      "source": "whole_candidates.json",
+      "metrics": {
+        "two_qubit_gates": 9362,
+        "depth": 22223,
+        "total_gates": 26601,
+        "active_qubits": 18
+      },
+      "compile_seconds": 0.25572014300269075,
+      "mean_paired_solve_seconds": null,
+      "mean_paired_sampled_peak_rss_mib": null,
+      "runtime_evidence": null
+    },
+    {
+      "name": "scored_blocks_dirty_first_external_first",
+      "source": "whole_candidates.json",
+      "metrics": {
+        "two_qubit_gates": 9362,
+        "depth": 22035,
+        "total_gates": 26616,
+        "active_qubits": 18
+      },
+      "compile_seconds": 0.2776220999985526,
+      "mean_paired_solve_seconds": null,
+      "mean_paired_sampled_peak_rss_mib": null,
+      "runtime_evidence": null
+    },
+    {
+      "name": "scored_blocks_dirty_last_work_first",
+      "source": "whole_candidates.json",
+      "metrics": {
+        "two_qubit_gates": 9382,
+        "depth": 22265,
+        "total_gates": 26646,
+        "active_qubits": 18
+      },
+      "compile_seconds": 0.2412060980022943,
+      "mean_paired_solve_seconds": null,
+      "mean_paired_sampled_peak_rss_mib": null,
+      "runtime_evidence": null
+    },
+    {
+      "name": "scored_blocks_dirty_last_external_first",
+      "source": "whole_candidates.json",
+      "metrics": {
+        "two_qubit_gates": 9382,
+        "depth": 22077,
+        "total_gates": 26636,
+        "active_qubits": 18
+      },
+      "compile_seconds": 0.2462864469998749,
+      "mean_paired_solve_seconds": null,
+      "mean_paired_sampled_peak_rss_mib": null,
+      "runtime_evidence": null
+    },
+    {
+      "name": "scored_blocks_native_first_work_first",
+      "source": "whole_candidates.json",
+      "metrics": {
+        "two_qubit_gates": 9358,
+        "depth": 22013,
+        "total_gates": 26619,
+        "active_qubits": 18
+      },
+      "compile_seconds": 0.26163038699814933,
+      "mean_paired_solve_seconds": null,
+      "mean_paired_sampled_peak_rss_mib": null,
+      "runtime_evidence": null
+    },
+    {
+      "name": "scored_blocks_native_last_work_first",
+      "source": "whole_candidates.json",
+      "metrics": {
+        "two_qubit_gates": 9378,
+        "depth": 22055,
+        "total_gates": 26639,
+        "active_qubits": 18
+      },
+      "compile_seconds": 0.2660602940013632,
+      "mean_paired_solve_seconds": null,
+      "mean_paired_sampled_peak_rss_mib": null,
+      "runtime_evidence": null
+    },
+    {
+      "name": "boolean_second_native_first_work_first",
+      "source": "whole_candidates.json",
+      "metrics": {
+        "two_qubit_gates": 9334,
+        "depth": 21954,
+        "total_gates": 26562,
+        "active_qubits": 18
+      },
+      "compile_seconds": 0.35830720299782115,
+      "mean_paired_solve_seconds": null,
+      "mean_paired_sampled_peak_rss_mib": null,
+      "runtime_evidence": null
+    },
+    {
+      "name": "boolean_third_native_first_work_first",
+      "source": "whole_candidates.json",
+      "metrics": {
+        "two_qubit_gates": 9302,
+        "depth": 21902,
+        "total_gates": 26475,
+        "active_qubits": 18
+      },
+      "compile_seconds": 0.2415425779981888,
+      "mean_paired_solve_seconds": 11.8428,
+      "mean_paired_sampled_peak_rss_mib": 166.349609375,
+      "runtime_evidence": "validation.json: ten completed paired seeds for9302-CX fallback only"
+    },
+    {
+      "name": "boolean_third_native_linear",
+      "source": "whole_candidates.json",
+      "metrics": {
+        "two_qubit_gates": 9302,
+        "depth": 21902,
+        "total_gates": 26475,
+        "active_qubits": 18
+      },
+      "compile_seconds": 2.848484822003229,
+      "mean_paired_solve_seconds": null,
+      "mean_paired_sampled_peak_rss_mib": null,
+      "runtime_evidence": null
+    },
+    {
+      "name": "adaptive_native_first",
+      "source": "adaptive_whole.json",
+      "metrics": {
+        "two_qubit_gates": 7876,
+        "depth": 18794,
+        "total_gates": 22881,
+        "active_qubits": 18
+      },
+      "compile_seconds": 0.19096940099916537,
+      "mean_paired_solve_seconds": null,
+      "mean_paired_sampled_peak_rss_mib": null,
+      "runtime_evidence": null
+    },
+    {
+      "name": "general_linear_native",
+      "source": "extension_candidates.json",
+      "metrics": {
+        "two_qubit_gates": 8566,
+        "depth": 19822,
+        "total_gates": 24092,
+        "active_qubits": 18
+      },
+      "compile_seconds": 0.33839758899921435,
+      "mean_paired_solve_seconds": null,
+      "mean_paired_sampled_peak_rss_mib": null,
+      "runtime_evidence": null
+    },
+    {
+      "name": "adaptive_native_last",
+      "source": "extension_candidates.json",
+      "metrics": {
+        "two_qubit_gates": 7856,
+        "depth": 18804,
+        "total_gates": 22861,
+        "active_qubits": 18
+      },
+      "compile_seconds": 0.3758115099990391,
+      "mean_paired_solve_seconds": 10.0622,
+      "mean_paired_sampled_peak_rss_mib": 157.384375,
+      "runtime_evidence": "final_validation.json: candidate arm of final five-pair study"
+    },
+    {
+      "name": "adaptive_dirty_first",
+      "source": "extension_candidates.json",
+      "metrics": {
+        "two_qubit_gates": 7878,
+        "depth": 19098,
+        "total_gates": 22893,
+        "active_qubits": 18
+      },
+      "compile_seconds": 0.2727915510004095,
+      "mean_paired_solve_seconds": null,
+      "mean_paired_sampled_peak_rss_mib": null,
+      "runtime_evidence": null
+    },
+    {
+      "name": "adaptive_dirty_last_external",
+      "source": "extension_candidates.json",
+      "metrics": {
+        "two_qubit_gates": 7858,
+        "depth": 18813,
+        "total_gates": 22859,
+        "active_qubits": 18
+      },
+      "compile_seconds": 0.2544699499994749,
+      "mean_paired_solve_seconds": null,
+      "mean_paired_sampled_peak_rss_mib": null,
+      "runtime_evidence": null
+    }
+  ],
+  "source_inputs": {
+    "whole_candidates.json": "0fdba1d766742aa64785aa25e0daf8ccda94f2bbd5aa656a7df4ec9bd1520dac",
+    "extension_candidates.json": "13eebabbee0949077ab6b20a57f173e4eef63c832fb42cc91041b624ed49bfda",
+    "adaptive_whole.json": "ba38ade056a0d5dba7c0bfd2e6523a2ae2e6683749c7f070fc7ed4878a53461c",
+    "baseline_profile.json": "b63c7b6c8ae84bb8596181f024c003c2225f3c1b0bc0fbc718594bf35694e0c1",
+    "validation.json": "ef9aaac408c08521b9b597428123b38614163ef9a1072a2906e346eb8f134d1f",
+    "final_validation.json": "aa1c6d83d5ae21e8378ccc7e10e629f8b5aaa3e5bc49a575191689041b5bd976"
+  },
+  "final_paired_baseline_control": {
+    "commit": "c4455782ea9388d5897fc27270f42dd3786ed35d",
+    "metrics": {
+      "active_qubits": 18,
+      "depth": 96055,
+      "total_gates": 102561,
+      "two_qubit_gates": 33904
+    },
+    "summary": {
+      "attempted": 5,
+      "max_sampled_peak_rss_mib_passed_only": 357.3125,
+      "max_solve_seconds_passed_only": 68.254,
+      "mean_sampled_peak_rss_mib_passed_only": 354.975,
+      "mean_solve_seconds_passed_only": 52.4644,
+      "median_solve_seconds_passed_only": 52.73,
+      "passed": 5,
+      "statuses": {
+        "FAIL": 0,
+        "PASS": 5,
+        "SKIP": 0,
+        "UNCONTROLLED": 0
+      }
+    },
+    "runtime_evidence": "final_validation.json: baseline arm of final five-pair study"
+  },
+  "measured_runtime_frontier_in_final_paired_study": [
+    "adaptive_native_last"
+  ]
+}

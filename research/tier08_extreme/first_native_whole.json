@@ -1,0 +1,38 @@
+{
+  "kind": "whole_candidate",
+  "source_operations_sha256": "2059c05d08528c311b24852bbab3d07363d33f6405f7e1df92dc9db2120987bf",
+  "emission": {
+    "mode": "native",
+    "pivot": "first",
+    "allocation": "work_first"
+  },
+  "whole": {
+    "metrics": {
+      "two_qubit_gates": 9828,
+      "depth": 22958,
+      "total_gates": 28107,
+      "active_qubits": 18
+    },
+    "solve_transpile_seconds": 0.45578294299775735,
+    "scoring_transpile_seconds": 0.40520600699892384,
+    "compile_seconds": 0.8610090679976565
+  },
+  "powers": {
+    "controlled_power_blocks": 12,
+    "equivalent_base_multiplications": 4095,
+    "exponents": [
+      1,
+      2,
+      4,
+      8,
+      16,
+      32,
+      64,
+      128,
+      256,
+      512,
+      1024,
+      2048
+    ]
+  }
+}

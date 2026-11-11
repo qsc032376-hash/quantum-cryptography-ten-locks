@@ -1,0 +1,68 @@
+{
+  "baseline": {
+    "two_qubit_gates": 33904,
+    "depth": 96055,
+    "total_gates": 102561,
+    "active_qubits": 18
+  },
+  "candidate": {
+    "two_qubit_gates": 9302,
+    "depth": 21902,
+    "total_gates": 26475,
+    "active_qubits": 18
+  },
+  "relative_reductions_percent": {
+    "two_qubit_gates": 72.56370929683813,
+    "depth": 77.19848003747853,
+    "total_gates": 74.18609412934741,
+    "active_qubits": 0.0
+  },
+  "weights": {
+    "two_qubit_gates": 0.4,
+    "depth": 0.3,
+    "total_gates": 0.2,
+    "active_qubits": 0.1
+  },
+  "tier_pool": 2.25,
+  "maximum_theoretical_gain": 1.5080005475065867,
+  "scenarios": [
+    {
+      "hypothetical_scenario": "Rivals no better than original baseline",
+      "rival_metric_minima": {
+        "two_qubit_gates": 33904,
+        "depth": 96055,
+        "total_gates": 102561,
+        "active_qubits": 18
+      },
+      "baseline_score": 2.25,
+      "candidate_score": 2.25,
+      "gain": 0.0
+    },
+    {
+      "hypothetical_scenario": "Hypothetical rival minima equal candidate",
+      "rival_metric_minima": {
+        "two_qubit_gates": 9302,
+        "depth": 21902,
+        "total_gates": 26475,
+        "active_qubits": 18
+      },
+      "baseline_score": 0.7419994524934135,
+      "candidate_score": 2.25,
+      "gain": 1.5080005475065865
+    },
+    {
+      "hypothetical_scenario": "Hypothetical rival gate metrics half candidate,18 qubits",
+      "rival_metric_minima": {
+        "two_qubit_gates": 4651.0,
+        "depth": 10951.0,
+        "total_gates": 13237.5,
+        "active_qubits": 18
+      },
+      "baseline_score": 0.4834997262467067,
+      "candidate_score": 1.2375,
+      "gain": 0.7540002737532934
+    }
+  ],
+  "actual_competition_score_known": false,
+  "competitor_values_are_hypothetical": true
+}

@@ -1,0 +1,196 @@
+{
+  "source_inputs": {
+    "extension_compare.py": "296d8311baf0fa263cf30cf99ac8d95bad4a8a3063c6aa3cbb79a66853c0d37b",
+    "affine_linear.py": "ccf1cc439674a3ee47f147a00839f034add000ab2e0843ef6bb4d107310a62a1",
+    "affine_linear.json": "057ef497064e4f8d6669722e499d3110ebe282aba575804d9bfcc2c56382b511",
+    "adaptive_boolean.json": "01683031cff4f29837007367d4689eb0ba676b50ed71d862d0db288df9ad009d",
+    "adaptive_whole.json": "ba38ade056a0d5dba7c0bfd2e6523a2ae2e6683749c7f070fc7ed4878a53461c",
+    "screen.py": "7f21365423f9eed3206057f7bc5097b2286b988cd7771dd489e9732f4dddac46",
+    "emitter.py": "75707580d3ea032d48624c2c02da4658fa2c7a8ec89a14d191ae0b7c77f046d5"
+  },
+  "note": "Post-authorization new architecture screens; actual complete solve-time plus official scoring transpilation, no Aer execution.",
+  "baseline_adaptive": {
+    "kind": "whole_candidate",
+    "source_operations_sha256": "269e2180462eb3e41cf317e6eb347fa9841fb11b471959c6864799fbbdfe88a5",
+    "emission": {
+      "mode": "native",
+      "pivot": "first",
+      "allocation": "work_first"
+    },
+    "whole": {
+      "metrics": {
+        "two_qubit_gates": 7876,
+        "depth": 18794,
+        "total_gates": 22881,
+        "active_qubits": 18
+      },
+      "solve_transpile_seconds": 0.10234643000148935,
+      "scoring_transpile_seconds": 0.08862146199680865,
+      "compile_seconds": 0.19096940099916537
+    },
+    "powers": {
+      "controlled_power_blocks": 12,
+      "equivalent_base_multiplications": 4095,
+      "exponents": [
+        1,
+        2,
+        4,
+        8,
+        16,
+        32,
+        64,
+        128,
+        256,
+        512,
+        1024,
+        2048
+      ]
+    }
+  },
+  "candidates": [
+    {
+      "name": "general_linear_native",
+      "whole": {
+        "metrics": {
+          "two_qubit_gates": 8566,
+          "depth": 19822,
+          "total_gates": 24092,
+          "active_qubits": 18
+        },
+        "solve_transpile_seconds": 0.16816763799943146,
+        "scoring_transpile_seconds": 0.17022833900045953,
+        "compile_seconds": 0.33839758899921435
+      },
+      "powers": {
+        "controlled_power_blocks": 12,
+        "equivalent_base_multiplications": 4095,
+        "exponents": [
+          1,
+          2,
+          4,
+          8,
+          16,
+          32,
+          64,
+          128,
+          256,
+          512,
+          1024,
+          2048
+        ]
+      }
+    },
+    {
+      "name": "adaptive_native_last",
+      "emission": {
+        "mode": "native",
+        "pivot": "last",
+        "allocation": "work_first"
+      },
+      "whole": {
+        "metrics": {
+          "two_qubit_gates": 7856,
+          "depth": 18804,
+          "total_gates": 22861,
+          "active_qubits": 18
+        },
+        "solve_transpile_seconds": 0.21854950999841094,
+        "scoring_transpile_seconds": 0.15726085400092416,
+        "compile_seconds": 0.3758115099990391
+      },
+      "powers": {
+        "controlled_power_blocks": 12,
+        "equivalent_base_multiplications": 4095,
+        "exponents": [
+          1,
+          2,
+          4,
+          8,
+          16,
+          32,
+          64,
+          128,
+          256,
+          512,
+          1024,
+          2048
+        ]
+      }
+    },
+    {
+      "name": "adaptive_dirty_first",
+      "emission": {
+        "mode": "dirty",
+        "pivot": "first",
+        "allocation": "work_first"
+      },
+      "whole": {
+        "metrics": {
+          "two_qubit_gates": 7878,
+          "depth": 19098,
+          "total_gates": 22893,
+          "active_qubits": 18
+        },
+        "solve_transpile_seconds": 0.1058877110008325,
+        "scoring_transpile_seconds": 0.16690044499773649,
+        "compile_seconds": 0.2727915510004095
+      },
+      "powers": {
+        "controlled_power_blocks": 12,
+        "equivalent_base_multiplications": 4095,
+        "exponents": [
+          1,
+          2,
+          4,
+          8,
+          16,
+          32,
+          64,
+          128,
+          256,
+          512,
+          1024,
+          2048
+        ]
+      }
+    },
+    {
+      "name": "adaptive_dirty_last_external",
+      "emission": {
+        "mode": "dirty",
+        "pivot": "last",
+        "allocation": "external_first"
+      },
+      "whole": {
+        "metrics": {
+          "two_qubit_gates": 7858,
+          "depth": 18813,
+          "total_gates": 22859,
+          "active_qubits": 18
+        },
+        "solve_transpile_seconds": 0.15715670599820442,
+        "scoring_transpile_seconds": 0.0973127180004667,
+        "compile_seconds": 0.2544699499994749
+      },
+      "powers": {
+        "controlled_power_blocks": 12,
+        "equivalent_base_multiplications": 4095,
+        "exponents": [
+          1,
+          2,
+          4,
+          8,
+          16,
+          32,
+          64,
+          128,
+          256,
+          512,
+          1024,
+          2048
+        ]
+      }
+    }
+  ],
+  "seconds": 1.569014991997392
+}

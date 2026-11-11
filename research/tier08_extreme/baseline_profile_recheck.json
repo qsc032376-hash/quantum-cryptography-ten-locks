@@ -1,0 +1,90 @@
+{
+  "kind": "baseline",
+  "source": "c4455782ea9388d5897fc27270f42dd3786ed35d",
+  "blocks": {
+    "2": {
+      "metrics": {
+        "two_qubit_gates": 1804,
+        "depth": 4582,
+        "total_gates": 5205,
+        "active_qubits": 9
+      },
+      "solve_transpile_seconds": 0.03175810600077966,
+      "scoring_transpile_seconds": 0.042494467001233716,
+      "compile_seconds": 0.0742537030018866
+    },
+    "4": {
+      "metrics": {
+        "two_qubit_gates": 2448,
+        "depth": 6123,
+        "total_gates": 7028,
+        "active_qubits": 9
+      },
+      "solve_transpile_seconds": 0.034901198003353784,
+      "scoring_transpile_seconds": 0.043926345999352634,
+      "compile_seconds": 0.07882807200076059
+    },
+    "11": {
+      "metrics": {
+        "two_qubit_gates": 2952,
+        "depth": 8531,
+        "total_gates": 8994,
+        "active_qubits": 9
+      },
+      "solve_transpile_seconds": 0.026129439000214916,
+      "scoring_transpile_seconds": 0.03597654700206476,
+      "compile_seconds": 0.062106307999783894
+    },
+    "16": {
+      "metrics": {
+        "two_qubit_gates": 2952,
+        "depth": 8531,
+        "total_gates": 9008,
+        "active_qubits": 9
+      },
+      "solve_transpile_seconds": 0.03084406800189754,
+      "scoring_transpile_seconds": 0.036792824997974094,
+      "compile_seconds": 0.06763749600213487
+    }
+  },
+  "whole": {
+    "metrics": {
+      "two_qubit_gates": 33904,
+      "depth": 96055,
+      "total_gates": 102561,
+      "active_qubits": 18
+    },
+    "solve_transpile_seconds": 0.3398530939994089,
+    "scoring_transpile_seconds": 0.41728866400080733,
+    "compile_seconds": 0.757142072001443
+  },
+  "qft": {
+    "metrics": {
+      "two_qubit_gates": 132,
+      "depth": 89,
+      "total_gates": 366,
+      "active_qubits": 12
+    },
+    "solve_transpile_seconds": 0.003964997998991748,
+    "scoring_transpile_seconds": 0.006200821000675205,
+    "compile_seconds": 0.010166089999984251
+  },
+  "powers": {
+    "controlled_power_blocks": 12,
+    "equivalent_base_multiplications": 4095,
+    "exponents": [
+      1,
+      2,
+      4,
+      8,
+      16,
+      32,
+      64,
+      128,
+      256,
+      512,
+      1024,
+      2048
+    ]
+  }
+}

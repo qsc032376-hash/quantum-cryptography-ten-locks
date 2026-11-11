@@ -1,0 +1,301 @@
+{
+  "started_at_utc": "2026-11-11T21:38:25.304750+00:00",
+  "baseline": "c4455782ea9388d5897fc27270f42dd3786ed35d",
+  "module": "team3.tier08.modular",
+  "module_sha256": "0a1d5054465df651ccd75165070bea81e60b4c0d6ea4afccfe83d57556f905a8",
+  "thread_environment": {
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1"
+  },
+  "tolerance": 1e-09,
+  "no_aer_or_secret_recovery_executed": true,
+  "prior_audit_reference": "3dac27e:research/tier08_osc/audit.py",
+  "blocks": [
+    {
+      "multiplier": 2,
+      "modulus": 35,
+      "work_bits": 6,
+      "total_local_wires": 9,
+      "borrowed_wires": 2,
+      "complete_basis_columns": 512,
+      "operator_shape": [
+        512,
+        512
+      ],
+      "full_complex_operator_max_error": 5.557405325916716e-15,
+      "inverse_max_error": 5.557405325916716e-15,
+      "control_off_max_error": 5.557405325916716e-15,
+      "padding_max_error": 5.5552340698547386e-15,
+      "max_borrowed_wire_leakage_probability": 0.0,
+      "global_phase_alignment_applied": false,
+      "all_borrowed_input_values_included": true,
+      "seconds": 1.887049,
+      "status": "PASS"
+    },
+    {
+      "multiplier": 4,
+      "modulus": 35,
+      "work_bits": 6,
+      "total_local_wires": 9,
+      "borrowed_wires": 2,
+      "complete_basis_columns": 512,
+      "operator_shape": [
+        512,
+        512
+      ],
+      "full_complex_operator_max_error": 1.0769234873615133e-14,
+      "inverse_max_error": 1.0769234873615133e-14,
+      "control_off_max_error": 1.0547136994170295e-14,
+      "padding_max_error": 1.0769234873615133e-14,
+      "max_borrowed_wire_leakage_probability": 0.0,
+      "global_phase_alignment_applied": false,
+      "all_borrowed_input_values_included": true,
+      "seconds": 2.20828,
+      "status": "PASS"
+    },
+    {
+      "multiplier": 11,
+      "modulus": 35,
+      "work_bits": 6,
+      "total_local_wires": 9,
+      "borrowed_wires": 2,
+      "complete_basis_columns": 512,
+      "operator_shape": [
+        512,
+        512
+      ],
+      "full_complex_operator_max_error": 3.308491457853569e-14,
+      "inverse_max_error": 3.308491457853569e-14,
+      "control_off_max_error": 3.2869764335355715e-14,
+      "padding_max_error": 3.308491457853569e-14,
+      "max_borrowed_wire_leakage_probability": 0.0,
+      "global_phase_alignment_applied": false,
+      "all_borrowed_input_values_included": true,
+      "seconds": 6.159974,
+      "status": "PASS"
+    },
+    {
+      "multiplier": 16,
+      "modulus": 35,
+      "work_bits": 6,
+      "total_local_wires": 9,
+      "borrowed_wires": 2,
+      "complete_basis_columns": 512,
+      "operator_shape": [
+        512,
+        512
+      ],
+      "full_complex_operator_max_error": 3.352912464102079e-14,
+      "inverse_max_error": 3.352912464102079e-14,
+      "control_off_max_error": 3.352912464102079e-14,
+      "padding_max_error": 3.219669715234274e-14,
+      "max_borrowed_wire_leakage_probability": 0.0,
+      "global_phase_alignment_applied": false,
+      "all_borrowed_input_values_included": true,
+      "seconds": 6.066295,
+      "status": "PASS"
+    }
+  ],
+  "emitter_sha256": "75707580d3ea032d48624c2c02da4658fa2c7a8ec89a14d191ae0b7c77f046d5",
+  "mixed_predicate_fanout": [
+    {
+      "case": "mixed_three_targets",
+      "pivot": "first",
+      "mode": "dirty",
+      "complete_basis_columns": 512,
+      "full_complex_operator_max_error": 3.3306690738754696e-16,
+      "arbitrary_target_and_borrowed_states_included": true,
+      "global_phase_alignment_applied": false,
+      "status": "PASS"
+    },
+    {
+      "case": "mixed_three_targets",
+      "pivot": "last",
+      "mode": "dirty",
+      "complete_basis_columns": 512,
+      "full_complex_operator_max_error": 3.3306690738754696e-16,
+      "arbitrary_target_and_borrowed_states_included": true,
+      "global_phase_alignment_applied": false,
+      "status": "PASS"
+    },
+    {
+      "case": "external_control_only",
+      "pivot": "first",
+      "mode": "dirty",
+      "complete_basis_columns": 512,
+      "full_complex_operator_max_error": 0.0,
+      "arbitrary_target_and_borrowed_states_included": true,
+      "global_phase_alignment_applied": false,
+      "status": "PASS"
+    },
+    {
+      "case": "external_control_only",
+      "pivot": "last",
+      "mode": "dirty",
+      "complete_basis_columns": 512,
+      "full_complex_operator_max_error": 0.0,
+      "arbitrary_target_and_borrowed_states_included": true,
+      "global_phase_alignment_applied": false,
+      "status": "PASS"
+    },
+    {
+      "case": "all_work_bits_participate",
+      "pivot": "first",
+      "mode": "dirty",
+      "complete_basis_columns": 512,
+      "full_complex_operator_max_error": 2.220446049250313e-15,
+      "arbitrary_target_and_borrowed_states_included": true,
+      "global_phase_alignment_applied": false,
+      "status": "PASS"
+    },
+    {
+      "case": "all_work_bits_participate",
+      "pivot": "last",
+      "mode": "dirty",
+      "complete_basis_columns": 512,
+      "full_complex_operator_max_error": 2.220446049250313e-15,
+      "arbitrary_target_and_borrowed_states_included": true,
+      "global_phase_alignment_applied": false,
+      "status": "PASS"
+    },
+    {
+      "case": "repeated_target_cancels",
+      "pivot": "first",
+      "mode": "dirty",
+      "complete_basis_columns": 512,
+      "full_complex_operator_max_error": 3.3306690738754696e-16,
+      "arbitrary_target_and_borrowed_states_included": true,
+      "global_phase_alignment_applied": false,
+      "status": "PASS"
+    },
+    {
+      "case": "repeated_target_cancels",
+      "pivot": "last",
+      "mode": "dirty",
+      "complete_basis_columns": 512,
+      "full_complex_operator_max_error": 3.3306690738754696e-16,
+      "arbitrary_target_and_borrowed_states_included": true,
+      "global_phase_alignment_applied": false,
+      "status": "PASS"
+    }
+  ],
+  "protected_source_identity": {
+    "submissions/team3/tier08/solution.py": {
+      "same_as_baseline": true,
+      "sha256": "8c377d9f3fa6d4f10190faf15d9889d1bea0fe0b782a1cebafc2bd48f7547abe"
+    },
+    "submissions/team3/tier08/order.py": {
+      "same_as_baseline": true,
+      "sha256": "60385abbf4731717a39d0ce209088b21c0450b90aec8ea3e27e4c0d7132480e5"
+    },
+    "submissions/team3/tier07/qpe.py": {
+      "same_as_baseline": true,
+      "sha256": "013e4e85d865cb003daa01454da6ea9411bc98ed4e9eddcb88ef6e8159d7f7ab"
+    }
+  },
+  "full_circuit_structure": {
+    "qubits": 18,
+    "classical_bits": 12,
+    "controlled_power_blocks": 12,
+    "public_power_exponents": [
+      1,
+      2,
+      4,
+      8,
+      16,
+      32,
+      64,
+      128,
+      256,
+      512,
+      1024,
+      2048
+    ],
+    "physical_controls_in_block_order": [
+      11,
+      10,
+      9,
+      8,
+      7,
+      6,
+      5,
+      4,
+      3,
+      2,
+      1,
+      0
+    ],
+    "measurement_mapping": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        3,
+        3
+      ],
+      [
+        4,
+        4
+      ],
+      [
+        5,
+        5
+      ],
+      [
+        6,
+        6
+      ],
+      [
+        7,
+        7
+      ],
+      [
+        8,
+        8
+      ],
+      [
+        9,
+        9
+      ],
+      [
+        10,
+        10
+      ],
+      [
+        11,
+        11
+      ]
+    ],
+    "work_integer_one_prepared": true,
+    "status": "PASS"
+  },
+  "synthetic_fourier_state": {
+    "synthetic_public_modulus": 5,
+    "synthetic_public_base": 2,
+    "phase_bits": 4,
+    "work_bits": 3,
+    "full_complex_state_max_error": 1.4074492931093031e-15,
+    "joint_probability_max_error": 2.220446049250313e-16,
+    "global_phase_alignment_applied": false,
+    "status": "PASS"
+  },
+  "seconds": 17.47274,
+  "status": "PASS",
+  "runtime_files_sha256": {
+    "submissions/team3/tier08/extreme_synthesis.py": "05de0badc51b92a1422d1471d2697e50108b9915b3f54a13a0eba2e7584a8187",
+    "submissions/team3/tier08/modular.py": "0a1d5054465df651ccd75165070bea81e60b4c0d6ea4afccfe83d57556f905a8",
+    "submissions/team3/tier08/order.py": "60385abbf4731717a39d0ce209088b21c0450b90aec8ea3e27e4c0d7132480e5",
+    "submissions/team3/tier08/solution.py": "8c377d9f3fa6d4f10190faf15d9889d1bea0fe0b782a1cebafc2bd48f7547abe"
+  },
+  "runtime_source_unchanged_during_audit": true
+}
