@@ -1,0 +1,10 @@
+{
+  "member_count": 37,
+  "same_bytes": 37,
+  "source_files": 39,
+  "missing_from_zip": [
+    "tier01/test_solution.py",
+    "tier01/validate_quantum.py"
+  ],
+  "extra_in_zip": []
+}
