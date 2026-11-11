@@ -1,0 +1,355 @@
+{
+  "baseline_commit": "c4455782ea9388d5897fc27270f42dd3786ed35d",
+  "seed_transpiler": 12345,
+  "iterations": 25,
+  "shots": 128,
+  "screens": [
+    {
+      "config": {
+        "relative_mask": false,
+        "relative_compare": false,
+        "level": 1,
+        "gf2": true
+      },
+      "metrics": {
+        "two_qubit_gates": 14552,
+        "depth": 28132,
+        "total_gates": 40938,
+        "active_qubits": 19
+      },
+      "compile_seconds": 1.1174143750104122,
+      "native_compile_seconds": 1.0357743329950608,
+      "gf2": {
+        "windows": 10879,
+        "accepted": 248,
+        "removed_cx": 148,
+        "max_window_wires": 5
+      }
+    },
+    {
+      "config": {
+        "relative_mask": false,
+        "relative_compare": false,
+        "level": 2,
+        "gf2": true
+      },
+      "metrics": {
+        "two_qubit_gates": 14552,
+        "depth": 27707,
+        "total_gates": 38187,
+        "active_qubits": 19
+      },
+      "compile_seconds": 1.1317309589940123,
+      "native_compile_seconds": 0.9881485420046374,
+      "gf2": {
+        "windows": 10879,
+        "accepted": 248,
+        "removed_cx": 148,
+        "max_window_wires": 5
+      }
+    },
+    {
+      "config": {
+        "relative_mask": false,
+        "relative_compare": true,
+        "level": 1,
+        "gf2": true
+      },
+      "metrics": {
+        "two_qubit_gates": 14452,
+        "depth": 27932,
+        "total_gates": 40738,
+        "active_qubits": 19
+      },
+      "compile_seconds": 1.0805908750044182,
+      "native_compile_seconds": 1.0061056660488248,
+      "gf2": {
+        "windows": 10804,
+        "accepted": 248,
+        "removed_cx": 148,
+        "max_window_wires": 5
+      }
+    },
+    {
+      "config": {
+        "relative_mask": false,
+        "relative_compare": true,
+        "level": 2,
+        "gf2": true
+      },
+      "metrics": {
+        "two_qubit_gates": 14452,
+        "depth": 27132,
+        "total_gates": 37613,
+        "active_qubits": 19
+      },
+      "compile_seconds": 1.0407399579999037,
+      "native_compile_seconds": 0.9717391250305809,
+      "gf2": {
+        "windows": 10804,
+        "accepted": 248,
+        "removed_cx": 148,
+        "max_window_wires": 5
+      }
+    },
+    {
+      "config": {
+        "relative_mask": true,
+        "relative_compare": false,
+        "level": 1,
+        "gf2": true
+      },
+      "metrics": {
+        "two_qubit_gates": 11100,
+        "depth": 23478,
+        "total_gates": 32686,
+        "active_qubits": 19
+      },
+      "compile_seconds": 0.8162481249892153,
+      "native_compile_seconds": 0.7557259169989266,
+      "gf2": {
+        "windows": 8479,
+        "accepted": 100,
+        "removed_cx": 0,
+        "max_window_wires": 5
+      }
+    },
+    {
+      "config": {
+        "relative_mask": true,
+        "relative_compare": false,
+        "level": 2,
+        "gf2": true
+      },
+      "metrics": {
+        "two_qubit_gates": 11100,
+        "depth": 22953,
+        "total_gates": 31030,
+        "active_qubits": 19
+      },
+      "compile_seconds": 0.8496075409930199,
+      "native_compile_seconds": 0.7946178329875693,
+      "gf2": {
+        "windows": 8479,
+        "accepted": 100,
+        "removed_cx": 0,
+        "max_window_wires": 5
+      }
+    },
+    {
+      "config": {
+        "relative_mask": true,
+        "relative_compare": true,
+        "level": 1,
+        "gf2": true
+      },
+      "metrics": {
+        "two_qubit_gates": 11000,
+        "depth": 23278,
+        "total_gates": 32486,
+        "active_qubits": 19
+      },
+      "compile_seconds": 0.8133912920020521,
+      "native_compile_seconds": 0.7527514999965206,
+      "gf2": {
+        "windows": 8404,
+        "accepted": 100,
+        "removed_cx": 0,
+        "max_window_wires": 5
+      }
+    },
+    {
+      "config": {
+        "relative_mask": true,
+        "relative_compare": true,
+        "level": 2,
+        "gf2": true
+      },
+      "metrics": {
+        "two_qubit_gates": 11000,
+        "depth": 22278,
+        "total_gates": 30263,
+        "active_qubits": 19
+      },
+      "compile_seconds": 0.8187798750004731,
+      "native_compile_seconds": 0.7618382499786094,
+      "gf2": {
+        "windows": 8404,
+        "accepted": 100,
+        "removed_cx": 0,
+        "max_window_wires": 5
+      }
+    },
+    {
+      "config": {
+        "relative_mask": true,
+        "relative_compare": true,
+        "level": 3,
+        "gf2": true
+      },
+      "metrics": {
+        "two_qubit_gates": 11000,
+        "depth": 22278,
+        "total_gates": 30263,
+        "active_qubits": 19
+      },
+      "compile_seconds": 0.8033467500354163,
+      "native_compile_seconds": 0.7479410420055501,
+      "gf2": {
+        "windows": 8404,
+        "accepted": 100,
+        "removed_cx": 0,
+        "max_window_wires": 5
+      }
+    },
+    {
+      "config": {
+        "relative_mask": true,
+        "relative_compare": true,
+        "level": 1,
+        "gf2": false
+      },
+      "metrics": {
+        "two_qubit_gates": 11000,
+        "depth": 23653,
+        "total_gates": 32486,
+        "active_qubits": 19
+      },
+      "compile_seconds": 0.1038655829615891,
+      "native_compile_seconds": 0.047100957948714495,
+      "gf2": {}
+    },
+    {
+      "config": {
+        "relative_mask": true,
+        "relative_compare": true,
+        "level": 2,
+        "gf2": false
+      },
+      "metrics": {
+        "two_qubit_gates": 11000,
+        "depth": 22653,
+        "total_gates": 30263,
+        "active_qubits": 19
+      },
+      "compile_seconds": 0.16047433397034183,
+      "native_compile_seconds": 0.10632133396575227,
+      "gf2": {}
+    },
+    {
+      "config": {
+        "fused": true,
+        "order": 0,
+        "pivot_last": false,
+        "level": 2,
+        "gf2": true
+      },
+      "metrics": {
+        "two_qubit_gates": 11025,
+        "depth": 19378,
+        "total_gates": 28413,
+        "active_qubits": 19
+      },
+      "compile_seconds": 0.8178097080090083,
+      "native_compile_seconds": 0.763900583027862,
+      "gf2": {
+        "windows": 8079,
+        "accepted": 225,
+        "removed_cx": 775,
+        "max_window_wires": 15
+      }
+    },
+    {
+      "config": {
+        "fused": true,
+        "order": 0,
+        "pivot_last": true,
+        "level": 2,
+        "gf2": true
+      },
+      "metrics": {
+        "two_qubit_gates": 11125,
+        "depth": 19678,
+        "total_gates": 28638,
+        "active_qubits": 19
+      },
+      "compile_seconds": 0.7754327500006184,
+      "native_compile_seconds": 0.7220985419698991,
+      "gf2": {
+        "windows": 8054,
+        "accepted": 200,
+        "removed_cx": 675,
+        "max_window_wires": 15
+      }
+    },
+    {
+      "config": {
+        "fused": true,
+        "order": 1,
+        "pivot_last": false,
+        "level": 2,
+        "gf2": true
+      },
+      "metrics": {
+        "two_qubit_gates": 11000,
+        "depth": 19628,
+        "total_gates": 28363,
+        "active_qubits": 19
+      },
+      "compile_seconds": 0.7750692919944413,
+      "native_compile_seconds": 0.7227177919703536,
+      "gf2": {
+        "windows": 8079,
+        "accepted": 100,
+        "removed_cx": 800,
+        "max_window_wires": 18
+      }
+    },
+    {
+      "config": {
+        "fused": true,
+        "order": 1,
+        "pivot_last": true,
+        "level": 2,
+        "gf2": true
+      },
+      "metrics": {
+        "two_qubit_gates": 10950,
+        "depth": 19703,
+        "total_gates": 28363,
+        "active_qubits": 19
+      },
+      "compile_seconds": 0.7707302090129815,
+      "native_compile_seconds": 0.7192956670187414,
+      "gf2": {
+        "windows": 8029,
+        "accepted": 125,
+        "removed_cx": 800,
+        "max_window_wires": 16
+      }
+    }
+  ],
+  "selected": {
+    "config": {
+      "fused": true,
+      "order": 1,
+      "pivot_last": true,
+      "level": 2,
+      "gf2": true
+    },
+    "metrics": {
+      "two_qubit_gates": 10950,
+      "depth": 19703,
+      "total_gates": 28363,
+      "active_qubits": 19
+    },
+    "compile_seconds": 0.7707302090129815,
+    "native_compile_seconds": 0.7192956670187414,
+    "gf2": {
+      "windows": 8029,
+      "accepted": 125,
+      "removed_cx": 800,
+      "max_window_wires": 16
+    }
+  }
+}

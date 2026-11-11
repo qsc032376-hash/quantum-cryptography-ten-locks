@@ -1,0 +1,53 @@
+{
+  "component_costs_nonadditive": {
+    "baseline_oracle": {
+      "two_qubit_gates": 540,
+      "depth": 1025,
+      "total_gates": 1428,
+      "active_qubits": 19
+    },
+    "candidate_oracle": {
+      "two_qubit_gates": 424,
+      "depth": 758,
+      "total_gates": 1030,
+      "active_qubits": 19
+    },
+    "diffuser": {
+      "two_qubit_gates": 48,
+      "depth": 114,
+      "total_gates": 220,
+      "active_qubits": 14
+    }
+  },
+  "phase_polynomial_probe": {
+    "stats": {
+      "accepted_windows": 0,
+      "cx_removed_before_rescoring": 0
+    },
+    "whole_metrics": {
+      "two_qubit_gates": 10950,
+      "depth": 19703,
+      "total_gates": 28363,
+      "active_qubits": 19
+    },
+    "promotion": "not promoted; finalist remains selected search configuration"
+  },
+  "smt": {
+    "z3": "5.4.1",
+    "trials": [
+      {
+        "length": 0,
+        "status": "unsat"
+      },
+      {
+        "length": 1,
+        "status": "sat"
+      }
+    ],
+    "original_cx": 4,
+    "optimal_cx": 1,
+    "operator_error": 0.0,
+    "scope": "synthetic safe linear block only; not integrated or claimed as extra circuit savings"
+  },
+  "ancillas": "19 total; 6 existing key wires borrowed dirty by relative comparator, restored; diffuser uses clean work only after oracle restoration"
+}

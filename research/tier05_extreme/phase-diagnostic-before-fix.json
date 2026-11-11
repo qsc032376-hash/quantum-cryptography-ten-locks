@@ -1,0 +1,29 @@
+[
+  {
+    "label": "baseline",
+    "logical_global_phase": 0.0,
+    "compiled_global_phase": 5.105088062076203,
+    "overlap_real": 0.9999999999997821,
+    "overlap_imag": 0.0,
+    "max_probability_difference": 0.0,
+    "aligned_error": 0.0
+  },
+  {
+    "label": "candidate",
+    "logical_global_phase": 0.0,
+    "compiled_global_phase": 1.963495408493051,
+    "overlap_real": 0.7071067811868227,
+    "overlap_imag": 0.7071067811859407,
+    "max_probability_difference": 1.4210854715202004e-14,
+    "aligned_error": 6.9979286851126974e-15
+  },
+  {
+    "label": "candidate_L1",
+    "logical_global_phase": 0.0,
+    "compiled_global_phase": 1.963495408492669,
+    "overlap_real": 0.9999999999997925,
+    "overlap_imag": -2.5049064131947875e-13,
+    "max_probability_difference": 2.0539125955565396e-14,
+    "aligned_error": 1.0326271569043521e-14
+  }
+]
