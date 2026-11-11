@@ -1,0 +1,62 @@
+{
+  "40": {
+    "cnots": [
+      [
+        6,
+        0
+      ]
+    ],
+    "flip": 126,
+    "short": false,
+    "inverse": true
+  },
+  "7": {
+    "cnots": [
+      [
+        6,
+        3
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        5,
+        1
+      ],
+      [
+        3,
+        0
+      ]
+    ],
+    "flip": 119,
+    "short": false,
+    "inverse": false
+  },
+  "10": {
+    "cnots": [
+      [
+        5,
+        2
+      ],
+      [
+        3,
+        1
+      ]
+    ],
+    "flip": 119,
+    "short": false,
+    "inverse": true
+  },
+  "3": {
+    "cnots": [
+      [
+        1,
+        2
+      ]
+    ],
+    "flip": 117,
+    "short": false,
+    "inverse": true
+  }
+}
