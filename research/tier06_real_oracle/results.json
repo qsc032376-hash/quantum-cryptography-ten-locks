@@ -1,0 +1,10 @@
+{
+  "phase_workspace_leakage": 4.49184622135323e-31,
+  "combined_workspace_leakage": 1.3480578555139594e-30,
+  "return_amplitude_error": 5.511434352610651e-15,
+  "two_round_search_query_count": {
+    "phase": 2,
+    "bit_predicate": 0
+  },
+  "search_measurement_identity": true
+}
