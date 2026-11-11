@@ -1,0 +1,147 @@
+{
+  "probe_public_multiplier": 3,
+  "anf_output_delta_term_counts": [
+    8,
+    16,
+    28,
+    36,
+    42,
+    54,
+    42
+  ],
+  "anf_target_dependent_terms": 92,
+  "anf_out_of_place_extra_qubits": 7,
+  "cycle_isolated": {
+    "two_qubit_gates": 7052,
+    "depth": 18818,
+    "total_gates": 20724,
+    "active_qubits": 11
+  },
+  "selected_isolated": {
+    "two_qubit_gates": 4634,
+    "depth": 9564,
+    "total_gates": 13224,
+    "active_qubits": 8
+  },
+  "whole_circuit_removal_profile": [
+    {
+      "removed": "qft",
+      "residual": {
+        "metrics": {
+          "two_qubit_gates": 38763,
+          "depth": 92553,
+          "total_gates": 111154,
+          "active_qubits": 19
+        },
+        "compilation_seconds": 0.330778542032931,
+        "native_ops": {
+          "x": 2861,
+          "cx": 2639,
+          "mcx": 1466,
+          "ccx": 270,
+          "h": 12,
+          "measure": 12
+        }
+      },
+      "marginal_cx": 60
+    },
+    {
+      "removed": "multipliers",
+      "residual": {
+        "metrics": {
+          "two_qubit_gates": 60,
+          "depth": 41,
+          "total_gates": 201,
+          "active_qubits": 13
+        },
+        "compilation_seconds": 0.030707792029716074,
+        "native_ops": {
+          "cp": 30,
+          "h": 20,
+          "measure": 12,
+          "x": 1
+        }
+      },
+      "marginal_cx": 38763
+    }
+  ],
+  "dirty_strategy": {
+    "metrics": {
+      "two_qubit_gates": 38823,
+      "depth": 92591,
+      "total_gates": 111337,
+      "active_qubits": 19
+    },
+    "compilation_seconds": 0.4633143750252202,
+    "native_ops": {
+      "cx": 31487,
+      "u2": 12893,
+      "tdg": 8274,
+      "t": 8274,
+      "x": 2268,
+      "h": 1389,
+      "mcx": 404,
+      "ccx": 270,
+      "cp": 30,
+      "measure": 12
+    }
+  },
+  "native_levels_official_level1": {
+    "0": {
+      "metrics": {
+        "two_qubit_gates": 38823,
+        "depth": 92604,
+        "total_gates": 111337,
+        "active_qubits": 19
+      },
+      "compilation_seconds": 0.33866987499641255,
+      "native_ops": {
+        "x": 7137,
+        "cx": 2709,
+        "mcx": 1466,
+        "ccx": 270,
+        "cp": 30,
+        "h": 24,
+        "measure": 12
+      }
+    },
+    "2": {
+      "metrics": {
+        "two_qubit_gates": 38767,
+        "depth": 92283,
+        "total_gates": 110097,
+        "active_qubits": 19
+      },
+      "compilation_seconds": 0.509347167040687,
+      "native_ops": {
+        "cx": 2583,
+        "x": 1677,
+        "mcx": 1466,
+        "ccx": 270,
+        "cp": 30,
+        "h": 24,
+        "measure": 12
+      }
+    },
+    "3": {
+      "metrics": {
+        "two_qubit_gates": 38767,
+        "depth": 92283,
+        "total_gates": 110097,
+        "active_qubits": 19
+      },
+      "compilation_seconds": 0.6654761669924483,
+      "native_ops": {
+        "cx": 2583,
+        "x": 1677,
+        "mcx": 1466,
+        "ccx": 270,
+        "cp": 30,
+        "h": 24,
+        "measure": 12
+      }
+    }
+  },
+  "adjacent_self_inverse_pairs": 2168,
+  "note": "Removal circuits are attribution probes, not valid recovery candidates. ANF evaluator not integrated; target-dependent terms preclude naive in-place extraction."
+}

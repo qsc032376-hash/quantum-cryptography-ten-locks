@@ -1,0 +1,255 @@
+{
+  "static_frontier": [
+    "prefix_96",
+    "last_pivot"
+  ],
+  "full_measured_frontier": [
+    "baseline",
+    "prefix_96"
+  ],
+  "rows": [
+    {
+      "name": "baseline",
+      "metrics": {
+        "two_qubit_gates": 46910,
+        "depth": 109763,
+        "total_gates": 132023,
+        "active_qubits": 19
+      },
+      "compilation_seconds": 0.4175910420017317,
+      "simulation_seconds": 3.76551596239442,
+      "solve_seconds": 3.9767,
+      "peak_memory_mib": 118.1859375,
+      "aer_timing_observations": [
+        {
+          "result_wait_seconds": 3.8074637909885496,
+          "aer_job_elapsed_seconds": 3.819288874976337,
+          "jobs_finished": 1
+        },
+        {
+          "result_wait_seconds": 3.5930282499757595,
+          "aer_job_elapsed_seconds": 3.6049455410102382,
+          "jobs_finished": 1
+        },
+        {
+          "result_wait_seconds": 3.633516208967194,
+          "aer_job_elapsed_seconds": 3.6455957500147633,
+          "jobs_finished": 1
+        },
+        {
+          "result_wait_seconds": 3.7313447080086917,
+          "aer_job_elapsed_seconds": 3.7432949999929406,
+          "jobs_finished": 1
+        },
+        {
+          "result_wait_seconds": 3.736251749971416,
+          "aer_job_elapsed_seconds": 3.7480135000078008,
+          "jobs_finished": 1
+        },
+        {
+          "result_wait_seconds": 4.761064040998463,
+          "aer_job_elapsed_seconds": 4.772781707986724,
+          "jobs_finished": 1
+        },
+        {
+          "result_wait_seconds": 3.6834852919564582,
+          "aer_job_elapsed_seconds": 3.695399707998149,
+          "jobs_finished": 1
+        },
+        {
+          "result_wait_seconds": 3.5213024169788696,
+          "aer_job_elapsed_seconds": 3.5331020419835113,
+          "jobs_finished": 1
+        },
+        {
+          "result_wait_seconds": 3.5056205830187537,
+          "aer_job_elapsed_seconds": 3.5171846249722876,
+          "jobs_finished": 1
+        },
+        {
+          "result_wait_seconds": 3.563450583955273,
+          "aer_job_elapsed_seconds": 3.575552875001449,
+          "jobs_finished": 1
+        }
+      ],
+      "simulation_time_definition": "mean observed Aer job elapsed, includes backend overhead, not pure kernel time",
+      "failure_reason": null,
+      "disposition": "verified baseline"
+    },
+    {
+      "name": "prefix_1",
+      "metrics": {
+        "two_qubit_gates": 46910,
+        "depth": 109763,
+        "total_gates": 132023,
+        "active_qubits": 19
+      },
+      "compilation_seconds": 0.37115583301056176,
+      "simulation_seconds": null,
+      "solve_seconds": null,
+      "peak_memory_mib": null,
+      "failure_reason": null,
+      "disposition": "static-only screen; not promoted"
+    },
+    {
+      "name": "prefix_8",
+      "metrics": {
+        "two_qubit_gates": 46026,
+        "depth": 107057,
+        "total_gates": 129135,
+        "active_qubits": 19
+      },
+      "compilation_seconds": 0.33884095802204683,
+      "simulation_seconds": null,
+      "solve_seconds": null,
+      "peak_memory_mib": null,
+      "failure_reason": null,
+      "disposition": "static-only screen; not promoted"
+    },
+    {
+      "name": "prefix_16",
+      "metrics": {
+        "two_qubit_gates": 46004,
+        "depth": 107086,
+        "total_gates": 128945,
+        "active_qubits": 19
+      },
+      "compilation_seconds": 0.35416783299297094,
+      "simulation_seconds": null,
+      "solve_seconds": null,
+      "peak_memory_mib": null,
+      "failure_reason": null,
+      "disposition": "static-only screen; not promoted"
+    },
+    {
+      "name": "prefix_32",
+      "metrics": {
+        "two_qubit_gates": 45342,
+        "depth": 106428,
+        "total_gates": 127283,
+        "active_qubits": 19
+      },
+      "compilation_seconds": 0.33608787500998005,
+      "simulation_seconds": null,
+      "solve_seconds": null,
+      "peak_memory_mib": null,
+      "failure_reason": null,
+      "disposition": "static-only screen; not promoted"
+    },
+    {
+      "name": "prefix_48",
+      "metrics": {
+        "two_qubit_gates": 44770,
+        "depth": 105496,
+        "total_gates": 125817,
+        "active_qubits": 19
+      },
+      "compilation_seconds": 0.33152000000700355,
+      "simulation_seconds": null,
+      "solve_seconds": null,
+      "peak_memory_mib": null,
+      "failure_reason": null,
+      "disposition": "static-only screen; not promoted"
+    },
+    {
+      "name": "prefix_64",
+      "metrics": {
+        "two_qubit_gates": 41415,
+        "depth": 99103,
+        "total_gates": 118047,
+        "active_qubits": 19
+      },
+      "compilation_seconds": 0.4582405419787392,
+      "simulation_seconds": null,
+      "solve_seconds": null,
+      "peak_memory_mib": null,
+      "failure_reason": null,
+      "disposition": "static-only screen; not promoted"
+    },
+    {
+      "name": "prefix_96",
+      "metrics": {
+        "two_qubit_gates": 38823,
+        "depth": 92604,
+        "total_gates": 111337,
+        "active_qubits": 19
+      },
+      "compilation_seconds": 0.36077904101694,
+      "simulation_seconds": 5.855453241604846,
+      "solve_seconds": 6.0055,
+      "peak_memory_mib": 129.221875,
+      "aer_timing_observations": [
+        {
+          "result_wait_seconds": 6.2197829589713365,
+          "aer_job_elapsed_seconds": 6.23313737497665,
+          "jobs_finished": 1
+        },
+        {
+          "result_wait_seconds": 6.687369957973715,
+          "aer_job_elapsed_seconds": 6.701739542011637,
+          "jobs_finished": 1
+        },
+        {
+          "result_wait_seconds": 5.523710583976936,
+          "aer_job_elapsed_seconds": 5.536816417006776,
+          "jobs_finished": 1
+        },
+        {
+          "result_wait_seconds": 6.941786666982807,
+          "aer_job_elapsed_seconds": 6.955083541979548,
+          "jobs_finished": 1
+        },
+        {
+          "result_wait_seconds": 5.3632874169852585,
+          "aer_job_elapsed_seconds": 5.377254457969684,
+          "jobs_finished": 1
+        },
+        {
+          "result_wait_seconds": 6.682797458022833,
+          "aer_job_elapsed_seconds": 6.695296208024956,
+          "jobs_finished": 1
+        },
+        {
+          "result_wait_seconds": 5.439367750019301,
+          "aer_job_elapsed_seconds": 5.45183812500909,
+          "jobs_finished": 1
+        },
+        {
+          "result_wait_seconds": 4.973821332969237,
+          "aer_job_elapsed_seconds": 4.986979458015412,
+          "jobs_finished": 1
+        },
+        {
+          "result_wait_seconds": 4.987563457980286,
+          "aer_job_elapsed_seconds": 5.000556708022486,
+          "jobs_finished": 1
+        },
+        {
+          "result_wait_seconds": 5.602857208054047,
+          "aer_job_elapsed_seconds": 5.615830583032221,
+          "jobs_finished": 1
+        }
+      ],
+      "simulation_time_definition": "mean observed Aer job elapsed, includes backend overhead, not pure kernel time",
+      "failure_reason": null,
+      "disposition": "validated finalist"
+    },
+    {
+      "name": "last_pivot",
+      "metrics": {
+        "two_qubit_gates": 38831,
+        "depth": 92760,
+        "total_gates": 111345,
+        "active_qubits": 19
+      },
+      "compilation_seconds": 0.32347599999047816,
+      "simulation_seconds": null,
+      "solve_seconds": null,
+      "peak_memory_mib": null,
+      "failure_reason": null,
+      "disposition": "static-only screen; not promoted"
+    }
+  ],
+  "note": "Unmeasured simulation fields are null; measured simulation proxy is mean Aer job elapsed. Solve includes construction and compilation.",
+  "source_commit": "160641690c647b508205e4ea0129eb83cc14da6f"
+}

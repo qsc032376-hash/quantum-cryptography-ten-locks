@@ -1,0 +1,574 @@
+{
+  "baseline": {
+    "full": {
+      "metrics": {
+        "two_qubit_gates": 46910,
+        "depth": 109763,
+        "total_gates": 132023,
+        "active_qubits": 19
+      },
+      "compilation_seconds": 0.3976094590034336,
+      "native_ops": {
+        "cx": 3394,
+        "mcx": 1720,
+        "ccx": 466,
+        "cp": 30,
+        "h": 24,
+        "measure": 12,
+        "x": 1
+      }
+    },
+    "ranked_removal_cost": [
+      {
+        "public_power_block": "tier10_controlled_A_power_32",
+        "marginal_cx": 9566,
+        "residual": {
+          "metrics": {
+            "two_qubit_gates": 37344,
+            "depth": 77259,
+            "total_gates": 111158,
+            "active_qubits": 19
+          },
+          "compilation_seconds": 1.0696845420170575,
+          "native_ops": {
+            "cx": 3024,
+            "mcx": 1569,
+            "ccx": 412,
+            "cp": 30,
+            "h": 22,
+            "measure": 12,
+            "x": 1
+          }
+        }
+      },
+      {
+        "public_power_block": "tier10_controlled_g_power_32",
+        "marginal_cx": 6438,
+        "residual": {
+          "metrics": {
+            "two_qubit_gates": 40472,
+            "depth": 90236,
+            "total_gates": 116450,
+            "active_qubits": 19
+          },
+          "compilation_seconds": 0.3972959159873426,
+          "native_ops": {
+            "cx": 3136,
+            "mcx": 1564,
+            "ccx": 412,
+            "cp": 30,
+            "h": 22,
+            "measure": 12,
+            "x": 1
+          }
+        }
+      },
+      {
+        "public_power_block": "tier10_controlled_A_power_2",
+        "marginal_cx": 4342,
+        "residual": {
+          "metrics": {
+            "two_qubit_gates": 42568,
+            "depth": 99634,
+            "total_gates": 119793,
+            "active_qubits": 19
+          },
+          "compilation_seconds": 0.3220058750011958,
+          "native_ops": {
+            "cx": 3070,
+            "mcx": 1559,
+            "ccx": 424,
+            "cp": 30,
+            "h": 24,
+            "measure": 12,
+            "x": 1
+          }
+        }
+      },
+      {
+        "public_power_block": "tier10_controlled_A_power_16",
+        "marginal_cx": 4124,
+        "residual": {
+          "metrics": {
+            "two_qubit_gates": 42786,
+            "depth": 100171,
+            "total_gates": 120487,
+            "active_qubits": 19
+          },
+          "compilation_seconds": 0.3644147909944877,
+          "native_ops": {
+            "cx": 3050,
+            "mcx": 1575,
+            "ccx": 420,
+            "cp": 30,
+            "h": 24,
+            "measure": 12,
+            "x": 1
+          }
+        }
+      },
+      {
+        "public_power_block": "tier10_controlled_A_power_8",
+        "marginal_cx": 4014,
+        "residual": {
+          "metrics": {
+            "two_qubit_gates": 42896,
+            "depth": 100277,
+            "total_gates": 120638,
+            "active_qubits": 19
+          },
+          "compilation_seconds": 0.32446883304510266,
+          "native_ops": {
+            "cx": 3124,
+            "mcx": 1573,
+            "ccx": 427,
+            "cp": 30,
+            "h": 24,
+            "measure": 12,
+            "x": 1
+          }
+        }
+      },
+      {
+        "public_power_block": "tier10_controlled_A_power_4",
+        "marginal_cx": 4010,
+        "residual": {
+          "metrics": {
+            "two_qubit_gates": 42900,
+            "depth": 100584,
+            "total_gates": 120800,
+            "active_qubits": 19
+          },
+          "compilation_seconds": 0.3246282920008525,
+          "native_ops": {
+            "cx": 3066,
+            "mcx": 1576,
+            "ccx": 418,
+            "cp": 30,
+            "h": 24,
+            "measure": 12,
+            "x": 1
+          }
+        }
+      },
+      {
+        "public_power_block": "tier10_controlled_A_power_1",
+        "marginal_cx": 4008,
+        "residual": {
+          "metrics": {
+            "two_qubit_gates": 42902,
+            "depth": 100562,
+            "total_gates": 120792,
+            "active_qubits": 19
+          },
+          "compilation_seconds": 0.32029120897641405,
+          "native_ops": {
+            "cx": 3100,
+            "mcx": 1570,
+            "ccx": 423,
+            "cp": 30,
+            "h": 24,
+            "measure": 12,
+            "x": 1
+          }
+        }
+      },
+      {
+        "public_power_block": "tier10_controlled_g_power_2",
+        "marginal_cx": 3960,
+        "residual": {
+          "metrics": {
+            "two_qubit_gates": 42950,
+            "depth": 100526,
+            "total_gates": 120959,
+            "active_qubits": 19
+          },
+          "compilation_seconds": 0.3295482089743018,
+          "native_ops": {
+            "cx": 3064,
+            "mcx": 1572,
+            "ccx": 431,
+            "cp": 30,
+            "h": 24,
+            "measure": 12,
+            "x": 1
+          }
+        }
+      },
+      {
+        "public_power_block": "tier10_controlled_g_power_16",
+        "marginal_cx": 3866,
+        "residual": {
+          "metrics": {
+            "two_qubit_gates": 43044,
+            "depth": 100664,
+            "total_gates": 121141,
+            "active_qubits": 19
+          },
+          "compilation_seconds": 0.3228188749635592,
+          "native_ops": {
+            "cx": 3102,
+            "mcx": 1578,
+            "ccx": 427,
+            "cp": 30,
+            "h": 24,
+            "measure": 12,
+            "x": 1
+          }
+        }
+      },
+      {
+        "public_power_block": "tier10_controlled_g_power_1",
+        "marginal_cx": 3632,
+        "residual": {
+          "metrics": {
+            "two_qubit_gates": 43278,
+            "depth": 100815,
+            "total_gates": 121682,
+            "active_qubits": 19
+          },
+          "compilation_seconds": 0.33062920899828896,
+          "native_ops": {
+            "cx": 3206,
+            "mcx": 1584,
+            "ccx": 449,
+            "cp": 30,
+            "h": 24,
+            "measure": 12,
+            "x": 1
+          }
+        }
+      },
+      {
+        "public_power_block": "tier10_controlled_g_power_8",
+        "marginal_cx": 3488,
+        "residual": {
+          "metrics": {
+            "two_qubit_gates": 43422,
+            "depth": 101231,
+            "total_gates": 122012,
+            "active_qubits": 19
+          },
+          "compilation_seconds": 0.32459691702388227,
+          "native_ops": {
+            "cx": 3214,
+            "mcx": 1596,
+            "ccx": 436,
+            "cp": 30,
+            "h": 24,
+            "measure": 12,
+            "x": 1
+          }
+        }
+      },
+      {
+        "public_power_block": "tier10_controlled_g_power_4",
+        "marginal_cx": 3054,
+        "residual": {
+          "metrics": {
+            "two_qubit_gates": 43856,
+            "depth": 102585,
+            "total_gates": 123455,
+            "active_qubits": 19
+          },
+          "compilation_seconds": 0.33009812503587455,
+          "native_ops": {
+            "cx": 3178,
+            "mcx": 1604,
+            "ccx": 447,
+            "cp": 30,
+            "h": 24,
+            "measure": 12,
+            "x": 1
+          }
+        }
+      }
+    ]
+  },
+  "candidate": {
+    "full": {
+      "metrics": {
+        "two_qubit_gates": 38823,
+        "depth": 92604,
+        "total_gates": 111337,
+        "active_qubits": 19
+      },
+      "compilation_seconds": 0.36840691696852446,
+      "native_ops": {
+        "x": 2861,
+        "cx": 2639,
+        "mcx": 1466,
+        "ccx": 270,
+        "cp": 30,
+        "h": 24,
+        "measure": 12
+      }
+    },
+    "ranked_removal_cost": [
+      {
+        "public_power_block": "tier10_controlled_A_power_32",
+        "marginal_cx": 10666,
+        "residual": {
+          "metrics": {
+            "two_qubit_gates": 28157,
+            "depth": 58159,
+            "total_gates": 83388,
+            "active_qubits": 19
+          },
+          "compilation_seconds": 0.40547937498195097,
+          "native_ops": {
+            "x": 2575,
+            "cx": 2399,
+            "mcx": 1339,
+            "ccx": 247,
+            "cp": 30,
+            "h": 22,
+            "measure": 12
+          }
+        }
+      },
+      {
+        "public_power_block": "tier10_controlled_g_power_32",
+        "marginal_cx": 7236,
+        "residual": {
+          "metrics": {
+            "two_qubit_gates": 31587,
+            "depth": 71314,
+            "total_gates": 91347,
+            "active_qubits": 19
+          },
+          "compilation_seconds": 0.44756358297308907,
+          "native_ops": {
+            "x": 2581,
+            "cx": 2377,
+            "mcx": 1341,
+            "ccx": 248,
+            "cp": 30,
+            "h": 22,
+            "measure": 12
+          }
+        }
+      },
+      {
+        "public_power_block": "tier10_controlled_A_power_8",
+        "marginal_cx": 3634,
+        "residual": {
+          "metrics": {
+            "two_qubit_gates": 35189,
+            "depth": 84092,
+            "total_gates": 100933,
+            "active_qubits": 19
+          },
+          "compilation_seconds": 0.2906724999775179,
+          "native_ops": {
+            "x": 2533,
+            "cx": 2379,
+            "mcx": 1330,
+            "ccx": 234,
+            "cp": 30,
+            "h": 24,
+            "measure": 12
+          }
+        }
+      },
+      {
+        "public_power_block": "tier10_controlled_g_power_1",
+        "marginal_cx": 3518,
+        "residual": {
+          "metrics": {
+            "two_qubit_gates": 35305,
+            "depth": 83946,
+            "total_gates": 101244,
+            "active_qubits": 19
+          },
+          "compilation_seconds": 0.298392667027656,
+          "native_ops": {
+            "x": 2753,
+            "cx": 2431,
+            "mcx": 1332,
+            "ccx": 256,
+            "cp": 30,
+            "h": 24,
+            "measure": 12
+          }
+        }
+      },
+      {
+        "public_power_block": "tier10_controlled_A_power_16",
+        "marginal_cx": 3422,
+        "residual": {
+          "metrics": {
+            "two_qubit_gates": 35401,
+            "depth": 84469,
+            "total_gates": 101508,
+            "active_qubits": 19
+          },
+          "compilation_seconds": 0.288604540983215,
+          "native_ops": {
+            "x": 2583,
+            "cx": 2385,
+            "mcx": 1337,
+            "ccx": 245,
+            "cp": 30,
+            "h": 24,
+            "measure": 12
+          }
+        }
+      },
+      {
+        "public_power_block": "tier10_controlled_g_power_2",
+        "marginal_cx": 3378,
+        "residual": {
+          "metrics": {
+            "two_qubit_gates": 35445,
+            "depth": 84653,
+            "total_gates": 101709,
+            "active_qubits": 19
+          },
+          "compilation_seconds": 0.30031716596568003,
+          "native_ops": {
+            "x": 2579,
+            "cx": 2417,
+            "mcx": 1335,
+            "ccx": 246,
+            "cp": 30,
+            "h": 24,
+            "measure": 12
+          }
+        }
+      },
+      {
+        "public_power_block": "tier10_controlled_A_power_2",
+        "marginal_cx": 3348,
+        "residual": {
+          "metrics": {
+            "two_qubit_gates": 35475,
+            "depth": 84733,
+            "total_gates": 101752,
+            "active_qubits": 19
+          },
+          "compilation_seconds": 0.29086229199310765,
+          "native_ops": {
+            "x": 2595,
+            "cx": 2413,
+            "mcx": 1337,
+            "ccx": 246,
+            "cp": 30,
+            "h": 24,
+            "measure": 12
+          }
+        }
+      },
+      {
+        "public_power_block": "tier10_controlled_g_power_16",
+        "marginal_cx": 3336,
+        "residual": {
+          "metrics": {
+            "two_qubit_gates": 35487,
+            "depth": 84470,
+            "total_gates": 101704,
+            "active_qubits": 19
+          },
+          "compilation_seconds": 0.2949520419933833,
+          "native_ops": {
+            "x": 2613,
+            "cx": 2423,
+            "mcx": 1341,
+            "ccx": 251,
+            "cp": 30,
+            "h": 24,
+            "measure": 12
+          }
+        }
+      },
+      {
+        "public_power_block": "tier10_controlled_A_power_1",
+        "marginal_cx": 3310,
+        "residual": {
+          "metrics": {
+            "two_qubit_gates": 35513,
+            "depth": 84646,
+            "total_gates": 101812,
+            "active_qubits": 19
+          },
+          "compilation_seconds": 0.2950326250283979,
+          "native_ops": {
+            "x": 2561,
+            "cx": 2393,
+            "mcx": 1340,
+            "ccx": 247,
+            "cp": 30,
+            "h": 24,
+            "measure": 12
+          }
+        }
+      },
+      {
+        "public_power_block": "tier10_controlled_A_power_4",
+        "marginal_cx": 3134,
+        "residual": {
+          "metrics": {
+            "two_qubit_gates": 35689,
+            "depth": 85180,
+            "total_gates": 102332,
+            "active_qubits": 19
+          },
+          "compilation_seconds": 0.2992268339730799,
+          "native_ops": {
+            "x": 2591,
+            "cx": 2393,
+            "mcx": 1350,
+            "ccx": 247,
+            "cp": 30,
+            "h": 24,
+            "measure": 12
+          }
+        }
+      },
+      {
+        "public_power_block": "tier10_controlled_g_power_8",
+        "marginal_cx": 2849,
+        "residual": {
+          "metrics": {
+            "two_qubit_gates": 35974,
+            "depth": 85582,
+            "total_gates": 103165,
+            "active_qubits": 19
+          },
+          "compilation_seconds": 0.291095792024862,
+          "native_ops": {
+            "x": 2775,
+            "cx": 2516,
+            "mcx": 1362,
+            "ccx": 252,
+            "cp": 30,
+            "h": 24,
+            "measure": 12
+          }
+        }
+      },
+      {
+        "public_power_block": "tier10_controlled_g_power_4",
+        "marginal_cx": 2106,
+        "residual": {
+          "metrics": {
+            "two_qubit_gates": 36717,
+            "depth": 87653,
+            "total_gates": 105433,
+            "active_qubits": 19
+          },
+          "compilation_seconds": 0.3016966250143014,
+          "native_ops": {
+            "x": 2739,
+            "cx": 2503,
+            "mcx": 1382,
+            "ccx": 251,
+            "cp": 30,
+            "h": 24,
+            "measure": 12
+          }
+        }
+      }
+    ]
+  }
+}
