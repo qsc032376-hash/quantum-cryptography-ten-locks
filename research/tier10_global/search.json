@@ -1,0 +1,1564 @@
+{
+  "baseline_commit": "c4455782ea9388d5897fc27270f42dd3786ed35d",
+  "seed": 20261111,
+  "python": "3.13.9",
+  "configurations": [
+    {
+      "index": 0,
+      "permutation": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "xor_mask": 0,
+      "aggregate_proxy": 46972
+    },
+    {
+      "index": 1,
+      "permutation": [
+        0,
+        4,
+        6,
+        1,
+        5,
+        2,
+        3
+      ],
+      "xor_mask": 0,
+      "aggregate_proxy": 46756
+    },
+    {
+      "index": 2,
+      "permutation": [
+        1,
+        2,
+        3,
+        0,
+        4,
+        5,
+        6
+      ],
+      "xor_mask": 0,
+      "aggregate_proxy": 46594
+    },
+    {
+      "index": 3,
+      "permutation": [
+        4,
+        1,
+        6,
+        2,
+        5,
+        3,
+        0
+      ],
+      "xor_mask": 0,
+      "aggregate_proxy": 46332
+    },
+    {
+      "index": 4,
+      "permutation": [
+        1,
+        5,
+        3,
+        6,
+        4,
+        0,
+        2
+      ],
+      "xor_mask": 0,
+      "aggregate_proxy": 46096
+    },
+    {
+      "index": 5,
+      "permutation": [
+        2,
+        4,
+        3,
+        6,
+        1,
+        5,
+        0
+      ],
+      "xor_mask": 0,
+      "aggregate_proxy": 46094
+    },
+    {
+      "index": 6,
+      "permutation": [
+        4,
+        1,
+        3,
+        0,
+        2,
+        6,
+        5
+      ],
+      "xor_mask": 0,
+      "aggregate_proxy": 46094
+    },
+    {
+      "index": 7,
+      "permutation": [
+        0,
+        6,
+        4,
+        2,
+        1,
+        5,
+        3
+      ],
+      "xor_mask": 0,
+      "aggregate_proxy": 46094
+    },
+    {
+      "index": 8,
+      "permutation": [
+        4,
+        0,
+        2,
+        1,
+        6,
+        5,
+        3
+      ],
+      "xor_mask": 0,
+      "aggregate_proxy": 46094
+    },
+    {
+      "index": 9,
+      "permutation": [
+        4,
+        5,
+        0,
+        2,
+        3,
+        6,
+        1
+      ],
+      "xor_mask": 0,
+      "aggregate_proxy": 46094
+    },
+    {
+      "index": 10,
+      "permutation": [
+        5,
+        4,
+        0,
+        2,
+        6,
+        1,
+        3
+      ],
+      "xor_mask": 0,
+      "aggregate_proxy": 46094
+    },
+    {
+      "index": 11,
+      "permutation": [
+        1,
+        5,
+        0,
+        6,
+        3,
+        2,
+        4
+      ],
+      "xor_mask": 0,
+      "aggregate_proxy": 46094
+    },
+    {
+      "index": 12,
+      "permutation": [
+        1,
+        5,
+        6,
+        4,
+        3,
+        0,
+        2
+      ],
+      "xor_mask": 0,
+      "aggregate_proxy": 46082
+    },
+    {
+      "index": 13,
+      "permutation": [
+        6,
+        0,
+        3,
+        1,
+        4,
+        5,
+        2
+      ],
+      "xor_mask": 0,
+      "aggregate_proxy": 46082
+    },
+    {
+      "index": 14,
+      "permutation": [
+        0,
+        1,
+        5,
+        4,
+        6,
+        2,
+        3
+      ],
+      "xor_mask": 0,
+      "aggregate_proxy": 46082
+    },
+    {
+      "index": 15,
+      "permutation": [
+        4,
+        2,
+        3,
+        6,
+        0,
+        1,
+        5
+      ],
+      "xor_mask": 0,
+      "aggregate_proxy": 46078
+    },
+    {
+      "index": 16,
+      "permutation": [
+        5,
+        3,
+        6,
+        4,
+        1,
+        0,
+        2
+      ],
+      "xor_mask": 0,
+      "aggregate_proxy": 46030
+    },
+    {
+      "index": 17,
+      "permutation": [
+        3,
+        6,
+        0,
+        2,
+        4,
+        5,
+        1
+      ],
+      "xor_mask": 0,
+      "aggregate_proxy": 46030
+    },
+    {
+      "index": 18,
+      "permutation": [
+        6,
+        0,
+        1,
+        3,
+        5,
+        2,
+        4
+      ],
+      "xor_mask": 0,
+      "aggregate_proxy": 46004
+    },
+    {
+      "index": 19,
+      "permutation": [
+        1,
+        4,
+        3,
+        2,
+        6,
+        5,
+        0
+      ],
+      "xor_mask": 0,
+      "aggregate_proxy": 45980
+    },
+    {
+      "index": 20,
+      "permutation": [
+        4,
+        1,
+        3,
+        6,
+        2,
+        5,
+        0
+      ],
+      "xor_mask": 0,
+      "aggregate_proxy": 45956
+    },
+    {
+      "index": 21,
+      "permutation": [
+        3,
+        6,
+        5,
+        0,
+        2,
+        4,
+        1
+      ],
+      "xor_mask": 0,
+      "aggregate_proxy": 45876
+    },
+    {
+      "index": 22,
+      "permutation": [
+        0,
+        4,
+        6,
+        2,
+        3,
+        1,
+        5
+      ],
+      "xor_mask": 0,
+      "aggregate_proxy": 45840
+    },
+    {
+      "index": 23,
+      "permutation": [
+        2,
+        1,
+        6,
+        5,
+        4,
+        3,
+        0
+      ],
+      "xor_mask": 0,
+      "aggregate_proxy": 45840
+    },
+    {
+      "index": 24,
+      "permutation": [
+        5,
+        3,
+        0,
+        4,
+        1,
+        6,
+        2
+      ],
+      "xor_mask": 0,
+      "aggregate_proxy": 45840
+    },
+    {
+      "index": 25,
+      "permutation": [
+        1,
+        5,
+        3,
+        6,
+        4,
+        2,
+        0
+      ],
+      "xor_mask": 0,
+      "aggregate_proxy": 45840
+    },
+    {
+      "index": 26,
+      "permutation": [
+        5,
+        1,
+        2,
+        0,
+        4,
+        3,
+        6
+      ],
+      "xor_mask": 0,
+      "aggregate_proxy": 45706
+    },
+    {
+      "index": 27,
+      "permutation": [
+        5,
+        2,
+        6,
+        0,
+        3,
+        4,
+        1
+      ],
+      "xor_mask": 0,
+      "aggregate_proxy": 45706
+    },
+    {
+      "index": 28,
+      "permutation": [
+        4,
+        3,
+        6,
+        0,
+        1,
+        2,
+        5
+      ],
+      "xor_mask": 0,
+      "aggregate_proxy": 45606
+    },
+    {
+      "index": 29,
+      "permutation": [
+        2,
+        3,
+        0,
+        6,
+        4,
+        1,
+        5
+      ],
+      "xor_mask": 0,
+      "aggregate_proxy": 45594
+    },
+    {
+      "index": 30,
+      "permutation": [
+        5,
+        0,
+        2,
+        6,
+        1,
+        3,
+        4
+      ],
+      "xor_mask": 0,
+      "aggregate_proxy": 45594
+    },
+    {
+      "index": 31,
+      "permutation": [
+        0,
+        4,
+        5,
+        6,
+        3,
+        1,
+        2
+      ],
+      "xor_mask": 0,
+      "aggregate_proxy": 45428
+    },
+    {
+      "index": 32,
+      "permutation": [
+        3,
+        0,
+        5,
+        1,
+        2,
+        6,
+        4
+      ],
+      "xor_mask": 0,
+      "aggregate_proxy": 45428
+    },
+    {
+      "index": 33,
+      "permutation": [
+        4,
+        2,
+        1,
+        6,
+        0,
+        5,
+        3
+      ],
+      "xor_mask": 0,
+      "aggregate_proxy": 45428
+    },
+    {
+      "index": 34,
+      "permutation": [
+        3,
+        6,
+        5,
+        1,
+        2,
+        0,
+        4
+      ],
+      "xor_mask": 0,
+      "aggregate_proxy": 45428
+    },
+    {
+      "index": 35,
+      "permutation": [
+        6,
+        0,
+        3,
+        5,
+        4,
+        2,
+        1
+      ],
+      "xor_mask": 0,
+      "aggregate_proxy": 45428
+    },
+    {
+      "index": 36,
+      "permutation": [
+        1,
+        3,
+        5,
+        6,
+        0,
+        4,
+        2
+      ],
+      "xor_mask": 0,
+      "aggregate_proxy": 45428
+    },
+    {
+      "index": 37,
+      "permutation": [
+        2,
+        5,
+        0,
+        6,
+        1,
+        3,
+        4
+      ],
+      "xor_mask": 0,
+      "aggregate_proxy": 45428
+    },
+    {
+      "index": 38,
+      "permutation": [
+        2,
+        0,
+        6,
+        4,
+        5,
+        1,
+        3
+      ],
+      "xor_mask": 0,
+      "aggregate_proxy": 45428
+    },
+    {
+      "index": 39,
+      "permutation": [
+        3,
+        1,
+        5,
+        6,
+        4,
+        0,
+        2
+      ],
+      "xor_mask": 0,
+      "aggregate_proxy": 45428
+    },
+    {
+      "index": 40,
+      "permutation": [
+        4,
+        3,
+        2,
+        5,
+        1,
+        0,
+        6
+      ],
+      "xor_mask": 0,
+      "aggregate_proxy": 44906
+    },
+    {
+      "index": 41,
+      "permutation": [
+        0,
+        3,
+        4,
+        1,
+        5,
+        2,
+        6
+      ],
+      "xor_mask": 0,
+      "aggregate_proxy": 44848
+    },
+    {
+      "index": 42,
+      "permutation": [
+        5,
+        2,
+        1,
+        4,
+        3,
+        0,
+        6
+      ],
+      "xor_mask": 0,
+      "aggregate_proxy": 44848
+    },
+    {
+      "index": 43,
+      "permutation": [
+        3,
+        1,
+        2,
+        6,
+        0,
+        4,
+        5
+      ],
+      "xor_mask": 0,
+      "aggregate_proxy": 44848
+    },
+    {
+      "index": 44,
+      "permutation": [
+        3,
+        6,
+        5,
+        2,
+        4,
+        0,
+        1
+      ],
+      "xor_mask": 0,
+      "aggregate_proxy": 44848
+    },
+    {
+      "index": 45,
+      "permutation": [
+        6,
+        0,
+        3,
+        2,
+        1,
+        4,
+        5
+      ],
+      "xor_mask": 0,
+      "aggregate_proxy": 44848
+    },
+    {
+      "index": 46,
+      "permutation": [
+        0,
+        2,
+        4,
+        3,
+        5,
+        1,
+        6
+      ],
+      "xor_mask": 0,
+      "aggregate_proxy": 44848
+    },
+    {
+      "index": 47,
+      "permutation": [
+        6,
+        0,
+        4,
+        1,
+        2,
+        3,
+        5
+      ],
+      "xor_mask": 0,
+      "aggregate_proxy": 44848
+    },
+    {
+      "index": 48,
+      "permutation": [
+        1,
+        3,
+        5,
+        0,
+        4,
+        6,
+        2
+      ],
+      "xor_mask": 50,
+      "aggregate_proxy": 44716
+    },
+    {
+      "index": 49,
+      "permutation": [
+        0,
+        6,
+        2,
+        5,
+        4,
+        3,
+        1
+      ],
+      "xor_mask": 90,
+      "aggregate_proxy": 44580
+    },
+    {
+      "index": 50,
+      "permutation": [
+        2,
+        1,
+        6,
+        0,
+        4,
+        5,
+        3
+      ],
+      "xor_mask": 78,
+      "aggregate_proxy": 44580
+    },
+    {
+      "index": 51,
+      "permutation": [
+        0,
+        6,
+        1,
+        3,
+        2,
+        5,
+        4
+      ],
+      "xor_mask": 32,
+      "aggregate_proxy": 44580
+    },
+    {
+      "index": 52,
+      "permutation": [
+        6,
+        2,
+        1,
+        5,
+        0,
+        3,
+        4
+      ],
+      "xor_mask": 13,
+      "aggregate_proxy": 43742
+    },
+    {
+      "index": 53,
+      "permutation": [
+        6,
+        0,
+        3,
+        5,
+        4,
+        2,
+        1
+      ],
+      "xor_mask": 22,
+      "aggregate_proxy": 43742
+    },
+    {
+      "index": 54,
+      "permutation": [
+        6,
+        2,
+        4,
+        1,
+        5,
+        3,
+        0
+      ],
+      "xor_mask": 37,
+      "aggregate_proxy": 43742
+    },
+    {
+      "index": 55,
+      "permutation": [
+        2,
+        4,
+        0,
+        6,
+        1,
+        5,
+        3
+      ],
+      "xor_mask": 118,
+      "aggregate_proxy": 43681
+    },
+    {
+      "index": 56,
+      "permutation": [
+        5,
+        2,
+        1,
+        0,
+        3,
+        4,
+        6
+      ],
+      "xor_mask": 98,
+      "aggregate_proxy": 41630
+    },
+    {
+      "index": 57,
+      "permutation": [
+        5,
+        1,
+        4,
+        2,
+        0,
+        3,
+        6
+      ],
+      "xor_mask": 14,
+      "aggregate_proxy": 41613
+    },
+    {
+      "index": 58,
+      "permutation": [
+        6,
+        4,
+        2,
+        5,
+        0,
+        1,
+        3
+      ],
+      "xor_mask": 4,
+      "aggregate_proxy": 41613
+    },
+    {
+      "index": 59,
+      "permutation": [
+        6,
+        3,
+        4,
+        2,
+        5,
+        1,
+        0
+      ],
+      "xor_mask": 6,
+      "aggregate_proxy": 41613
+    },
+    {
+      "index": 60,
+      "permutation": [
+        2,
+        4,
+        1,
+        6,
+        5,
+        0,
+        3
+      ],
+      "xor_mask": 101,
+      "aggregate_proxy": 41613
+    },
+    {
+      "index": 61,
+      "permutation": [
+        3,
+        5,
+        1,
+        6,
+        2,
+        4,
+        0
+      ],
+      "xor_mask": 37,
+      "aggregate_proxy": 41613
+    },
+    {
+      "index": 62,
+      "permutation": [
+        2,
+        5,
+        0,
+        6,
+        3,
+        4,
+        1
+      ],
+      "xor_mask": 73,
+      "aggregate_proxy": 41613
+    },
+    {
+      "index": 63,
+      "permutation": [
+        2,
+        6,
+        1,
+        3,
+        0,
+        5,
+        4
+      ],
+      "xor_mask": 34,
+      "aggregate_proxy": 41607
+    },
+    {
+      "index": 64,
+      "permutation": [
+        1,
+        4,
+        6,
+        2,
+        5,
+        0,
+        3
+      ],
+      "xor_mask": 98,
+      "aggregate_proxy": 41607
+    },
+    {
+      "index": 65,
+      "permutation": [
+        0,
+        1,
+        3,
+        5,
+        2,
+        6,
+        4
+      ],
+      "xor_mask": 62,
+      "aggregate_proxy": 41607
+    },
+    {
+      "index": 66,
+      "permutation": [
+        6,
+        4,
+        0,
+        2,
+        1,
+        3,
+        5
+      ],
+      "xor_mask": 98,
+      "aggregate_proxy": 41607
+    },
+    {
+      "index": 67,
+      "permutation": [
+        1,
+        2,
+        5,
+        4,
+        0,
+        3,
+        6
+      ],
+      "xor_mask": 107,
+      "aggregate_proxy": 39090
+    },
+    {
+      "index": 68,
+      "permutation": [
+        0,
+        6,
+        4,
+        2,
+        3,
+        5,
+        1
+      ],
+      "xor_mask": 28,
+      "aggregate_proxy": 39090
+    },
+    {
+      "index": 69,
+      "permutation": [
+        4,
+        1,
+        0,
+        5,
+        3,
+        6,
+        2
+      ],
+      "xor_mask": 101,
+      "aggregate_proxy": 39090
+    },
+    {
+      "index": 70,
+      "permutation": [
+        6,
+        4,
+        5,
+        0,
+        3,
+        2,
+        1
+      ],
+      "xor_mask": 27,
+      "aggregate_proxy": 38976
+    },
+    {
+      "index": 71,
+      "permutation": [
+        2,
+        4,
+        6,
+        3,
+        1,
+        5,
+        0
+      ],
+      "xor_mask": 68,
+      "aggregate_proxy": 38976
+    },
+    {
+      "index": 72,
+      "permutation": [
+        6,
+        2,
+        1,
+        5,
+        3,
+        0,
+        4
+      ],
+      "xor_mask": 4,
+      "aggregate_proxy": 38976
+    },
+    {
+      "index": 73,
+      "permutation": [
+        6,
+        1,
+        5,
+        3,
+        0,
+        2,
+        4
+      ],
+      "xor_mask": 55,
+      "aggregate_proxy": 38976
+    },
+    {
+      "index": 74,
+      "permutation": [
+        4,
+        5,
+        2,
+        1,
+        3,
+        0,
+        6
+      ],
+      "xor_mask": 42,
+      "aggregate_proxy": 38976
+    },
+    {
+      "index": 75,
+      "permutation": [
+        0,
+        4,
+        5,
+        3,
+        2,
+        1,
+        6
+      ],
+      "xor_mask": 49,
+      "aggregate_proxy": 38976
+    },
+    {
+      "index": 76,
+      "permutation": [
+        6,
+        4,
+        1,
+        5,
+        2,
+        0,
+        3
+      ],
+      "xor_mask": 28,
+      "aggregate_proxy": 38976
+    },
+    {
+      "index": 77,
+      "permutation": [
+        6,
+        4,
+        3,
+        2,
+        5,
+        0,
+        1
+      ],
+      "xor_mask": 26,
+      "aggregate_proxy": 38833
+    },
+    {
+      "index": 78,
+      "permutation": [
+        0,
+        4,
+        3,
+        1,
+        6,
+        5,
+        2
+      ],
+      "xor_mask": 111,
+      "aggregate_proxy": 38833
+    },
+    {
+      "index": 79,
+      "permutation": [
+        0,
+        1,
+        4,
+        3,
+        5,
+        6,
+        2
+      ],
+      "xor_mask": 21,
+      "aggregate_proxy": 38833
+    },
+    {
+      "index": 80,
+      "permutation": [
+        2,
+        0,
+        4,
+        3,
+        6,
+        5,
+        1
+      ],
+      "xor_mask": 83,
+      "aggregate_proxy": 38833
+    },
+    {
+      "index": 81,
+      "permutation": [
+        4,
+        2,
+        5,
+        0,
+        3,
+        1,
+        6
+      ],
+      "xor_mask": 34,
+      "aggregate_proxy": 38833
+    },
+    {
+      "index": 82,
+      "permutation": [
+        0,
+        4,
+        2,
+        5,
+        6,
+        3,
+        1
+      ],
+      "xor_mask": 27,
+      "aggregate_proxy": 38833
+    },
+    {
+      "index": 83,
+      "permutation": [
+        0,
+        2,
+        6,
+        1,
+        3,
+        5,
+        4
+      ],
+      "xor_mask": 31,
+      "aggregate_proxy": 38833
+    },
+    {
+      "index": 84,
+      "permutation": [
+        6,
+        4,
+        2,
+        5,
+        1,
+        0,
+        3
+      ],
+      "xor_mask": 35,
+      "aggregate_proxy": 38833
+    },
+    {
+      "index": 85,
+      "permutation": [
+        6,
+        3,
+        2,
+        0,
+        4,
+        1,
+        5
+      ],
+      "xor_mask": 52,
+      "aggregate_proxy": 38833
+    },
+    {
+      "index": 86,
+      "permutation": [
+        6,
+        0,
+        4,
+        1,
+        3,
+        5,
+        2
+      ],
+      "xor_mask": 7,
+      "aggregate_proxy": 38833
+    },
+    {
+      "index": 87,
+      "permutation": [
+        6,
+        4,
+        2,
+        1,
+        3,
+        5,
+        0
+      ],
+      "xor_mask": 101,
+      "aggregate_proxy": 38833
+    },
+    {
+      "index": 88,
+      "permutation": [
+        1,
+        2,
+        5,
+        0,
+        4,
+        6,
+        3
+      ],
+      "xor_mask": 66,
+      "aggregate_proxy": 38833
+    },
+    {
+      "index": 89,
+      "permutation": [
+        3,
+        1,
+        4,
+        6,
+        5,
+        0,
+        2
+      ],
+      "xor_mask": 49,
+      "aggregate_proxy": 38833
+    },
+    {
+      "index": 90,
+      "permutation": [
+        2,
+        3,
+        4,
+        6,
+        5,
+        0,
+        1
+      ],
+      "xor_mask": 56,
+      "aggregate_proxy": 38833
+    },
+    {
+      "index": 91,
+      "permutation": [
+        6,
+        4,
+        0,
+        5,
+        2,
+        1,
+        3
+      ],
+      "xor_mask": 75,
+      "aggregate_proxy": 38833
+    },
+    {
+      "index": 92,
+      "permutation": [
+        3,
+        5,
+        1,
+        4,
+        6,
+        0,
+        2
+      ],
+      "xor_mask": 35,
+      "aggregate_proxy": 38833
+    },
+    {
+      "index": 93,
+      "permutation": [
+        2,
+        5,
+        4,
+        1,
+        3,
+        6,
+        0
+      ],
+      "xor_mask": 2,
+      "aggregate_proxy": 38833
+    },
+    {
+      "index": 94,
+      "permutation": [
+        2,
+        3,
+        5,
+        6,
+        0,
+        1,
+        4
+      ],
+      "xor_mask": 50,
+      "aggregate_proxy": 38833
+    },
+    {
+      "index": 95,
+      "permutation": [
+        5,
+        4,
+        1,
+        2,
+        3,
+        6,
+        0
+      ],
+      "xor_mask": 73,
+      "aggregate_proxy": 38833
+    }
+  ],
+  "unique_networks": 4608,
+  "screens": [
+    {
+      "name": "baseline",
+      "config": {},
+      "metrics": {
+        "two_qubit_gates": 46910,
+        "depth": 109763,
+        "total_gates": 132023,
+        "active_qubits": 19
+      },
+      "compilation_seconds": 0.4175910420017317,
+      "native_ops": {
+        "cx": 3394,
+        "mcx": 1720,
+        "ccx": 466,
+        "cp": 30,
+        "h": 24,
+        "measure": 12,
+        "x": 1
+      }
+    },
+    {
+      "name": "prefix_1",
+      "config": {
+        "prefix": 1
+      },
+      "metrics": {
+        "two_qubit_gates": 46910,
+        "depth": 109763,
+        "total_gates": 132023,
+        "active_qubits": 19
+      },
+      "compilation_seconds": 0.37115583301056176,
+      "native_ops": {
+        "cx": 3394,
+        "mcx": 1720,
+        "ccx": 466,
+        "cp": 30,
+        "h": 24,
+        "measure": 12,
+        "x": 1
+      }
+    },
+    {
+      "name": "prefix_8",
+      "config": {
+        "prefix": 8
+      },
+      "metrics": {
+        "two_qubit_gates": 46026,
+        "depth": 107057,
+        "total_gates": 129135,
+        "active_qubits": 19
+      },
+      "compilation_seconds": 0.33884095802204683,
+      "native_ops": {
+        "cx": 3480,
+        "mcx": 1691,
+        "ccx": 478,
+        "cp": 30,
+        "h": 24,
+        "measure": 12,
+        "x": 1
+      }
+    },
+    {
+      "name": "prefix_16",
+      "config": {
+        "prefix": 16
+      },
+      "metrics": {
+        "two_qubit_gates": 46004,
+        "depth": 107086,
+        "total_gates": 128945,
+        "active_qubits": 19
+      },
+      "compilation_seconds": 0.35416783299297094,
+      "native_ops": {
+        "cx": 3552,
+        "mcx": 1686,
+        "ccx": 467,
+        "cp": 30,
+        "h": 24,
+        "measure": 12,
+        "x": 1
+      }
+    },
+    {
+      "name": "prefix_32",
+      "config": {
+        "prefix": 32
+      },
+      "metrics": {
+        "two_qubit_gates": 45342,
+        "depth": 106428,
+        "total_gates": 127283,
+        "active_qubits": 19
+      },
+      "compilation_seconds": 0.33608787500998005,
+      "native_ops": {
+        "cx": 3394,
+        "mcx": 1666,
+        "ccx": 478,
+        "cp": 30,
+        "h": 24,
+        "measure": 12,
+        "x": 1
+      }
+    },
+    {
+      "name": "prefix_48",
+      "config": {
+        "prefix": 48
+      },
+      "metrics": {
+        "two_qubit_gates": 44770,
+        "depth": 105496,
+        "total_gates": 125817,
+        "active_qubits": 19
+      },
+      "compilation_seconds": 0.33152000000700355,
+      "native_ops": {
+        "cx": 3224,
+        "mcx": 1658,
+        "ccx": 436,
+        "cp": 30,
+        "h": 24,
+        "measure": 12,
+        "x": 1
+      }
+    },
+    {
+      "name": "prefix_64",
+      "config": {
+        "prefix": 64
+      },
+      "metrics": {
+        "two_qubit_gates": 41415,
+        "depth": 99103,
+        "total_gates": 118047,
+        "active_qubits": 19
+      },
+      "compilation_seconds": 0.4582405419787392,
+      "native_ops": {
+        "cx": 2403,
+        "mcx": 1570,
+        "x": 1505,
+        "ccx": 279,
+        "cp": 30,
+        "h": 24,
+        "measure": 12
+      }
+    },
+    {
+      "name": "prefix_96",
+      "config": {
+        "prefix": 96
+      },
+      "metrics": {
+        "two_qubit_gates": 38823,
+        "depth": 92604,
+        "total_gates": 111337,
+        "active_qubits": 19
+      },
+      "compilation_seconds": 0.36077904101694,
+      "native_ops": {
+        "x": 2861,
+        "cx": 2639,
+        "mcx": 1466,
+        "ccx": 270,
+        "cp": 30,
+        "h": 24,
+        "measure": 12
+      }
+    },
+    {
+      "name": "last_pivot",
+      "config": {
+        "pivot_last": true
+      },
+      "metrics": {
+        "two_qubit_gates": 38831,
+        "depth": 92760,
+        "total_gates": 111345,
+        "active_qubits": 19
+      },
+      "compilation_seconds": 0.32347599999047816,
+      "native_ops": {
+        "x": 2861,
+        "cx": 2647,
+        "mcx": 1466,
+        "ccx": 270,
+        "cp": 30,
+        "h": 24,
+        "measure": 12
+      }
+    }
+  ],
+  "resource_compile_frontier": [
+    "prefix_96",
+    "last_pivot"
+  ],
+  "logical_cost_histogram": {
+    "('mcx', 7)": 70,
+    "('cx', 1)": 3516,
+    "('mcx', 6)": 240,
+    "('mcx', 5)": 445,
+    "('mcx', 4)": 495,
+    "('mcx', 3)": 470,
+    "('ccx', 2)": 466
+  },
+  "seconds": 30.374422916967887
+}
