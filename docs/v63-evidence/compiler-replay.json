@@ -1,0 +1,32 @@
+{
+  "pinned_builder": {
+    "metrics": {
+      "two_qubit_gates": 10950,
+      "depth": 19703,
+      "total_gates": 28413,
+      "active_qubits": 19
+    },
+    "execution_gate_counts": {
+      "rz": 12301,
+      "cx": 11000,
+      "sx": 4862,
+      "x": 300,
+      "measure": 10
+    }
+  },
+  "integrated_builder": {
+    "metrics": {
+      "two_qubit_gates": 10950,
+      "depth": 19703,
+      "total_gates": 28413,
+      "active_qubits": 19
+    },
+    "execution_gate_counts": {
+      "rz": 12301,
+      "cx": 11000,
+      "sx": 4862,
+      "x": 300,
+      "measure": 10
+    }
+  }
+}

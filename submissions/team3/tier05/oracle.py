@@ -7,6 +7,8 @@ All work qubits and the comparison flag must start in zero and are restored.
 
 from math import pi
 
+from qiskit.circuit.library import RCCXGate
+from qiskit.synthesis import synth_mcx_n_dirty_i15
 from qiskit import QuantumCircuit
 from qiskit.synthesis import synth_mcx_n_clean_m15, synth_mcx_n_dirty_m15
 
@@ -122,55 +124,69 @@ def _build_mask_transform(byte_index: int) -> QuantumCircuit:
     return circuit
 
 
+def _relative_mask(index, relative):
+    c = _build_mask_transform(index)
+    if not relative:
+        return c
+    result = c.copy_empty_like()
+    for item in c.data:
+        result.append(RCCXGate() if item.operation.name == 'ccx' else item.operation, [c.find_bit(q).index for q in item.qubits])
+    return result
+
+
+def transition(order=0, pivot_last=False):
+    terms = {}
+    for index in (0, 1):
+        shift = 3 * index
+        for op, *idx in helper.mask_gates(10):
+            controls = tuple(sorted(((j - shift) % 10 for j in idx[:-1])))
+            target = 10 + idx[-1]
+            terms[controls] = terms.get(controls, 0) ^ 1 << target
+    groups = [(cs, [j for j in range(10, 18) if bits >> j & 1]) for cs, bits in terms.items() if bits]
+    groups.sort(key=lambda pair: (len(pair[0]), pair[0]), reverse=bool(order))
+    c = QuantumCircuit(19)
+    for controls, targets in groups:
+        if pivot_last:
+            targets.reverse()
+        p, *others = targets
+        for t in others:
+            c.cx(p, t)
+        if len(controls) == 1:
+            c.cx(controls[0], p)
+        else:
+            c.append(RCCXGate(), [*controls, p])
+        for t in reversed(others):
+            c.cx(p, t)
+    return c
+
+
+def fused_oracle(ciphertext, order=0, pivot_last=False):
+    targets = tuple((ciphertext[i] ^ helper.ROUND_CONSTANT * i % 256 ^ inverse_sbox_layer(inverse_permute(b)) for i, b in enumerate(b'QC')))
+    a = _relative_mask(0, True)
+    _comparison_x(a, targets[0])
+    rel = synth_mcx_n_dirty_i15(8, relative_phase=True, action_only=False)
+    a.append(rel.to_gate(), WORK_QUBITS + (18,) + KEY_QUBITS[:rel.num_qubits - 9])
+    _comparison_x(a, targets[0])
+    a.compose(transition(order, pivot_last), inplace=True)
+    _comparison_x(a, targets[1])
+    exact, wires = _dirty_comparison_gate()
+    c = QuantumCircuit(19, name=ORACLE_NAME)
+    c.compose(a, inplace=True)
+    c.h(18)
+    c.append(exact, wires)
+    c.h(18)
+    c.compose(a.inverse(), inplace=True)
+    return c
+
+
 def build_phase_oracle(ciphertext: bytes) -> QuantumCircuit:
-    """Apply -1 iff the first two decrypted bytes are QC, with clean work.
-
-    Register layout is key[0:10], work[10:18], flag[18]. The flag starts
-    at zero; no phase-kickback preparation of a separate |-> qubit is needed.
-    First compute the Q comparison into the flag and uncompute its byte.
-    Then compute C and phase-flip only when both comparisons hold. Finally
-    uncompute C and reverse the entire first comparison, restoring all work.
-
-    For each PUBLIC target byte b, decrypt(c,i)==b is equivalent to
-    mask(rot_i(key)) == c XOR RC_i XOR S^-1(PERM^-1(b)). Only those public
-    constants are evaluated classically. Folding the S-box/PERM out of the
-    comparison preserves the full phase action on zero work/flag, including
-    arbitrary key superpositions; it does not search for or encode any key.
-    The general build_byte_transform API remains unchanged.
-    """
+    """Accepted fused phase marker, using the actual adjoint to restore scratch."""
     if not isinstance(ciphertext, bytes):
         raise TypeError("ciphertext must be bytes")
     if len(ciphertext) < 2:
         raise ValueError("The Tier 5 oracle requires at least two ciphertext bytes")
 
-    targets = tuple(
-        ciphertext[index]
-        ^ ((helper.ROUND_CONSTANT * index) % 256)
-        ^ inverse_sbox_layer(inverse_permute(known_byte))
-        for index, known_byte in enumerate(b"QC")
-    )
-    first_byte = _build_mask_transform(0)
-    second_byte = _build_mask_transform(1)
-    comparison_gate, comparison_wires = _dirty_comparison_gate()
-
-    first_check = QuantumCircuit(N_QUBITS, name="tier05_first_byte_check")
-    first_check.compose(first_byte, inplace=True)
-    _comparison_x(first_check, targets[0])
-    first_check.append(comparison_gate, comparison_wires)
-    _comparison_x(first_check, targets[0])
-    first_check.compose(first_byte.inverse(), inplace=True)
-
-    circuit = QuantumCircuit(N_QUBITS, name=ORACLE_NAME)
-    circuit.compose(first_check, inplace=True)
-    circuit.compose(second_byte, inplace=True)
-    _comparison_x(circuit, targets[1])
-    circuit.h(FLAG_QUBIT)
-    circuit.append(comparison_gate, comparison_wires)
-    circuit.h(FLAG_QUBIT)
-    _comparison_x(circuit, targets[1])
-    circuit.compose(second_byte.inverse(), inplace=True)
-    circuit.compose(first_check.inverse(), inplace=True)
-    return circuit
+    return fused_oracle(ciphertext, order=1, pivot_last=True)
 
 
 def build_diffuser() -> QuantumCircuit:

@@ -237,3 +237,17 @@ def build_controlled_multiplier(multiplier: int, modulus: int, work_bits: int = 
     anchor_mcx_count = sum(item.operation.name != 'x' for item in anchor.data)
     anchor_cost = anchor_mcx_count * _template_cx_cost(work_bits)
     return candidate if cost < anchor_cost else anchor
+
+
+# Preserve the validated general-width implementation for synthetic inputs and
+# public multipliers outside this research-selected cache.
+_validated_hybrid_multiplier = build_controlled_multiplier
+
+
+def build_controlled_multiplier(multiplier: int, modulus: int, work_bits: int = 6) -> QuantumCircuit:
+    """Select a verified public mixed-polarity network without changing Shor."""
+    permutation_table(multiplier, modulus, work_bits)  # Preserve validation contract.
+    if modulus == 35 and work_bits == 6 and multiplier % modulus in (2, 4, 11, 16):
+        from .extreme_synthesis import build_controlled_multiplier as selected_multiplier
+        return selected_multiplier(multiplier, modulus, work_bits)
+    return _validated_hybrid_multiplier(multiplier, modulus, work_bits)

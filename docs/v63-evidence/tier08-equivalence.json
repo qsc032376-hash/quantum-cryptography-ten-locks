@@ -1,0 +1,183 @@
+{
+  "blocks": [
+    {
+      "multiplier": 2,
+      "modulus": 35,
+      "work_bits": 6,
+      "total_local_wires": 9,
+      "borrowed_wires": 2,
+      "complete_basis_columns": 512,
+      "operator_shape": [
+        512,
+        512
+      ],
+      "full_complex_operator_max_error": 4.99847016421492e-15,
+      "inverse_max_error": 4.99847016421492e-15,
+      "control_off_max_error": 4.99847016421492e-15,
+      "padding_max_error": 4.1107910202938875e-15,
+      "max_borrowed_wire_leakage_probability": 0.0,
+      "global_phase_alignment_applied": false,
+      "all_borrowed_input_values_included": true,
+      "seconds": 4.907,
+      "status": "PASS"
+    },
+    {
+      "multiplier": 4,
+      "modulus": 35,
+      "work_bits": 6,
+      "total_local_wires": 9,
+      "borrowed_wires": 2,
+      "complete_basis_columns": 512,
+      "operator_shape": [
+        512,
+        512
+      ],
+      "full_complex_operator_max_error": 8.882026459438666e-15,
+      "inverse_max_error": 8.882026459438666e-15,
+      "control_off_max_error": 8.326688127799563e-15,
+      "padding_max_error": 8.882026459438666e-15,
+      "max_borrowed_wire_leakage_probability": 0.0,
+      "global_phase_alignment_applied": false,
+      "all_borrowed_input_values_included": true,
+      "seconds": 5.968,
+      "status": "PASS"
+    },
+    {
+      "multiplier": 11,
+      "modulus": 35,
+      "work_bits": 6,
+      "total_local_wires": 9,
+      "borrowed_wires": 2,
+      "complete_basis_columns": 512,
+      "operator_shape": [
+        512,
+        512
+      ],
+      "full_complex_operator_max_error": 2.6867496394115384e-14,
+      "inverse_max_error": 2.6867496394115384e-14,
+      "control_off_max_error": 2.6867496394115384e-14,
+      "padding_max_error": 2.64234752757185e-14,
+      "max_borrowed_wire_leakage_probability": 0.0,
+      "global_phase_alignment_applied": false,
+      "all_borrowed_input_values_included": true,
+      "seconds": 11.032,
+      "status": "PASS"
+    },
+    {
+      "multiplier": 16,
+      "modulus": 35,
+      "work_bits": 6,
+      "total_local_wires": 9,
+      "borrowed_wires": 2,
+      "complete_basis_columns": 512,
+      "operator_shape": [
+        512,
+        512
+      ],
+      "full_complex_operator_max_error": 2.753560189158126e-14,
+      "inverse_max_error": 2.753560189158126e-14,
+      "control_off_max_error": 2.753560189158126e-14,
+      "padding_max_error": 2.6090372439852832e-14,
+      "max_borrowed_wire_leakage_probability": 0.0,
+      "global_phase_alignment_applied": false,
+      "all_borrowed_input_values_included": true,
+      "seconds": 10.484,
+      "status": "PASS"
+    }
+  ],
+  "structure": {
+    "qubits": 18,
+    "classical_bits": 12,
+    "controlled_power_blocks": 12,
+    "public_power_exponents": [
+      1,
+      2,
+      4,
+      8,
+      16,
+      32,
+      64,
+      128,
+      256,
+      512,
+      1024,
+      2048
+    ],
+    "physical_controls_in_block_order": [
+      11,
+      10,
+      9,
+      8,
+      7,
+      6,
+      5,
+      4,
+      3,
+      2,
+      1,
+      0
+    ],
+    "measurement_mapping": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        3,
+        3
+      ],
+      [
+        4,
+        4
+      ],
+      [
+        5,
+        5
+      ],
+      [
+        6,
+        6
+      ],
+      [
+        7,
+        7
+      ],
+      [
+        8,
+        8
+      ],
+      [
+        9,
+        9
+      ],
+      [
+        10,
+        10
+      ],
+      [
+        11,
+        11
+      ]
+    ],
+    "work_integer_one_prepared": true,
+    "status": "PASS"
+  },
+  "fourier": {
+    "synthetic_public_modulus": 5,
+    "synthetic_public_base": 2,
+    "phase_bits": 4,
+    "work_bits": 3,
+    "full_complex_state_max_error": 1.4074492931093031e-15,
+    "joint_probability_max_error": 2.220446049250313e-16,
+    "global_phase_alignment_applied": false,
+    "status": "PASS"
+  }
+}

@@ -1,0 +1,212 @@
+[
+  {
+    "tier": 5,
+    "seed": 5301,
+    "hash_ok": true,
+    "solve_seconds": 25.677831699998933,
+    "compilation_seconds": 0.26899759999650996,
+    "actual_forwarded_calls": [
+      {
+        "seed": 5301,
+        "shots": 128
+      }
+    ],
+    "exception_class": null,
+    "python": "3.12.10",
+    "qiskit": "2.6.1",
+    "aer": "0.18.2",
+    "resource_state": "ok",
+    "wall_seconds": 27.51578220000374,
+    "sampled_peak_rss_mib": 195.9921875,
+    "status": "PASS"
+  },
+  {
+    "tier": 5,
+    "seed": 5302,
+    "hash_ok": true,
+    "solve_seconds": 24.688071099997615,
+    "compilation_seconds": 0.29505719999724533,
+    "actual_forwarded_calls": [
+      {
+        "seed": 5302,
+        "shots": 128
+      }
+    ],
+    "exception_class": null,
+    "python": "3.12.10",
+    "qiskit": "2.6.1",
+    "aer": "0.18.2",
+    "resource_state": "ok",
+    "wall_seconds": 27.198394200007897,
+    "sampled_peak_rss_mib": 189.86328125,
+    "status": "PASS"
+  },
+  {
+    "tier": 5,
+    "seed": 5303,
+    "hash_ok": true,
+    "solve_seconds": 12.06216790000326,
+    "compilation_seconds": 0.1341009000025224,
+    "actual_forwarded_calls": [
+      {
+        "seed": 5303,
+        "shots": 128
+      }
+    ],
+    "exception_class": null,
+    "python": "3.12.10",
+    "qiskit": "2.6.1",
+    "aer": "0.18.2",
+    "resource_state": "ok",
+    "wall_seconds": 13.092182599997614,
+    "sampled_peak_rss_mib": 192.06640625,
+    "status": "PASS"
+  },
+  {
+    "tier": 5,
+    "seed": 5304,
+    "hash_ok": true,
+    "solve_seconds": 8.547739300003741,
+    "compilation_seconds": 0.1114506000012625,
+    "actual_forwarded_calls": [
+      {
+        "seed": 5304,
+        "shots": 128
+      }
+    ],
+    "exception_class": null,
+    "python": "3.12.10",
+    "qiskit": "2.6.1",
+    "aer": "0.18.2",
+    "resource_state": "ok",
+    "wall_seconds": 9.272985899995547,
+    "sampled_peak_rss_mib": 190.765625,
+    "status": "PASS"
+  },
+  {
+    "tier": 5,
+    "seed": 5305,
+    "hash_ok": true,
+    "solve_seconds": 8.877649200003361,
+    "compilation_seconds": 0.11396229999081697,
+    "actual_forwarded_calls": [
+      {
+        "seed": 5305,
+        "shots": 128
+      }
+    ],
+    "exception_class": null,
+    "python": "3.12.10",
+    "qiskit": "2.6.1",
+    "aer": "0.18.2",
+    "resource_state": "ok",
+    "wall_seconds": 9.569541200005915,
+    "sampled_peak_rss_mib": 192.1484375,
+    "status": "PASS"
+  },
+  {
+    "tier": 8,
+    "seed": 8301,
+    "hash_ok": true,
+    "solve_seconds": 2.341527299999143,
+    "compilation_seconds": 0.07044650000170805,
+    "actual_forwarded_calls": [
+      {
+        "seed": 8301,
+        "shots": 64
+      }
+    ],
+    "exception_class": null,
+    "python": "3.12.10",
+    "qiskit": "2.6.1",
+    "aer": "0.18.2",
+    "resource_state": "ok",
+    "wall_seconds": 3.0817577999987407,
+    "sampled_peak_rss_mib": 145.24609375,
+    "status": "PASS"
+  },
+  {
+    "tier": 8,
+    "seed": 8302,
+    "hash_ok": true,
+    "solve_seconds": 2.26415819999238,
+    "compilation_seconds": 0.05091489999904297,
+    "actual_forwarded_calls": [
+      {
+        "seed": 8302,
+        "shots": 64
+      }
+    ],
+    "exception_class": null,
+    "python": "3.12.10",
+    "qiskit": "2.6.1",
+    "aer": "0.18.2",
+    "resource_state": "ok",
+    "wall_seconds": 3.0010367999930168,
+    "sampled_peak_rss_mib": 145.328125,
+    "status": "PASS"
+  },
+  {
+    "tier": 8,
+    "seed": 8303,
+    "hash_ok": true,
+    "solve_seconds": 2.1063276000058977,
+    "compilation_seconds": 0.05388839999795891,
+    "actual_forwarded_calls": [
+      {
+        "seed": 8303,
+        "shots": 64
+      }
+    ],
+    "exception_class": null,
+    "python": "3.12.10",
+    "qiskit": "2.6.1",
+    "aer": "0.18.2",
+    "resource_state": "ok",
+    "wall_seconds": 2.7829150000034133,
+    "sampled_peak_rss_mib": 144.578125,
+    "status": "PASS"
+  },
+  {
+    "tier": 8,
+    "seed": 8304,
+    "hash_ok": true,
+    "solve_seconds": 2.082424299995182,
+    "compilation_seconds": 0.04907560000719968,
+    "actual_forwarded_calls": [
+      {
+        "seed": 8304,
+        "shots": 64
+      }
+    ],
+    "exception_class": null,
+    "python": "3.12.10",
+    "qiskit": "2.6.1",
+    "aer": "0.18.2",
+    "resource_state": "ok",
+    "wall_seconds": 2.731919099998777,
+    "sampled_peak_rss_mib": 144.58984375,
+    "status": "PASS"
+  },
+  {
+    "tier": 8,
+    "seed": 8305,
+    "hash_ok": true,
+    "solve_seconds": 2.07350490000681,
+    "compilation_seconds": 0.05058169999392703,
+    "actual_forwarded_calls": [
+      {
+        "seed": 8305,
+        "shots": 64
+      }
+    ],
+    "exception_class": null,
+    "python": "3.12.10",
+    "qiskit": "2.6.1",
+    "aer": "0.18.2",
+    "resource_state": "ok",
+    "wall_seconds": 2.740531999996165,
+    "sampled_peak_rss_mib": 144.34375,
+    "status": "PASS"
+  }
+]

@@ -1,0 +1,13 @@
+{
+  "boolean_keys_checked": 1024,
+  "relative_toffoli_complex_operator_checked": true,
+  "clean_subspace_phase_max_error": 7.916499485036041e-16,
+  "workspace_leak_probability": 2.7790857927567147e-30,
+  "arbitrary_workspace_oracle_state_error": 2.9500063266784096e-17,
+  "full_25_iteration_compiled_state_error": 6.351787374309274e-12,
+  "phase_fitting": false,
+  "iterations": 25,
+  "measurement_mapping_preserved": true,
+  "seconds": 63.95173570000043,
+  "limitation": "Finite statevectors plus monomial/conjugation argument; not full 19-qubit dense operator proof. Boolean expected phases used only in tests, never solver."
+}

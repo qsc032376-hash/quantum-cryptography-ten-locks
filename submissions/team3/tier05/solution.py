@@ -124,7 +124,7 @@ def recover_key_with_diagnostics(*, iterations=ITERATIONS, shots=SHOTS):
     circuit = build_circuit(ciphertext=ciphertext, iterations=iterations)
     simulator = AerSimulator(method="statevector", max_memory_mb=512, max_parallel_threads=2)
     compiled = transpile(
-        circuit, simulator, basis_gates=BASIS_GATES, optimization_level=1,
+        circuit, simulator, basis_gates=BASIS_GATES, optimization_level=2,
         seed_transpiler=SEED_TRANSPILER, num_processes=1,
     )
     compiled, _, _ = gf2_synthesis.gf2_runs(compiled)
