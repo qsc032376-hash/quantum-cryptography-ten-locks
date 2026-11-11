@@ -1,0 +1,39 @@
+{
+  "baseline": "c4455782ea9388d5897fc27270f42dd3786ed35d",
+  "tiers": {
+    "6": {
+      "status": "full",
+      "hash_ok": true,
+      "circuit_executed": true,
+      "metrics": {
+        "two_qubit_gates": 3000,
+        "depth": 5691,
+        "total_gates": 8680,
+        "active_qubits": 22
+      },
+      "metrics_status": "ok",
+      "flags": [],
+      "solve_seconds": 32.488,
+      "circuits_executed": 2,
+      "unique_circuits": 2,
+      "oracle_calls": null
+    },
+    "7": {
+      "status": "full",
+      "hash_ok": true,
+      "circuit_executed": true,
+      "metrics": {
+        "two_qubit_gates": 209,
+        "depth": 266,
+        "total_gates": 724,
+        "active_qubits": 15
+      },
+      "metrics_status": "ok",
+      "flags": [],
+      "solve_seconds": 0.054,
+      "circuits_executed": 2,
+      "unique_circuits": 2,
+      "oracle_calls": null
+    }
+  }
+}

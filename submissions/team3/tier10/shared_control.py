@@ -35,19 +35,9 @@ def shared_multiplier(d, modulus, work_bits):
 
 
 def fanout_multiplier(d, modulus, work_bits):
-    """Exact no-ancilla pivot fanout, independently applied to Tier 10 powers."""
-    ops = select_operations(d, modulus, work_bits)
-    qc = QuantumCircuit(work_bits + 1)
-    for mask, parity in groups(ops):
-        targets = [j + 1 for j in range(work_bits) if parity & (1 << j)]
-        controls = [0] + [j + 1 for j in range(work_bits) if mask & (1 << j)]
-        pivot, *others = targets
-        for target in others:
-            qc.cx(pivot, target)
-        qc.append(MCXGate(len(controls)), [*controls, pivot])
-        for target in reversed(others):
-            qc.cx(pivot, target)
-    return qc
+    """Use the exact validated full-domain public-operation cache."""
+    from .global_synthesis import fanout_multiplier as compiled_multiplier
+    return compiled_multiplier(d, modulus, work_bits)
 
 
 def _build_circuit(p, g, A, register_bits, work_bits, *, fanout, relabel):

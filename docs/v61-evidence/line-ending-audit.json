@@ -1,0 +1,18 @@
+[
+  {
+    "path": "tools/scoring_config.yaml",
+    "git_blob_identical": true,
+    "lf_digest": "16eea5d6bcd4ad44b60cd0b50a15d7c2fbdee98ec16b9fe5b61426a8f020a31e",
+    "crlf_digest": "25b15b1e42852fd10d41cb1cccb5e25f4063382924ecdb41b15130df80f4915a",
+    "stored_rc_digest": "25b15b1e42852fd10d41cb1cccb5e25f4063382924ecdb41b15130df80f4915a",
+    "new_checker_digest": "16eea5d6bcd4ad44b60cd0b50a15d7c2fbdee98ec16b9fe5b61426a8f020a31e"
+  },
+  {
+    "path": "hashes.txt",
+    "git_blob_identical": true,
+    "lf_digest": "54bcd720b8b3fb665794c59e51d1e83747029578012fac7f2765e3474ac831e3",
+    "crlf_digest": "46b4e257799432591738f7b62dd4e35b096beef8cd07c56c612fb9e2187cf48f",
+    "stored_rc_digest": "46b4e257799432591738f7b62dd4e35b096beef8cd07c56c612fb9e2187cf48f",
+    "new_checker_digest": "54bcd720b8b3fb665794c59e51d1e83747029578012fac7f2765e3474ac831e3"
+  }
+]

@@ -38,6 +38,10 @@ SHOTS = 64
 CHECK_SHOTS = 32
 BASIS_GATES = ["rz", "sx", "x", "cx"]
 SEED_TRANSPILER = 12345
+# Pre-compile the recorded circuit at level 2; the Checker's fixed level-1
+# re-transpile then sees 209 CX / depth 154 / 536 total gates instead of
+# 209 / 266 / 727. Compilation only; algorithm and measurement are unchanged.
+PRE_OPTIMIZATION_LEVEL = 2
 SEED_SIMULATOR = 707
 
 
@@ -94,7 +98,7 @@ def phase_from_counts(counts, expected_shots=SHOTS):
 
 def _simulate(simulator, circuit, shots, seed):
     compiled = transpile(
-        circuit, basis_gates=BASIS_GATES, optimization_level=1,
+        circuit, basis_gates=BASIS_GATES, optimization_level=PRE_OPTIMIZATION_LEVEL,
         seed_transpiler=SEED_TRANSPILER, num_processes=1,
     )
     result = simulator.run(compiled, shots=shots, seed_simulator=seed).result()
