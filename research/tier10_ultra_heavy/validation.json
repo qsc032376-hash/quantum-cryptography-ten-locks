@@ -1,0 +1,170 @@
+{
+  "baseline": {
+    "two_qubit_gates": 38823,
+    "depth": 92604,
+    "total_gates": 111337,
+    "active_qubits": 19
+  },
+  "candidate": {
+    "active_qubits": 19,
+    "depth": 91235,
+    "total_gates": 109312,
+    "two_qubit_gates": 38163
+  },
+  "official_checker": {
+    "status": "full",
+    "hash_ok": true,
+    "circuits_executed": 1,
+    "solve_seconds": 3.383,
+    "flags": [],
+    "metrics_status": "ok"
+  },
+  "block_operator_max_error": {
+    "40": 1.01e-13,
+    "7": 1.15e-13
+  },
+  "cache_sha256_actual": "62b6ebf880d91d7f71bd981a51c037c1305bd3fbe875d6e078649ad6c03182d6",
+  "cache_sha256_expected": "b5de825230fba9ff3c01b6d0237685b836aea319dccab9d8d7e50b20447a1db6",
+  "paired_seeds": {
+    "baseline": [
+      {
+        "mode": "base",
+        "seed": 1000,
+        "seeds_seen": [
+          1000
+        ],
+        "ok": true,
+        "sha256": "f6378a508815972cc4800007b2676b482085fc8cb5d49b7c6e5f82d32ec039bd",
+        "total_seconds": 3.53,
+        "compile_seconds": 0.14,
+        "aer_seconds": 3.25,
+        "peak_mb": 96.2
+      },
+      {
+        "mode": "base",
+        "seed": 2000,
+        "seeds_seen": [
+          2000
+        ],
+        "ok": true,
+        "sha256": "f6378a508815972cc4800007b2676b482085fc8cb5d49b7c6e5f82d32ec039bd",
+        "total_seconds": 3.52,
+        "compile_seconds": 0.13,
+        "aer_seconds": 3.26,
+        "peak_mb": 94.9
+      },
+      {
+        "mode": "base",
+        "seed": 3000,
+        "seeds_seen": [
+          3000
+        ],
+        "ok": true,
+        "sha256": "f6378a508815972cc4800007b2676b482085fc8cb5d49b7c6e5f82d32ec039bd",
+        "total_seconds": 3.49,
+        "compile_seconds": 0.12,
+        "aer_seconds": 3.23,
+        "peak_mb": 95.0
+      },
+      {
+        "mode": "base",
+        "seed": 4000,
+        "seeds_seen": [
+          4000
+        ],
+        "ok": true,
+        "sha256": "f6378a508815972cc4800007b2676b482085fc8cb5d49b7c6e5f82d32ec039bd",
+        "total_seconds": 3.58,
+        "compile_seconds": 0.12,
+        "aer_seconds": 3.32,
+        "peak_mb": 96.2
+      },
+      {
+        "mode": "base",
+        "seed": 5000,
+        "seeds_seen": [
+          5000
+        ],
+        "ok": true,
+        "sha256": "f6378a508815972cc4800007b2676b482085fc8cb5d49b7c6e5f82d32ec039bd",
+        "total_seconds": 3.51,
+        "compile_seconds": 0.12,
+        "aer_seconds": 3.25,
+        "peak_mb": 96.5
+      }
+    ],
+    "candidate": [
+      {
+        "mode": "cand",
+        "seed": 1000,
+        "seeds_seen": [
+          1000
+        ],
+        "ok": true,
+        "sha256": "f6378a508815972cc4800007b2676b482085fc8cb5d49b7c6e5f82d32ec039bd",
+        "total_seconds": 3.35,
+        "compile_seconds": 0.15,
+        "aer_seconds": 3.07,
+        "peak_mb": 95.3
+      },
+      {
+        "mode": "cand",
+        "seed": 2000,
+        "seeds_seen": [
+          2000
+        ],
+        "ok": true,
+        "sha256": "f6378a508815972cc4800007b2676b482085fc8cb5d49b7c6e5f82d32ec039bd",
+        "total_seconds": 3.33,
+        "compile_seconds": 0.13,
+        "aer_seconds": 3.07,
+        "peak_mb": 94.7
+      },
+      {
+        "mode": "cand",
+        "seed": 3000,
+        "seeds_seen": [
+          3000
+        ],
+        "ok": true,
+        "sha256": "f6378a508815972cc4800007b2676b482085fc8cb5d49b7c6e5f82d32ec039bd",
+        "total_seconds": 3.3,
+        "compile_seconds": 0.12,
+        "aer_seconds": 3.05,
+        "peak_mb": 94.7
+      },
+      {
+        "mode": "cand",
+        "seed": 4000,
+        "seeds_seen": [
+          4000
+        ],
+        "ok": true,
+        "sha256": "f6378a508815972cc4800007b2676b482085fc8cb5d49b7c6e5f82d32ec039bd",
+        "total_seconds": 3.31,
+        "compile_seconds": 0.12,
+        "aer_seconds": 3.06,
+        "peak_mb": 94.6
+      },
+      {
+        "mode": "cand",
+        "seed": 5000,
+        "seeds_seen": [
+          5000
+        ],
+        "ok": true,
+        "sha256": "f6378a508815972cc4800007b2676b482085fc8cb5d49b7c6e5f82d32ec039bd",
+        "total_seconds": 3.31,
+        "compile_seconds": 0.12,
+        "aer_seconds": 3.06,
+        "peak_mb": 95.4
+      }
+    ]
+  },
+  "summary": {
+    "baseline_mean_seconds": 3.53,
+    "candidate_mean_seconds": 3.32,
+    "baseline_mean_peak_mb": 95.8,
+    "candidate_mean_peak_mb": 94.9
+  }
+}
