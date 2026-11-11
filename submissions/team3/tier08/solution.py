@@ -6,7 +6,7 @@ classical module. Do not log returned factors or decrypted values.
 """
 
 from collections import Counter
-from math import gcd
+from math import gcd, pi
 from pathlib import Path
 import sys
 import time
@@ -23,7 +23,6 @@ if not __package__:
     __package__ = f"{team_dir.name}.tier08"
 
 from ..rsa_classical import CiphertextError, DecodeError, KeyBitsError, RSAError, decrypt_tier8
-from ..tier07.qpe import build_inverse_qft
 from .modular import build_controlled_multiplier, dirty_qubit_count
 from ..tier08.order import (
     InsufficientMeasurements, recover_order, factors_from_order,
@@ -41,6 +40,16 @@ SEED_SIMULATOR = 808
 _POWER_PREFIX = "tier08_controlled_modmul_power_"
 
 
+def _inverse_qft_core(width):
+    """Negative-angle inverse QFT after absorbing input reversal into controls."""
+    circuit = QuantumCircuit(width, name="tier08_inverse_qft_core")
+    for target in range(width):
+        for earlier in range(target):
+            circuit.cp(-pi / (1 << (target - earlier)), target, earlier)
+        circuit.h(target)
+    return circuit
+
+
 def _public_parameters():
     parameters = load_locked(8)["public_parameters"]
     if parameters["N"] != 35:
@@ -51,8 +60,9 @@ def _public_parameters():
 def build_circuit(*, modulus=None, base=BASE, phase_bits=PHASE_BITS, work_bits=WORK_BITS):
     """Count q0..11; work q12..17 starts at integer 1; qj measures into cj.
 
-    Other counting wires are borrowed as dirty MCX ancillas, restored exactly
-    even when entangled. No additional qubits or order-dependent shortcuts.
+    Control power 2**j uses physical q[phase_bits-1-j]. Other counting wires
+    are borrowed as dirty MCX ancillas under the same reversal, restored
+    exactly even when entangled. No additional qubits or order shortcuts.
     Optional dimensions are for small synthetic tests, not hidden-data tuning.
     """
     if modulus is None:
@@ -73,15 +83,19 @@ def build_circuit(*, modulus=None, base=BASE, phase_bits=PHASE_BITS, work_bits=W
     circuit.x(work[0])  # Little-endian |1>, with all other work bits zero.
     circuit.h(range(phase_bits))
     cache = {}
-    for control in range(phase_bits):
-        exponent = 1 << control
+    for logical_control in range(phase_bits):
+        exponent = 1 << logical_control
         multiplier = pow(base, exponent, modulus)  # Public modular exponentiation only.
         if multiplier not in cache:
             cache[multiplier] = build_controlled_multiplier(multiplier, modulus, work_bits).to_gate()
         powered = cache[multiplier].copy(name=f"{_POWER_PREFIX}{exponent}")
-        dirty = [wire for wire in range(phase_bits) if wire != control][:borrowed_count]
-        circuit.append(powered, [control, *work, *dirty])
-    circuit.append(build_inverse_qft(phase_bits).to_gate(), range(phase_bits))
+        physical_control = phase_bits - 1 - logical_control
+        dirty = [
+            phase_bits - 1 - wire
+            for wire in range(phase_bits) if wire != logical_control
+        ][:borrowed_count]
+        circuit.append(powered, [physical_control, *work, *dirty])
+    circuit.append(_inverse_qft_core(phase_bits).to_gate(), range(phase_bits))
     circuit.measure(range(phase_bits), range(phase_bits))
     return circuit
 

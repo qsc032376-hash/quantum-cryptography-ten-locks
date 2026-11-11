@@ -116,8 +116,11 @@ def recover_key_with_diagnostics():
     }
     reports = {}
     candidates = {}
+    # Channel copies each receiver into its log and composes it with a fresh input.
+    # Reuse the two unmodified templates; each position still gets its own Aer shot.
+    receivers = (build_circuit(0), build_circuit(1))
     for name, channel in channels.items():
-        circuits = [build_circuit(basis) for basis in bases[name]]
+        circuits = [receivers[basis] for basis in bases[name]]
         measured_bits = channel.receive_all(circuits)
         public_data = channel.finish()
         key_bits, stats = analyze_link(bases[name], measured_bits, public_data)

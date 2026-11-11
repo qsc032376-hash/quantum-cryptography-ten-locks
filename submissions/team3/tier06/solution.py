@@ -45,6 +45,10 @@ MAX_SEARCH_SHOTS = 1024
 MAX_SEARCH_BATCHES = 2
 BASIS_GATES = ["rz", "sx", "x", "cx"]
 SEED_TRANSPILER = 12345
+# Level 2 leaves the CX count at 3,000 but removes redundant RZ layers that the
+# Checker's fixed level-1 pass would otherwise keep: depth 5,883 -> 5,715,
+# total gates 9,534 -> 8,752, identical measurement distribution.
+PRE_OPTIMIZATION_LEVEL = 2
 SEED_SIMULATOR = 606
 PHASE_NAME = "tier06_Q_phase"
 BIT_NAME = "tier06_Q_flag"
@@ -203,7 +207,7 @@ def estimate_marked_count(hits, shots):
 
 def _simulate(simulator, circuit, shots, seed):
     compiled = transpile(
-        circuit, basis_gates=BASIS_GATES, optimization_level=1,
+        circuit, basis_gates=BASIS_GATES, optimization_level=PRE_OPTIMIZATION_LEVEL,
         seed_transpiler=SEED_TRANSPILER, num_processes=1,
     )
     result = simulator.run(compiled, shots=shots, seed_simulator=seed).result()

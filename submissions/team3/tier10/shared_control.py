@@ -2,11 +2,10 @@
 
 The default solver uses the no-ancilla fanout with QFT relabeling.
 """
-from itertools import groupby
-from operator import itemgetter
 
 from qiskit import QuantumCircuit
 from qiskit.circuit.library import MCXGate
+from .synthesis import groups, select_operations
 from ..tier09.modular import _compiled_operations
 from ..tier07.qpe import build_inverse_qft
 
@@ -37,15 +36,10 @@ def shared_multiplier(d, modulus, work_bits):
 
 def fanout_multiplier(d, modulus, work_bits):
     """Exact no-ancilla pivot fanout, independently applied to Tier 10 powers."""
-    ops = _compiled_operations(d, modulus, work_bits)
+    ops = select_operations(d, modulus, work_bits)
     qc = QuantumCircuit(work_bits + 1)
-    for mask, group in groupby(ops, key=itemgetter(0)):
-        parity = 0
-        for _, target in group:
-            parity ^= 1 << target
+    for mask, parity in groups(ops):
         targets = [j + 1 for j in range(work_bits) if parity & (1 << j)]
-        if not targets:
-            continue
         controls = [0] + [j + 1 for j in range(work_bits) if mask & (1 << j)]
         pivot, *others = targets
         for target in others:

@@ -24,9 +24,10 @@ def _load_local_module(name, path):
 
 
 if __package__:
-    from . import oracle
+    from . import gf2_synthesis, oracle
 else:
     # The official Checker loads solution.py by path without a parent package.
+    gf2_synthesis = _load_local_module("tier05_gf2_synthesis", Path(__file__).with_name("gf2_synthesis.py"))
     oracle = _load_local_module("team_tier05_oracle", Path(__file__).with_name("oracle.py"))
 
 
@@ -126,6 +127,7 @@ def recover_key_with_diagnostics(*, iterations=ITERATIONS, shots=SHOTS):
         circuit, simulator, basis_gates=BASIS_GATES, optimization_level=1,
         seed_transpiler=SEED_TRANSPILER, num_processes=1,
     )
+    compiled, _, _ = gf2_synthesis.gf2_runs(compiled)
     result = simulator.run(compiled, shots=shots).result()
     if not result.success:
         raise RuntimeError("Aer failed to execute the Grover circuit")

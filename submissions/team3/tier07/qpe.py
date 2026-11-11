@@ -31,17 +31,18 @@ def _validate_one_qubit(circuit, name):
         raise ValueError(f"{name} must have one qubit and no classical bits")
 
 
-def build_inverse_qft(width: int) -> QuantumCircuit:
-    """Return the full inverse DFT on a little-endian quantum register.
+def build_inverse_qft(width: int, *, reverse_input: bool = True) -> QuantumCircuit:
+    """Return the inverse-QFT core, with optional input bit reversal.
 
     The forward DFT convention is exp(+2*pi*i*x*y / 2**width). Initial
-    swaps are the inverse of the final swaps in the full forward QFT; they
-    must not be dropped without also changing the measurement convention.
+    swaps are the inverse of the final swaps in the full forward QFT.
+    Without swaps, the caller must reverse the phase-register inputs.
     """
     _validate_width(width)
     circuit = QuantumCircuit(width, name="tier07_inverse_qft")
-    for bit in range(width // 2):
-        circuit.swap(bit, width - 1 - bit)
+    if reverse_input:
+        for bit in range(width // 2):
+            circuit.swap(bit, width - 1 - bit)
     for target in range(width):
         for earlier in range(target):
             circuit.cp(-pi / (1 << (target - earlier)), target, earlier)
@@ -54,6 +55,8 @@ def _build_phase_register(
     eigenstate: QuantumCircuit,
     phase_bits: int,
     name: str,
+    *,
+    reverse_controls: bool = False,
 ) -> QuantumCircuit:
     """Prepare the supplied eigenstate and controlled powers, without readout."""
     _validate_width(phase_bits)
@@ -76,7 +79,8 @@ def _build_phase_register(
             1, annotated=False
         )
         controlled.name = f"{_POWER_PREFIX}{exponent}"
-        circuit.append(controlled, [bit, target])
+        control_bit = phase_bits - 1 - bit if reverse_controls else bit
+        circuit.append(controlled, [control_bit, target])
         if bit + 1 < phase_bits:
             # Out-of-place multiplication leaves all previously made gates
             # intact and needs exactly phase_bits-1 repeated squarings.
@@ -89,14 +93,20 @@ def build_qpe_circuit(
     eigenstate: QuantumCircuit,
     phase_bits: int = PHASE_BITS,
 ) -> QuantumCircuit:
-    """Return QPE with count q[j] controlling U**(2**j), then q[j] -> c[j].
+    """Return QPE with q[n-1-j] controlling U**(2**j), then q[j] -> c[j].
 
     The final qubit holds the supplied V|1> state; do not add a separate X
     preparation. For a phase k/2**phase_bits, the counts key c[n-1]...c[0]
-    directly represents k in binary. No string reversal is required.
+    directly represents k in binary. The reversed controls absorb the
+    inverse QFT's input swaps; no measured-string reversal is required.
     """
-    circuit = _build_phase_register(unitary, eigenstate, phase_bits, "tier07_qpe")
-    circuit.append(build_inverse_qft(phase_bits).to_gate(), range(phase_bits))
+    circuit = _build_phase_register(
+        unitary, eigenstate, phase_bits, "tier07_qpe", reverse_controls=True
+    )
+    circuit.append(
+        build_inverse_qft(phase_bits, reverse_input=False).to_gate(),
+        range(phase_bits),
+    )
     circuit.measure(range(phase_bits), range(phase_bits))
     return circuit
 

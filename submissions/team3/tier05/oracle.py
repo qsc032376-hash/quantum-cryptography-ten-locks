@@ -8,7 +8,7 @@ All work qubits and the comparison flag must start in zero and are restored.
 from math import pi
 
 from qiskit import QuantumCircuit
-from qiskit.synthesis import synth_mcx_n_clean_m15, synth_mcx_n_dirty_i15
+from qiskit.synthesis import synth_mcx_n_clean_m15, synth_mcx_n_dirty_m15
 
 from common.toy_cipher import inverse_permute, inverse_sbox_layer
 from tier05 import helper
@@ -86,10 +86,8 @@ def _comparison_x(circuit: QuantumCircuit, expected_byte: int):
 
 
 def _dirty_comparison_gate():
-    """An exact MCX8 with six borrowed key wires, restored even if entangled."""
-    synthesized = synth_mcx_n_dirty_i15(
-        len(WORK_QUBITS), relative_phase=False, action_only=False
-    )
+    """An exact MCX8 with three borrowed key wires, restored even if entangled."""
+    synthesized = synth_mcx_n_dirty_m15(len(WORK_QUBITS))
     dirty_count = synthesized.num_qubits - len(WORK_QUBITS) - 1
     if not 0 <= dirty_count <= len(KEY_QUBITS):
         raise RuntimeError("The MCX synthesis needs more borrowed key wires than available")

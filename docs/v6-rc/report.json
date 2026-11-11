@@ -1,0 +1,183 @@
+{
+  "config_sha256": "25b15b1e42852fd10d41cb1cccb5e25f4063382924ecdb41b15130df80f4915a",
+  "hashes_sha256": "46b4e257799432591738f7b62dd4e35b096beef8cd07c56c612fb9e2187cf48f",
+  "mode": "full",
+  "qiskit": "2.6.1",
+  "qiskit_aer": "0.18.2",
+  "sha": "submission-tree:5d825abd0f0c82546c83574bf4148c3a92238d83",
+  "submitted_at": null,
+  "team": "rc_audit",
+  "tiers": {
+    "1": {
+      "circuit_executed": true,
+      "circuits_executed": 1,
+      "flags": [],
+      "hash_ok": true,
+      "metrics": {
+        "active_qubits": 25,
+        "depth": 44,
+        "total_gates": 298,
+        "two_qubit_gates": 151
+      },
+      "metrics_status": "ok",
+      "oracle_calls": 1,
+      "solve_seconds": 6.086,
+      "status": "full",
+      "unique_circuits": 1
+    },
+    "10": {
+      "circuit_executed": true,
+      "circuits_executed": 1,
+      "flags": [],
+      "hash_ok": true,
+      "metrics": {
+        "active_qubits": 19,
+        "depth": 109763,
+        "total_gates": 132023,
+        "two_qubit_gates": 46910
+      },
+      "metrics_status": "ok",
+      "oracle_calls": null,
+      "solve_seconds": 3.612,
+      "status": "full",
+      "unique_circuits": 1
+    },
+    "2": {
+      "circuit_executed": true,
+      "circuits_executed": 2048,
+      "flags": [],
+      "hash_ok": true,
+      "metrics": {
+        "active_qubits": 1,
+        "depth": 3,
+        "total_gates": 3,
+        "two_qubit_gates": 0
+      },
+      "metrics_status": "ok",
+      "oracle_calls": null,
+      "repeat_measurements": 0,
+      "solve_seconds": 0.539,
+      "status": "full",
+      "unique_circuits": 2
+    },
+    "3": {
+      "circuit_executed": true,
+      "circuits_executed": 24,
+      "flags": [],
+      "hash_ok": true,
+      "metrics": {
+        "active_qubits": 7,
+        "depth": 8771,
+        "total_gates": 19497,
+        "two_qubit_gates": 7808
+      },
+      "metrics_status": "ok",
+      "oracle_calls": 1,
+      "solve_seconds": 5.278,
+      "status": "full",
+      "unique_circuits": 24
+    },
+    "4": {
+      "circuit_executed": true,
+      "circuits_executed": 1,
+      "flags": [],
+      "hash_ok": true,
+      "metrics": {
+        "active_qubits": 20,
+        "depth": 195,
+        "total_gates": 455,
+        "two_qubit_gates": 183
+      },
+      "metrics_status": "ok",
+      "oracle_calls": null,
+      "solve_seconds": 0.141,
+      "status": "full",
+      "unique_circuits": 1
+    },
+    "5": {
+      "circuit_executed": true,
+      "circuits_executed": 1,
+      "flags": [],
+      "hash_ok": true,
+      "metrics": {
+        "active_qubits": 19,
+        "depth": 28132,
+        "total_gates": 40938,
+        "two_qubit_gates": 14552
+      },
+      "metrics_status": "ok",
+      "oracle_calls": null,
+      "solve_seconds": 7.59,
+      "status": "full",
+      "unique_circuits": 1
+    },
+    "6": {
+      "circuit_executed": true,
+      "circuits_executed": 2,
+      "flags": [],
+      "hash_ok": true,
+      "metrics": {
+        "active_qubits": 22,
+        "depth": 5715,
+        "total_gates": 8752,
+        "two_qubit_gates": 3000
+      },
+      "metrics_status": "ok",
+      "oracle_calls": null,
+      "solve_seconds": 11.766,
+      "status": "full",
+      "unique_circuits": 2
+    },
+    "7": {
+      "circuit_executed": true,
+      "circuits_executed": 2,
+      "flags": [],
+      "hash_ok": true,
+      "metrics": {
+        "active_qubits": 15,
+        "depth": 266,
+        "total_gates": 727,
+        "two_qubit_gates": 209
+      },
+      "metrics_status": "ok",
+      "oracle_calls": null,
+      "solve_seconds": 0.157,
+      "status": "full",
+      "unique_circuits": 2
+    },
+    "8": {
+      "circuit_executed": true,
+      "circuits_executed": 1,
+      "flags": [],
+      "hash_ok": true,
+      "metrics": {
+        "active_qubits": 18,
+        "depth": 96055,
+        "total_gates": 102561,
+        "two_qubit_gates": 33904
+      },
+      "metrics_status": "ok",
+      "oracle_calls": null,
+      "solve_seconds": 6.503,
+      "status": "full",
+      "unique_circuits": 1
+    },
+    "9": {
+      "circuit_executed": true,
+      "circuits_executed": 1,
+      "flags": [],
+      "hash_ok": true,
+      "metrics": {
+        "active_qubits": 22,
+        "depth": 120242,
+        "total_gates": 168116,
+        "two_qubit_gates": 55999
+      },
+      "metrics_status": "ok",
+      "oracle_calls": null,
+      "solve_seconds": 14.849,
+      "status": "full",
+      "unique_circuits": 1
+    }
+  }
+}
