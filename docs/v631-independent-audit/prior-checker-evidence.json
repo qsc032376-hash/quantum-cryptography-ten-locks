@@ -1,0 +1,257 @@
+{
+  "scope": "Independent read-only review of existing Junrui evidence; no Checker/Aer execution performed by this subreview. Root independent rerun is recorded separately.",
+  "package_commit": "2fe40b2d096d87875244d5ccbb8a76ef979ac499",
+  "junrui_evidence_commit": "24b3c53181e184050973528903fd31abcc7f36b1",
+  "evidence_commit_parent_is_package_commit": true,
+  "evidence_commit_changed_paths": [
+    "docs/V631_FULL_CHECKER.md",
+    "docs/V631_RELEASE_REVIEW.md"
+  ],
+  "observed_zip_sha256": "4f1b2de8c7b554bed75319ab7f965937bad85906aa11a26172f5573dc24dfb52",
+  "zip_blob_same_at_package_and_evidence_commits": true,
+  "junrui_markdown_binds_observed_zip_digest": true,
+  "zip_member_names_and_order_equal_fallback": true,
+  "changed_members": [
+    "team3/README.md",
+    "team3/WRITEUP.md"
+  ],
+  "unchanged_member_count": 35,
+  "source_provenance": [
+    {
+      "commit": "2fe40b2d096d87875244d5ccbb8a76ef979ac499",
+      "path": "docs/V631_PACKAGE_MANIFEST.md",
+      "sha256": "f1138b67de3710cfbd0782e74cc66d2b565715ca7bd5cb482f22f5db238563b2"
+    },
+    {
+      "commit": "24b3c53181e184050973528903fd31abcc7f36b1",
+      "path": "docs/V631_FULL_CHECKER.md",
+      "sha256": "804f94f86b5165b997051d84a3fd940f0d58b3dd000d043e3250bd1599fdbe1b"
+    },
+    {
+      "commit": "24b3c53181e184050973528903fd31abcc7f36b1",
+      "path": "docs/V631_RELEASE_REVIEW.md",
+      "sha256": "cba04dc023c4715a62e399038a6308849f4aed0d955ae9864fb6fd4f90cffb95"
+    },
+    {
+      "commit": "ce75c0721622d363e77912191a52a02c34f92472",
+      "path": "docs/v63-evidence/zip-checker/report.json",
+      "sha256": "8a8bc7f615e5ab667b925ebdcea7c47da228587479f27dbe6ae0ec7325665740"
+    },
+    {
+      "commit": "be105035dee6cdbbf30f1dc06a95100f4c9e49f5",
+      "path": "docs/v63-metrics-evidence/investigation.json",
+      "sha256": "6d23265d12b411a15122b202ff001a98905939ee428e26b8be45b090d7e66d52"
+    },
+    {
+      "commit": "2fe40b2d096d87875244d5ccbb8a76ef979ac499",
+      "path": "tools/scoring_config.yaml",
+      "sha256": "16eea5d6bcd4ad44b60cd0b50a15d7c2fbdee98ec16b9fe5b61426a8f020a31e"
+    },
+    {
+      "commit": "2fe40b2d096d87875244d5ccbb8a76ef979ac499",
+      "path": "tools/check_submission.py",
+      "sha256": "d6e1351600f69739d3f481c7fae6292bd6ab1d83c141997aafd8a848d5d1cd36"
+    },
+    {
+      "commit": "2fe40b2d096d87875244d5ccbb8a76ef979ac499",
+      "path": "requirements.txt",
+      "sha256": "421a5f143616d67e365e96fa458b0580e7bd483c00128cf726045d6decc9d7e6"
+    }
+  ],
+  "junrui_report_tiers": {
+    "1": {
+      "status": "full",
+      "hash": "match",
+      "circuit_run": "yes",
+      "metrics": {
+        "two_qubit_gates": 151,
+        "depth": 44,
+        "total_gates": 298,
+        "active_qubits": 25
+      },
+      "metrics_status": "ok",
+      "flags_display": "-"
+    },
+    "2": {
+      "status": "full",
+      "hash": "match",
+      "circuit_run": "yes",
+      "metrics": {
+        "two_qubit_gates": 0,
+        "depth": 3,
+        "total_gates": 3,
+        "active_qubits": 1
+      },
+      "metrics_status": "ok",
+      "flags_display": "-"
+    },
+    "3": {
+      "status": "full",
+      "hash": "match",
+      "circuit_run": "yes",
+      "metrics": {
+        "two_qubit_gates": 7808,
+        "depth": 8771,
+        "total_gates": 19497,
+        "active_qubits": 7
+      },
+      "metrics_status": "ok",
+      "flags_display": "-"
+    },
+    "4": {
+      "status": "full",
+      "hash": "match",
+      "circuit_run": "yes",
+      "metrics": {
+        "two_qubit_gates": 183,
+        "depth": 195,
+        "total_gates": 455,
+        "active_qubits": 20
+      },
+      "metrics_status": "ok",
+      "flags_display": "-"
+    },
+    "5": {
+      "status": "full",
+      "hash": "match",
+      "circuit_run": "yes",
+      "metrics": {
+        "two_qubit_gates": 10950,
+        "depth": 19703,
+        "total_gates": 28413,
+        "active_qubits": 19
+      },
+      "metrics_status": "ok",
+      "flags_display": "-"
+    },
+    "6": {
+      "status": "full",
+      "hash": "match",
+      "circuit_run": "yes",
+      "metrics": {
+        "two_qubit_gates": 3000,
+        "depth": 5715,
+        "total_gates": 8752,
+        "active_qubits": 22
+      },
+      "metrics_status": "ok",
+      "flags_display": "-"
+    },
+    "7": {
+      "status": "full",
+      "hash": "match",
+      "circuit_run": "yes",
+      "metrics": {
+        "two_qubit_gates": 209,
+        "depth": 154,
+        "total_gates": 536,
+        "active_qubits": 15
+      },
+      "metrics_status": "ok",
+      "flags_display": "-"
+    },
+    "8": {
+      "status": "full",
+      "hash": "match",
+      "circuit_run": "yes",
+      "metrics": {
+        "two_qubit_gates": 7856,
+        "depth": 18804,
+        "total_gates": 22861,
+        "active_qubits": 18
+      },
+      "metrics_status": "ok",
+      "flags_display": "-"
+    },
+    "9": {
+      "status": "full",
+      "hash": "match",
+      "circuit_run": "yes",
+      "metrics": {
+        "two_qubit_gates": 34186,
+        "depth": 71632,
+        "total_gates": 102830,
+        "active_qubits": 22
+      },
+      "metrics_status": "ok",
+      "flags_display": "-"
+    },
+    "10": {
+      "status": "full",
+      "hash": "match",
+      "circuit_run": "yes",
+      "metrics": {
+        "two_qubit_gates": 38823,
+        "depth": 92604,
+        "total_gates": 111337,
+        "active_qubits": 19
+      },
+      "metrics_status": "ok",
+      "flags_display": "-"
+    }
+  },
+  "junrui_report_computed_totals": {
+    "two_qubit_gates": 103166,
+    "depth": 217625,
+    "total_gates": 294982
+  },
+  "junrui_report_all_full_hash_circuit_metrics_and_empty_flag_display": true,
+  "all_ten_metric_rows_equal_approved_v63_reference": true,
+  "junrui_report_format": "Official-style Markdown with all ten rows; raw JSON and run logs for new digest are not present at evidence commit.",
+  "direct_evidence_limitations": [
+    "New report has no Python/dependency versions, compile seeds, phase timings, resource measurements, complete worker outcomes, or run/extraction commands.",
+    "Zero timeouts and clean checkout are explicitly asserted in V631_RELEASE_REVIEW.md, but new raw timeout/runtime records are not published at this commit.",
+    "requirements/scoring source pins are observable; they do not independently prove the environment actually used by the reported run.",
+    "Circuit run=yes is a reported actual-execution field; this subreview did not observe that earlier process or captured circuit arguments."
+  ],
+  "declared_fresh_official_commit": "fce7c3950d06bb4d23e3c057b4625f901c396de4",
+  "official_declared_vs_upstream_difference_paths": [
+    "docs/TIER01_THEORY.md"
+  ],
+  "official_scoring_config_observed": {
+    "basis_gates": [
+      "rz",
+      "sx",
+      "x",
+      "cx"
+    ],
+    "optimization_level": 1,
+    "seed_transpiler": 12345,
+    "coupling_map": null,
+    "initial_layout": null,
+    "solve_timeout_s": 120,
+    "transpile_timeout_s": 120
+  },
+  "declared_requirements": {
+    "qiskit": "2.6.1",
+    "qiskit-aer": "0.18.2",
+    "numpy": "2.5.4",
+    "pyyaml": "6.0.3"
+  },
+  "earlier_independent_audit": {
+    "commit": "be105035dee6cdbbf30f1dc06a95100f4c9e49f5",
+    "verdict": "SAFE_WITH_VARIANCE",
+    "new_full_results": 30,
+    "new_hash_matches": 30,
+    "new_flagged_tiers": 0,
+    "same_environment_totals_each_run": [
+      {
+        "two_qubit_gates": 103166,
+        "depth": 217602,
+        "total_gates": 294857
+      },
+      {
+        "two_qubit_gates": 103166,
+        "depth": 217602,
+        "total_gates": 294857
+      },
+      {
+        "two_qubit_gates": 103166,
+        "depth": 217602,
+        "total_gates": 294857
+      }
+    ],
+    "interpretation": "Runtime files are identical, but original ZIP approval does not automatically approve changed documentation ZIP. Known platform metric variation is disclosed, not a reason alone to reject otherwise correct new run."
+  },
+  "recommendation": "No contrary evidence found in Junrui report. Independently rerun the exact new archive to close provenance and raw-machine-evidence gaps before root final release sign-off."
+}

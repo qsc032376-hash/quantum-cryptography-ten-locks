@@ -1,0 +1,77 @@
+{
+  "created_at": "2026-11-11T20:59:55.435623-05:00",
+  "source_commit": "2fe40b2d096d87875244d5ccbb8a76ef979ac499",
+  "purpose": "Raw SHA-256 of published safe audit evidence, excluding this self-index.",
+  "files": [
+    {
+      "path": "docs/V631_INDEPENDENT_RELEASE_AUDIT.md",
+      "bytes": 9568,
+      "sha256": "b9041dc934bef698cd62119f57a812b096c5ee347986771bf5415327234a9864"
+    },
+    {
+      "path": "docs/v631-independent-audit/README.md",
+      "bytes": 2627,
+      "sha256": "94ec2911f26a25a857ad8ca5b58e9a8f6d2a0777f054f32ef9e00c2531f48906"
+    },
+    {
+      "path": "docs/v631-independent-audit/archive-comparison.json",
+      "bytes": 32816,
+      "sha256": "060a9707327b2a1c6ee3224539f668f880adcae8e5258d177a1c9f23c5a1389f"
+    },
+    {
+      "path": "docs/v631-independent-audit/checker/report.json",
+      "bytes": 4364,
+      "sha256": "55945aae7c9ab89ddd19b1a729838d17cbac4a63dc6211728b9b780b43e2dbd7"
+    },
+    {
+      "path": "docs/v631-independent-audit/checker/report.md",
+      "bytes": 836,
+      "sha256": "f5786f00a9b12ef31ca26d96133784daecc922c3e4ebb7b210735cae6b2e5e57"
+    },
+    {
+      "path": "docs/v631-independent-audit/documentation-review.md",
+      "bytes": 10838,
+      "sha256": "72c11b8cac130a3cf075e05792fe2a91fbc288fe0ce637f0ae19bafdc9748e33"
+    },
+    {
+      "path": "docs/v631-independent-audit/independent-checker.json",
+      "bytes": 36208,
+      "sha256": "9d8ccddd9e39c65ea4d72d6f5dcc56fb1fada0974175148709906d8073443b31"
+    },
+    {
+      "path": "docs/v631-independent-audit/junrui-checker-report.md",
+      "bytes": 902,
+      "sha256": "804f94f86b5165b997051d84a3fd940f0d58b3dd000d043e3250bd1599fdbe1b"
+    },
+    {
+      "path": "docs/v631-independent-audit/junrui-release-review-record.md",
+      "bytes": 1839,
+      "sha256": "cba04dc023c4715a62e399038a6308849f4aed0d955ae9864fb6fd4f90cffb95"
+    },
+    {
+      "path": "docs/v631-independent-audit/prior-checker-evidence-review.md",
+      "bytes": 5733,
+      "sha256": "70f04fc42b396469783553fdd8ddeb069fcc85a96312fc59f17b2e5438888cb3"
+    },
+    {
+      "path": "docs/v631-independent-audit/prior-checker-evidence.json",
+      "bytes": 8077,
+      "sha256": "1d7207ad3053653c8159d34d15469af0a1d2b28ad54c34b916cb73afe4cbdcf2"
+    },
+    {
+      "path": "docs/v631-independent-audit/release-decision.json",
+      "bytes": 3122,
+      "sha256": "983a11ae89bf25ad9156f3595cbc17b495b78ccad25bc23efda6a59911c65b03"
+    },
+    {
+      "path": "docs/v631-independent-audit/run_independent_checker.py",
+      "bytes": 6783,
+      "sha256": "4f6d2bc8901ea83d40b0554cad9abbc843a8f7e96c6ed7207698565c0f8445da"
+    },
+    {
+      "path": "docs/v631-independent-audit/verify_archive.py",
+      "bytes": 8437,
+      "sha256": "ab880dc187b61b4d29f3d8d67bd1fcdfc2870d9e3b1510222b33088a92cf38de"
+    }
+  ]
+}

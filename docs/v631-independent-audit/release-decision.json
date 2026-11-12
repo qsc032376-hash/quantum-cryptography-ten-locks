@@ -1,0 +1,91 @@
+{
+  "verdict": "RELEASE_APPROVED",
+  "reviewed_at": "2026-11-11T20:58:24.095457-05:00",
+  "scope": "Approval of the exact user-pinned documentation archive; no submission upload.",
+  "package_commit": "2fe40b2d096d87875244d5ccbb8a76ef979ac499",
+  "junrui_evidence_commit": "24b3c53181e184050973528903fd31abcc7f36b1",
+  "zip_sha256": "4f1b2de8c7b554bed75319ab7f965937bad85906aa11a26172f5573dc24dfb52",
+  "archive_checks_pass": true,
+  "members": 37,
+  "changed_members": [
+    "team3/README.md",
+    "team3/WRITEUP.md"
+  ],
+  "unchanged_runtime_members": 35,
+  "all_members_match_source_blobs": true,
+  "cache_checks_pass": true,
+  "independent_full": 10,
+  "independent_hash_matches": 10,
+  "independent_actual_aer_tiers": 10,
+  "flags": 0,
+  "timeouts": 0,
+  "independent_exit_code": 0,
+  "independent_totals": {
+    "two_qubit_gates": 103166,
+    "depth": 217602,
+    "total_gates": 294857
+  },
+  "all_ten_metrics_identical_to_previous_independent_v63_runs": true,
+  "known_reference_metric_differences": [
+    {
+      "tier": 5,
+      "metric": "total_gates",
+      "junrui_reference": 28413,
+      "independent_actual": 28363
+    },
+    {
+      "tier": 6,
+      "metric": "depth",
+      "junrui_reference": 5715,
+      "independent_actual": 5691
+    },
+    {
+      "tier": 6,
+      "metric": "total_gates",
+      "junrui_reference": 8752,
+      "independent_actual": 8680
+    },
+    {
+      "tier": 7,
+      "metric": "depth",
+      "junrui_reference": 154,
+      "independent_actual": 155
+    },
+    {
+      "tier": 7,
+      "metric": "total_gates",
+      "junrui_reference": 536,
+      "independent_actual": 533
+    }
+  ],
+  "independent_wall_seconds": 201.01813662999484,
+  "sampled_peak_process_tree_rss_mib": 692.3515625,
+  "official_source_files_preserved": 96,
+  "all_37_extracted_files_preserved": true,
+  "approved_zip_and_production_changed": false,
+  "temporary_private_extraction_removed": true,
+  "documentation_review": "PASS WITH NON-BLOCKING NOTES",
+  "documentation_caveats": [
+    {
+      "file": "team3/WRITEUP.md",
+      "lines": "231",
+      "issue": "All results described as statevector; official Tier 2 Channel leaves Aer method automatic.",
+      "blocking": false
+    },
+    {
+      "file": "team3/README.md",
+      "lines": "88-89",
+      "issue": "Scored circuit is an official retranspilation of recorder-derived input, not necessarily the exact native Aer representation; Tier 2 uses Channel.log.",
+      "blocking": false
+    },
+    {
+      "file": "team3/WRITEUP.md",
+      "lines": "184-185",
+      "issue": "Separate approximately 6.5e-15 Tier 10 error value not traced to a pinned source in bounded review; not accepted as independently verified evidence.",
+      "blocking": false
+    }
+  ],
+  "acceptance_rationale": "All archive bytes and runtime source provenance verified; fresh unchanged official Checker fully passes; only known previously documented compiler variance; substantive algorithm evidence is supported without relying on the three qualified wording/citation statements.",
+  "judge_analysis_score_or_rank_guaranteed": false,
+  "competition_form_submitted": false
+}
