@@ -1,0 +1,59 @@
+{
+  "commit": "ce75c0721622d363e77912191a52a02c34f92472",
+  "scope": "ApprovedcommitdocsJSONwithtier06/tier07/v61/v62/v63/v6-rcpathnames only; nohiddenoracleparameters/circuits inspected.",
+  "files_checked": [
+    "docs/v6-rc/manifest.json",
+    "docs/v6-rc/report.json",
+    "docs/v61-evidence/baseline-diagnostics.json",
+    "docs/v61-evidence/full-checker/report.json",
+    "docs/v61-evidence/line-ending-audit.json",
+    "docs/v61-evidence/reliability.json",
+    "docs/v61-evidence/source-audit.json",
+    "docs/v62-evidence/baseline-checker/report.json",
+    "docs/v62-evidence/full-checker/report.json",
+    "docs/v62-evidence/paired.json",
+    "docs/v62-evidence/preflight-base-crlf/report.json",
+    "docs/v62-evidence/preflight-candidate-crlf/report.json",
+    "docs/v62-evidence/source-audit.json",
+    "docs/v63-evidence/candidate-checker/report.json",
+    "docs/v63-evidence/compiler-replay.json",
+    "docs/v63-evidence/preflight-tier08-only/report.json",
+    "docs/v63-evidence/seeds.json",
+    "docs/v63-evidence/tier05-equivalence.json",
+    "docs/v63-evidence/tier08-equivalence.json",
+    "docs/v63-evidence/zip-checker/report.json",
+    "docs/v63-evidence/zip-manifest.json"
+  ],
+  "matching_gate_counter_records": [
+    {
+      "path": "docs/v63-evidence/compiler-replay.json",
+      "json_path": [
+        "pinned_builder",
+        "execution_gate_counts"
+      ],
+      "gate_counts": {
+        "rz": 12301,
+        "cx": 11000,
+        "sx": 4862,
+        "x": 300,
+        "measure": 10
+      }
+    },
+    {
+      "path": "docs/v63-evidence/compiler-replay.json",
+      "json_path": [
+        "integrated_builder",
+        "execution_gate_counts"
+      ],
+      "gate_counts": {
+        "rz": 12301,
+        "cx": 11000,
+        "sx": 4862,
+        "x": 300,
+        "measure": 10
+      }
+    }
+  ],
+  "tier6_tier7_historical_native_gate_counter_found": false,
+  "conclusion": "OnlyTier5compiler-replaynativegatecounterfoundinthisboundedapproveddocumentationsearch; cannotattributeTier6/Tier7deltastoaspecificgatefamilybeyondtheunchangedCXcount."
+}

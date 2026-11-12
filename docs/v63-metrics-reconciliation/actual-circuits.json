@@ -1,0 +1,798 @@
+{
+  "status": "ACTUAL_SCORING_INPUTS_COMPARED",
+  "results": [
+    {
+      "run": 1,
+      "tier": 5,
+      "actual_unique_records": 1,
+      "actual_total_executions": 1,
+      "captured_from_actual_official_scoring_worker": true,
+      "circuits": [
+        {
+          "record_index": 0,
+          "qubits": 19,
+          "classical_bits": 10,
+          "native_count_ops": {
+            "rz": 12301,
+            "cx": 11000,
+            "sx": 4862,
+            "x": 250,
+            "measure": 10
+          },
+          "native_metrics": {
+            "two_qubit_gates": 11000,
+            "depth": 19703,
+            "total_gates": 28413,
+            "active_qubits": 19
+          },
+          "official_replay_metrics": {
+            "two_qubit_gates": 10950,
+            "depth": 19703,
+            "total_gates": 28363,
+            "active_qubits": 19
+          },
+          "official_replay_count_ops": {
+            "rz": 12301,
+            "cx": 10950,
+            "sx": 4862,
+            "x": 250,
+            "measure": 10
+          },
+          "replay_compile_seconds": 0.20273099200130673
+        }
+      ],
+      "scored_winner_record_index": 0,
+      "reported_official_metrics": {
+        "active_qubits": 19,
+        "depth": 19703,
+        "total_gates": 28363,
+        "two_qubit_gates": 10950
+      },
+      "replayed_winner_matches_actual_official_report": true
+    },
+    {
+      "run": 1,
+      "tier": 6,
+      "actual_unique_records": 2,
+      "actual_total_executions": 2,
+      "captured_from_actual_official_scoring_worker": true,
+      "circuits": [
+        {
+          "record_index": 0,
+          "qubits": 23,
+          "classical_bits": 1,
+          "native_count_ops": {
+            "rz": 574,
+            "cx": 436,
+            "sx": 196,
+            "measure": 1
+          },
+          "native_metrics": {
+            "two_qubit_gates": 436,
+            "depth": 819,
+            "total_gates": 1206,
+            "active_qubits": 23
+          },
+          "official_replay_metrics": {
+            "two_qubit_gates": 436,
+            "depth": 819,
+            "total_gates": 1206,
+            "active_qubits": 23
+          },
+          "official_replay_count_ops": {
+            "rz": 574,
+            "cx": 436,
+            "sx": 196,
+            "measure": 1
+          },
+          "replay_compile_seconds": 0.011015950000000885
+        },
+        {
+          "record_index": 1,
+          "qubits": 22,
+          "classical_bits": 14,
+          "native_count_ops": {
+            "rz": 4178,
+            "cx": 3000,
+            "sx": 1502,
+            "measure": 14
+          },
+          "native_metrics": {
+            "two_qubit_gates": 3000,
+            "depth": 5691,
+            "total_gates": 8680,
+            "active_qubits": 22
+          },
+          "official_replay_metrics": {
+            "two_qubit_gates": 3000,
+            "depth": 5691,
+            "total_gates": 8680,
+            "active_qubits": 22
+          },
+          "official_replay_count_ops": {
+            "rz": 4178,
+            "cx": 3000,
+            "sx": 1502,
+            "measure": 14
+          },
+          "replay_compile_seconds": 0.05866794300163747
+        }
+      ],
+      "scored_winner_record_index": 1,
+      "reported_official_metrics": {
+        "active_qubits": 22,
+        "depth": 5691,
+        "total_gates": 8680,
+        "two_qubit_gates": 3000
+      },
+      "replayed_winner_matches_actual_official_report": true
+    },
+    {
+      "run": 1,
+      "tier": 7,
+      "actual_unique_records": 2,
+      "actual_total_executions": 2,
+      "captured_from_actual_official_scoring_worker": true,
+      "circuits": [
+        {
+          "record_index": 0,
+          "qubits": 15,
+          "classical_bits": 14,
+          "native_count_ops": {
+            "rz": 267,
+            "cx": 209,
+            "sx": 31,
+            "x": 26,
+            "measure": 14
+          },
+          "native_metrics": {
+            "two_qubit_gates": 209,
+            "depth": 155,
+            "total_gates": 533,
+            "active_qubits": 15
+          },
+          "official_replay_metrics": {
+            "two_qubit_gates": 209,
+            "depth": 155,
+            "total_gates": 533,
+            "active_qubits": 15
+          },
+          "official_replay_count_ops": {
+            "rz": 267,
+            "cx": 209,
+            "sx": 31,
+            "x": 26,
+            "measure": 14
+          },
+          "replay_compile_seconds": 0.0065530520005268045
+        },
+        {
+          "record_index": 1,
+          "qubits": 15,
+          "classical_bits": 14,
+          "native_count_ops": {
+            "rz": 85,
+            "sx": 31,
+            "cx": 27,
+            "x": 18,
+            "measure": 14
+          },
+          "native_metrics": {
+            "two_qubit_gates": 27,
+            "depth": 68,
+            "total_gates": 161,
+            "active_qubits": 15
+          },
+          "official_replay_metrics": {
+            "two_qubit_gates": 27,
+            "depth": 68,
+            "total_gates": 161,
+            "active_qubits": 15
+          },
+          "official_replay_count_ops": {
+            "rz": 85,
+            "sx": 31,
+            "cx": 27,
+            "x": 18,
+            "measure": 14
+          },
+          "replay_compile_seconds": 0.0035720890009542927
+        }
+      ],
+      "scored_winner_record_index": 0,
+      "reported_official_metrics": {
+        "active_qubits": 15,
+        "depth": 155,
+        "total_gates": 533,
+        "two_qubit_gates": 209
+      },
+      "replayed_winner_matches_actual_official_report": true
+    },
+    {
+      "run": 2,
+      "tier": 5,
+      "actual_unique_records": 1,
+      "actual_total_executions": 1,
+      "captured_from_actual_official_scoring_worker": true,
+      "circuits": [
+        {
+          "record_index": 0,
+          "qubits": 19,
+          "classical_bits": 10,
+          "native_count_ops": {
+            "rz": 12301,
+            "cx": 11000,
+            "sx": 4862,
+            "x": 250,
+            "measure": 10
+          },
+          "native_metrics": {
+            "two_qubit_gates": 11000,
+            "depth": 19703,
+            "total_gates": 28413,
+            "active_qubits": 19
+          },
+          "official_replay_metrics": {
+            "two_qubit_gates": 10950,
+            "depth": 19703,
+            "total_gates": 28363,
+            "active_qubits": 19
+          },
+          "official_replay_count_ops": {
+            "rz": 12301,
+            "cx": 10950,
+            "sx": 4862,
+            "x": 250,
+            "measure": 10
+          },
+          "replay_compile_seconds": 0.18858037700192654
+        }
+      ],
+      "scored_winner_record_index": 0,
+      "reported_official_metrics": {
+        "active_qubits": 19,
+        "depth": 19703,
+        "total_gates": 28363,
+        "two_qubit_gates": 10950
+      },
+      "replayed_winner_matches_actual_official_report": true
+    },
+    {
+      "run": 2,
+      "tier": 6,
+      "actual_unique_records": 2,
+      "actual_total_executions": 2,
+      "captured_from_actual_official_scoring_worker": true,
+      "circuits": [
+        {
+          "record_index": 0,
+          "qubits": 23,
+          "classical_bits": 1,
+          "native_count_ops": {
+            "rz": 574,
+            "cx": 436,
+            "sx": 196,
+            "measure": 1
+          },
+          "native_metrics": {
+            "two_qubit_gates": 436,
+            "depth": 819,
+            "total_gates": 1206,
+            "active_qubits": 23
+          },
+          "official_replay_metrics": {
+            "two_qubit_gates": 436,
+            "depth": 819,
+            "total_gates": 1206,
+            "active_qubits": 23
+          },
+          "official_replay_count_ops": {
+            "rz": 574,
+            "cx": 436,
+            "sx": 196,
+            "measure": 1
+          },
+          "replay_compile_seconds": 0.012872222003352363
+        },
+        {
+          "record_index": 1,
+          "qubits": 22,
+          "classical_bits": 14,
+          "native_count_ops": {
+            "rz": 4178,
+            "cx": 3000,
+            "sx": 1502,
+            "measure": 14
+          },
+          "native_metrics": {
+            "two_qubit_gates": 3000,
+            "depth": 5691,
+            "total_gates": 8680,
+            "active_qubits": 22
+          },
+          "official_replay_metrics": {
+            "two_qubit_gates": 3000,
+            "depth": 5691,
+            "total_gates": 8680,
+            "active_qubits": 22
+          },
+          "official_replay_count_ops": {
+            "rz": 4178,
+            "cx": 3000,
+            "sx": 1502,
+            "measure": 14
+          },
+          "replay_compile_seconds": 0.05955881000045338
+        }
+      ],
+      "scored_winner_record_index": 1,
+      "reported_official_metrics": {
+        "active_qubits": 22,
+        "depth": 5691,
+        "total_gates": 8680,
+        "two_qubit_gates": 3000
+      },
+      "replayed_winner_matches_actual_official_report": true
+    },
+    {
+      "run": 2,
+      "tier": 7,
+      "actual_unique_records": 2,
+      "actual_total_executions": 2,
+      "captured_from_actual_official_scoring_worker": true,
+      "circuits": [
+        {
+          "record_index": 0,
+          "qubits": 15,
+          "classical_bits": 14,
+          "native_count_ops": {
+            "rz": 267,
+            "cx": 209,
+            "sx": 31,
+            "x": 26,
+            "measure": 14
+          },
+          "native_metrics": {
+            "two_qubit_gates": 209,
+            "depth": 155,
+            "total_gates": 533,
+            "active_qubits": 15
+          },
+          "official_replay_metrics": {
+            "two_qubit_gates": 209,
+            "depth": 155,
+            "total_gates": 533,
+            "active_qubits": 15
+          },
+          "official_replay_count_ops": {
+            "rz": 267,
+            "cx": 209,
+            "sx": 31,
+            "x": 26,
+            "measure": 14
+          },
+          "replay_compile_seconds": 0.006497903003037209
+        },
+        {
+          "record_index": 1,
+          "qubits": 15,
+          "classical_bits": 14,
+          "native_count_ops": {
+            "rz": 85,
+            "sx": 31,
+            "cx": 27,
+            "x": 18,
+            "measure": 14
+          },
+          "native_metrics": {
+            "two_qubit_gates": 27,
+            "depth": 68,
+            "total_gates": 161,
+            "active_qubits": 15
+          },
+          "official_replay_metrics": {
+            "two_qubit_gates": 27,
+            "depth": 68,
+            "total_gates": 161,
+            "active_qubits": 15
+          },
+          "official_replay_count_ops": {
+            "rz": 85,
+            "sx": 31,
+            "cx": 27,
+            "x": 18,
+            "measure": 14
+          },
+          "replay_compile_seconds": 0.004073635998793179
+        }
+      ],
+      "scored_winner_record_index": 0,
+      "reported_official_metrics": {
+        "active_qubits": 15,
+        "depth": 155,
+        "total_gates": 533,
+        "two_qubit_gates": 209
+      },
+      "replayed_winner_matches_actual_official_report": true
+    },
+    {
+      "run": 3,
+      "tier": 5,
+      "actual_unique_records": 1,
+      "actual_total_executions": 1,
+      "captured_from_actual_official_scoring_worker": true,
+      "circuits": [
+        {
+          "record_index": 0,
+          "qubits": 19,
+          "classical_bits": 10,
+          "native_count_ops": {
+            "rz": 12301,
+            "cx": 11000,
+            "sx": 4862,
+            "x": 250,
+            "measure": 10
+          },
+          "native_metrics": {
+            "two_qubit_gates": 11000,
+            "depth": 19703,
+            "total_gates": 28413,
+            "active_qubits": 19
+          },
+          "official_replay_metrics": {
+            "two_qubit_gates": 10950,
+            "depth": 19703,
+            "total_gates": 28363,
+            "active_qubits": 19
+          },
+          "official_replay_count_ops": {
+            "rz": 12301,
+            "cx": 10950,
+            "sx": 4862,
+            "x": 250,
+            "measure": 10
+          },
+          "replay_compile_seconds": 0.1848505079979077
+        }
+      ],
+      "scored_winner_record_index": 0,
+      "reported_official_metrics": {
+        "active_qubits": 19,
+        "depth": 19703,
+        "total_gates": 28363,
+        "two_qubit_gates": 10950
+      },
+      "replayed_winner_matches_actual_official_report": true
+    },
+    {
+      "run": 3,
+      "tier": 6,
+      "actual_unique_records": 2,
+      "actual_total_executions": 2,
+      "captured_from_actual_official_scoring_worker": true,
+      "circuits": [
+        {
+          "record_index": 0,
+          "qubits": 23,
+          "classical_bits": 1,
+          "native_count_ops": {
+            "rz": 574,
+            "cx": 436,
+            "sx": 196,
+            "measure": 1
+          },
+          "native_metrics": {
+            "two_qubit_gates": 436,
+            "depth": 819,
+            "total_gates": 1206,
+            "active_qubits": 23
+          },
+          "official_replay_metrics": {
+            "two_qubit_gates": 436,
+            "depth": 819,
+            "total_gates": 1206,
+            "active_qubits": 23
+          },
+          "official_replay_count_ops": {
+            "rz": 574,
+            "cx": 436,
+            "sx": 196,
+            "measure": 1
+          },
+          "replay_compile_seconds": 0.012548443999548908
+        },
+        {
+          "record_index": 1,
+          "qubits": 22,
+          "classical_bits": 14,
+          "native_count_ops": {
+            "rz": 4178,
+            "cx": 3000,
+            "sx": 1502,
+            "measure": 14
+          },
+          "native_metrics": {
+            "two_qubit_gates": 3000,
+            "depth": 5691,
+            "total_gates": 8680,
+            "active_qubits": 22
+          },
+          "official_replay_metrics": {
+            "two_qubit_gates": 3000,
+            "depth": 5691,
+            "total_gates": 8680,
+            "active_qubits": 22
+          },
+          "official_replay_count_ops": {
+            "rz": 4178,
+            "cx": 3000,
+            "sx": 1502,
+            "measure": 14
+          },
+          "replay_compile_seconds": 0.0676410920023045
+        }
+      ],
+      "scored_winner_record_index": 1,
+      "reported_official_metrics": {
+        "active_qubits": 22,
+        "depth": 5691,
+        "total_gates": 8680,
+        "two_qubit_gates": 3000
+      },
+      "replayed_winner_matches_actual_official_report": true
+    },
+    {
+      "run": 3,
+      "tier": 7,
+      "actual_unique_records": 2,
+      "actual_total_executions": 2,
+      "captured_from_actual_official_scoring_worker": true,
+      "circuits": [
+        {
+          "record_index": 0,
+          "qubits": 15,
+          "classical_bits": 14,
+          "native_count_ops": {
+            "rz": 267,
+            "cx": 209,
+            "sx": 31,
+            "x": 26,
+            "measure": 14
+          },
+          "native_metrics": {
+            "two_qubit_gates": 209,
+            "depth": 155,
+            "total_gates": 533,
+            "active_qubits": 15
+          },
+          "official_replay_metrics": {
+            "two_qubit_gates": 209,
+            "depth": 155,
+            "total_gates": 533,
+            "active_qubits": 15
+          },
+          "official_replay_count_ops": {
+            "rz": 267,
+            "cx": 209,
+            "sx": 31,
+            "x": 26,
+            "measure": 14
+          },
+          "replay_compile_seconds": 0.00922099600211368
+        },
+        {
+          "record_index": 1,
+          "qubits": 15,
+          "classical_bits": 14,
+          "native_count_ops": {
+            "rz": 85,
+            "sx": 31,
+            "cx": 27,
+            "x": 18,
+            "measure": 14
+          },
+          "native_metrics": {
+            "two_qubit_gates": 27,
+            "depth": 68,
+            "total_gates": 161,
+            "active_qubits": 15
+          },
+          "official_replay_metrics": {
+            "two_qubit_gates": 27,
+            "depth": 68,
+            "total_gates": 161,
+            "active_qubits": 15
+          },
+          "official_replay_count_ops": {
+            "rz": 85,
+            "sx": 31,
+            "cx": 27,
+            "x": 18,
+            "measure": 14
+          },
+          "replay_compile_seconds": 0.004872863002674421
+        }
+      ],
+      "scored_winner_record_index": 0,
+      "reported_official_metrics": {
+        "active_qubits": 15,
+        "depth": 155,
+        "total_gates": 533,
+        "two_qubit_gates": 209
+      },
+      "replayed_winner_matches_actual_official_report": true
+    }
+  ],
+  "comparisons": [
+    {
+      "reference_run": 1,
+      "run": 2,
+      "tier": 5,
+      "record_counts_equal": true,
+      "per_record": [
+        {
+          "record_index": 0,
+          "supported": true,
+          "shape_equal": true,
+          "exact_order_and_native_operations_equal": true,
+          "global_phase_equal": true
+        }
+      ],
+      "winner_indices_equal": true,
+      "selected_winner_equality": {
+        "supported": true,
+        "shape_equal": true,
+        "exact_order_and_native_operations_equal": true,
+        "global_phase_equal": true
+      }
+    },
+    {
+      "reference_run": 1,
+      "run": 2,
+      "tier": 6,
+      "record_counts_equal": true,
+      "per_record": [
+        {
+          "record_index": 0,
+          "supported": true,
+          "shape_equal": true,
+          "exact_order_and_native_operations_equal": true,
+          "global_phase_equal": true
+        },
+        {
+          "record_index": 1,
+          "supported": true,
+          "shape_equal": true,
+          "exact_order_and_native_operations_equal": true,
+          "global_phase_equal": true
+        }
+      ],
+      "winner_indices_equal": true,
+      "selected_winner_equality": {
+        "supported": true,
+        "shape_equal": true,
+        "exact_order_and_native_operations_equal": true,
+        "global_phase_equal": true
+      }
+    },
+    {
+      "reference_run": 1,
+      "run": 2,
+      "tier": 7,
+      "record_counts_equal": true,
+      "per_record": [
+        {
+          "record_index": 0,
+          "supported": true,
+          "shape_equal": true,
+          "exact_order_and_native_operations_equal": true,
+          "global_phase_equal": true
+        },
+        {
+          "record_index": 1,
+          "supported": true,
+          "shape_equal": true,
+          "exact_order_and_native_operations_equal": true,
+          "global_phase_equal": true
+        }
+      ],
+      "winner_indices_equal": true,
+      "selected_winner_equality": {
+        "supported": true,
+        "shape_equal": true,
+        "exact_order_and_native_operations_equal": true,
+        "global_phase_equal": true
+      }
+    },
+    {
+      "reference_run": 1,
+      "run": 3,
+      "tier": 5,
+      "record_counts_equal": true,
+      "per_record": [
+        {
+          "record_index": 0,
+          "supported": true,
+          "shape_equal": true,
+          "exact_order_and_native_operations_equal": true,
+          "global_phase_equal": true
+        }
+      ],
+      "winner_indices_equal": true,
+      "selected_winner_equality": {
+        "supported": true,
+        "shape_equal": true,
+        "exact_order_and_native_operations_equal": true,
+        "global_phase_equal": true
+      }
+    },
+    {
+      "reference_run": 1,
+      "run": 3,
+      "tier": 6,
+      "record_counts_equal": true,
+      "per_record": [
+        {
+          "record_index": 0,
+          "supported": true,
+          "shape_equal": true,
+          "exact_order_and_native_operations_equal": true,
+          "global_phase_equal": true
+        },
+        {
+          "record_index": 1,
+          "supported": true,
+          "shape_equal": true,
+          "exact_order_and_native_operations_equal": true,
+          "global_phase_equal": true
+        }
+      ],
+      "winner_indices_equal": true,
+      "selected_winner_equality": {
+        "supported": true,
+        "shape_equal": true,
+        "exact_order_and_native_operations_equal": true,
+        "global_phase_equal": true
+      }
+    },
+    {
+      "reference_run": 1,
+      "run": 3,
+      "tier": 7,
+      "record_counts_equal": true,
+      "per_record": [
+        {
+          "record_index": 0,
+          "supported": true,
+          "shape_equal": true,
+          "exact_order_and_native_operations_equal": true,
+          "global_phase_equal": true
+        },
+        {
+          "record_index": 1,
+          "supported": true,
+          "shape_equal": true,
+          "exact_order_and_native_operations_equal": true,
+          "global_phase_equal": true
+        }
+      ],
+      "winner_indices_equal": true,
+      "selected_winner_equality": {
+        "supported": true,
+        "shape_equal": true,
+        "exact_order_and_native_operations_equal": true,
+        "global_phase_equal": true
+      }
+    }
+  ],
+  "all_official_winners_reproduced": true,
+  "all_selected_winners_exact_native_sequence_equal": true,
+  "private_circuit_data_saved_in_evidence": false,
+  "private_parameter_or_fingerprint_values_saved": false,
+  "native_parameter_comparison_tolerance": 0,
+  "native_parameter_values_persisted": false,
+  "oracle_internal_decomposition_inspected": false,
+  "actual_aer_runs_added_by_this_analysis": 0,
+  "historical_actual_circuit_comparison_available": false,
+  "scope": "Equality concerns actual recorder-normalized native scoring-input circuits across these three local runs, not missing historical remote circuit payloads; raw QPY UUID/metadata byte identity is not required."
+}

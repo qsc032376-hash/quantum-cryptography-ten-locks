@@ -1,0 +1,99 @@
+{
+  "verdict": "SAFE_WITH_VARIANCE",
+  "completed_at": "2026-11-11T19:08:56.951921-05:00",
+  "approved_commit": "ce75c0721622d363e77912191a52a02c34f92472",
+  "approved_zip_sha256": "64c0e648010b3e601d3696e051b7f31ed4bbe8d3b8039c22b10fb2a4c7806c94",
+  "approved_zip_unchanged": true,
+  "three_scheduled_runs_completed": 3,
+  "new_full_results": 30,
+  "new_hash_matches": 30,
+  "new_flagged_tiers": 0,
+  "required_execution_checks_pass": true,
+  "all_ten_per_tier_metrics_identical_across_three_runs": true,
+  "end_dependency_versions_and_python_binary_match_start": true,
+  "actual_scoring_input_capture_complete": true,
+  "all_actual_winner_inputs_exact_native_sequence_and_global_phase_equal": true,
+  "actual_scoring_replay_matches_original_official_reports": true,
+  "historical_exact_metrics_reproduced": false,
+  "historical_differences": [
+    {
+      "tier": 5,
+      "metric": "total_gates",
+      "historical": 28413,
+      "three_runs_each": 28363,
+      "delta": -50
+    },
+    {
+      "tier": 6,
+      "metric": "depth",
+      "historical": 5715,
+      "three_runs_each": 5691,
+      "delta": -24
+    },
+    {
+      "tier": 6,
+      "metric": "total_gates",
+      "historical": 8752,
+      "three_runs_each": 8680,
+      "delta": -72
+    },
+    {
+      "tier": 7,
+      "metric": "depth",
+      "historical": 154,
+      "three_runs_each": 155,
+      "delta": 1
+    },
+    {
+      "tier": 7,
+      "metric": "total_gates",
+      "historical": 536,
+      "three_runs_each": 533,
+      "delta": -3
+    }
+  ],
+  "same_environment_totals_each_run": [
+    {
+      "two_qubit_gates": 103166,
+      "depth": 217602,
+      "total_gates": 294857
+    },
+    {
+      "two_qubit_gates": 103166,
+      "depth": 217602,
+      "total_gates": 294857
+    },
+    {
+      "two_qubit_gates": 103166,
+      "depth": 217602,
+      "total_gates": 294857
+    }
+  ],
+  "preservation_checks": [
+    {
+      "run": 1,
+      "all_37_runtime_members_unchanged": true,
+      "all_protected_official_files_unchanged": true
+    },
+    {
+      "run": 2,
+      "all_37_runtime_members_unchanged": true,
+      "all_protected_official_files_unchanged": true
+    },
+    {
+      "run": 3,
+      "all_37_runtime_members_unchanged": true,
+      "all_protected_official_files_unchanged": true
+    }
+  ],
+  "cross_historical_environment_root_cause_fully_isolated": false,
+  "historical_native_circuit_identity_proven": false,
+  "acceptance_basis": "Unchanged approved bytes, three uncensored functional/metric passes, actual executed/scored-circuit provenance, stable local native circuits, and official rules scoring valid actual measurements; historical exact gate counts are not a compliance requirement.",
+  "score_impact_source": "scoring-impact.json",
+  "ranking_invariance_claimed": false,
+  "formal_cross_historical_unitary_equivalence_claimed": false,
+  "previous_strict_reference_audit_preserved": true,
+  "no_new_optimization_or_release_or_form_submission": true,
+  "private_circuit_payloads_committed": false,
+  "private_copies_removed": true
+}

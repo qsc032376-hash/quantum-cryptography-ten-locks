@@ -1,0 +1,763 @@
+{
+  "approved_commit": "ce75c0721622d363e77912191a52a02c34f92472",
+  "official_commit": "340e1ce18cafa69f4cea906f88f93741738dc0fa",
+  "zip_sha256": "64c0e648010b3e601d3696e051b7f31ed4bbe8d3b8039c22b10fb2a4c7806c94",
+  "started_at": "2026-11-11T18:57:57.834003-05:00",
+  "planned_runs": 3,
+  "retry_policy": "Exactly three sequential scheduled runs; all results retained, no retry or replacement.",
+  "fixed_environment": {
+    "python": "3.12.14",
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "machine": "x86_64",
+    "packages": {
+      "qiskit": "2.6.1",
+      "qiskit-aer": "0.18.2",
+      "numpy": "2.5.4",
+      "pyyaml": "6.0.3",
+      "scipy": "1.18.1",
+      "rustworkx": "0.18.1",
+      "dill": "0.4.1",
+      "stevedore": "5.9.1",
+      "psutil": "7.2.2"
+    },
+    "environment": {
+      "PYTHONHASHSEED": "0",
+      "OMP_NUM_THREADS": "2",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "QISKIT_PARALLEL": "FALSE",
+      "RAYON_NUM_THREADS": null
+    },
+    "python_executable": "/workspace/work/tier01-venv/bin/python",
+    "python_executable_sha256": "fa67443527ed9647f760d807e2a38f26340757123e643c4639cf273ed15d5ea7",
+    "checker_sha256": "d6e1351600f69739d3f481c7fae6292bd6ab1d83c141997aafd8a848d5d1cd36",
+    "config_sha256": "16eea5d6bcd4ad44b60cd0b50a15d7c2fbdee98ec16b9fe5b61426a8f020a31e"
+  },
+  "checker_or_submission_patched": false,
+  "simulator_seed_overridden": false,
+  "circuit_capture": "External observer copies completed official input files seen in actual --_transpile worker argv; does not patch the Checker.",
+  "capture_targets": [
+    5,
+    6,
+    7
+  ],
+  "private_payloads_committed": false,
+  "runs": [
+    {
+      "run": 1,
+      "started_at": "2026-11-11T18:57:57.861747-05:00",
+      "command": [
+        "/workspace/work/tier01-venv/bin/python",
+        "-I",
+        "tools/check_submission.py",
+        "submissions/team3",
+        "--out",
+        "/workspace/work/v63-metrics-reconciliation/docs/v63-metrics-reconciliation/run-1/checker"
+      ],
+      "cwd": "/workspace/scratch/v63-metrics-private/official-1",
+      "captured_tiers": {
+        "5": {
+          "captured": true,
+          "unique_records": 1,
+          "origin": "actual official scoring worker input",
+          "complete_framing": true,
+          "worker_python_hash_seed": "0",
+          "worker_qiskit_parallel": "FALSE",
+          "worker_isolated_flag_present": false,
+          "private_payload_persisted_in_git": false
+        },
+        "6": {
+          "captured": true,
+          "unique_records": 2,
+          "origin": "actual official scoring worker input",
+          "complete_framing": true,
+          "worker_python_hash_seed": "0",
+          "worker_qiskit_parallel": "FALSE",
+          "worker_isolated_flag_present": false,
+          "private_payload_persisted_in_git": false
+        },
+        "7": {
+          "captured": true,
+          "unique_records": 2,
+          "origin": "actual official scoring worker input",
+          "complete_framing": true,
+          "worker_python_hash_seed": "0",
+          "worker_qiskit_parallel": "FALSE",
+          "worker_isolated_flag_present": false,
+          "private_payload_persisted_in_git": false
+        }
+      },
+      "same_environment": true,
+      "finished_at": "2026-11-11T19:00:49.624338-05:00",
+      "exit_code": 0,
+      "resource_state": "ok",
+      "wall_seconds": 171.76236644600067,
+      "sampled_peak_process_tree_rss_mib": 695.07421875,
+      "sample_period_ms": 10,
+      "official_solve_timeout_s": 120,
+      "official_transpile_timeout_s": 120,
+      "submission_bytes_unchanged": true,
+      "checker_unchanged": true,
+      "scoring_config_unchanged": true,
+      "archive_unchanged": true,
+      "official_report_sha256": "c0062410a79c38d981b54b283c096e1ba6f47183f9226fe86b845ef5e747db46",
+      "tiers": {
+        "1": {
+          "circuit_executed": true,
+          "circuits_executed": 1,
+          "flags": [],
+          "hash_ok": true,
+          "metrics": {
+            "active_qubits": 25,
+            "depth": 44,
+            "total_gates": 298,
+            "two_qubit_gates": 151
+          },
+          "metrics_status": "ok",
+          "oracle_calls": 1,
+          "solve_seconds": 21.856,
+          "status": "full",
+          "unique_circuits": 1
+        },
+        "10": {
+          "circuit_executed": true,
+          "circuits_executed": 1,
+          "flags": [],
+          "hash_ok": true,
+          "metrics": {
+            "active_qubits": 19,
+            "depth": 92604,
+            "total_gates": 111337,
+            "two_qubit_gates": 38823
+          },
+          "metrics_status": "ok",
+          "oracle_calls": null,
+          "solve_seconds": 10.419,
+          "status": "full",
+          "unique_circuits": 1
+        },
+        "2": {
+          "circuit_executed": true,
+          "circuits_executed": 2048,
+          "flags": [],
+          "hash_ok": true,
+          "metrics": {
+            "active_qubits": 1,
+            "depth": 3,
+            "total_gates": 3,
+            "two_qubit_gates": 0
+          },
+          "metrics_status": "ok",
+          "oracle_calls": null,
+          "repeat_measurements": 0,
+          "solve_seconds": 0.879,
+          "status": "full",
+          "unique_circuits": 2
+        },
+        "3": {
+          "circuit_executed": true,
+          "circuits_executed": 24,
+          "flags": [],
+          "hash_ok": true,
+          "metrics": {
+            "active_qubits": 7,
+            "depth": 8771,
+            "total_gates": 19497,
+            "two_qubit_gates": 7808
+          },
+          "metrics_status": "ok",
+          "oracle_calls": 1,
+          "solve_seconds": 9.512,
+          "status": "full",
+          "unique_circuits": 24
+        },
+        "4": {
+          "circuit_executed": true,
+          "circuits_executed": 1,
+          "flags": [],
+          "hash_ok": true,
+          "metrics": {
+            "active_qubits": 20,
+            "depth": 195,
+            "total_gates": 455,
+            "two_qubit_gates": 183
+          },
+          "metrics_status": "ok",
+          "oracle_calls": null,
+          "solve_seconds": 0.208,
+          "status": "full",
+          "unique_circuits": 1
+        },
+        "5": {
+          "circuit_executed": true,
+          "circuits_executed": 1,
+          "flags": [],
+          "hash_ok": true,
+          "metrics": {
+            "active_qubits": 19,
+            "depth": 19703,
+            "total_gates": 28363,
+            "two_qubit_gates": 10950
+          },
+          "metrics_status": "ok",
+          "oracle_calls": null,
+          "solve_seconds": 28.304,
+          "status": "full",
+          "unique_circuits": 1
+        },
+        "6": {
+          "circuit_executed": true,
+          "circuits_executed": 2,
+          "flags": [],
+          "hash_ok": true,
+          "metrics": {
+            "active_qubits": 22,
+            "depth": 5691,
+            "total_gates": 8680,
+            "two_qubit_gates": 3000
+          },
+          "metrics_status": "ok",
+          "oracle_calls": null,
+          "solve_seconds": 44.15,
+          "status": "full",
+          "unique_circuits": 2
+        },
+        "7": {
+          "circuit_executed": true,
+          "circuits_executed": 2,
+          "flags": [],
+          "hash_ok": true,
+          "metrics": {
+            "active_qubits": 15,
+            "depth": 155,
+            "total_gates": 533,
+            "two_qubit_gates": 209
+          },
+          "metrics_status": "ok",
+          "oracle_calls": null,
+          "solve_seconds": 0.142,
+          "status": "full",
+          "unique_circuits": 2
+        },
+        "8": {
+          "circuit_executed": true,
+          "circuits_executed": 1,
+          "flags": [],
+          "hash_ok": true,
+          "metrics": {
+            "active_qubits": 18,
+            "depth": 18804,
+            "total_gates": 22861,
+            "two_qubit_gates": 7856
+          },
+          "metrics_status": "ok",
+          "oracle_calls": null,
+          "solve_seconds": 5.864,
+          "status": "full",
+          "unique_circuits": 1
+        },
+        "9": {
+          "circuit_executed": true,
+          "circuits_executed": 1,
+          "flags": [],
+          "hash_ok": true,
+          "metrics": {
+            "active_qubits": 22,
+            "depth": 71632,
+            "total_gates": 102830,
+            "two_qubit_gates": 34186
+          },
+          "metrics_status": "ok",
+          "oracle_calls": null,
+          "solve_seconds": 29.422,
+          "status": "full",
+          "unique_circuits": 1
+        }
+      },
+      "totals": {
+        "two_qubit_gates": 103166,
+        "depth": 217602,
+        "total_gates": 294857
+      },
+      "all_required_checks_pass": true
+    },
+    {
+      "run": 2,
+      "started_at": "2026-11-11T19:00:49.651365-05:00",
+      "command": [
+        "/workspace/work/tier01-venv/bin/python",
+        "-I",
+        "tools/check_submission.py",
+        "submissions/team3",
+        "--out",
+        "/workspace/work/v63-metrics-reconciliation/docs/v63-metrics-reconciliation/run-2/checker"
+      ],
+      "cwd": "/workspace/scratch/v63-metrics-private/official-2",
+      "captured_tiers": {
+        "5": {
+          "captured": true,
+          "unique_records": 1,
+          "origin": "actual official scoring worker input",
+          "complete_framing": true,
+          "worker_python_hash_seed": "0",
+          "worker_qiskit_parallel": "FALSE",
+          "worker_isolated_flag_present": false,
+          "private_payload_persisted_in_git": false
+        },
+        "6": {
+          "captured": true,
+          "unique_records": 2,
+          "origin": "actual official scoring worker input",
+          "complete_framing": true,
+          "worker_python_hash_seed": "0",
+          "worker_qiskit_parallel": "FALSE",
+          "worker_isolated_flag_present": false,
+          "private_payload_persisted_in_git": false
+        },
+        "7": {
+          "captured": true,
+          "unique_records": 2,
+          "origin": "actual official scoring worker input",
+          "complete_framing": true,
+          "worker_python_hash_seed": "0",
+          "worker_qiskit_parallel": "FALSE",
+          "worker_isolated_flag_present": false,
+          "private_payload_persisted_in_git": false
+        }
+      },
+      "same_environment": true,
+      "finished_at": "2026-11-11T19:04:00.120933-05:00",
+      "exit_code": 0,
+      "resource_state": "ok",
+      "wall_seconds": 190.46895880300144,
+      "sampled_peak_process_tree_rss_mib": 694.7421875,
+      "sample_period_ms": 10,
+      "official_solve_timeout_s": 120,
+      "official_transpile_timeout_s": 120,
+      "submission_bytes_unchanged": true,
+      "checker_unchanged": true,
+      "scoring_config_unchanged": true,
+      "archive_unchanged": true,
+      "official_report_sha256": "017f91a4e74c429046a1b16b60486a50c46e40dbeb1d78e9e6ad5799df4d9de7",
+      "tiers": {
+        "1": {
+          "circuit_executed": true,
+          "circuits_executed": 1,
+          "flags": [],
+          "hash_ok": true,
+          "metrics": {
+            "active_qubits": 25,
+            "depth": 44,
+            "total_gates": 298,
+            "two_qubit_gates": 151
+          },
+          "metrics_status": "ok",
+          "oracle_calls": 1,
+          "solve_seconds": 35.744,
+          "status": "full",
+          "unique_circuits": 1
+        },
+        "10": {
+          "circuit_executed": true,
+          "circuits_executed": 1,
+          "flags": [],
+          "hash_ok": true,
+          "metrics": {
+            "active_qubits": 19,
+            "depth": 92604,
+            "total_gates": 111337,
+            "two_qubit_gates": 38823
+          },
+          "metrics_status": "ok",
+          "oracle_calls": null,
+          "solve_seconds": 14.782,
+          "status": "full",
+          "unique_circuits": 1
+        },
+        "2": {
+          "circuit_executed": true,
+          "circuits_executed": 2048,
+          "flags": [],
+          "hash_ok": true,
+          "metrics": {
+            "active_qubits": 1,
+            "depth": 3,
+            "total_gates": 3,
+            "two_qubit_gates": 0
+          },
+          "metrics_status": "ok",
+          "oracle_calls": null,
+          "repeat_measurements": 0,
+          "solve_seconds": 1.011,
+          "status": "full",
+          "unique_circuits": 2
+        },
+        "3": {
+          "circuit_executed": true,
+          "circuits_executed": 24,
+          "flags": [],
+          "hash_ok": true,
+          "metrics": {
+            "active_qubits": 7,
+            "depth": 8771,
+            "total_gates": 19497,
+            "two_qubit_gates": 7808
+          },
+          "metrics_status": "ok",
+          "oracle_calls": 1,
+          "solve_seconds": 9.09,
+          "status": "full",
+          "unique_circuits": 24
+        },
+        "4": {
+          "circuit_executed": true,
+          "circuits_executed": 1,
+          "flags": [],
+          "hash_ok": true,
+          "metrics": {
+            "active_qubits": 20,
+            "depth": 195,
+            "total_gates": 455,
+            "two_qubit_gates": 183
+          },
+          "metrics_status": "ok",
+          "oracle_calls": null,
+          "solve_seconds": 0.186,
+          "status": "full",
+          "unique_circuits": 1
+        },
+        "5": {
+          "circuit_executed": true,
+          "circuits_executed": 1,
+          "flags": [],
+          "hash_ok": true,
+          "metrics": {
+            "active_qubits": 19,
+            "depth": 19703,
+            "total_gates": 28363,
+            "two_qubit_gates": 10950
+          },
+          "metrics_status": "ok",
+          "oracle_calls": null,
+          "solve_seconds": 28.807,
+          "status": "full",
+          "unique_circuits": 1
+        },
+        "6": {
+          "circuit_executed": true,
+          "circuits_executed": 2,
+          "flags": [],
+          "hash_ok": true,
+          "metrics": {
+            "active_qubits": 22,
+            "depth": 5691,
+            "total_gates": 8680,
+            "two_qubit_gates": 3000
+          },
+          "metrics_status": "ok",
+          "oracle_calls": null,
+          "solve_seconds": 41.327,
+          "status": "full",
+          "unique_circuits": 2
+        },
+        "7": {
+          "circuit_executed": true,
+          "circuits_executed": 2,
+          "flags": [],
+          "hash_ok": true,
+          "metrics": {
+            "active_qubits": 15,
+            "depth": 155,
+            "total_gates": 533,
+            "two_qubit_gates": 209
+          },
+          "metrics_status": "ok",
+          "oracle_calls": null,
+          "solve_seconds": 0.127,
+          "status": "full",
+          "unique_circuits": 2
+        },
+        "8": {
+          "circuit_executed": true,
+          "circuits_executed": 1,
+          "flags": [],
+          "hash_ok": true,
+          "metrics": {
+            "active_qubits": 18,
+            "depth": 18804,
+            "total_gates": 22861,
+            "two_qubit_gates": 7856
+          },
+          "metrics_status": "ok",
+          "oracle_calls": null,
+          "solve_seconds": 5.428,
+          "status": "full",
+          "unique_circuits": 1
+        },
+        "9": {
+          "circuit_executed": true,
+          "circuits_executed": 1,
+          "flags": [],
+          "hash_ok": true,
+          "metrics": {
+            "active_qubits": 22,
+            "depth": 71632,
+            "total_gates": 102830,
+            "two_qubit_gates": 34186
+          },
+          "metrics_status": "ok",
+          "oracle_calls": null,
+          "solve_seconds": 32.639,
+          "status": "full",
+          "unique_circuits": 1
+        }
+      },
+      "totals": {
+        "two_qubit_gates": 103166,
+        "depth": 217602,
+        "total_gates": 294857
+      },
+      "all_required_checks_pass": true
+    },
+    {
+      "run": 3,
+      "started_at": "2026-11-11T19:04:00.154585-05:00",
+      "command": [
+        "/workspace/work/tier01-venv/bin/python",
+        "-I",
+        "tools/check_submission.py",
+        "submissions/team3",
+        "--out",
+        "/workspace/work/v63-metrics-reconciliation/docs/v63-metrics-reconciliation/run-3/checker"
+      ],
+      "cwd": "/workspace/scratch/v63-metrics-private/official-3",
+      "captured_tiers": {
+        "5": {
+          "captured": true,
+          "unique_records": 1,
+          "origin": "actual official scoring worker input",
+          "complete_framing": true,
+          "worker_python_hash_seed": "0",
+          "worker_qiskit_parallel": "FALSE",
+          "worker_isolated_flag_present": false,
+          "private_payload_persisted_in_git": false
+        },
+        "6": {
+          "captured": true,
+          "unique_records": 2,
+          "origin": "actual official scoring worker input",
+          "complete_framing": true,
+          "worker_python_hash_seed": "0",
+          "worker_qiskit_parallel": "FALSE",
+          "worker_isolated_flag_present": false,
+          "private_payload_persisted_in_git": false
+        },
+        "7": {
+          "captured": true,
+          "unique_records": 2,
+          "origin": "actual official scoring worker input",
+          "complete_framing": true,
+          "worker_python_hash_seed": "0",
+          "worker_qiskit_parallel": "FALSE",
+          "worker_isolated_flag_present": false,
+          "private_payload_persisted_in_git": false
+        }
+      },
+      "same_environment": true,
+      "finished_at": "2026-11-11T19:07:05.702020-05:00",
+      "exit_code": 0,
+      "resource_state": "ok",
+      "wall_seconds": 185.5466579760032,
+      "sampled_peak_process_tree_rss_mib": 694.9609375,
+      "sample_period_ms": 10,
+      "official_solve_timeout_s": 120,
+      "official_transpile_timeout_s": 120,
+      "submission_bytes_unchanged": true,
+      "checker_unchanged": true,
+      "scoring_config_unchanged": true,
+      "archive_unchanged": true,
+      "official_report_sha256": "2a0fe78ac1c95cd5f00bdc207288673fcfef65df077a39ad9c17eb1f6f450be8",
+      "tiers": {
+        "1": {
+          "circuit_executed": true,
+          "circuits_executed": 1,
+          "flags": [],
+          "hash_ok": true,
+          "metrics": {
+            "active_qubits": 25,
+            "depth": 44,
+            "total_gates": 298,
+            "two_qubit_gates": 151
+          },
+          "metrics_status": "ok",
+          "oracle_calls": 1,
+          "solve_seconds": 21.255,
+          "status": "full",
+          "unique_circuits": 1
+        },
+        "10": {
+          "circuit_executed": true,
+          "circuits_executed": 1,
+          "flags": [],
+          "hash_ok": true,
+          "metrics": {
+            "active_qubits": 19,
+            "depth": 92604,
+            "total_gates": 111337,
+            "two_qubit_gates": 38823
+          },
+          "metrics_status": "ok",
+          "oracle_calls": null,
+          "solve_seconds": 10.188,
+          "status": "full",
+          "unique_circuits": 1
+        },
+        "2": {
+          "circuit_executed": true,
+          "circuits_executed": 2048,
+          "flags": [],
+          "hash_ok": true,
+          "metrics": {
+            "active_qubits": 1,
+            "depth": 3,
+            "total_gates": 3,
+            "two_qubit_gates": 0
+          },
+          "metrics_status": "ok",
+          "oracle_calls": null,
+          "repeat_measurements": 0,
+          "solve_seconds": 1.186,
+          "status": "full",
+          "unique_circuits": 2
+        },
+        "3": {
+          "circuit_executed": true,
+          "circuits_executed": 24,
+          "flags": [],
+          "hash_ok": true,
+          "metrics": {
+            "active_qubits": 7,
+            "depth": 8771,
+            "total_gates": 19497,
+            "two_qubit_gates": 7808
+          },
+          "metrics_status": "ok",
+          "oracle_calls": 1,
+          "solve_seconds": 11.18,
+          "status": "full",
+          "unique_circuits": 24
+        },
+        "4": {
+          "circuit_executed": true,
+          "circuits_executed": 1,
+          "flags": [],
+          "hash_ok": true,
+          "metrics": {
+            "active_qubits": 20,
+            "depth": 195,
+            "total_gates": 455,
+            "two_qubit_gates": 183
+          },
+          "metrics_status": "ok",
+          "oracle_calls": null,
+          "solve_seconds": 0.242,
+          "status": "full",
+          "unique_circuits": 1
+        },
+        "5": {
+          "circuit_executed": true,
+          "circuits_executed": 1,
+          "flags": [],
+          "hash_ok": true,
+          "metrics": {
+            "active_qubits": 19,
+            "depth": 19703,
+            "total_gates": 28363,
+            "two_qubit_gates": 10950
+          },
+          "metrics_status": "ok",
+          "oracle_calls": null,
+          "solve_seconds": 25.057,
+          "status": "full",
+          "unique_circuits": 1
+        },
+        "6": {
+          "circuit_executed": true,
+          "circuits_executed": 2,
+          "flags": [],
+          "hash_ok": true,
+          "metrics": {
+            "active_qubits": 22,
+            "depth": 5691,
+            "total_gates": 8680,
+            "two_qubit_gates": 3000
+          },
+          "metrics_status": "ok",
+          "oracle_calls": null,
+          "solve_seconds": 42.088,
+          "status": "full",
+          "unique_circuits": 2
+        },
+        "7": {
+          "circuit_executed": true,
+          "circuits_executed": 2,
+          "flags": [],
+          "hash_ok": true,
+          "metrics": {
+            "active_qubits": 15,
+            "depth": 155,
+            "total_gates": 533,
+            "two_qubit_gates": 209
+          },
+          "metrics_status": "ok",
+          "oracle_calls": null,
+          "solve_seconds": 0.127,
+          "status": "full",
+          "unique_circuits": 2
+        },
+        "8": {
+          "circuit_executed": true,
+          "circuits_executed": 1,
+          "flags": [],
+          "hash_ok": true,
+          "metrics": {
+            "active_qubits": 18,
+            "depth": 18804,
+            "total_gates": 22861,
+            "two_qubit_gates": 7856
+          },
+          "metrics_status": "ok",
+          "oracle_calls": null,
+          "solve_seconds": 5.755,
+          "status": "full",
+          "unique_circuits": 1
+        },
+        "9": {
+          "circuit_executed": true,
+          "circuits_executed": 1,
+          "flags": [],
+          "hash_ok": true,
+          "metrics": {
+            "active_qubits": 22,
+            "depth": 71632,
+            "total_gates": 102830,
+            "two_qubit_gates": 34186
+          },
+          "metrics_status": "ok",
+          "oracle_calls": null,
+          "solve_seconds": 46.702,
+          "status": "full",
+          "unique_circuits": 1
+        }
+      },
+      "totals": {
+        "two_qubit_gates": 103166,
+        "depth": 217602,
+        "total_gates": 294857
+      },
+      "all_required_checks_pass": true
+    }
+  ],
+  "finished_at": "2026-11-11T19:07:05.704880-05:00",
+  "completed_runs": 3
+}

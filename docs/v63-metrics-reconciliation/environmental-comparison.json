@@ -1,0 +1,264 @@
+{
+  "purpose": "Read-only comparison of recorded environments, configuration and source-level randomness; no new quantum execution.",
+  "conclusion": "ENVIRONMENTS_NOT_IDENTICAL_OR_FULLY_DOCUMENTED",
+  "approved_commit": "ce75c0721622d363e77912191a52a02c34f92472",
+  "independent_audit_commit": "5b86f71c058193ea0b94070d76524ecef2455fe7",
+  "previous_fresh_audit_commit": "a6eb6230000a91317911c917755f9549847a35e8",
+  "current_observed_runtime": {
+    "python": "3.12.14",
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "machine": "x86_64",
+    "packages": {
+      "qiskit": "2.6.1",
+      "qiskit-aer": "0.18.2",
+      "numpy": "2.5.4",
+      "scipy": "1.18.1",
+      "rustworkx": "0.18.1",
+      "dill": "0.4.1",
+      "stevedore": "5.9.1",
+      "pyyaml": "6.0.3",
+      "psutil": "7.2.2"
+    }
+  },
+  "historical_v63": {
+    "python_in_seed_records": "3.12.10",
+    "python_in_independent_audit": "3.12.10",
+    "qiskit_in_official_reports": "2.6.1",
+    "qiskit_aer_in_official_reports": "0.18.2",
+    "numpy_required_pin": "2.5.4",
+    "actual_numpy_version_independently_recorded": false,
+    "actual_platform_cpu_blas_native_wheel_build_inventory_recorded": false,
+    "OMP_OPENBLAS_MKL_RAYON_thread_settings_recorded": false,
+    "note": "The v6.1 package freeze agrees with current package versions, but does not establish the later v6.3 actual full binary environment."
+  },
+  "comparison": [
+    {
+      "parameter": "Python exact version",
+      "historical": "3.12.10",
+      "current": "3.12.14",
+      "finding": "DIFFERENT_PATCH_VERSION"
+    },
+    {
+      "parameter": "Qiskit reported version",
+      "historical": "2.6.1",
+      "current": "2.6.1",
+      "finding": "SAME_VERSION_STRING_NOT_BINARY_BUILD_PROOF"
+    },
+    {
+      "parameter": "Aer reported version",
+      "historical": "0.18.2",
+      "current": "0.18.2",
+      "finding": "SAME_VERSION_STRING_NOT_BINARY_BUILD_PROOF"
+    },
+    {
+      "parameter": "NumPy pin",
+      "historical": "2.5.4",
+      "current": "2.5.4",
+      "finding": "CURRENT_MATCHES_PIN_HISTORICAL_ACTUAL_VERSION_NOT_RECORDED"
+    },
+    {
+      "parameter": "Solver precompile level for tiers 5,6,7",
+      "historical": 2,
+      "current": 2,
+      "finding": "SAME_IMMUTABLE_SOURCE"
+    },
+    {
+      "parameter": "Solver transpiler seed for tiers 5,6,7",
+      "historical": 12345,
+      "current": 12345,
+      "finding": "SAME_IMMUTABLE_SOURCE"
+    },
+    {
+      "parameter": "Solver and scoring basis order",
+      "historical": [
+        "rz",
+        "sx",
+        "x",
+        "cx"
+      ],
+      "current": [
+        "rz",
+        "sx",
+        "x",
+        "cx"
+      ],
+      "finding": "SAME_IMMUTABLE_SOURCE_AND_CONFIG"
+    },
+    {
+      "parameter": "Official scoring optimization level",
+      "historical": 1,
+      "current": 1,
+      "finding": "SAME_CONFIG_BYTES"
+    },
+    {
+      "parameter": "Official scoring transpiler seed",
+      "historical": 12345,
+      "current": 12345,
+      "finding": "SAME_CONFIG_BYTES"
+    },
+    {
+      "parameter": "Official coupling map and initial layout",
+      "historical": [
+        null,
+        null
+      ],
+      "current": [
+        null,
+        null
+      ],
+      "finding": "SAME_CONFIG_BYTES"
+    },
+    {
+      "parameter": "Actual official worker PYTHONHASHSEED",
+      "historical": "0",
+      "current": "0",
+      "finding": "FORCED_BY_SAME_OFFICIAL_SUBPROCESS_LAUNCHER"
+    }
+  ],
+  "official_configuration_sha256": "16eea5d6bcd4ad44b60cd0b50a15d7c2fbdee98ec16b9fe5b61426a8f020a31e",
+  "official_hash_file_sha256": "54bcd720b8b3fb665794c59e51d1e83747029578012fac7f2765e3474ac831e3",
+  "process_and_order": {
+    "parent_previous_command_uses_python_I": true,
+    "actual_worker_command_inherits_parent_I_flag": false,
+    "worker_command_shape": [
+      "sys.executable",
+      "absolute tools/check_submission.py",
+      "--_solve or --_transpile",
+      "arguments"
+    ],
+    "actual_worker_forced_environment": {
+      "PYTHONHASHSEED": "0",
+      "QISKIT_PARALLEL": "FALSE"
+    },
+    "parent_I_does_not_disable_worker_hash_seed": "The unchanged launcher starts a new interpreter without -I and sets PYTHONHASHSEED before process startup.",
+    "fresh_solve_process_per_tier": true,
+    "fresh_scoring_process_per_tier": true,
+    "cross_tier_python_module_state_carryover": false,
+    "tier05_gf2_pass_source_observation": "Walks circuit.data in order; touched-wire set is sorted before local linear synthesis. No source-level random traversal was found in this pass.",
+    "compiler_internal_gate_order_invariance_proven": false,
+    "historical_full_process_env_available": false,
+    "source_citations": [
+      "tools/check_submission.py:run_worker",
+      "submissions/team3/tier05/gf2_synthesis.py:gf2_runs"
+    ]
+  },
+  "aer_sampling_and_scored_identity": {
+    "tier05": {
+      "source": "submissions/team3/tier05/solution.py:recover_key_with_diagnostics",
+      "seed_simulator_explicit": false,
+      "shots": 128,
+      "iterations": 25,
+      "actual_circuit_count_by_source": 1,
+      "note": "Default Aer sampling randomness remains; transpiler seed is a separate setting. This is not evidence that compiled gate metrics are random."
+    },
+    "tier06": {
+      "source": "submissions/team3/tier06/solution.py:recover_candidates_with_diagnostics",
+      "calibration_seed": 606,
+      "search_seed_rule": "607 + batch",
+      "note": "Measured calibration controls iteration/batch selection. Actual scored circuit identity must be checked from executed circuits, not default build_circuit alone."
+    },
+    "tier07": {
+      "source": "submissions/team3/tier07/solution.py:recover_phase_with_diagnostics",
+      "first_QPE_seed": 707,
+      "verification_seed": 708,
+      "note": "A second check circuit depends on measured private k. The first build alone is not full executed-circuit provenance."
+    },
+    "scoring_selection": "Official worker records circuits actually sent to Aer, serializes distinct QPY circuits, recompiles each at level1, and selects max(two_qubit_gates, depth).",
+    "historical_per_circuit_QPY_or_equivalent_full_identity_available": false,
+    "scope_limit": "Matching aggregate per-tier metrics/circuit counts is not a proof of cross-host circuit identity."
+  },
+  "known_pipeline_detail": {
+    "tier05": "Solver precompile passes the AerSimulator backend and then applies the retained gf2_runs pass; Tier6/7 precompile without a backend argument. Each uses num_processes=1. Official scoring is a separate level1 pass.",
+    "none_of_these_settings_changed_in_this_task": true
+  },
+  "unknown_causes_not_asserted": [
+    "Python patch differences",
+    "floating point angle simplification",
+    "native wheel build or CPU/BLAS differences",
+    "Rayon worker scheduling",
+    "compiler internal ordering"
+  ],
+  "protected_source_files": [
+    {
+      "path": "submissions/team3/tier05/solution.py",
+      "approved_commit": "ce75c0721622d363e77912191a52a02c34f92472",
+      "sha256": "ea4ff71efaa8f5e1b270852ccbde8cd388df101945a63ecbbf83b2b3f0d81c34",
+      "current_bytes_equal_approved": true
+    },
+    {
+      "path": "submissions/team3/tier05/gf2_synthesis.py",
+      "approved_commit": "ce75c0721622d363e77912191a52a02c34f92472",
+      "sha256": "841416dc715cec11983908be1f3362cb049b638ef0f8786964ec4bc44d36dcff",
+      "current_bytes_equal_approved": true
+    },
+    {
+      "path": "submissions/team3/tier06/solution.py",
+      "approved_commit": "ce75c0721622d363e77912191a52a02c34f92472",
+      "sha256": "c423486f5fce6fb042eb66e5cf828929b965bbf63400f7cd73fb4f30ad43f708",
+      "current_bytes_equal_approved": true
+    },
+    {
+      "path": "submissions/team3/tier07/solution.py",
+      "approved_commit": "ce75c0721622d363e77912191a52a02c34f92472",
+      "sha256": "08cb45b42d45b9d55d23adb18cf6110d033001dcf69c9bb0b32acfc1b05cc79b",
+      "current_bytes_equal_approved": true
+    },
+    {
+      "path": "tools/check_submission.py",
+      "approved_commit": "ce75c0721622d363e77912191a52a02c34f92472",
+      "sha256": "d6e1351600f69739d3f481c7fae6292bd6ab1d83c141997aafd8a848d5d1cd36",
+      "current_bytes_equal_approved": true
+    },
+    {
+      "path": "tools/scoring_config.yaml",
+      "approved_commit": "ce75c0721622d363e77912191a52a02c34f92472",
+      "sha256": "16eea5d6bcd4ad44b60cd0b50a15d7c2fbdee98ec16b9fe5b61426a8f020a31e",
+      "current_bytes_equal_approved": true
+    },
+    {
+      "path": "requirements.txt",
+      "approved_commit": "ce75c0721622d363e77912191a52a02c34f92472",
+      "sha256": "421a5f143616d67e365e96fa458b0580e7bd483c00128cf726045d6decc9d7e6",
+      "current_bytes_equal_approved": true
+    }
+  ],
+  "references": [
+    {
+      "commit": "ce75c0721622d363e77912191a52a02c34f92472",
+      "path": "docs/v63-evidence/seeds.json",
+      "sha256": "5de51fcbea47d77bffd1e6d5d76356ee553ecde5586b638530a809da22718a83"
+    },
+    {
+      "commit": "ce75c0721622d363e77912191a52a02c34f92472",
+      "path": "docs/v63-evidence/zip-checker/report.json",
+      "sha256": "8a8bc7f615e5ab667b925ebdcea7c47da228587479f27dbe6ae0ec7325665740"
+    },
+    {
+      "commit": "ce75c0721622d363e77912191a52a02c34f92472",
+      "path": "docs/V63_INTEGRATION_REPORT.md",
+      "sha256": "c218727f9e1f7304c1dc069795aa609a4949c773b9ee1d07ce196ec80e7d4ae1"
+    },
+    {
+      "commit": "5b86f71c058193ea0b94070d76524ecef2455fe7",
+      "path": "docs/V63_INDEPENDENT_AUDIT.md",
+      "sha256": "1fc71c00ca7a1d7acebc64359ff6e95fba55d14f146b37958234ee5ed20ae687"
+    },
+    {
+      "commit": "a6eb6230000a91317911c917755f9549847a35e8",
+      "path": "docs/v63-final-verification/execution.json",
+      "sha256": "fc86f543708b5747709e562f5ae7b0385dfe9942152e3ee9e48fd8f85b0c6e45"
+    },
+    {
+      "commit": "a6eb6230000a91317911c917755f9549847a35e8",
+      "path": "docs/v63-final-verification/checker/report.json",
+      "sha256": "3a27ff942b8d15f130fdeb4bd14fb4ccb255380394b3292446f8658d06d6db65"
+    },
+    {
+      "commit": "ce75c0721622d363e77912191a52a02c34f92472",
+      "path": "docs/v61-evidence/environment.txt",
+      "sha256": "f9b7fd89a63ce8c0ba6200da0bfa8067a3c8d498818c63886e96e40e14d4f804"
+    }
+  ],
+  "quantum_simulations_run_by_this_subtask": 0,
+  "approved_archive_or_source_modified": false
+}

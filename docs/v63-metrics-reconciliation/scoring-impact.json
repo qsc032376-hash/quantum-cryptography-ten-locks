@@ -1,0 +1,275 @@
+{
+  "scope": "Conditional sensitivity of Team 3 own Simplicity points to observed Tier 5/6/7 metric changes; all other eligible-team metrics held fixed.",
+  "reference_report": "ce75c0721622d363e77912191a52a02c34f92472:docs/v63-evidence/zip-checker/report.json",
+  "observed_report": "a6eb6230000a91317911c917755f9549847a35e8:docs/v63-final-verification/checker/report.json",
+  "weights": {
+    "two_qubit_gates": 0.4,
+    "depth": 0.3,
+    "total_gates": 0.2,
+    "active_qubits": 0.1
+  },
+  "tier_pool_formula": "0.375 * tier_points",
+  "positive_rival_formula": "S_t(v;r) = P_t * sum_m w_m * min(v_m,r_m)/v_m",
+  "zero_rival_rule": "Official metric_ratio uses 1/(1+v) for positive v when best is zero; checked separately and does not enlarge the envelope.",
+  "metric_bound_formula": "For x=old,y=new: y<x -> [0,P*w*(x-y)/x]; y>x -> [-P*w*(y-x)/y,0]; y=x -> [0,0].",
+  "per_tier": [
+    {
+      "tier": 5,
+      "tier_points": 4,
+      "simplicity_pool": 1.5,
+      "simplicity_pool_exact": "3/2",
+      "reference_metrics": {
+        "active_qubits": 19,
+        "depth": 19703,
+        "total_gates": 28413,
+        "two_qubit_gates": 10950
+      },
+      "observed_metrics": {
+        "active_qubits": 19,
+        "depth": 19703,
+        "total_gates": 28363,
+        "two_qubit_gates": 10950
+      },
+      "metrics": {
+        "two_qubit_gates": {
+          "reference": 10950,
+          "observed": 10950,
+          "delta": 0,
+          "relative_change_percent": 0.0,
+          "weight": 0.4,
+          "weight_exact": "2/5",
+          "score_delta_lower_bound": 0.0,
+          "score_delta_upper_bound": 0.0,
+          "lower_bound_exact": "0",
+          "upper_bound_exact": "0"
+        },
+        "depth": {
+          "reference": 19703,
+          "observed": 19703,
+          "delta": 0,
+          "relative_change_percent": 0.0,
+          "weight": 0.3,
+          "weight_exact": "3/10",
+          "score_delta_lower_bound": 0.0,
+          "score_delta_upper_bound": 0.0,
+          "lower_bound_exact": "0",
+          "upper_bound_exact": "0"
+        },
+        "total_gates": {
+          "reference": 28413,
+          "observed": 28363,
+          "delta": -50,
+          "relative_change_percent": -0.1759757857318833,
+          "weight": 0.2,
+          "weight_exact": "1/5",
+          "score_delta_lower_bound": 0.0,
+          "score_delta_upper_bound": 0.0005279273571956499,
+          "lower_bound_exact": "0",
+          "upper_bound_exact": "5/9471"
+        },
+        "active_qubits": {
+          "reference": 19,
+          "observed": 19,
+          "delta": 0,
+          "relative_change_percent": 0.0,
+          "weight": 0.1,
+          "weight_exact": "1/10",
+          "score_delta_lower_bound": 0.0,
+          "score_delta_upper_bound": 0.0,
+          "lower_bound_exact": "0",
+          "upper_bound_exact": "0"
+        }
+      },
+      "score_delta_conservative_lower_bound": 0.0,
+      "score_delta_conservative_upper_bound": 0.0005279273571956499,
+      "lower_bound_exact": "0",
+      "upper_bound_exact": "5/9471"
+    },
+    {
+      "tier": 6,
+      "tier_points": 4,
+      "simplicity_pool": 1.5,
+      "simplicity_pool_exact": "3/2",
+      "reference_metrics": {
+        "active_qubits": 22,
+        "depth": 5715,
+        "total_gates": 8752,
+        "two_qubit_gates": 3000
+      },
+      "observed_metrics": {
+        "active_qubits": 22,
+        "depth": 5691,
+        "total_gates": 8680,
+        "two_qubit_gates": 3000
+      },
+      "metrics": {
+        "two_qubit_gates": {
+          "reference": 3000,
+          "observed": 3000,
+          "delta": 0,
+          "relative_change_percent": 0.0,
+          "weight": 0.4,
+          "weight_exact": "2/5",
+          "score_delta_lower_bound": 0.0,
+          "score_delta_upper_bound": 0.0,
+          "lower_bound_exact": "0",
+          "upper_bound_exact": "0"
+        },
+        "depth": {
+          "reference": 5715,
+          "observed": 5691,
+          "delta": -24,
+          "relative_change_percent": -0.4199475065616798,
+          "weight": 0.3,
+          "weight_exact": "3/10",
+          "score_delta_lower_bound": 0.0,
+          "score_delta_upper_bound": 0.001889763779527559,
+          "lower_bound_exact": "0",
+          "upper_bound_exact": "6/3175"
+        },
+        "total_gates": {
+          "reference": 8752,
+          "observed": 8680,
+          "delta": -72,
+          "relative_change_percent": -0.8226691042047533,
+          "weight": 0.2,
+          "weight_exact": "1/5",
+          "score_delta_lower_bound": 0.0,
+          "score_delta_upper_bound": 0.0024680073126142595,
+          "lower_bound_exact": "0",
+          "upper_bound_exact": "27/10940"
+        },
+        "active_qubits": {
+          "reference": 22,
+          "observed": 22,
+          "delta": 0,
+          "relative_change_percent": 0.0,
+          "weight": 0.1,
+          "weight_exact": "1/10",
+          "score_delta_lower_bound": 0.0,
+          "score_delta_upper_bound": 0.0,
+          "lower_bound_exact": "0",
+          "upper_bound_exact": "0"
+        }
+      },
+      "score_delta_conservative_lower_bound": 0.0,
+      "score_delta_conservative_upper_bound": 0.004357771092141818,
+      "lower_bound_exact": "0",
+      "upper_bound_exact": "30273/6946900"
+    },
+    {
+      "tier": 7,
+      "tier_points": 5,
+      "simplicity_pool": 1.875,
+      "simplicity_pool_exact": "15/8",
+      "reference_metrics": {
+        "active_qubits": 15,
+        "depth": 154,
+        "total_gates": 536,
+        "two_qubit_gates": 209
+      },
+      "observed_metrics": {
+        "active_qubits": 15,
+        "depth": 155,
+        "total_gates": 533,
+        "two_qubit_gates": 209
+      },
+      "metrics": {
+        "two_qubit_gates": {
+          "reference": 209,
+          "observed": 209,
+          "delta": 0,
+          "relative_change_percent": 0.0,
+          "weight": 0.4,
+          "weight_exact": "2/5",
+          "score_delta_lower_bound": 0.0,
+          "score_delta_upper_bound": 0.0,
+          "lower_bound_exact": "0",
+          "upper_bound_exact": "0"
+        },
+        "depth": {
+          "reference": 154,
+          "observed": 155,
+          "delta": 1,
+          "relative_change_percent": 0.6493506493506493,
+          "weight": 0.3,
+          "weight_exact": "3/10",
+          "score_delta_lower_bound": -0.0036290322580645163,
+          "score_delta_upper_bound": 0.0,
+          "lower_bound_exact": "-9/2480",
+          "upper_bound_exact": "0"
+        },
+        "total_gates": {
+          "reference": 536,
+          "observed": 533,
+          "delta": -3,
+          "relative_change_percent": -0.5597014925373134,
+          "weight": 0.2,
+          "weight_exact": "1/5",
+          "score_delta_lower_bound": 0.0,
+          "score_delta_upper_bound": 0.0020988805970149254,
+          "lower_bound_exact": "0",
+          "upper_bound_exact": "9/4288"
+        },
+        "active_qubits": {
+          "reference": 15,
+          "observed": 15,
+          "delta": 0,
+          "relative_change_percent": 0.0,
+          "weight": 0.1,
+          "weight_exact": "1/10",
+          "score_delta_lower_bound": 0.0,
+          "score_delta_upper_bound": 0.0,
+          "lower_bound_exact": "0",
+          "upper_bound_exact": "0"
+        }
+      },
+      "score_delta_conservative_lower_bound": -0.0036290322580645163,
+      "score_delta_conservative_upper_bound": 0.0020988805970149254,
+      "lower_bound_exact": "-9/2480",
+      "upper_bound_exact": "9/4288"
+    }
+  ],
+  "aggregate_conservative_lower_bound": -0.0036290322580645163,
+  "aggregate_conservative_upper_bound": 0.006984579046352394,
+  "aggregate_lower_bound_exact": "-9/2480",
+  "aggregate_upper_bound_exact": "492631191251/70531264372800",
+  "joint_extrema_attainability_claimed": false,
+  "actual_competitor_metrics_known": false,
+  "actual_competition_score_claimed": false,
+  "same_ranking_guaranteed": false,
+  "official_tie_margin": 0.01,
+  "exhaustive_integer_rival_checks": 77513,
+  "limitations": [
+    "Bounds hold for the stated observed vectors, not unbounded future compiler changes.",
+    "Other eligible-team metric vectors are assumed fixed; changes in their measurements require a new analysis.",
+    "Summing metric-wise extrema gives a conservative envelope, not a proof that a physically valid set of rival circuits jointly attains it.",
+    "If Team 3 changes the eligible best metric, rival normalized scores may also change; this is not a bound on rank or on every pairwise score gap.",
+    "A change below the 0.01 tie margin can still cross a tie-group boundary."
+  ],
+  "compliance": {
+    "full_and_valid_metrics_required": true,
+    "actual_solve_circuits_scored": true,
+    "worst_recorded_circuit_selection": "max(two_qubit_gates, depth)",
+    "same_metric_counts_across_environments_officially_required": false,
+    "hash_match_alone_proves_quantum_method": false,
+    "variance_alone_implies_archive_corruption": false,
+    "safe_with_variance_recommendation_conditional": "Appropriate only if unchanged approved bytes, required versions/configuration, actual executed-circuit provenance, three uncensored runs, FULL/hash/metrics/no-flags checks all pass; explicitly retain unresolved causal limits.",
+    "metrics_reconciled_criterion": "Use only if differences are causally accounted for or exactly reproduced with a documented like-for-like input/configuration/environment relation; simple repetition and matching plaintext are insufficient.",
+    "release_blocked_criterion": "Use for approved-byte or protected-source mismatch, invalid/missing metrics or actual execution, failed required functional/resource/compliance checks, or inability to establish submitted/executed circuit provenance."
+  },
+  "sources": {
+    "tools/scoring_config.yaml": "lines 2-17",
+    "tools/rank.py": "lines 83-86, 124-139, 149-157; TIE_MARGIN line31",
+    "tools/check_submission.py": "lines 219-244 and 262-324",
+    "SCORING.md": "lines 20-26, 30-48, 54-66, 91-95",
+    "README.md": "lines 115-119"
+  },
+  "source_sha256": {
+    "tools/rank.py": "04890ff02495746ee2a7972a1603e3f97e86b16daa5337cc97472d5ea6719291",
+    "tools/scoring_config.yaml": "16eea5d6bcd4ad44b60cd0b50a15d7c2fbdee98ec16b9fe5b61426a8f020a31e",
+    "tools/check_submission.py": "d6e1351600f69739d3f481c7fae6292bd6ab1d83c141997aafd8a848d5d1cd36",
+    "SCORING.md": "c506db43d2c4986209ea9ccbc2fee64c61117fd84419ec6995948c46c60a0150",
+    "README.md": "4f9c0b27c5e49a3fbcfa0f1a1398551075f303069a0aef7770e4f9d96f136e82"
+  }
+}

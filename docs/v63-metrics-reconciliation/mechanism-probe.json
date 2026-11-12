@@ -1,0 +1,877 @@
+{
+  "purpose": "Targeted hash-seed, traversal and process-state diagnosis",
+  "compiler_helper": "/workspace/work/v63-metrics-reconciliation/docs/v63-final-verification/compile_replay.py",
+  "compiler_helper_sha256": "dd2c8af38890c6e8844f8ea11354b0d64ab89507c7b8542a70e3fd67ee143397",
+  "submission_modified": false,
+  "official_checker_modified": false,
+  "aer_runs": 0,
+  "thread_environment": {
+    "OMP_NUM_THREADS": "2",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "QISKIT_PARALLEL": "FALSE",
+    "RAYON_NUM_THREADS": null
+  },
+  "transpiler_seed": 12345,
+  "basis_gates": [
+    "rz",
+    "sx",
+    "x",
+    "cx"
+  ],
+  "precompile_level": 2,
+  "official_scoring_level": 1,
+  "trials": [
+    {
+      "tier": 5,
+      "pythonhashseed": 0,
+      "same_process_repeats": 1,
+      "status": "PASS",
+      "runs": [
+        {
+          "tier": 5,
+          "rows": [
+            {
+              "circuit": "sole_Grover_circuit",
+              "scope": "FULL_COMPILATION_PIPELINE: sole real solver circuit, without Aer execution",
+              "precompile_metrics": {
+                "two_qubit_gates": 11000,
+                "depth": 19703,
+                "total_gates": 28413,
+                "active_qubits": 19
+              },
+              "precompile_count_ops": {
+                "rz": 12301,
+                "cx": 11000,
+                "sx": 4862,
+                "x": 250,
+                "measure": 10
+              },
+              "official_basis_metrics": {
+                "two_qubit_gates": 10950,
+                "depth": 19703,
+                "total_gates": 28363,
+                "active_qubits": 19
+              },
+              "official_basis_count_ops": {
+                "rz": 12301,
+                "cx": 10950,
+                "sx": 4862,
+                "x": 250,
+                "measure": 10
+              },
+              "precompile_seconds": 2.435919062998437,
+              "scoring_compile_seconds": 0.10420448800141457
+            }
+          ],
+          "aer_run_calls": 0,
+          "scope": "FULL_COMPILATION_PIPELINE: sole real solver circuit, without Aer execution",
+          "same_process_repeat": 1
+        }
+      ]
+    },
+    {
+      "tier": 5,
+      "pythonhashseed": 1,
+      "same_process_repeats": 1,
+      "status": "PASS",
+      "runs": [
+        {
+          "tier": 5,
+          "rows": [
+            {
+              "circuit": "sole_Grover_circuit",
+              "scope": "FULL_COMPILATION_PIPELINE: sole real solver circuit, without Aer execution",
+              "precompile_metrics": {
+                "two_qubit_gates": 11000,
+                "depth": 19703,
+                "total_gates": 28413,
+                "active_qubits": 19
+              },
+              "precompile_count_ops": {
+                "rz": 12301,
+                "cx": 11000,
+                "sx": 4862,
+                "x": 250,
+                "measure": 10
+              },
+              "official_basis_metrics": {
+                "two_qubit_gates": 10950,
+                "depth": 19703,
+                "total_gates": 28363,
+                "active_qubits": 19
+              },
+              "official_basis_count_ops": {
+                "rz": 12301,
+                "cx": 10950,
+                "sx": 4862,
+                "x": 250,
+                "measure": 10
+              },
+              "precompile_seconds": 2.553678738997405,
+              "scoring_compile_seconds": 0.10971676600092906
+            }
+          ],
+          "aer_run_calls": 0,
+          "scope": "FULL_COMPILATION_PIPELINE: sole real solver circuit, without Aer execution",
+          "same_process_repeat": 1
+        }
+      ]
+    },
+    {
+      "tier": 5,
+      "pythonhashseed": 42,
+      "same_process_repeats": 1,
+      "status": "PASS",
+      "runs": [
+        {
+          "tier": 5,
+          "rows": [
+            {
+              "circuit": "sole_Grover_circuit",
+              "scope": "FULL_COMPILATION_PIPELINE: sole real solver circuit, without Aer execution",
+              "precompile_metrics": {
+                "two_qubit_gates": 11000,
+                "depth": 19703,
+                "total_gates": 28413,
+                "active_qubits": 19
+              },
+              "precompile_count_ops": {
+                "rz": 12301,
+                "cx": 11000,
+                "sx": 4862,
+                "x": 250,
+                "measure": 10
+              },
+              "official_basis_metrics": {
+                "two_qubit_gates": 10950,
+                "depth": 19703,
+                "total_gates": 28363,
+                "active_qubits": 19
+              },
+              "official_basis_count_ops": {
+                "rz": 12301,
+                "cx": 10950,
+                "sx": 4862,
+                "x": 250,
+                "measure": 10
+              },
+              "precompile_seconds": 2.5001496500008216,
+              "scoring_compile_seconds": 0.11263417500231299
+            }
+          ],
+          "aer_run_calls": 0,
+          "scope": "FULL_COMPILATION_PIPELINE: sole real solver circuit, without Aer execution",
+          "same_process_repeat": 1
+        }
+      ]
+    },
+    {
+      "tier": 5,
+      "pythonhashseed": 0,
+      "same_process_repeats": 3,
+      "status": "PASS",
+      "runs": [
+        {
+          "tier": 5,
+          "rows": [
+            {
+              "circuit": "sole_Grover_circuit",
+              "scope": "FULL_COMPILATION_PIPELINE: sole real solver circuit, without Aer execution",
+              "precompile_metrics": {
+                "two_qubit_gates": 11000,
+                "depth": 19703,
+                "total_gates": 28413,
+                "active_qubits": 19
+              },
+              "precompile_count_ops": {
+                "rz": 12301,
+                "cx": 11000,
+                "sx": 4862,
+                "x": 250,
+                "measure": 10
+              },
+              "official_basis_metrics": {
+                "two_qubit_gates": 10950,
+                "depth": 19703,
+                "total_gates": 28363,
+                "active_qubits": 19
+              },
+              "official_basis_count_ops": {
+                "rz": 12301,
+                "cx": 10950,
+                "sx": 4862,
+                "x": 250,
+                "measure": 10
+              },
+              "precompile_seconds": 2.9571476130004157,
+              "scoring_compile_seconds": 0.17473371899905032
+            }
+          ],
+          "aer_run_calls": 0,
+          "scope": "FULL_COMPILATION_PIPELINE: sole real solver circuit, without Aer execution",
+          "same_process_repeat": 1
+        },
+        {
+          "tier": 5,
+          "rows": [
+            {
+              "circuit": "sole_Grover_circuit",
+              "scope": "FULL_COMPILATION_PIPELINE: sole real solver circuit, without Aer execution",
+              "precompile_metrics": {
+                "two_qubit_gates": 11000,
+                "depth": 19703,
+                "total_gates": 28413,
+                "active_qubits": 19
+              },
+              "precompile_count_ops": {
+                "rz": 12301,
+                "cx": 11000,
+                "sx": 4862,
+                "x": 250,
+                "measure": 10
+              },
+              "official_basis_metrics": {
+                "two_qubit_gates": 10950,
+                "depth": 19703,
+                "total_gates": 28363,
+                "active_qubits": 19
+              },
+              "official_basis_count_ops": {
+                "rz": 12301,
+                "cx": 10950,
+                "sx": 4862,
+                "x": 250,
+                "measure": 10
+              },
+              "precompile_seconds": 2.6150399910002307,
+              "scoring_compile_seconds": 0.10233784499723697
+            }
+          ],
+          "aer_run_calls": 0,
+          "scope": "FULL_COMPILATION_PIPELINE: sole real solver circuit, without Aer execution",
+          "same_process_repeat": 2
+        },
+        {
+          "tier": 5,
+          "rows": [
+            {
+              "circuit": "sole_Grover_circuit",
+              "scope": "FULL_COMPILATION_PIPELINE: sole real solver circuit, without Aer execution",
+              "precompile_metrics": {
+                "two_qubit_gates": 11000,
+                "depth": 19703,
+                "total_gates": 28413,
+                "active_qubits": 19
+              },
+              "precompile_count_ops": {
+                "rz": 12301,
+                "cx": 11000,
+                "sx": 4862,
+                "x": 250,
+                "measure": 10
+              },
+              "official_basis_metrics": {
+                "two_qubit_gates": 10950,
+                "depth": 19703,
+                "total_gates": 28363,
+                "active_qubits": 19
+              },
+              "official_basis_count_ops": {
+                "rz": 12301,
+                "cx": 10950,
+                "sx": 4862,
+                "x": 250,
+                "measure": 10
+              },
+              "precompile_seconds": 3.092061575000116,
+              "scoring_compile_seconds": 0.13126578900119057
+            }
+          ],
+          "aer_run_calls": 0,
+          "scope": "FULL_COMPILATION_PIPELINE: sole real solver circuit, without Aer execution",
+          "same_process_repeat": 3
+        }
+      ]
+    },
+    {
+      "tier": 6,
+      "pythonhashseed": 0,
+      "same_process_repeats": 1,
+      "status": "PASS",
+      "runs": [
+        {
+          "tier": 6,
+          "rows": [
+            {
+              "circuit": "actual_calibration_builder",
+              "scope": "PARTIAL: search uses documented nominal 12 rounds, not a recovered calibration outcome; cannot certify actual scored-winner identity",
+              "precompile_metrics": {
+                "two_qubit_gates": 436,
+                "depth": 819,
+                "total_gates": 1206,
+                "active_qubits": 23
+              },
+              "precompile_count_ops": {
+                "rz": 574,
+                "cx": 436,
+                "sx": 196,
+                "measure": 1
+              },
+              "official_basis_metrics": {
+                "two_qubit_gates": 436,
+                "depth": 819,
+                "total_gates": 1206,
+                "active_qubits": 23
+              },
+              "official_basis_count_ops": {
+                "rz": 574,
+                "cx": 436,
+                "sx": 196,
+                "measure": 1
+              },
+              "precompile_seconds": 0.06350789200223517,
+              "scoring_compile_seconds": 0.010582106999208918
+            },
+            {
+              "circuit": "nominal_12_round_search_builder",
+              "scope": "PARTIAL: search uses documented nominal 12 rounds, not a recovered calibration outcome; cannot certify actual scored-winner identity",
+              "precompile_metrics": {
+                "two_qubit_gates": 3000,
+                "depth": 5691,
+                "total_gates": 8680,
+                "active_qubits": 22
+              },
+              "precompile_count_ops": {
+                "rz": 4178,
+                "cx": 3000,
+                "sx": 1502,
+                "measure": 14
+              },
+              "official_basis_metrics": {
+                "two_qubit_gates": 3000,
+                "depth": 5691,
+                "total_gates": 8680,
+                "active_qubits": 22
+              },
+              "official_basis_count_ops": {
+                "rz": 4178,
+                "cx": 3000,
+                "sx": 1502,
+                "measure": 14
+              },
+              "precompile_seconds": 0.13587916499818675,
+              "scoring_compile_seconds": 0.04038426899933256
+            }
+          ],
+          "aer_run_calls": 0,
+          "scope": "PARTIAL: search uses documented nominal 12 rounds, not a recovered calibration outcome; cannot certify actual scored-winner identity",
+          "same_process_repeat": 1
+        }
+      ]
+    },
+    {
+      "tier": 6,
+      "pythonhashseed": 1,
+      "same_process_repeats": 1,
+      "status": "PASS",
+      "runs": [
+        {
+          "tier": 6,
+          "rows": [
+            {
+              "circuit": "actual_calibration_builder",
+              "scope": "PARTIAL: search uses documented nominal 12 rounds, not a recovered calibration outcome; cannot certify actual scored-winner identity",
+              "precompile_metrics": {
+                "two_qubit_gates": 436,
+                "depth": 819,
+                "total_gates": 1206,
+                "active_qubits": 23
+              },
+              "precompile_count_ops": {
+                "rz": 574,
+                "cx": 436,
+                "sx": 196,
+                "measure": 1
+              },
+              "official_basis_metrics": {
+                "two_qubit_gates": 436,
+                "depth": 819,
+                "total_gates": 1206,
+                "active_qubits": 23
+              },
+              "official_basis_count_ops": {
+                "rz": 574,
+                "cx": 436,
+                "sx": 196,
+                "measure": 1
+              },
+              "precompile_seconds": 0.042639448001864366,
+              "scoring_compile_seconds": 0.01655451500118943
+            },
+            {
+              "circuit": "nominal_12_round_search_builder",
+              "scope": "PARTIAL: search uses documented nominal 12 rounds, not a recovered calibration outcome; cannot certify actual scored-winner identity",
+              "precompile_metrics": {
+                "two_qubit_gates": 3000,
+                "depth": 5691,
+                "total_gates": 8680,
+                "active_qubits": 22
+              },
+              "precompile_count_ops": {
+                "rz": 4178,
+                "cx": 3000,
+                "sx": 1502,
+                "measure": 14
+              },
+              "official_basis_metrics": {
+                "two_qubit_gates": 3000,
+                "depth": 5691,
+                "total_gates": 8680,
+                "active_qubits": 22
+              },
+              "official_basis_count_ops": {
+                "rz": 4178,
+                "cx": 3000,
+                "sx": 1502,
+                "measure": 14
+              },
+              "precompile_seconds": 0.16327514899967355,
+              "scoring_compile_seconds": 0.06871908199900645
+            }
+          ],
+          "aer_run_calls": 0,
+          "scope": "PARTIAL: search uses documented nominal 12 rounds, not a recovered calibration outcome; cannot certify actual scored-winner identity",
+          "same_process_repeat": 1
+        }
+      ]
+    },
+    {
+      "tier": 6,
+      "pythonhashseed": 42,
+      "same_process_repeats": 1,
+      "status": "PASS",
+      "runs": [
+        {
+          "tier": 6,
+          "rows": [
+            {
+              "circuit": "actual_calibration_builder",
+              "scope": "PARTIAL: search uses documented nominal 12 rounds, not a recovered calibration outcome; cannot certify actual scored-winner identity",
+              "precompile_metrics": {
+                "two_qubit_gates": 436,
+                "depth": 819,
+                "total_gates": 1206,
+                "active_qubits": 23
+              },
+              "precompile_count_ops": {
+                "rz": 574,
+                "cx": 436,
+                "sx": 196,
+                "measure": 1
+              },
+              "official_basis_metrics": {
+                "two_qubit_gates": 436,
+                "depth": 819,
+                "total_gates": 1206,
+                "active_qubits": 23
+              },
+              "official_basis_count_ops": {
+                "rz": 574,
+                "cx": 436,
+                "sx": 196,
+                "measure": 1
+              },
+              "precompile_seconds": 0.02947425700040185,
+              "scoring_compile_seconds": 0.009261716997571057
+            },
+            {
+              "circuit": "nominal_12_round_search_builder",
+              "scope": "PARTIAL: search uses documented nominal 12 rounds, not a recovered calibration outcome; cannot certify actual scored-winner identity",
+              "precompile_metrics": {
+                "two_qubit_gates": 3000,
+                "depth": 5691,
+                "total_gates": 8680,
+                "active_qubits": 22
+              },
+              "precompile_count_ops": {
+                "rz": 4178,
+                "cx": 3000,
+                "sx": 1502,
+                "measure": 14
+              },
+              "official_basis_metrics": {
+                "two_qubit_gates": 3000,
+                "depth": 5691,
+                "total_gates": 8680,
+                "active_qubits": 22
+              },
+              "official_basis_count_ops": {
+                "rz": 4178,
+                "cx": 3000,
+                "sx": 1502,
+                "measure": 14
+              },
+              "precompile_seconds": 0.11056893999921158,
+              "scoring_compile_seconds": 0.032742931001848774
+            }
+          ],
+          "aer_run_calls": 0,
+          "scope": "PARTIAL: search uses documented nominal 12 rounds, not a recovered calibration outcome; cannot certify actual scored-winner identity",
+          "same_process_repeat": 1
+        }
+      ]
+    },
+    {
+      "tier": 6,
+      "pythonhashseed": 0,
+      "same_process_repeats": 3,
+      "status": "PASS",
+      "runs": [
+        {
+          "tier": 6,
+          "rows": [
+            {
+              "circuit": "actual_calibration_builder",
+              "scope": "PARTIAL: search uses documented nominal 12 rounds, not a recovered calibration outcome; cannot certify actual scored-winner identity",
+              "precompile_metrics": {
+                "two_qubit_gates": 436,
+                "depth": 819,
+                "total_gates": 1206,
+                "active_qubits": 23
+              },
+              "precompile_count_ops": {
+                "rz": 574,
+                "cx": 436,
+                "sx": 196,
+                "measure": 1
+              },
+              "official_basis_metrics": {
+                "two_qubit_gates": 436,
+                "depth": 819,
+                "total_gates": 1206,
+                "active_qubits": 23
+              },
+              "official_basis_count_ops": {
+                "rz": 574,
+                "cx": 436,
+                "sx": 196,
+                "measure": 1
+              },
+              "precompile_seconds": 0.03725492200101144,
+              "scoring_compile_seconds": 0.008977376000984805
+            },
+            {
+              "circuit": "nominal_12_round_search_builder",
+              "scope": "PARTIAL: search uses documented nominal 12 rounds, not a recovered calibration outcome; cannot certify actual scored-winner identity",
+              "precompile_metrics": {
+                "two_qubit_gates": 3000,
+                "depth": 5691,
+                "total_gates": 8680,
+                "active_qubits": 22
+              },
+              "precompile_count_ops": {
+                "rz": 4178,
+                "cx": 3000,
+                "sx": 1502,
+                "measure": 14
+              },
+              "official_basis_metrics": {
+                "two_qubit_gates": 3000,
+                "depth": 5691,
+                "total_gates": 8680,
+                "active_qubits": 22
+              },
+              "official_basis_count_ops": {
+                "rz": 4178,
+                "cx": 3000,
+                "sx": 1502,
+                "measure": 14
+              },
+              "precompile_seconds": 0.1236100690002786,
+              "scoring_compile_seconds": 0.05723873399983859
+            }
+          ],
+          "aer_run_calls": 0,
+          "scope": "PARTIAL: search uses documented nominal 12 rounds, not a recovered calibration outcome; cannot certify actual scored-winner identity",
+          "same_process_repeat": 1
+        },
+        {
+          "tier": 6,
+          "rows": [
+            {
+              "circuit": "actual_calibration_builder",
+              "scope": "PARTIAL: search uses documented nominal 12 rounds, not a recovered calibration outcome; cannot certify actual scored-winner identity",
+              "precompile_metrics": {
+                "two_qubit_gates": 436,
+                "depth": 819,
+                "total_gates": 1206,
+                "active_qubits": 23
+              },
+              "precompile_count_ops": {
+                "rz": 574,
+                "cx": 436,
+                "sx": 196,
+                "measure": 1
+              },
+              "official_basis_metrics": {
+                "two_qubit_gates": 436,
+                "depth": 819,
+                "total_gates": 1206,
+                "active_qubits": 23
+              },
+              "official_basis_count_ops": {
+                "rz": 574,
+                "cx": 436,
+                "sx": 196,
+                "measure": 1
+              },
+              "precompile_seconds": 0.03363968399935402,
+              "scoring_compile_seconds": 0.007532748000812717
+            },
+            {
+              "circuit": "nominal_12_round_search_builder",
+              "scope": "PARTIAL: search uses documented nominal 12 rounds, not a recovered calibration outcome; cannot certify actual scored-winner identity",
+              "precompile_metrics": {
+                "two_qubit_gates": 3000,
+                "depth": 5691,
+                "total_gates": 8680,
+                "active_qubits": 22
+              },
+              "precompile_count_ops": {
+                "rz": 4178,
+                "cx": 3000,
+                "sx": 1502,
+                "measure": 14
+              },
+              "official_basis_metrics": {
+                "two_qubit_gates": 3000,
+                "depth": 5691,
+                "total_gates": 8680,
+                "active_qubits": 22
+              },
+              "official_basis_count_ops": {
+                "rz": 4178,
+                "cx": 3000,
+                "sx": 1502,
+                "measure": 14
+              },
+              "precompile_seconds": 0.06552419699801248,
+              "scoring_compile_seconds": 0.029700708997552283
+            }
+          ],
+          "aer_run_calls": 0,
+          "scope": "PARTIAL: search uses documented nominal 12 rounds, not a recovered calibration outcome; cannot certify actual scored-winner identity",
+          "same_process_repeat": 2
+        },
+        {
+          "tier": 6,
+          "rows": [
+            {
+              "circuit": "actual_calibration_builder",
+              "scope": "PARTIAL: search uses documented nominal 12 rounds, not a recovered calibration outcome; cannot certify actual scored-winner identity",
+              "precompile_metrics": {
+                "two_qubit_gates": 436,
+                "depth": 819,
+                "total_gates": 1206,
+                "active_qubits": 23
+              },
+              "precompile_count_ops": {
+                "rz": 574,
+                "cx": 436,
+                "sx": 196,
+                "measure": 1
+              },
+              "official_basis_metrics": {
+                "two_qubit_gates": 436,
+                "depth": 819,
+                "total_gates": 1206,
+                "active_qubits": 23
+              },
+              "official_basis_count_ops": {
+                "rz": 574,
+                "cx": 436,
+                "sx": 196,
+                "measure": 1
+              },
+              "precompile_seconds": 0.018499765999877127,
+              "scoring_compile_seconds": 0.007139112000004388
+            },
+            {
+              "circuit": "nominal_12_round_search_builder",
+              "scope": "PARTIAL: search uses documented nominal 12 rounds, not a recovered calibration outcome; cannot certify actual scored-winner identity",
+              "precompile_metrics": {
+                "two_qubit_gates": 3000,
+                "depth": 5691,
+                "total_gates": 8680,
+                "active_qubits": 22
+              },
+              "precompile_count_ops": {
+                "rz": 4178,
+                "cx": 3000,
+                "sx": 1502,
+                "measure": 14
+              },
+              "official_basis_metrics": {
+                "two_qubit_gates": 3000,
+                "depth": 5691,
+                "total_gates": 8680,
+                "active_qubits": 22
+              },
+              "official_basis_count_ops": {
+                "rz": 4178,
+                "cx": 3000,
+                "sx": 1502,
+                "measure": 14
+              },
+              "precompile_seconds": 0.06374693299949286,
+              "scoring_compile_seconds": 0.035050558999500936
+            }
+          ],
+          "aer_run_calls": 0,
+          "scope": "PARTIAL: search uses documented nominal 12 rounds, not a recovered calibration outcome; cannot certify actual scored-winner identity",
+          "same_process_repeat": 3
+        }
+      ]
+    }
+  ],
+  "planned_trials": "T5/T6 x hash seeds0/1/42 fresh process, plus3consecutive same-process repeats per tier atseed0",
+  "scope": "Tier5 sole executed builder complete compile flow; Tier6 pilot plus nominal12-round builder only, not measured calibration selection.",
+  "protected_oracle_internals_inspected": false,
+  "private_parameters_or_circuit_hashes_saved": false,
+  "euler_bases_for_scoring_basis": [
+    "ZSXX"
+  ],
+  "comparison": {
+    "5": {
+      "different_hash_seeds_equal_metrics_and_count_ops": true,
+      "three_same_process_repeats_equal_metrics_and_count_ops": true,
+      "reference_rows": [
+        {
+          "circuit": "sole_Grover_circuit",
+          "precompile_metrics": {
+            "two_qubit_gates": 11000,
+            "depth": 19703,
+            "total_gates": 28413,
+            "active_qubits": 19
+          },
+          "precompile_count_ops": {
+            "rz": 12301,
+            "cx": 11000,
+            "sx": 4862,
+            "x": 250,
+            "measure": 10
+          },
+          "official_basis_metrics": {
+            "two_qubit_gates": 10950,
+            "depth": 19703,
+            "total_gates": 28363,
+            "active_qubits": 19
+          },
+          "official_basis_count_ops": {
+            "rz": 12301,
+            "cx": 10950,
+            "sx": 4862,
+            "x": 250,
+            "measure": 10
+          }
+        }
+      ]
+    },
+    "6": {
+      "different_hash_seeds_equal_metrics_and_count_ops": true,
+      "three_same_process_repeats_equal_metrics_and_count_ops": true,
+      "reference_rows": [
+        {
+          "circuit": "actual_calibration_builder",
+          "precompile_metrics": {
+            "two_qubit_gates": 436,
+            "depth": 819,
+            "total_gates": 1206,
+            "active_qubits": 23
+          },
+          "precompile_count_ops": {
+            "rz": 574,
+            "cx": 436,
+            "sx": 196,
+            "measure": 1
+          },
+          "official_basis_metrics": {
+            "two_qubit_gates": 436,
+            "depth": 819,
+            "total_gates": 1206,
+            "active_qubits": 23
+          },
+          "official_basis_count_ops": {
+            "rz": 574,
+            "cx": 436,
+            "sx": 196,
+            "measure": 1
+          }
+        },
+        {
+          "circuit": "nominal_12_round_search_builder",
+          "precompile_metrics": {
+            "two_qubit_gates": 3000,
+            "depth": 5691,
+            "total_gates": 8680,
+            "active_qubits": 22
+          },
+          "precompile_count_ops": {
+            "rz": 4178,
+            "cx": 3000,
+            "sx": 1502,
+            "measure": 14
+          },
+          "official_basis_metrics": {
+            "two_qubit_gates": 3000,
+            "depth": 5691,
+            "total_gates": 8680,
+            "active_qubits": 22
+          },
+          "official_basis_count_ops": {
+            "rz": 4178,
+            "cx": 3000,
+            "sx": 1502,
+            "measure": 14
+          }
+        }
+      ]
+    }
+  },
+  "elapsed_seconds": 26.245656259001407,
+  "status": "COMPLETE",
+  "conclusion": "No change in observed metrics/count_ops from tested Python hash seeds or repeated in-process construction/compilation. This bounds the tested causes; it does not isolate historical cross-environment root cause or prove all compiler state irrelevant.",
+  "tier5_historical_gate_count_comparison": {
+    "source_commit": "ce75c0721622d363e77912191a52a02c34f92472",
+    "source_path": "docs/v63-evidence/compiler-replay.json",
+    "historical_execution_count_ops": {
+      "rz": 12301,
+      "cx": 11000,
+      "sx": 4862,
+      "x": 300,
+      "measure": 10
+    },
+    "current_execution_count_ops": {
+      "rz": 12301,
+      "cx": 11000,
+      "sx": 4862,
+      "x": 250,
+      "measure": 10
+    },
+    "nonzero_deltas": {
+      "x": -50
+    },
+    "finding": "The50gateTier5differenceisexactly50Xgatesatcountlevel;allothernativegatecountsagree.",
+    "historical_ordered_circuit_available": false,
+    "histogram_does_not_prove_gate_positions_or_unitary_equivalence": true
+  },
+  "gate_traversal_order_equality_tested": false,
+  "source_review_observations": [
+    "Scoringbasisrz/sx/x/cxselectsonlyZSXXEulerdecomposer;nogenuinealternativeEulerbasistieinthatdispatch.",
+    "Tier5gf2_synthesisusescircuit.datainsertionorder,sortedwireindicesanddeterministicGaussianpivots;nouserlevelrandomselectionfound.",
+    "QiskitRustpassstateandfloatingpointlibrarybehaviornotprovenidenticalacrosshistoricalhosts.",
+    "Tier5Aerhasnoseed_simulatorargument,butitssolecircuitisconstructedandcompiledbeforemeasurements;samplingdoesnotchoosescoringcircuit."
+  ],
+  "script_sha256": "4e983b4148fec3e95a83fd74872d122a27be5f9cffed4583e155031cf329199e"
+}
