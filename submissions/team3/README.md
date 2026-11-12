@@ -1,8 +1,6 @@
 # Quantum Cryptography: Ten Locks, One Message
 
-> **v6.3 Candidate A.** The v6 metrics and independent acceptance below describe the earlier release. This draft integrates the selected Tier 5 and Tier 8 circuits with v6.2. Independent v6.3 source and package review is pending. Both tier09/public_operations.json and tier10/public_operations.json are runtime dependencies.
-
-**Team 3:** Sicheng Qian, Junqi Sheng, Youyang Shang, and Junrui Yu
+**Team 3:** Sicheng Qian, Junqi Sheng, Youyang Shang, Junrui Yu
 
 **Institution:** The Ohio State University
 
@@ -12,51 +10,85 @@
 
 **Write-up:** [WRITEUP.md](WRITEUP.md)
 
-## Overview
+## Result
 
-We solved all ten tiers using quantum circuits executed on Qiskit Aer, followed by classical key recovery and decryption. The official Checker reported FULL and matching plaintext SHA-256 hashes for all ten. Youyang Shang independently reproduced the v6 runtime release candidate's results, with no flags or timeouts. Relative to v5, the sum of the ten selected circuits' two-qubit gates fell from 241,211 to 162,716 (32.54%). These are simulator results, not a demonstration of hardware speedup.
+All ten tiers pass the unchanged official Checker: **10/10 FULL**, all ten plaintext
+SHA-256 hashes match, every tier executed a circuit on Aer, and there were **no flags
+and no timeouts**. The ten selected scoring circuits total:
+
+| Metric | v6.3 result |
+|---|---:|
+| Two-qubit gates | **103,166** |
+| Sum of per-tier depths | **217,625** |
+| Total gates | **294,982** |
+
+These figures were independently reproduced from the approved v6.3 Candidate A ZIP in a clean checkout
+of the official challenge repository (Python 3.12.10, Qiskit 2.6.1, Aer 0.18.2).
+Junqi also observed 103,166 two-qubit gates, depth sum 217,602 and 294,857 total gates in three clean runs in a different environment. All ten tiers passed in each run. The table below gives the approved reference measurements. The independent v6.3 audit applies to Candidate A; this documentation edition has its own package review record.
 
 ## Contents
 
-- `tier01/` through `tier10/`: each contains `solution.py` and the tier-specific helper modules needed by that solution.
-- The team directory also contains shared classical helpers for the keystream, toy cipher, RSA, Diffie–Hellman and Tier 7 decryption. These files are required alongside the tier directories.
-- [WRITEUP.md](WRITEUP.md): methods, per-tier analysis, circuit diagrams, validation and scaling limitations.
+- `tier01/` through `tier10/`: each contains `solution.py` and the tier-specific
+  modules that solution imports.
+- Shared classical modules at the team root: keystream, toy cipher, RSA,
+  Diffie–Hellman and Tier 7 decryption.
+- `tier09/public_operations.json` and `tier10/public_operations.json`: public
+  operation caches required at runtime.
+- [WRITEUP.md](WRITEUP.md): algorithms, circuit construction, measurement-to-key
+  recovery, resource tables, optimization evidence and limitations.
 
-## Reproduction
+## Per-tier scoring resources
 
-Use a fresh copy of the official challenge repository and Python 3.12. From its root:
+These are the official post-transpilation metrics for the one circuit the Checker
+selects per tier (most two-qubit gates, then depth), not the total work over all shots.
 
-```bash
-python -m venv .venv
-source .venv/bin/activate  # Windows: .venv\Scripts\activate
-python -m pip install -r requirements.txt
-python tools/check_setup.py
-```
-
-Place the complete `team3/` folder from the submission archive under `submissions/`, retaining all tier and shared helper files. Then run the official full Checker from the repository root:
-
-```bash
-python tools/check_submission.py submissions/team3 --out reports/team3
-```
-
-Inspect `reports/team3/report.md` and `report.json` for hash status, circuit execution, flags and scoring metrics. The Checker selects, per tier, the executed circuit with the most two-qubit gates after official transpilation, breaking ties by depth. `python tools/check_submission.py submissions/team3 --metrics-only` runs the metrics-only mode and does not verify hashes. Probabilistic sampling and machine load can affect individual runs.
-
-## Verified v6 results
-
-The independently reproduced rows below are for the selected scoring circuit in each tier; all ten were FULL with matching hashes and valid metrics.
-
-| Tier | Algorithm | Two-qubit gates | Depth | Total gates | Active qubits | Checker |
+| Tier | Algorithm | 2Q gates | Depth | Total gates | Active qubits | Status |
 |---:|---|---:|---:|---:|---:|---|
 | 1 | Bernstein–Vazirani | 151 | 44 | 298 | 25 | FULL |
 | 2 | BB84 | 0 | 3 | 3 | 1 | FULL |
 | 3 | Deutsch–Jozsa | 7,808 | 8,771 | 19,497 | 7 | FULL |
 | 4 | Simon | 183 | 195 | 455 | 20 | FULL |
-| 5 | Grover search | 14,552 | 28,132 | 40,938 | 19 | FULL |
+| 5 | Grover search | 10,950 | 19,703 | 28,413 | 19 | FULL |
 | 6 | Multi-target Grover | 3,000 | 5,715 | 8,752 | 22 | FULL |
-| 7 | Quantum phase estimation | 209 | 266 | 727 | 15 | FULL |
-| 8 | Shor order finding, N = 35 | 33,904 | 96,055 | 102,561 | 18 | FULL |
-| 9 | Shor order finding, N = 77 | 55,999 | 120,242 | 168,116 | 22 | FULL |
-| 10 | Quantum discrete logarithm | 46,910 | 109,763 | 132,023 | 19 | FULL |
-| **Sum** | **Ten separate circuits** | **162,716** | **369,186** | **473,370** | — | **10/10** |
+| 7 | Quantum phase estimation | 209 | 154 | 536 | 15 | FULL |
+| 8 | Shor order finding, N = 35 | 7,856 | 18,804 | 22,861 | 18 | FULL |
+| 9 | Shor order finding, N = 77 | 34,186 | 71,632 | 102,830 | 22 | FULL |
+| 10 | Quantum discrete logarithm | 38,823 | 92,604 | 111,337 | 19 | FULL |
+| **Sum** | **Ten separate circuits** | **103,166** | **217,625** | **294,982** | — | **10/10** |
 
-The depth sum is not the depth of one combined circuit. Simplicity points depend on eligible competitors' results and cannot yet be calculated from these numbers alone.
+The depth sum is not the depth of one combined circuit. Simplicity is relative to
+other teams' eligible metrics and can only be final after the deadline.
+
+## Reproduction
+
+Use a fresh copy of the official challenge repository and Python 3.12:
+
+```bash
+python -m venv .venv
+source .venv/bin/activate      # Windows: .venv\Scripts\activate
+python -m pip install -r requirements.txt
+python tools/check_setup.py
+```
+
+Place the complete `team3/` folder from the submission archive under `submissions/`,
+then run the unchanged official Checker:
+
+```bash
+python tools/check_submission.py submissions/team3 --out reports/team3
+```
+
+Inspect `report.md` and `report.json` for hash status, circuit execution, flags and
+metrics. `--metrics-only` skips the hash check and is not a correctness test.
+
+## Evidence and scope
+
+- Every `solve()` returns a plaintext that the official Checker hashes; matched hashes
+  alone do not establish the recovery method, so the write-up identifies the measured
+  outcomes and the classical post-processing used for each tier.
+- Circuit diagrams in the write-up are logical block diagrams; the scored circuit is
+  the exact circuit passed to Aer, not `build_circuit()`.
+- The v6.3 changes are confined to Tier 5 and Tier 8; Tier 9 and Tier 10 retain their
+  independently validated v6.2 implementations.
+- No physical quantum hardware was used. All results are ideal-simulation results with
+  all-to-all transpilation; noise, routing and fault-tolerance costs are discussed in
+  the analysis.

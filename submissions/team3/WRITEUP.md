@@ -1,6 +1,4 @@
-# Quantum Cryptography: Ten Locks, One Message — Team 3 Write-up
-
-> **v6.3 Candidate A.** The v6 metrics and independent acceptance below describe the earlier release. This draft integrates the selected Tier 5 and Tier 8 circuits with v6.2. Independent v6.3 source and package review is pending. Both tier09/public_operations.json and tier10/public_operations.json are runtime dependencies.
+# Quantum Cryptography: Ten Locks, One Message — Team 3 Write-up (v6.3.1 documentation edition)
 
 **Sicheng Qian, Junqi Sheng, Youyang Shang, Junrui Yu**
 
@@ -8,128 +6,263 @@ The Ohio State University · Qiskit Fall Fest 2026
 
 ## Abstract
 
-We solve ten encrypted-file challenges with Bernstein–Vazirani, BB84, Deutsch–Jozsa, Simon, Grover search, phase estimation, Shor order finding and quantum discrete logarithms. Each `solve()` executes a Qiskit Aer circuit and uses measurements in key recovery. Classical post-processing decrypts the file and verifies its SHA-256. The independently audited v6 runtime candidate achieved FULL and matching hashes in all ten tiers. Its ten selected circuits use 32.54% fewer two-qubit gates in aggregate than v5. This is a circuit-resource comparison on a classical simulator, not evidence of a hardware speedup.
+We solve ten encrypted-file challenges with Bernstein–Vazirani, BB84,
+Deutsch–Jozsa, Simon, Grover search, multi-target Grover, quantum phase estimation,
+Shor order finding and quantum discrete logarithms. Each `solve()` executes a Qiskit
+Aer circuit and derives its key from measured outcomes; classical routines then decrypt
+the file and the official Checker verifies its SHA-256.
 
-## Problem and methodology
+The approved v6.3 Candidate A package passes the unchanged official Checker **10/10 FULL**, with
+all ten hashes matching, actual Aer execution in every tier, no flags and no timeouts.
+Its ten selected scoring circuits total **103,166 two-qubit gates**, **217,625** summed
+depth and **294,982** total gates. These are ideal-simulator, all-to-all metrics, not a
+hardware speedup claim.
 
-Each file encodes a line using a key hidden behind a different oracle, channel or public cryptographic construction. We identify the structure, construct a circuit using the provided public interfaces, execute it on Aer and interpret its measurements. Classical routines perform operations such as linear algebra, candidate checking, continued fractions, GCD, reconciliation, key derivation and decryption. The official Checker hashes each returned plaintext; the hash checks the answer, while the circuit and measurement-to-key path explain how it was obtained.
+## How the evidence should be read
 
-The resource figures below are post-transpilation metrics for the one circuit selected by the official Checker in each tier, not the total work across shots or retries. It selects the executed circuit with the most two-qubit gates, then greatest depth. The independently reproduced v6 report recorded FULL, hash match, circuit execution, valid metrics and no flags for every tier. Raw private measurement strings and their frequencies were not retained in that report; we give the implemented recovery rules and shot budgets rather than inventing outcomes. Circuit sketches show logical blocks; `build_circuit()` in each solution provides the corresponding diagram interface, though it is not itself scored.
+The Checker records every circuit sent to Aer during `solve()`, transpiles each with the
+official configuration (`rz, sx, x, cx`, all-to-all, optimization level 1, seed 12345)
+and scores the circuit with the most two-qubit gates, breaking ties by depth. It hashes
+the returned plaintext; a hash match verifies the answer, not the recovery method.
+Accordingly, each section below states what was hidden, why the algorithm applies, what
+the executed circuit computes, which measured outcomes become the key, and what the
+classical cost is. `build_circuit()` is a diagram interface and is never scored.
 
 ## Tier 1: The Parity Vault — Bernstein–Vazirani
 
-**Objective and principle.** Recover a 24-bit XOR mask from a parity oracle. Phase kickback converts the oracle's inner product into a phase; Hadamards then map that phase to the hidden string.
-
-**Circuit and extraction.** `|0>^24 — H — [parity oracle] — H — measure`; target `|1> — H — [oracle]` supplies |−⟩. One circuit, one shot and one oracle call produce the measured key bits, converted with the recorded classical-bit ordering. Classical XOR decrypts the file. The independent Checker confirmed the resulting hash; the actual string was not retained in the report. A classical black-box approach needs up to 24 independent bit queries. The exact one-shot outcome assumes the promised oracle and ideal simulation.
-
-**Scored resources:** 151 two-qubit gates; depth 44; 298 total gates; 25 active qubits.
+**What was hidden.** A 24-bit XOR mask behind a parity oracle. **Why it works.** Phase
+kickback turns each oracle inner product into a phase; a final Hadamard layer maps the
+phase pattern to the mask. **Circuit and extraction.** `|0>^24 — H — [parity oracle] —
+H — measure`, with a `|1> — H` target supplying |−⟩. One shot, one oracle call; the
+measured 24 bits are the key, converted with the recorded bit order. **Classical cost.**
+A black-box classical search needs up to 24 independent bit queries; here the oracle is
+supplied and the instance is small. **Scored resources.** 151 two-qubit gates, depth 44,
+298 total gates, 25 active qubits.
 
 ## Tier 2: Two Links — BB84
 
-**Objective and principle.** Identify the intercepted link and reconstruct the clean link's key. Measuring in Alice's basis preserves an ideal BB84 bit; intercept-resend introduces errors among matching-basis check bits.
-
-**Circuit and extraction.** For each received qubit Bob applies either identity (Z basis) or H (X basis), then measures. Bases are chosen before disclosure. After each of the two 1,024-qubit links is measured once, public bases and check bits permit sifting and a matching-basis error-rate comparison. The lower-error link supplies unrevealed matching-basis bits to the public reconciliation helper; classical XOR decrypts. The Checker recorded 2,048 measurement circuits and no repeat measurements. Each is one received-qubit measurement; the selected scored circuit includes the channel preparation. The independent hash matched. The fixed basis seed is for reproducibility, not production randomness; finite checks and the one-clean-link promise do not constitute a general security proof.
-
-**Scored resources:** 0 two-qubit gates; depth 3; 3 total gates; 1 active qubit. Classical sifting and reconciliation scale with the transmitted data and reconciliation procedure.
+**What was hidden.** Which of two intercepted links is clean, and the key carried by
+that link. **Why it works.** Measuring in Alice's basis preserves an ideal BB84 bit;
+intercept–resend introduces errors in matching-basis check bits. **Circuit and
+extraction.** Bob applies identity or H according to his chosen basis and measures each
+received qubit. The two 1,024-qubit links are measured once each; public bases and check
+bits permit sifting, and the lower-error link supplies unrevealed matching-basis bits to
+the public reconciliation helper. **Classical cost.** Sifting and reconciliation scale
+with the transmitted data, not with a hidden key search. **Scored resources.** 0
+two-qubit gates, depth 3, 3 total gates, 1 active qubit; 2,048 measurement circuits.
 
 ## Tier 3: Twenty-Four Seals — Deutsch–Jozsa
 
-**Objective and principle.** Classify 24 promised constant or balanced Boolean oracles. Interference makes the all-zero input result certain for a constant oracle and impossible for a balanced one in the ideal promise setting.
-
-**Circuit and extraction.** For each oracle: `|0>^6 — H — [oracle] — H — measure`, with a |−⟩ target. The 24 circuits use one shot and one oracle call each. All-zero maps to constant; any other result maps to balanced. The classifications in oracle order form the key, which feeds the classical keystream decryptor. The independent hash matched; individual outcomes are not in the report. Classical deterministic classification can require exponentially many queries in the input width in the worst case; the advantage relies on the promise and ideal oracle.
-
-**Scored resources:** 7,808 two-qubit gates; depth 8,771; 19,497 total gates; 7 active qubits.
+**What was hidden.** Whether each of 24 promised constant/balanced Boolean oracles is
+constant or balanced. **Why it works.** Interference makes the all-zero input certain
+for a constant oracle and impossible for a balanced one in the ideal promise setting.
+**Circuit and extraction.** For each oracle: `|0>^6 — H — [oracle] — H — measure`, with a
+|−⟩ target; one shot and one oracle call per oracle. All-zero means constant, anything
+else balanced. The 24 classifications form the key. **Classical cost.** Deterministic
+classical classification can require exponentially many queries in the input width in
+the worst case; the advantage relies on the promise and an ideal oracle. **Scored
+resources.** 7,808 two-qubit gates, depth 8,771, 19,497 total gates, 7 active qubits.
 
 ## Tier 4: The Echo — Simon
 
-**Objective and principle.** Find the nonzero 10-bit XOR period of a promised two-to-one function. Each sample yields a row y satisfying y·s = 0 over GF(2).
-
-**Circuit and extraction.** `|0>^10 — H — [oracle] — H — measure`; a 10-qubit zeroed output register enters the oracle and remains unmeasured. Each shot queries the oracle once. The solver takes 32-shot batches, up to 128 shots, and row-reduces the observed equations until rank 9 determines the unique nonzero null vector. The period feeds classical keystream decryption. The independent Checker passed; its report does not retain the rank history or bitstrings. Sampling may fail to reach sufficient rank within the finite budget. A classical collision search has exponential query cost in the input width under the usual black-box model.
-
-**Scored resources:** 183 two-qubit gates; depth 195; 455 total gates; 20 active qubits.
+**What was hidden.** A nonzero 10-bit XOR period of a promised two-to-one function.
+**Why it works.** Each measured sample yields a row `y` with `y·s = 0` over GF(2);
+enough independent rows determine the unique nonzero null vector. **Circuit and
+extraction.** `|0>^10 — H — [oracle] — H — measure`; a 10-qubit zeroed output register
+enters the oracle and is not measured. The solver takes 32-shot batches up to 128 shots
+and row-reduces observed equations until rank 9 fixes the period. **Classical cost.**
+Black-box collision search is exponential in the input width under the usual model.
+**Scored resources.** 183 two-qubit gates, depth 195, 455 total gates, 20 active qubits.
 
 ## Tier 5: The Small Safe — Grover search
 
-**Objective and principle.** Find a 10-bit toy-cipher key matching known text. With one marked item among 1,024, repeated phase marking and diffusion amplify its measurement probability.
-
-**Circuit and extraction.** `|0>^10 — H — ([reversible cipher phase oracle] — [diffuser])^25 — measure`; eight scratch qubits and one flag support the oracle. It computes the public prefix predicate, applies a phase, and uncomputes temporary work. One 128-shot circuit uses 25 phase-oracle calls per shot, or 3,200 shot-weighted calls. Classical checks consider only measured keys, require a unique prefix-valid candidate with majority support, and decrypt. The independent hash matched; private counts are unavailable in the aggregate report. Sampling may fail, and the fixed iteration count assumes the stated one-solution promise. Classical exhaustive search is O(2^10) cipher checks; the quantum query advantage does not make the reversible cipher free.
-
-**Scored resources:** 14,552 two-qubit gates; depth 28,132; 40,938 total gates; 19 active qubits.
+**What was hidden.** A 10-bit toy-cipher key matching a public known-text prefix.
+**Why it works.** With one marked item among 1,024, repeated phase marking and
+diffusion amplify its measurement probability; 25 iterations are close to the optimal
+`(π/4)√N`. **Circuit and extraction.** `|0>^10 — H — ([reversible cipher phase
+oracle] — [diffuser])^25 — measure`; eight scratch qubits and one flag support the
+oracle. The phase oracle computes the public prefix predicate, applies a phase, and
+uses the true adjoint to uncompute its temporary work. One 128-shot circuit uses 25
+phase-oracle calls per shot (3,200 shot-weighted calls). Only measured candidates are
+checked; the solver requires a unique prefix-valid key with majority support before
+decrypting. **Classical cost.** Exhaustive search is `O(2^10)` cipher checks, trivial at
+this size; the quantum query advantage does not make the reversible cipher free.
+**Scored resources.** 10,950 two-qubit gates, depth 19,703, 28,413 total gates, 19
+active qubits.
 
 ## Tier 6: The Bigger Safe — multi-target Grover
 
-**Objective and principle.** Recover a 14-bit key when roughly 64 keys satisfy the first-byte predicate. If M of N keys are marked, Grover's amplified probability after k rounds is sin²((2k+1)θ), where sin²θ = M/N.
-
-**Circuit and extraction.** A calibration circuit prepares the key superposition, performs one phase-oracle/diffuser round, computes the predicate into a measured flag, and uses 2,048 shots. A statistical estimate selects the number of rounds for `H — ([Q phase] — [diffuser])^k — measure`. The solver uses at most two search batches and 1,024 search shots; each search shot uses k phase queries, and each pilot shot uses one phase and one bit-predicate query. It checks only observed candidates against the public first-byte predicate, then classically decrypts and filters by checksum, format and hash. The audited run executed two circuits and matched the hash, but does not disclose its pilot frequency, chosen k or search counts. Statistical calibration and candidate coverage are bounded, not guaranteed; a supplemental batch may be used if needed and time permits. Classical enumeration costs up to 2^14 candidate checks.
-
-**Scored resources:** 3,000 two-qubit gates; depth 5,715; 8,752 total gates; 22 active qubits.
+**What was hidden.** A 14-bit key when roughly 64 keys satisfy the first-byte predicate.
+**Why it works.** If `M` of `N` keys are marked, the success probability after `k` rounds is
+`sin²((2k+1)θ)` with `sin²θ = M/N`; a calibration run estimates `M/N` and selects `k`.
+**Circuit and extraction.** A 2,048-shot calibration circuit prepares the key
+superposition, performs one phase/diffuser round and measures the predicate flag. The
+solver then runs at most two search batches (1,024 shots total), checks only observed
+candidates against the public predicate, and decrypts and filters by checksum, format
+and hash. **Classical cost.** Up to `2^14` candidate checks; again trivial at this toy
+size. **Scored resources.** 3,000 two-qubit gates, depth 5,715, 8,752 total gates, 22
+active qubits.
 
 ## Tier 7: The Hidden Angle — quantum phase estimation
 
-**Objective and principle.** Recover a 14-bit eigenphase of the supplied one-qubit unitary. Controlled powers imprint the phase on a counting register; an inverse QFT converts the exact-grid phase into bits.
-
-**Circuit and extraction.** `|0>^14 — H — [controlled U^(2^j)] — inverse QFT — measure`, with the supplied eigenstate as target. The 64-shot QPE batch must give one consistent 14-bit outcome. A second 32-shot quantum phase-cancellation circuit built from that measured value must yield all zeros. Each shot uses 14 controlled-power blocks, equivalent to 16,383 base-U applications if powers are counted as repeated queries; the two batches therefore represent 1,572,768 base-U applications under that convention. Matrix powers are classically constructed by repeated squaring, so actual compiled gate cost is a different accounting. The measured phase is converted to the keystream key and decrypted; the independent hash matched. Exact-grid behavior and ideal gates are assumptions, and the phase check is not a hardware-noise test.
-
-**Scored resources:** 209 two-qubit gates; depth 266; 727 total gates; 15 active qubits.
+**What was hidden.** A 14-bit eigenphase of the supplied one-qubit unitary. **Why it
+works.** Controlled powers imprint the phase on a counting register; an inverse QFT
+converts the exact-grid phase into bits. **Circuit and extraction.** `|0>^14 — H —
+[controlled U^(2^j)] — inverse QFT — measure`, with the supplied eigenstate as target.
+The 64-shot QPE batch must give one consistent 14-bit outcome; a second 32-shot
+phase-cancellation circuit built from that measured value must return all zeros. The
+phase is converted to the keystream key and decrypted. **Classical cost.** Matrix powers
+are constructed classically by repeated squaring; the compiled gate cost is a separate
+accounting from abstract oracle queries. **Scored resources.** 209 two-qubit gates,
+depth 154, 536 total gates, 15 active qubits. The lower depth/gate count comes from
+compiling the executed circuit at optimization level 2 before the Checker's fixed
+level-1 pass; the algorithm and measurements are unchanged.
 
 ## Tier 8: The Wrapped Key, N = 35 — Shor order finding
 
-**Objective and principle.** Factor the toy RSA modulus to unwrap a key. QPE on modular multiplication samples information about the order r of public base 2; an even order with a nontrivial half-order gives factors via GCD.
-
-**Circuit and extraction.** `|0>^12 — H — [controlled modular powers] — inverse QFT body — measure`; six work qubits start at |1⟩. Reversed power-control wiring absorbs the inverse-QFT SWAPs for the uniformly prepared counting state. Each controlled multiplier acts on all six-bit work states, fixing padding outside the modulus. A batch has 64 shots; at most two batches are allowed. Continued fractions and bounded subset LCMs propose orders from measured y/2^12; modular exponentiation validates and reduces a candidate, then GCD yields factors and classical RSA unwrapping yields the key. Trial factoring is applied to a measurement-derived candidate order, not to the modulus. The independent hash matched, but the measured frequencies were not retained. Finite samples can fail, and explicit small permutation tables do not scale to cryptographic moduli.
-
-**Scored resources:** 33,904 two-qubit gates; depth 96,055; 102,561 total gates; 18 active qubits. The circuit contains 12 controlled public-power blocks per shot; their table synthesis and gate costs are separate from abstract oracle queries.
+**What was hidden.** The factors of the public toy RSA modulus 35. **Why it works.** QPE on modular
+multiplication samples information about the order `r` of public base 2; an even order
+with a nontrivial half-order yields factors by GCD. **Circuit and extraction.**
+`|0>^12 — H — [controlled modular powers] — inverse QFT body — measure`; the six-qubit work register
+starts at integer 1. Reversed power-control wiring absorbs the inverse-QFT SWAPs for the
+uniformly prepared counting state. Each controlled multiplier implements the complete
+six-bit permutation, fixing padding outside the modulus; two retained dirty slots are
+restored exactly. A batch is 64 shots, at most two batches. Continued fractions and
+bounded subset LCMs propose orders from measured `y/2^12`; modular exponentiation
+validates a candidate, then GCD and classical RSA unwrapping yield the key. **Classical
+cost.** Trial factoring is trivial for 35; the table synthesis is exponential in the
+work width and does not scale. **Scored resources.** 7,856 two-qubit gates, depth
+18,804, 22,861 total gates, 18 active qubits. This is the final last-pivot native
+synthesis, not the earlier 33,904-CX network.
 
 ## Tier 9: The Wrapped Key, N = 77 — Shor order finding
 
-**Objective and principle.** Apply the same measurement-driven order-finding method to a larger toy RSA modulus.
-
-**Circuit and extraction.** `|0>^14 — H — [controlled modular powers] — full inverse QFT — measure`; seven work qubits start at |1⟩ and one clean synthesis wire starts at zero. The public base is 2; multiplication acts modulo 77 below the modulus and fixes padding. The clean wire can be used by exact decomposition and must return to zero. Up to two 64-shot batches yield y/2^14; continued fractions, bounded LCMs, order validation and GCD recover factors for classical RSA decryption. There are 14 controlled-power blocks per shot. The independent hash matched; raw frequencies are not in the report. Bounded sampling can fail, and the table-based implementation is specific to this small instance.
-
-**Scored resources:** 55,999 two-qubit gates; depth 120,242; 168,116 total gates; 22 active qubits.
+**What was hidden.** The factors of the public toy RSA modulus 77. **Why it works.** The same
+measurement-driven order-finding method; 14 counting qubits and seven work qubits.
+**Circuit and extraction.** `|0>^14 — H — [controlled modular powers] — full inverse
+QFT — measure`; the seven-qubit work register starts at integer 1 and one clean synthesis wire starts at
+zero. The public base is 2; multiplication acts modulo 77 below the modulus and fixes
+padding. Up to two 64-shot batches yield `y/2^14`; continued fractions, bounded LCMs,
+order validation and GCD recover factors for classical RSA decryption. **Classical
+cost.** Trial division is trivial for 77; the global fixed-mask synthesis is specific to
+this small instance. **Scored resources.** 34,186 two-qubit gates, depth 71,632,
+102,830 total gates, 22 active qubits.
 
 ## Tier 10: The Handshake — quantum discrete logarithm
 
-**Objective and principle.** Recover a Diffie–Hellman exponent from public A = g^a mod p. For p = 83, g = 3 and supplied subgroup order 41, coherent evaluation of g^x A^z hides the kernel x + az = 0 mod 41; Fourier sampling produces information about the dual relation v = au mod 41.
+**What was hidden.** A Diffie–Hellman exponent from public `A = g^a mod p`. For
+`p = 83`, `g = 3` and subgroup order 41, coherent evaluation of `g^x A^z` hides the
+kernel `x + az = 0 mod 41`; Fourier sampling yields information about the dual relation
+`v = au mod 41`. **Circuit and extraction.** Two six-qubit counting registers and a
+seven-qubit work register implement `|x,z,1> → |x,z,g^x A^z mod 83>`, followed by
+inverse-QFT bodies and measurements. Reversed control wiring absorbs physical SWAPs for
+the prepared uniform registers. Each shot uses 12 controlled public-power blocks. For
+measured grid integers, half-up rounding maps each to `u` and `v` modulo 41; the solver
+forms measurement-derived equations, rejects uninformative or inconsistent samples and
+tests at most eight new candidates per 128-shot batch, with at most two batches.
+**Classical cost.** Brute force is feasible for this small subgroup; it grows with the
+order and is not a scalable method. **Scored resources.** 38,823 two-qubit gates, depth
+92,604, 111,337 total gates, 19 active qubits.
 
-**Circuit and extraction.** Two six-qubit counting registers and a seven-qubit work register implement `|x,z,1> → |x,z,g^x A^z mod 83>`, followed by inverse-QFT bodies and measurements. Reversed control wiring absorbs the physical SWAPs for the prepared uniform registers. Each shot uses 12 controlled public-power blocks. For measured grid integers bX and bZ, classical half-up rounding maps each from the 64-point grid to u and v modulo 41. The solver forms measurement-derived equations, rejects uninformative or inconsistent samples, and tests at most eight new candidates per 128-shot batch against the public relation, with at most two batches. A verified exponent derives the shared secret and keystream. The independent hash matched; raw outcomes are not published in the aggregate report. Rounding can produce false equations and the bounded sampling may fail; this is not a general exponent-search fallback.
+## Optimization and correctness
 
-**Scored resources:** 46,910 two-qubit gates; depth 109,763; 132,023 total gates; 19 active qubits. Classical brute force is feasible for this small subgroup but grows with its order.
+**Tier 5.** The accepted 19-qubit implementation resynthesizes consecutive CNOT windows
+as exact GF(2) linear transformations after basis transpilation and before Aer
+execution. Every replaced window was checked on all columns; the recorded maximum error
+was zero. The final phase layer uses the actual adjoint, not a copy, so the relative
+phase network and scratch qubits are restored. A 22-qubit candidate with 13,802 two-qubit gates
+was rejected because all ten strict OSC solves exceeded the 120-second limit; fewer
+gates did not mean a better solver.
 
-## Circuit optimization and correctness
+**Tier 8.** The accepted six-bit modular multipliers use public mixed-polarity Boolean networks and native multi-controlled gates with last-pivot fanout. They preserve the entire permutation, including padding and control-off identity. At 18 active qubits, the final circuit uses 7,856 two-qubit gates, down from 33,904. The four nine-wire operators were compared on all 512 basis columns, including arbitrary borrowed bits; the maximum complex-entry error was below 2.8e-14.
 
-**Tier 5.** The accepted 19-qubit implementation resynthesizes consecutive CNOT windows as GF(2) linear transformations after normal basis transpilation and before Aer execution. Full complex operators of every replaced window were compared on all columns; the recorded maximum error was zero. The positive-CNOT maps preserve phase and their composition preserves the original reversible transformation and restoration behavior. The final circuit has 14,552 two-qubit gates. A 22-qubit candidate with 13,802 gates was excluded after all ten strict OSC solves exceeded the 120-second solve timeout. Ten paired OSC trials of the accepted rewrite passed, but its measured simulation solve time increased.
+**Tier 9.** The v6.2 integration retained in Candidate A uses affine-coordinate, mixed-polarity synthesis and exact shared-control grouping for five public multipliers. At 22 active qubits, it reduced the v6.1 circuit from 55,999 to 34,186 two-qubit gates. All controlled branches, padding, inverse maps and clean-workspace restoration were checked. In five paired v6.2 trials the median simulator solve time fell from 13.275 to 10.616 seconds.
 
-**Tier 8.** Controlled modular multipliers use a hybrid choice between fixed-mask row elimination and cycle-anchor synthesis. Both implement the complete public permutation, including padding and control-off identity; anchor choice reduces a construction cost without proving global optimality. Relative to the immediately preceding baseline, two-qubit gates fell 42,792 → 33,904 and depth 123,300 → 96,055, with 18 active qubits unchanged. Ten paired OSC trials passed. Independent complex-operator checks covered each actual nine-wire controlled block, including dirty-wire values and inverse, with maximum element error approximately 2.94×10⁻¹³; this was not a full 18-qubit dense-operator test.
+**Tier 10.** The accepted implementation uses global mixed-polarity group-operation synthesis with a public cache, exact shared-control operations and SWAP-absorbed
+QFT wiring: 38,823 two-qubit gates, retained from v6.1 and v6.2 (46,910 in v6; 82,804 in v5), at 19 active qubits. Tests cover
+the actual controlled work-register branches, small complex operators and reduced
+statevector comparisons; a separate 19-qubit statevector comparison reported error
+about `6.5e-15`. These are scoped tests, not a dense full-unitary proof.
 
-**Tier 9.** Global fixed-original-mask elimination synthesizes the complete seven-bit permutation; already fixed rows remain untouched. Exact shared-control grouping preserves the controlled mapping and phase. The approved v2 changed two-qubit gates 89,075 → 55,999, depth 235,048 → 120,242, and active qubits 21 → 22. Ten paired OSC trials passed correctness, but mean solve time rose from 28.2307 to 36.0989 seconds. The original overall benchmark label remains **INCONCLUSIVE**; the subsequent integration decision selected v2. Earlier timeout evidence remains relevant.
+**Cross-tier evidence.** A reversible basis mapping alone is insufficient if phases
+differ. Exact complex-operator tests, phase-preserving constructions, inverse checks
+and restoration of clean or borrowed dirty wires support coherent composition on
+superpositions. The modular work register intentionally retains its result and may
+remain entangled; it need not return to zero. QFT SWAP absorption in Tiers 8 and 10
+relies on uniform initial counting registers. Matching plaintext SHA-256 confirms an
+output, not unitary equivalence.
 
-**Tier 10.** The independently accepted v2 uses shorter safe control predicates for reversible permutation synthesis, exact shared-control operations and SWAP-absorbed QFT wiring. Two-qubit gates fell 82,804 → 46,910 and depth 218,263 → 109,763, with 19 active qubits. Tests cover actual controlled work-register branches, small complex operators and reduced-state comparisons; a separate 19-qubit statevector comparison reported error about 6.5×10⁻¹⁵. These are scoped tests, not a dense full-unitary proof. The v2 simulation was slower in its cited benchmark.
+## Analysis: classical versus quantum cost
 
-A reversible basis mapping alone is insufficient if phases differ. Exact complex-operator tests, phase-preserving gate constructions, inverse checks and restoration of temporary clean or borrowed dirty wires support coherent composition on superpositions. The modular work register intentionally retains its result and may remain entangled; it need not return to zero. QFT SWAP absorption in Tiers 8 and 10 relies on uniform initial counting registers, rather than equality of the bare operators on arbitrary inputs. Matching plaintext SHA-256 confirms an output, not equivalence of quantum unitaries; finite tests and compiler assumptions limit the evidence.
+The table compares the abstract query cost of each algorithm with the concrete work in
+this submission. It deliberately separates oracle queries and shots from compiled
+gates; the scored circuit is only one axis.
 
-## Scaling and classical comparison
+| Tier | Classical baseline | Quantum work in this solver | Scaling caveat |
+|---:|---|---|---|
+| 1 | up to 24 parity queries | 1 oracle call, 1 shot | oracle is supplied; advantage is query count |
+| 2 | classical key distribution | 2,048 single-qubit measurements | security protocol, not a speed contest |
+| 3 | up to `2^{n-1}+1` queries worst case | 24 oracle calls, 24 shots | promise-dependent |
+| 4 | `O(2^{n/2})` collision queries | 32–128 shots, rank-9 rows | finite sampling can fail |
+| 5 | `O(2^{10})` cipher checks | 25 iterations × 128 shots | reversible oracle dominates gates |
+| 6 | `O(2^{14}/M)` checks | 2,048 pilot + ≤1,024 search shots | calibration is statistical |
+| 7 | classical phase estimation | 64 + 32 shots; 14 controlled powers per shot | exact-grid assumption |
+| 8 | trial division is trivial for 35 | 12 controlled blocks × ≤128 shots | 64-entry table synthesis |
+| 9 | trial division is trivial for 77 | 14 controlled blocks × ≤128 shots | 128-entry table synthesis |
+| 10 | `O(41)` brute force for this subgroup | 12 blocks × ≤256 shots | small subgroup, bounded sampling |
 
-Grover needs O(√(N/M)) oracle queries for M marked items, versus O(N/M) expected classical search under comparable assumptions; constructing and uncomputing a reversible oracle can dominate its gates. Shor's framework uses QPE and efficient reversible modular arithmetic to extract an order, followed by classical continued fractions and GCD. These toy solutions also use classical preprocessing, explicit public permutation tables, synthesis heuristics, bounded candidate validation and post-processing. A table of 2^w work states requires exponential storage in w; fixed small permutations do not establish scalable arithmetic. Classical brute force or factoring is practical at these sizes. Neither query complexity nor a lower scored gate count establishes an end-to-end advantage for this implementation, and no practical RSA-2048 break is claimed.
+Grover gives a quadratic query reduction, `O(√(N/M))` versus `O(N/M)` under comparable
+assumptions; Shor gives a polynomial-time order-finding framework against
+sub-exponential classical factoring. Those asymptotic statements do not transfer
+directly to this submission: the moduli are 35 and 77, the group order is 41, and the
+solver uses explicit public permutation tables whose classical preparation is
+exponential in the work width. At these sizes classical brute force or trial division
+is immediate, so the exercise demonstrates the algorithms and their measurement paths,
+not an end-to-end practical advantage.
 
-## Hardware and noise
+A second distinction is query complexity versus circuit cost. Tier 5 uses only 25
+oracle calls per shot but a reversible cipher with thousands of two-qubit gates; Tier 8
+uses 12 controlled blocks but a table-synthesis preprocessing step that does not scale.
+No claim is made that these compiled gate counts are competitive with classical
+factoring at cryptographic sizes.
 
-Aer and OSC Cardinal are classical simulation platforms, not quantum processors. On hardware, two-qubit errors accumulate, limited coherence constrains circuit duration, and readout errors corrupt measured equations. Restricted connectivity requires routing and additional gates. Reliable large instances would require fault-tolerant logical gates, error correction, physical-qubit overhead and far longer resource estimates; the ideal, all-to-all scoring circuit does not include those costs. No physical-hardware run is claimed.
+## Hardware, noise and the simulator boundary
 
-## Experimental methodology and results
+Every result here comes from Qiskit Aer statevector simulation with an all-to-all
+transpiler. That removes the dominant hardware costs: two-qubit gate error
+(device- and calibration-dependent), readout error, limited qubit coherence,
+and connectivity that forces SWAP routing and therefore more two-qubit gates. A real
+run would also need calibration-aware transpilation, dynamical decoupling or error
+mitigation, and repeated shots to build confidence; none of that is modeled here.
 
-The audited runtime RC is commit `c4455782ea9388d5897fc27270f42dd3786ed35d`; its tested team tree is `5d825abd0f0c82546c83574bf4148c3a92238d83`. Frozen v5 is `41c7c6775b8fc499c2acdd878b4829bd17e1210d`. The independent audit used Python 3.12.10, Qiskit 2.6.1 and Aer 0.18.2 with pinned requirements. Official scoring uses basis `rz`, `sx`, `x`, `cx`, all-to-all connectivity, optimization level 1 and transpiler seed 12345; solve and scoring transpilation each have a 120-second limit. Youyang independently rebuilt the runtime ZIP byte-for-byte, checked its manifest, and ran the unchanged official Checker on an extracted copy: ten FULL, ten matching hashes, no flags or timeouts. That archive contained runtime files only; the final archive containing this write-up must be rebuilt and receive a new digest.
+At cryptographic key sizes the gap is qualitative, not a constant factor. Shor's
+modular exponentiation requires a fault-tolerant arithmetic design; physical qubit and timing estimates depend on the logical circuit, code, error rates and architecture. The toy circuits in this submission are scoring instruments and
+teaching examples, not resource estimates for RSA-2048 or real Diffie–Hellman groups.
+No physical-hardware run is claimed, and no hardware speedup is inferred from simulator
+gate counts.
 
-| Metric, summed over ten selected circuits | v5 | v6 | Reduction |
-|---|---:|---:|---:|
-| Two-qubit gates | 241,211 | 162,716 | 32.54% |
-| Sum of per-tier depths | 621,301 | 369,186 | 40.58% |
-| Total gates | 711,705 | 473,370 | 33.49% |
+## Validation and limits
 
-These are ten independent circuits, not a monolithic circuit or the total cost of all shots. The per-tier metrics appear in the [README](README.md). Simplicity uses relative best/team ratios weighted 40% two-qubit gates, 30% depth, 20% total gates and 10% active qubits. Without other teams' eligible metrics, a final Simplicity score cannot be determined.
+The v6.3 package was checked in a clean official checkout with only the v6.3 Candidate A ZIP
+extracted: 10/10 FULL, ten matching hashes, Aer execution in all ten tiers, no flags, no
+timeouts, and 103,166 / 217,625 / 294,982 aggregate metrics. Tier 5 was independently
+checked on all 1,024 key inputs (maximum phase error `9.1e-16`, no detectable work/flag leakage);
+Tier 8 was checked on the full 512-column controlled operators for multipliers 2, 4, 11
+and 16 (maximum error `2.8e-14`). Five fresh simulator seeds passed for each of Tiers 5
+and 8 during v6.3 integration; finite seeds do not prove a zero failure rate.
 
-A single full Checker run establishes observed correctness in that environment. Paired-seed OSC trials provide additional finite reliability and performance evidence; they do not prove zero failure probability. They record solve or wall time and sampled process-tree peak RSS, which can miss brief peaks or double-count shared pages. Nodes, load and simulation representations affect comparisons. Mathematical operator tests address a different question from hashes and sampled runs. In particular, reduced gates need not imply faster simulation: Tier 9 used an additional active qubit and was slower in the paired sample. The rejected Tier 5 clean-ancilla candidate illustrates the gate-versus-time tradeoff.
+The table uses the approved Candidate A reference run. Junqi's three-run reconciliation found the same CX and active widths, with a depth sum of 217,602 and 294,857 total gates on his platform. Independent approval of the original archive does not transfer automatically to the v6.3.1 documentation ZIP.
+
+Remaining limits: the hash checks the plaintext, not the unitary; complex-operator
+evidence is scoped to selected blocks; the tables, compilation and shot budgets are
+tuned to these small instances; and Simplicity depends on other teams' eligible
+metrics, so no final simplicity score is asserted here.
 
 ## Conclusion
 
-All ten measured quantum workflows recovered their keys in the independently audited run. The v6 selected circuits reduced aggregate two-qubit gates by 32.54% from v5, supported by reproducible Checker results and scoped mathematical and multi-seed evidence. Future work includes scalable reversible arithmetic, broader reliability studies and realistic noise and fault-tolerance analysis. Neither arbitrary-seed success nor real-hardware performance is guaranteed by these simulator results.
+All ten measurement-driven workflows recovered their keys in the audited v6.3 run. The
+selected circuits use 103,166 two-qubit gates in total, with every tier executing a
+real Aer circuit and every hash matching. The main lesson is not a speedup claim: it is
+that each algorithm's measurement semantics, reversible arithmetic and classical
+post-processing can be made explicit and independently checked at toy scale, while the
+scaling and hardware gaps to real cryptography remain large.
