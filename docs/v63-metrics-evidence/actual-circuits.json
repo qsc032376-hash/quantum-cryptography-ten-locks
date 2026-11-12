@@ -1,0 +1,4111 @@
+{
+  "status": "ACTUAL_SCORING_INPUTS_COMPARED",
+  "results": [
+    {
+      "run": 1,
+      "tier": 5,
+      "actual_unique_records": 1,
+      "actual_total_executions": 1,
+      "captured_from_actual_official_scoring_worker": true,
+      "circuits": [
+        {
+          "record_index": 0,
+          "qubits": 19,
+          "classical_bits": 10,
+          "native_count_ops": {
+            "rz": 12301,
+            "cx": 11000,
+            "sx": 4862,
+            "x": 250,
+            "measure": 10
+          },
+          "native_metrics": {
+            "two_qubit_gates": 11000,
+            "depth": 19703,
+            "total_gates": 28413,
+            "active_qubits": 19
+          },
+          "official_replay_metrics": {
+            "two_qubit_gates": 10950,
+            "depth": 19703,
+            "total_gates": 28363,
+            "active_qubits": 19
+          },
+          "stage3_actual_recorded_input": {
+            "schema": "v63-parameter-free-ordered-structure-v1",
+            "structural_digest": "1ed2d4e6f9ff1de2efec9ce6a0fe913e212fa9bdfd2298471f93e1e9008a7995",
+            "num_qubits": 19,
+            "num_clbits": 10,
+            "literal_cx": 11000,
+            "metrics": {
+              "two_qubit_gates": 11000,
+              "depth": 19703,
+              "total_gates": 28413,
+              "active_qubits": 19
+            },
+            "instruction_histogram": {
+              "cx": 11000,
+              "measure": 10,
+              "rz": 12301,
+              "sx": 4862,
+              "x": 250
+            },
+            "instruction_count_including_measurements": 28423,
+            "opaque_instruction_count": 0,
+            "measurement_map": [
+              {
+                "qargs": [
+                  0
+                ],
+                "cargs": [
+                  0
+                ]
+              },
+              {
+                "qargs": [
+                  1
+                ],
+                "cargs": [
+                  1
+                ]
+              },
+              {
+                "qargs": [
+                  2
+                ],
+                "cargs": [
+                  2
+                ]
+              },
+              {
+                "qargs": [
+                  3
+                ],
+                "cargs": [
+                  3
+                ]
+              },
+              {
+                "qargs": [
+                  4
+                ],
+                "cargs": [
+                  4
+                ]
+              },
+              {
+                "qargs": [
+                  5
+                ],
+                "cargs": [
+                  5
+                ]
+              },
+              {
+                "qargs": [
+                  6
+                ],
+                "cargs": [
+                  6
+                ]
+              },
+              {
+                "qargs": [
+                  7
+                ],
+                "cargs": [
+                  7
+                ]
+              },
+              {
+                "qargs": [
+                  8
+                ],
+                "cargs": [
+                  8
+                ]
+              },
+              {
+                "qargs": [
+                  9
+                ],
+                "cargs": [
+                  9
+                ]
+              }
+            ],
+            "metric_scope": "stored representation; opaque composites are not expanded",
+            "digest_scope": "ordered public structure only; numeric parameters and global phase excluded"
+          },
+          "stage4_scoring_replay_output": {
+            "schema": "v63-parameter-free-ordered-structure-v1",
+            "structural_digest": "f17356f5e13863cc189930ad9e441400a240a9b21e076643015d4dc7e6bfe29d",
+            "num_qubits": 19,
+            "num_clbits": 10,
+            "literal_cx": 10950,
+            "metrics": {
+              "two_qubit_gates": 10950,
+              "depth": 19703,
+              "total_gates": 28363,
+              "active_qubits": 19
+            },
+            "instruction_histogram": {
+              "cx": 10950,
+              "measure": 10,
+              "rz": 12301,
+              "sx": 4862,
+              "x": 250
+            },
+            "instruction_count_including_measurements": 28373,
+            "opaque_instruction_count": 0,
+            "measurement_map": [
+              {
+                "qargs": [
+                  0
+                ],
+                "cargs": [
+                  0
+                ]
+              },
+              {
+                "qargs": [
+                  1
+                ],
+                "cargs": [
+                  1
+                ]
+              },
+              {
+                "qargs": [
+                  2
+                ],
+                "cargs": [
+                  2
+                ]
+              },
+              {
+                "qargs": [
+                  3
+                ],
+                "cargs": [
+                  3
+                ]
+              },
+              {
+                "qargs": [
+                  4
+                ],
+                "cargs": [
+                  4
+                ]
+              },
+              {
+                "qargs": [
+                  5
+                ],
+                "cargs": [
+                  5
+                ]
+              },
+              {
+                "qargs": [
+                  6
+                ],
+                "cargs": [
+                  6
+                ]
+              },
+              {
+                "qargs": [
+                  7
+                ],
+                "cargs": [
+                  7
+                ]
+              },
+              {
+                "qargs": [
+                  8
+                ],
+                "cargs": [
+                  8
+                ]
+              },
+              {
+                "qargs": [
+                  9
+                ],
+                "cargs": [
+                  9
+                ]
+              }
+            ],
+            "metric_scope": "stored representation; opaque composites are not expanded",
+            "digest_scope": "ordered public structure only; numeric parameters and global phase excluded"
+          },
+          "official_replay_count_ops": {
+            "rz": 12301,
+            "cx": 10950,
+            "sx": 4862,
+            "x": 250,
+            "measure": 10
+          },
+          "replay_compile_seconds": 1.6398521680021076
+        }
+      ],
+      "scored_winner_record_index": 0,
+      "reported_official_metrics": {
+        "active_qubits": 19,
+        "depth": 19703,
+        "total_gates": 28363,
+        "two_qubit_gates": 10950
+      },
+      "replayed_winner_matches_actual_official_report": true
+    },
+    {
+      "run": 1,
+      "tier": 6,
+      "actual_unique_records": 2,
+      "actual_total_executions": 2,
+      "captured_from_actual_official_scoring_worker": true,
+      "circuits": [
+        {
+          "record_index": 0,
+          "qubits": 23,
+          "classical_bits": 1,
+          "native_count_ops": {
+            "rz": 574,
+            "cx": 436,
+            "sx": 196,
+            "measure": 1
+          },
+          "native_metrics": {
+            "two_qubit_gates": 436,
+            "depth": 819,
+            "total_gates": 1206,
+            "active_qubits": 23
+          },
+          "official_replay_metrics": {
+            "two_qubit_gates": 436,
+            "depth": 819,
+            "total_gates": 1206,
+            "active_qubits": 23
+          },
+          "stage3_actual_recorded_input": {
+            "schema": "v63-parameter-free-ordered-structure-v1",
+            "structural_digest": "749ec47a20cacc80a95458a8b9d313a94aa4cad81f05fc4159db3ba837ad5af6",
+            "num_qubits": 23,
+            "num_clbits": 1,
+            "literal_cx": 436,
+            "metrics": {
+              "two_qubit_gates": 436,
+              "depth": 819,
+              "total_gates": 1206,
+              "active_qubits": 23
+            },
+            "instruction_histogram": {
+              "cx": 436,
+              "measure": 1,
+              "rz": 574,
+              "sx": 196
+            },
+            "instruction_count_including_measurements": 1207,
+            "opaque_instruction_count": 0,
+            "measurement_map": [
+              {
+                "qargs": [
+                  22
+                ],
+                "cargs": [
+                  0
+                ]
+              }
+            ],
+            "metric_scope": "stored representation; opaque composites are not expanded",
+            "digest_scope": "ordered public structure only; numeric parameters and global phase excluded"
+          },
+          "stage4_scoring_replay_output": {
+            "schema": "v63-parameter-free-ordered-structure-v1",
+            "structural_digest": "749ec47a20cacc80a95458a8b9d313a94aa4cad81f05fc4159db3ba837ad5af6",
+            "num_qubits": 23,
+            "num_clbits": 1,
+            "literal_cx": 436,
+            "metrics": {
+              "two_qubit_gates": 436,
+              "depth": 819,
+              "total_gates": 1206,
+              "active_qubits": 23
+            },
+            "instruction_histogram": {
+              "cx": 436,
+              "measure": 1,
+              "rz": 574,
+              "sx": 196
+            },
+            "instruction_count_including_measurements": 1207,
+            "opaque_instruction_count": 0,
+            "measurement_map": [
+              {
+                "qargs": [
+                  22
+                ],
+                "cargs": [
+                  0
+                ]
+              }
+            ],
+            "metric_scope": "stored representation; opaque composites are not expanded",
+            "digest_scope": "ordered public structure only; numeric parameters and global phase excluded"
+          },
+          "official_replay_count_ops": {
+            "rz": 574,
+            "cx": 436,
+            "sx": 196,
+            "measure": 1
+          },
+          "replay_compile_seconds": 0.17304175800381927
+        },
+        {
+          "record_index": 1,
+          "qubits": 22,
+          "classical_bits": 14,
+          "native_count_ops": {
+            "rz": 4178,
+            "cx": 3000,
+            "sx": 1502,
+            "measure": 14
+          },
+          "native_metrics": {
+            "two_qubit_gates": 3000,
+            "depth": 5691,
+            "total_gates": 8680,
+            "active_qubits": 22
+          },
+          "official_replay_metrics": {
+            "two_qubit_gates": 3000,
+            "depth": 5691,
+            "total_gates": 8680,
+            "active_qubits": 22
+          },
+          "stage3_actual_recorded_input": {
+            "schema": "v63-parameter-free-ordered-structure-v1",
+            "structural_digest": "82c671d5f1f8364388e36b22be12f4a9836347fbfc8e2ddf08c706ae99d7b221",
+            "num_qubits": 22,
+            "num_clbits": 14,
+            "literal_cx": 3000,
+            "metrics": {
+              "two_qubit_gates": 3000,
+              "depth": 5691,
+              "total_gates": 8680,
+              "active_qubits": 22
+            },
+            "instruction_histogram": {
+              "cx": 3000,
+              "measure": 14,
+              "rz": 4178,
+              "sx": 1502
+            },
+            "instruction_count_including_measurements": 8694,
+            "opaque_instruction_count": 0,
+            "measurement_map": [
+              {
+                "qargs": [
+                  0
+                ],
+                "cargs": [
+                  0
+                ]
+              },
+              {
+                "qargs": [
+                  1
+                ],
+                "cargs": [
+                  1
+                ]
+              },
+              {
+                "qargs": [
+                  2
+                ],
+                "cargs": [
+                  2
+                ]
+              },
+              {
+                "qargs": [
+                  3
+                ],
+                "cargs": [
+                  3
+                ]
+              },
+              {
+                "qargs": [
+                  4
+                ],
+                "cargs": [
+                  4
+                ]
+              },
+              {
+                "qargs": [
+                  5
+                ],
+                "cargs": [
+                  5
+                ]
+              },
+              {
+                "qargs": [
+                  6
+                ],
+                "cargs": [
+                  6
+                ]
+              },
+              {
+                "qargs": [
+                  7
+                ],
+                "cargs": [
+                  7
+                ]
+              },
+              {
+                "qargs": [
+                  8
+                ],
+                "cargs": [
+                  8
+                ]
+              },
+              {
+                "qargs": [
+                  9
+                ],
+                "cargs": [
+                  9
+                ]
+              },
+              {
+                "qargs": [
+                  10
+                ],
+                "cargs": [
+                  10
+                ]
+              },
+              {
+                "qargs": [
+                  11
+                ],
+                "cargs": [
+                  11
+                ]
+              },
+              {
+                "qargs": [
+                  12
+                ],
+                "cargs": [
+                  12
+                ]
+              },
+              {
+                "qargs": [
+                  13
+                ],
+                "cargs": [
+                  13
+                ]
+              }
+            ],
+            "metric_scope": "stored representation; opaque composites are not expanded",
+            "digest_scope": "ordered public structure only; numeric parameters and global phase excluded"
+          },
+          "stage4_scoring_replay_output": {
+            "schema": "v63-parameter-free-ordered-structure-v1",
+            "structural_digest": "82c671d5f1f8364388e36b22be12f4a9836347fbfc8e2ddf08c706ae99d7b221",
+            "num_qubits": 22,
+            "num_clbits": 14,
+            "literal_cx": 3000,
+            "metrics": {
+              "two_qubit_gates": 3000,
+              "depth": 5691,
+              "total_gates": 8680,
+              "active_qubits": 22
+            },
+            "instruction_histogram": {
+              "cx": 3000,
+              "measure": 14,
+              "rz": 4178,
+              "sx": 1502
+            },
+            "instruction_count_including_measurements": 8694,
+            "opaque_instruction_count": 0,
+            "measurement_map": [
+              {
+                "qargs": [
+                  0
+                ],
+                "cargs": [
+                  0
+                ]
+              },
+              {
+                "qargs": [
+                  1
+                ],
+                "cargs": [
+                  1
+                ]
+              },
+              {
+                "qargs": [
+                  2
+                ],
+                "cargs": [
+                  2
+                ]
+              },
+              {
+                "qargs": [
+                  3
+                ],
+                "cargs": [
+                  3
+                ]
+              },
+              {
+                "qargs": [
+                  4
+                ],
+                "cargs": [
+                  4
+                ]
+              },
+              {
+                "qargs": [
+                  5
+                ],
+                "cargs": [
+                  5
+                ]
+              },
+              {
+                "qargs": [
+                  6
+                ],
+                "cargs": [
+                  6
+                ]
+              },
+              {
+                "qargs": [
+                  7
+                ],
+                "cargs": [
+                  7
+                ]
+              },
+              {
+                "qargs": [
+                  8
+                ],
+                "cargs": [
+                  8
+                ]
+              },
+              {
+                "qargs": [
+                  9
+                ],
+                "cargs": [
+                  9
+                ]
+              },
+              {
+                "qargs": [
+                  10
+                ],
+                "cargs": [
+                  10
+                ]
+              },
+              {
+                "qargs": [
+                  11
+                ],
+                "cargs": [
+                  11
+                ]
+              },
+              {
+                "qargs": [
+                  12
+                ],
+                "cargs": [
+                  12
+                ]
+              },
+              {
+                "qargs": [
+                  13
+                ],
+                "cargs": [
+                  13
+                ]
+              }
+            ],
+            "metric_scope": "stored representation; opaque composites are not expanded",
+            "digest_scope": "ordered public structure only; numeric parameters and global phase excluded"
+          },
+          "official_replay_count_ops": {
+            "rz": 4178,
+            "cx": 3000,
+            "sx": 1502,
+            "measure": 14
+          },
+          "replay_compile_seconds": 1.4034896349985502
+        }
+      ],
+      "scored_winner_record_index": 1,
+      "reported_official_metrics": {
+        "active_qubits": 22,
+        "depth": 5691,
+        "total_gates": 8680,
+        "two_qubit_gates": 3000
+      },
+      "replayed_winner_matches_actual_official_report": true
+    },
+    {
+      "run": 1,
+      "tier": 7,
+      "actual_unique_records": 2,
+      "actual_total_executions": 2,
+      "captured_from_actual_official_scoring_worker": true,
+      "circuits": [
+        {
+          "record_index": 0,
+          "qubits": 15,
+          "classical_bits": 14,
+          "native_count_ops": {
+            "rz": 267,
+            "cx": 209,
+            "sx": 31,
+            "x": 26,
+            "measure": 14
+          },
+          "native_metrics": {
+            "two_qubit_gates": 209,
+            "depth": 155,
+            "total_gates": 533,
+            "active_qubits": 15
+          },
+          "official_replay_metrics": {
+            "two_qubit_gates": 209,
+            "depth": 155,
+            "total_gates": 533,
+            "active_qubits": 15
+          },
+          "stage3_actual_recorded_input": {
+            "schema": "v63-parameter-free-ordered-structure-v1",
+            "structural_digest": "5da512e6707cf12cfeb25c55ae64d1588e96e7a7abd66580d6b95063bcdd91b5",
+            "num_qubits": 15,
+            "num_clbits": 14,
+            "literal_cx": 209,
+            "metrics": {
+              "two_qubit_gates": 209,
+              "depth": 155,
+              "total_gates": 533,
+              "active_qubits": 15
+            },
+            "instruction_histogram": {
+              "cx": 209,
+              "measure": 14,
+              "rz": 267,
+              "sx": 31,
+              "x": 26
+            },
+            "instruction_count_including_measurements": 547,
+            "opaque_instruction_count": 0,
+            "measurement_map": [
+              {
+                "qargs": [
+                  0
+                ],
+                "cargs": [
+                  0
+                ]
+              },
+              {
+                "qargs": [
+                  1
+                ],
+                "cargs": [
+                  1
+                ]
+              },
+              {
+                "qargs": [
+                  2
+                ],
+                "cargs": [
+                  2
+                ]
+              },
+              {
+                "qargs": [
+                  3
+                ],
+                "cargs": [
+                  3
+                ]
+              },
+              {
+                "qargs": [
+                  4
+                ],
+                "cargs": [
+                  4
+                ]
+              },
+              {
+                "qargs": [
+                  5
+                ],
+                "cargs": [
+                  5
+                ]
+              },
+              {
+                "qargs": [
+                  6
+                ],
+                "cargs": [
+                  6
+                ]
+              },
+              {
+                "qargs": [
+                  7
+                ],
+                "cargs": [
+                  7
+                ]
+              },
+              {
+                "qargs": [
+                  8
+                ],
+                "cargs": [
+                  8
+                ]
+              },
+              {
+                "qargs": [
+                  9
+                ],
+                "cargs": [
+                  9
+                ]
+              },
+              {
+                "qargs": [
+                  10
+                ],
+                "cargs": [
+                  10
+                ]
+              },
+              {
+                "qargs": [
+                  11
+                ],
+                "cargs": [
+                  11
+                ]
+              },
+              {
+                "qargs": [
+                  12
+                ],
+                "cargs": [
+                  12
+                ]
+              },
+              {
+                "qargs": [
+                  13
+                ],
+                "cargs": [
+                  13
+                ]
+              }
+            ],
+            "metric_scope": "stored representation; opaque composites are not expanded",
+            "digest_scope": "ordered public structure only; numeric parameters and global phase excluded"
+          },
+          "stage4_scoring_replay_output": {
+            "schema": "v63-parameter-free-ordered-structure-v1",
+            "structural_digest": "5da512e6707cf12cfeb25c55ae64d1588e96e7a7abd66580d6b95063bcdd91b5",
+            "num_qubits": 15,
+            "num_clbits": 14,
+            "literal_cx": 209,
+            "metrics": {
+              "two_qubit_gates": 209,
+              "depth": 155,
+              "total_gates": 533,
+              "active_qubits": 15
+            },
+            "instruction_histogram": {
+              "cx": 209,
+              "measure": 14,
+              "rz": 267,
+              "sx": 31,
+              "x": 26
+            },
+            "instruction_count_including_measurements": 547,
+            "opaque_instruction_count": 0,
+            "measurement_map": [
+              {
+                "qargs": [
+                  0
+                ],
+                "cargs": [
+                  0
+                ]
+              },
+              {
+                "qargs": [
+                  1
+                ],
+                "cargs": [
+                  1
+                ]
+              },
+              {
+                "qargs": [
+                  2
+                ],
+                "cargs": [
+                  2
+                ]
+              },
+              {
+                "qargs": [
+                  3
+                ],
+                "cargs": [
+                  3
+                ]
+              },
+              {
+                "qargs": [
+                  4
+                ],
+                "cargs": [
+                  4
+                ]
+              },
+              {
+                "qargs": [
+                  5
+                ],
+                "cargs": [
+                  5
+                ]
+              },
+              {
+                "qargs": [
+                  6
+                ],
+                "cargs": [
+                  6
+                ]
+              },
+              {
+                "qargs": [
+                  7
+                ],
+                "cargs": [
+                  7
+                ]
+              },
+              {
+                "qargs": [
+                  8
+                ],
+                "cargs": [
+                  8
+                ]
+              },
+              {
+                "qargs": [
+                  9
+                ],
+                "cargs": [
+                  9
+                ]
+              },
+              {
+                "qargs": [
+                  10
+                ],
+                "cargs": [
+                  10
+                ]
+              },
+              {
+                "qargs": [
+                  11
+                ],
+                "cargs": [
+                  11
+                ]
+              },
+              {
+                "qargs": [
+                  12
+                ],
+                "cargs": [
+                  12
+                ]
+              },
+              {
+                "qargs": [
+                  13
+                ],
+                "cargs": [
+                  13
+                ]
+              }
+            ],
+            "metric_scope": "stored representation; opaque composites are not expanded",
+            "digest_scope": "ordered public structure only; numeric parameters and global phase excluded"
+          },
+          "official_replay_count_ops": {
+            "rz": 267,
+            "cx": 209,
+            "sx": 31,
+            "x": 26,
+            "measure": 14
+          },
+          "replay_compile_seconds": 0.02151726299780421
+        },
+        {
+          "record_index": 1,
+          "qubits": 15,
+          "classical_bits": 14,
+          "native_count_ops": {
+            "rz": 85,
+            "sx": 31,
+            "cx": 27,
+            "x": 18,
+            "measure": 14
+          },
+          "native_metrics": {
+            "two_qubit_gates": 27,
+            "depth": 68,
+            "total_gates": 161,
+            "active_qubits": 15
+          },
+          "official_replay_metrics": {
+            "two_qubit_gates": 27,
+            "depth": 68,
+            "total_gates": 161,
+            "active_qubits": 15
+          },
+          "stage3_actual_recorded_input": {
+            "schema": "v63-parameter-free-ordered-structure-v1",
+            "structural_digest": "2a9b33b5546cc7d1d1b9b9abadda96d5e6737473eac1939e2b584c5f7f39a500",
+            "num_qubits": 15,
+            "num_clbits": 14,
+            "literal_cx": 27,
+            "metrics": {
+              "two_qubit_gates": 27,
+              "depth": 68,
+              "total_gates": 161,
+              "active_qubits": 15
+            },
+            "instruction_histogram": {
+              "cx": 27,
+              "measure": 14,
+              "rz": 85,
+              "sx": 31,
+              "x": 18
+            },
+            "instruction_count_including_measurements": 175,
+            "opaque_instruction_count": 0,
+            "measurement_map": [
+              {
+                "qargs": [
+                  0
+                ],
+                "cargs": [
+                  0
+                ]
+              },
+              {
+                "qargs": [
+                  1
+                ],
+                "cargs": [
+                  1
+                ]
+              },
+              {
+                "qargs": [
+                  2
+                ],
+                "cargs": [
+                  2
+                ]
+              },
+              {
+                "qargs": [
+                  3
+                ],
+                "cargs": [
+                  3
+                ]
+              },
+              {
+                "qargs": [
+                  4
+                ],
+                "cargs": [
+                  4
+                ]
+              },
+              {
+                "qargs": [
+                  5
+                ],
+                "cargs": [
+                  5
+                ]
+              },
+              {
+                "qargs": [
+                  6
+                ],
+                "cargs": [
+                  6
+                ]
+              },
+              {
+                "qargs": [
+                  7
+                ],
+                "cargs": [
+                  7
+                ]
+              },
+              {
+                "qargs": [
+                  8
+                ],
+                "cargs": [
+                  8
+                ]
+              },
+              {
+                "qargs": [
+                  9
+                ],
+                "cargs": [
+                  9
+                ]
+              },
+              {
+                "qargs": [
+                  10
+                ],
+                "cargs": [
+                  10
+                ]
+              },
+              {
+                "qargs": [
+                  11
+                ],
+                "cargs": [
+                  11
+                ]
+              },
+              {
+                "qargs": [
+                  12
+                ],
+                "cargs": [
+                  12
+                ]
+              },
+              {
+                "qargs": [
+                  13
+                ],
+                "cargs": [
+                  13
+                ]
+              }
+            ],
+            "metric_scope": "stored representation; opaque composites are not expanded",
+            "digest_scope": "ordered public structure only; numeric parameters and global phase excluded"
+          },
+          "stage4_scoring_replay_output": {
+            "schema": "v63-parameter-free-ordered-structure-v1",
+            "structural_digest": "2a9b33b5546cc7d1d1b9b9abadda96d5e6737473eac1939e2b584c5f7f39a500",
+            "num_qubits": 15,
+            "num_clbits": 14,
+            "literal_cx": 27,
+            "metrics": {
+              "two_qubit_gates": 27,
+              "depth": 68,
+              "total_gates": 161,
+              "active_qubits": 15
+            },
+            "instruction_histogram": {
+              "cx": 27,
+              "measure": 14,
+              "rz": 85,
+              "sx": 31,
+              "x": 18
+            },
+            "instruction_count_including_measurements": 175,
+            "opaque_instruction_count": 0,
+            "measurement_map": [
+              {
+                "qargs": [
+                  0
+                ],
+                "cargs": [
+                  0
+                ]
+              },
+              {
+                "qargs": [
+                  1
+                ],
+                "cargs": [
+                  1
+                ]
+              },
+              {
+                "qargs": [
+                  2
+                ],
+                "cargs": [
+                  2
+                ]
+              },
+              {
+                "qargs": [
+                  3
+                ],
+                "cargs": [
+                  3
+                ]
+              },
+              {
+                "qargs": [
+                  4
+                ],
+                "cargs": [
+                  4
+                ]
+              },
+              {
+                "qargs": [
+                  5
+                ],
+                "cargs": [
+                  5
+                ]
+              },
+              {
+                "qargs": [
+                  6
+                ],
+                "cargs": [
+                  6
+                ]
+              },
+              {
+                "qargs": [
+                  7
+                ],
+                "cargs": [
+                  7
+                ]
+              },
+              {
+                "qargs": [
+                  8
+                ],
+                "cargs": [
+                  8
+                ]
+              },
+              {
+                "qargs": [
+                  9
+                ],
+                "cargs": [
+                  9
+                ]
+              },
+              {
+                "qargs": [
+                  10
+                ],
+                "cargs": [
+                  10
+                ]
+              },
+              {
+                "qargs": [
+                  11
+                ],
+                "cargs": [
+                  11
+                ]
+              },
+              {
+                "qargs": [
+                  12
+                ],
+                "cargs": [
+                  12
+                ]
+              },
+              {
+                "qargs": [
+                  13
+                ],
+                "cargs": [
+                  13
+                ]
+              }
+            ],
+            "metric_scope": "stored representation; opaque composites are not expanded",
+            "digest_scope": "ordered public structure only; numeric parameters and global phase excluded"
+          },
+          "official_replay_count_ops": {
+            "rz": 85,
+            "sx": 31,
+            "cx": 27,
+            "x": 18,
+            "measure": 14
+          },
+          "replay_compile_seconds": 0.007451987999957055
+        }
+      ],
+      "scored_winner_record_index": 0,
+      "reported_official_metrics": {
+        "active_qubits": 15,
+        "depth": 155,
+        "total_gates": 533,
+        "two_qubit_gates": 209
+      },
+      "replayed_winner_matches_actual_official_report": true
+    },
+    {
+      "run": 2,
+      "tier": 5,
+      "actual_unique_records": 1,
+      "actual_total_executions": 1,
+      "captured_from_actual_official_scoring_worker": true,
+      "circuits": [
+        {
+          "record_index": 0,
+          "qubits": 19,
+          "classical_bits": 10,
+          "native_count_ops": {
+            "rz": 12301,
+            "cx": 11000,
+            "sx": 4862,
+            "x": 250,
+            "measure": 10
+          },
+          "native_metrics": {
+            "two_qubit_gates": 11000,
+            "depth": 19703,
+            "total_gates": 28413,
+            "active_qubits": 19
+          },
+          "official_replay_metrics": {
+            "two_qubit_gates": 10950,
+            "depth": 19703,
+            "total_gates": 28363,
+            "active_qubits": 19
+          },
+          "stage3_actual_recorded_input": {
+            "schema": "v63-parameter-free-ordered-structure-v1",
+            "structural_digest": "1ed2d4e6f9ff1de2efec9ce6a0fe913e212fa9bdfd2298471f93e1e9008a7995",
+            "num_qubits": 19,
+            "num_clbits": 10,
+            "literal_cx": 11000,
+            "metrics": {
+              "two_qubit_gates": 11000,
+              "depth": 19703,
+              "total_gates": 28413,
+              "active_qubits": 19
+            },
+            "instruction_histogram": {
+              "cx": 11000,
+              "measure": 10,
+              "rz": 12301,
+              "sx": 4862,
+              "x": 250
+            },
+            "instruction_count_including_measurements": 28423,
+            "opaque_instruction_count": 0,
+            "measurement_map": [
+              {
+                "qargs": [
+                  0
+                ],
+                "cargs": [
+                  0
+                ]
+              },
+              {
+                "qargs": [
+                  1
+                ],
+                "cargs": [
+                  1
+                ]
+              },
+              {
+                "qargs": [
+                  2
+                ],
+                "cargs": [
+                  2
+                ]
+              },
+              {
+                "qargs": [
+                  3
+                ],
+                "cargs": [
+                  3
+                ]
+              },
+              {
+                "qargs": [
+                  4
+                ],
+                "cargs": [
+                  4
+                ]
+              },
+              {
+                "qargs": [
+                  5
+                ],
+                "cargs": [
+                  5
+                ]
+              },
+              {
+                "qargs": [
+                  6
+                ],
+                "cargs": [
+                  6
+                ]
+              },
+              {
+                "qargs": [
+                  7
+                ],
+                "cargs": [
+                  7
+                ]
+              },
+              {
+                "qargs": [
+                  8
+                ],
+                "cargs": [
+                  8
+                ]
+              },
+              {
+                "qargs": [
+                  9
+                ],
+                "cargs": [
+                  9
+                ]
+              }
+            ],
+            "metric_scope": "stored representation; opaque composites are not expanded",
+            "digest_scope": "ordered public structure only; numeric parameters and global phase excluded"
+          },
+          "stage4_scoring_replay_output": {
+            "schema": "v63-parameter-free-ordered-structure-v1",
+            "structural_digest": "f17356f5e13863cc189930ad9e441400a240a9b21e076643015d4dc7e6bfe29d",
+            "num_qubits": 19,
+            "num_clbits": 10,
+            "literal_cx": 10950,
+            "metrics": {
+              "two_qubit_gates": 10950,
+              "depth": 19703,
+              "total_gates": 28363,
+              "active_qubits": 19
+            },
+            "instruction_histogram": {
+              "cx": 10950,
+              "measure": 10,
+              "rz": 12301,
+              "sx": 4862,
+              "x": 250
+            },
+            "instruction_count_including_measurements": 28373,
+            "opaque_instruction_count": 0,
+            "measurement_map": [
+              {
+                "qargs": [
+                  0
+                ],
+                "cargs": [
+                  0
+                ]
+              },
+              {
+                "qargs": [
+                  1
+                ],
+                "cargs": [
+                  1
+                ]
+              },
+              {
+                "qargs": [
+                  2
+                ],
+                "cargs": [
+                  2
+                ]
+              },
+              {
+                "qargs": [
+                  3
+                ],
+                "cargs": [
+                  3
+                ]
+              },
+              {
+                "qargs": [
+                  4
+                ],
+                "cargs": [
+                  4
+                ]
+              },
+              {
+                "qargs": [
+                  5
+                ],
+                "cargs": [
+                  5
+                ]
+              },
+              {
+                "qargs": [
+                  6
+                ],
+                "cargs": [
+                  6
+                ]
+              },
+              {
+                "qargs": [
+                  7
+                ],
+                "cargs": [
+                  7
+                ]
+              },
+              {
+                "qargs": [
+                  8
+                ],
+                "cargs": [
+                  8
+                ]
+              },
+              {
+                "qargs": [
+                  9
+                ],
+                "cargs": [
+                  9
+                ]
+              }
+            ],
+            "metric_scope": "stored representation; opaque composites are not expanded",
+            "digest_scope": "ordered public structure only; numeric parameters and global phase excluded"
+          },
+          "official_replay_count_ops": {
+            "rz": 12301,
+            "cx": 10950,
+            "sx": 4862,
+            "x": 250,
+            "measure": 10
+          },
+          "replay_compile_seconds": 1.6562032319998252
+        }
+      ],
+      "scored_winner_record_index": 0,
+      "reported_official_metrics": {
+        "active_qubits": 19,
+        "depth": 19703,
+        "total_gates": 28363,
+        "two_qubit_gates": 10950
+      },
+      "replayed_winner_matches_actual_official_report": true
+    },
+    {
+      "run": 2,
+      "tier": 6,
+      "actual_unique_records": 2,
+      "actual_total_executions": 2,
+      "captured_from_actual_official_scoring_worker": true,
+      "circuits": [
+        {
+          "record_index": 0,
+          "qubits": 23,
+          "classical_bits": 1,
+          "native_count_ops": {
+            "rz": 574,
+            "cx": 436,
+            "sx": 196,
+            "measure": 1
+          },
+          "native_metrics": {
+            "two_qubit_gates": 436,
+            "depth": 819,
+            "total_gates": 1206,
+            "active_qubits": 23
+          },
+          "official_replay_metrics": {
+            "two_qubit_gates": 436,
+            "depth": 819,
+            "total_gates": 1206,
+            "active_qubits": 23
+          },
+          "stage3_actual_recorded_input": {
+            "schema": "v63-parameter-free-ordered-structure-v1",
+            "structural_digest": "749ec47a20cacc80a95458a8b9d313a94aa4cad81f05fc4159db3ba837ad5af6",
+            "num_qubits": 23,
+            "num_clbits": 1,
+            "literal_cx": 436,
+            "metrics": {
+              "two_qubit_gates": 436,
+              "depth": 819,
+              "total_gates": 1206,
+              "active_qubits": 23
+            },
+            "instruction_histogram": {
+              "cx": 436,
+              "measure": 1,
+              "rz": 574,
+              "sx": 196
+            },
+            "instruction_count_including_measurements": 1207,
+            "opaque_instruction_count": 0,
+            "measurement_map": [
+              {
+                "qargs": [
+                  22
+                ],
+                "cargs": [
+                  0
+                ]
+              }
+            ],
+            "metric_scope": "stored representation; opaque composites are not expanded",
+            "digest_scope": "ordered public structure only; numeric parameters and global phase excluded"
+          },
+          "stage4_scoring_replay_output": {
+            "schema": "v63-parameter-free-ordered-structure-v1",
+            "structural_digest": "749ec47a20cacc80a95458a8b9d313a94aa4cad81f05fc4159db3ba837ad5af6",
+            "num_qubits": 23,
+            "num_clbits": 1,
+            "literal_cx": 436,
+            "metrics": {
+              "two_qubit_gates": 436,
+              "depth": 819,
+              "total_gates": 1206,
+              "active_qubits": 23
+            },
+            "instruction_histogram": {
+              "cx": 436,
+              "measure": 1,
+              "rz": 574,
+              "sx": 196
+            },
+            "instruction_count_including_measurements": 1207,
+            "opaque_instruction_count": 0,
+            "measurement_map": [
+              {
+                "qargs": [
+                  22
+                ],
+                "cargs": [
+                  0
+                ]
+              }
+            ],
+            "metric_scope": "stored representation; opaque composites are not expanded",
+            "digest_scope": "ordered public structure only; numeric parameters and global phase excluded"
+          },
+          "official_replay_count_ops": {
+            "rz": 574,
+            "cx": 436,
+            "sx": 196,
+            "measure": 1
+          },
+          "replay_compile_seconds": 0.06061293100356124
+        },
+        {
+          "record_index": 1,
+          "qubits": 22,
+          "classical_bits": 14,
+          "native_count_ops": {
+            "rz": 4178,
+            "cx": 3000,
+            "sx": 1502,
+            "measure": 14
+          },
+          "native_metrics": {
+            "two_qubit_gates": 3000,
+            "depth": 5691,
+            "total_gates": 8680,
+            "active_qubits": 22
+          },
+          "official_replay_metrics": {
+            "two_qubit_gates": 3000,
+            "depth": 5691,
+            "total_gates": 8680,
+            "active_qubits": 22
+          },
+          "stage3_actual_recorded_input": {
+            "schema": "v63-parameter-free-ordered-structure-v1",
+            "structural_digest": "82c671d5f1f8364388e36b22be12f4a9836347fbfc8e2ddf08c706ae99d7b221",
+            "num_qubits": 22,
+            "num_clbits": 14,
+            "literal_cx": 3000,
+            "metrics": {
+              "two_qubit_gates": 3000,
+              "depth": 5691,
+              "total_gates": 8680,
+              "active_qubits": 22
+            },
+            "instruction_histogram": {
+              "cx": 3000,
+              "measure": 14,
+              "rz": 4178,
+              "sx": 1502
+            },
+            "instruction_count_including_measurements": 8694,
+            "opaque_instruction_count": 0,
+            "measurement_map": [
+              {
+                "qargs": [
+                  0
+                ],
+                "cargs": [
+                  0
+                ]
+              },
+              {
+                "qargs": [
+                  1
+                ],
+                "cargs": [
+                  1
+                ]
+              },
+              {
+                "qargs": [
+                  2
+                ],
+                "cargs": [
+                  2
+                ]
+              },
+              {
+                "qargs": [
+                  3
+                ],
+                "cargs": [
+                  3
+                ]
+              },
+              {
+                "qargs": [
+                  4
+                ],
+                "cargs": [
+                  4
+                ]
+              },
+              {
+                "qargs": [
+                  5
+                ],
+                "cargs": [
+                  5
+                ]
+              },
+              {
+                "qargs": [
+                  6
+                ],
+                "cargs": [
+                  6
+                ]
+              },
+              {
+                "qargs": [
+                  7
+                ],
+                "cargs": [
+                  7
+                ]
+              },
+              {
+                "qargs": [
+                  8
+                ],
+                "cargs": [
+                  8
+                ]
+              },
+              {
+                "qargs": [
+                  9
+                ],
+                "cargs": [
+                  9
+                ]
+              },
+              {
+                "qargs": [
+                  10
+                ],
+                "cargs": [
+                  10
+                ]
+              },
+              {
+                "qargs": [
+                  11
+                ],
+                "cargs": [
+                  11
+                ]
+              },
+              {
+                "qargs": [
+                  12
+                ],
+                "cargs": [
+                  12
+                ]
+              },
+              {
+                "qargs": [
+                  13
+                ],
+                "cargs": [
+                  13
+                ]
+              }
+            ],
+            "metric_scope": "stored representation; opaque composites are not expanded",
+            "digest_scope": "ordered public structure only; numeric parameters and global phase excluded"
+          },
+          "stage4_scoring_replay_output": {
+            "schema": "v63-parameter-free-ordered-structure-v1",
+            "structural_digest": "82c671d5f1f8364388e36b22be12f4a9836347fbfc8e2ddf08c706ae99d7b221",
+            "num_qubits": 22,
+            "num_clbits": 14,
+            "literal_cx": 3000,
+            "metrics": {
+              "two_qubit_gates": 3000,
+              "depth": 5691,
+              "total_gates": 8680,
+              "active_qubits": 22
+            },
+            "instruction_histogram": {
+              "cx": 3000,
+              "measure": 14,
+              "rz": 4178,
+              "sx": 1502
+            },
+            "instruction_count_including_measurements": 8694,
+            "opaque_instruction_count": 0,
+            "measurement_map": [
+              {
+                "qargs": [
+                  0
+                ],
+                "cargs": [
+                  0
+                ]
+              },
+              {
+                "qargs": [
+                  1
+                ],
+                "cargs": [
+                  1
+                ]
+              },
+              {
+                "qargs": [
+                  2
+                ],
+                "cargs": [
+                  2
+                ]
+              },
+              {
+                "qargs": [
+                  3
+                ],
+                "cargs": [
+                  3
+                ]
+              },
+              {
+                "qargs": [
+                  4
+                ],
+                "cargs": [
+                  4
+                ]
+              },
+              {
+                "qargs": [
+                  5
+                ],
+                "cargs": [
+                  5
+                ]
+              },
+              {
+                "qargs": [
+                  6
+                ],
+                "cargs": [
+                  6
+                ]
+              },
+              {
+                "qargs": [
+                  7
+                ],
+                "cargs": [
+                  7
+                ]
+              },
+              {
+                "qargs": [
+                  8
+                ],
+                "cargs": [
+                  8
+                ]
+              },
+              {
+                "qargs": [
+                  9
+                ],
+                "cargs": [
+                  9
+                ]
+              },
+              {
+                "qargs": [
+                  10
+                ],
+                "cargs": [
+                  10
+                ]
+              },
+              {
+                "qargs": [
+                  11
+                ],
+                "cargs": [
+                  11
+                ]
+              },
+              {
+                "qargs": [
+                  12
+                ],
+                "cargs": [
+                  12
+                ]
+              },
+              {
+                "qargs": [
+                  13
+                ],
+                "cargs": [
+                  13
+                ]
+              }
+            ],
+            "metric_scope": "stored representation; opaque composites are not expanded",
+            "digest_scope": "ordered public structure only; numeric parameters and global phase excluded"
+          },
+          "official_replay_count_ops": {
+            "rz": 4178,
+            "cx": 3000,
+            "sx": 1502,
+            "measure": 14
+          },
+          "replay_compile_seconds": 0.30256784199445974
+        }
+      ],
+      "scored_winner_record_index": 1,
+      "reported_official_metrics": {
+        "active_qubits": 22,
+        "depth": 5691,
+        "total_gates": 8680,
+        "two_qubit_gates": 3000
+      },
+      "replayed_winner_matches_actual_official_report": true
+    },
+    {
+      "run": 2,
+      "tier": 7,
+      "actual_unique_records": 2,
+      "actual_total_executions": 2,
+      "captured_from_actual_official_scoring_worker": true,
+      "circuits": [
+        {
+          "record_index": 0,
+          "qubits": 15,
+          "classical_bits": 14,
+          "native_count_ops": {
+            "rz": 267,
+            "cx": 209,
+            "sx": 31,
+            "x": 26,
+            "measure": 14
+          },
+          "native_metrics": {
+            "two_qubit_gates": 209,
+            "depth": 155,
+            "total_gates": 533,
+            "active_qubits": 15
+          },
+          "official_replay_metrics": {
+            "two_qubit_gates": 209,
+            "depth": 155,
+            "total_gates": 533,
+            "active_qubits": 15
+          },
+          "stage3_actual_recorded_input": {
+            "schema": "v63-parameter-free-ordered-structure-v1",
+            "structural_digest": "5da512e6707cf12cfeb25c55ae64d1588e96e7a7abd66580d6b95063bcdd91b5",
+            "num_qubits": 15,
+            "num_clbits": 14,
+            "literal_cx": 209,
+            "metrics": {
+              "two_qubit_gates": 209,
+              "depth": 155,
+              "total_gates": 533,
+              "active_qubits": 15
+            },
+            "instruction_histogram": {
+              "cx": 209,
+              "measure": 14,
+              "rz": 267,
+              "sx": 31,
+              "x": 26
+            },
+            "instruction_count_including_measurements": 547,
+            "opaque_instruction_count": 0,
+            "measurement_map": [
+              {
+                "qargs": [
+                  0
+                ],
+                "cargs": [
+                  0
+                ]
+              },
+              {
+                "qargs": [
+                  1
+                ],
+                "cargs": [
+                  1
+                ]
+              },
+              {
+                "qargs": [
+                  2
+                ],
+                "cargs": [
+                  2
+                ]
+              },
+              {
+                "qargs": [
+                  3
+                ],
+                "cargs": [
+                  3
+                ]
+              },
+              {
+                "qargs": [
+                  4
+                ],
+                "cargs": [
+                  4
+                ]
+              },
+              {
+                "qargs": [
+                  5
+                ],
+                "cargs": [
+                  5
+                ]
+              },
+              {
+                "qargs": [
+                  6
+                ],
+                "cargs": [
+                  6
+                ]
+              },
+              {
+                "qargs": [
+                  7
+                ],
+                "cargs": [
+                  7
+                ]
+              },
+              {
+                "qargs": [
+                  8
+                ],
+                "cargs": [
+                  8
+                ]
+              },
+              {
+                "qargs": [
+                  9
+                ],
+                "cargs": [
+                  9
+                ]
+              },
+              {
+                "qargs": [
+                  10
+                ],
+                "cargs": [
+                  10
+                ]
+              },
+              {
+                "qargs": [
+                  11
+                ],
+                "cargs": [
+                  11
+                ]
+              },
+              {
+                "qargs": [
+                  12
+                ],
+                "cargs": [
+                  12
+                ]
+              },
+              {
+                "qargs": [
+                  13
+                ],
+                "cargs": [
+                  13
+                ]
+              }
+            ],
+            "metric_scope": "stored representation; opaque composites are not expanded",
+            "digest_scope": "ordered public structure only; numeric parameters and global phase excluded"
+          },
+          "stage4_scoring_replay_output": {
+            "schema": "v63-parameter-free-ordered-structure-v1",
+            "structural_digest": "5da512e6707cf12cfeb25c55ae64d1588e96e7a7abd66580d6b95063bcdd91b5",
+            "num_qubits": 15,
+            "num_clbits": 14,
+            "literal_cx": 209,
+            "metrics": {
+              "two_qubit_gates": 209,
+              "depth": 155,
+              "total_gates": 533,
+              "active_qubits": 15
+            },
+            "instruction_histogram": {
+              "cx": 209,
+              "measure": 14,
+              "rz": 267,
+              "sx": 31,
+              "x": 26
+            },
+            "instruction_count_including_measurements": 547,
+            "opaque_instruction_count": 0,
+            "measurement_map": [
+              {
+                "qargs": [
+                  0
+                ],
+                "cargs": [
+                  0
+                ]
+              },
+              {
+                "qargs": [
+                  1
+                ],
+                "cargs": [
+                  1
+                ]
+              },
+              {
+                "qargs": [
+                  2
+                ],
+                "cargs": [
+                  2
+                ]
+              },
+              {
+                "qargs": [
+                  3
+                ],
+                "cargs": [
+                  3
+                ]
+              },
+              {
+                "qargs": [
+                  4
+                ],
+                "cargs": [
+                  4
+                ]
+              },
+              {
+                "qargs": [
+                  5
+                ],
+                "cargs": [
+                  5
+                ]
+              },
+              {
+                "qargs": [
+                  6
+                ],
+                "cargs": [
+                  6
+                ]
+              },
+              {
+                "qargs": [
+                  7
+                ],
+                "cargs": [
+                  7
+                ]
+              },
+              {
+                "qargs": [
+                  8
+                ],
+                "cargs": [
+                  8
+                ]
+              },
+              {
+                "qargs": [
+                  9
+                ],
+                "cargs": [
+                  9
+                ]
+              },
+              {
+                "qargs": [
+                  10
+                ],
+                "cargs": [
+                  10
+                ]
+              },
+              {
+                "qargs": [
+                  11
+                ],
+                "cargs": [
+                  11
+                ]
+              },
+              {
+                "qargs": [
+                  12
+                ],
+                "cargs": [
+                  12
+                ]
+              },
+              {
+                "qargs": [
+                  13
+                ],
+                "cargs": [
+                  13
+                ]
+              }
+            ],
+            "metric_scope": "stored representation; opaque composites are not expanded",
+            "digest_scope": "ordered public structure only; numeric parameters and global phase excluded"
+          },
+          "official_replay_count_ops": {
+            "rz": 267,
+            "cx": 209,
+            "sx": 31,
+            "x": 26,
+            "measure": 14
+          },
+          "replay_compile_seconds": 0.016490473004523665
+        },
+        {
+          "record_index": 1,
+          "qubits": 15,
+          "classical_bits": 14,
+          "native_count_ops": {
+            "rz": 85,
+            "sx": 31,
+            "cx": 27,
+            "x": 18,
+            "measure": 14
+          },
+          "native_metrics": {
+            "two_qubit_gates": 27,
+            "depth": 68,
+            "total_gates": 161,
+            "active_qubits": 15
+          },
+          "official_replay_metrics": {
+            "two_qubit_gates": 27,
+            "depth": 68,
+            "total_gates": 161,
+            "active_qubits": 15
+          },
+          "stage3_actual_recorded_input": {
+            "schema": "v63-parameter-free-ordered-structure-v1",
+            "structural_digest": "2a9b33b5546cc7d1d1b9b9abadda96d5e6737473eac1939e2b584c5f7f39a500",
+            "num_qubits": 15,
+            "num_clbits": 14,
+            "literal_cx": 27,
+            "metrics": {
+              "two_qubit_gates": 27,
+              "depth": 68,
+              "total_gates": 161,
+              "active_qubits": 15
+            },
+            "instruction_histogram": {
+              "cx": 27,
+              "measure": 14,
+              "rz": 85,
+              "sx": 31,
+              "x": 18
+            },
+            "instruction_count_including_measurements": 175,
+            "opaque_instruction_count": 0,
+            "measurement_map": [
+              {
+                "qargs": [
+                  0
+                ],
+                "cargs": [
+                  0
+                ]
+              },
+              {
+                "qargs": [
+                  1
+                ],
+                "cargs": [
+                  1
+                ]
+              },
+              {
+                "qargs": [
+                  2
+                ],
+                "cargs": [
+                  2
+                ]
+              },
+              {
+                "qargs": [
+                  3
+                ],
+                "cargs": [
+                  3
+                ]
+              },
+              {
+                "qargs": [
+                  4
+                ],
+                "cargs": [
+                  4
+                ]
+              },
+              {
+                "qargs": [
+                  5
+                ],
+                "cargs": [
+                  5
+                ]
+              },
+              {
+                "qargs": [
+                  6
+                ],
+                "cargs": [
+                  6
+                ]
+              },
+              {
+                "qargs": [
+                  7
+                ],
+                "cargs": [
+                  7
+                ]
+              },
+              {
+                "qargs": [
+                  8
+                ],
+                "cargs": [
+                  8
+                ]
+              },
+              {
+                "qargs": [
+                  9
+                ],
+                "cargs": [
+                  9
+                ]
+              },
+              {
+                "qargs": [
+                  10
+                ],
+                "cargs": [
+                  10
+                ]
+              },
+              {
+                "qargs": [
+                  11
+                ],
+                "cargs": [
+                  11
+                ]
+              },
+              {
+                "qargs": [
+                  12
+                ],
+                "cargs": [
+                  12
+                ]
+              },
+              {
+                "qargs": [
+                  13
+                ],
+                "cargs": [
+                  13
+                ]
+              }
+            ],
+            "metric_scope": "stored representation; opaque composites are not expanded",
+            "digest_scope": "ordered public structure only; numeric parameters and global phase excluded"
+          },
+          "stage4_scoring_replay_output": {
+            "schema": "v63-parameter-free-ordered-structure-v1",
+            "structural_digest": "2a9b33b5546cc7d1d1b9b9abadda96d5e6737473eac1939e2b584c5f7f39a500",
+            "num_qubits": 15,
+            "num_clbits": 14,
+            "literal_cx": 27,
+            "metrics": {
+              "two_qubit_gates": 27,
+              "depth": 68,
+              "total_gates": 161,
+              "active_qubits": 15
+            },
+            "instruction_histogram": {
+              "cx": 27,
+              "measure": 14,
+              "rz": 85,
+              "sx": 31,
+              "x": 18
+            },
+            "instruction_count_including_measurements": 175,
+            "opaque_instruction_count": 0,
+            "measurement_map": [
+              {
+                "qargs": [
+                  0
+                ],
+                "cargs": [
+                  0
+                ]
+              },
+              {
+                "qargs": [
+                  1
+                ],
+                "cargs": [
+                  1
+                ]
+              },
+              {
+                "qargs": [
+                  2
+                ],
+                "cargs": [
+                  2
+                ]
+              },
+              {
+                "qargs": [
+                  3
+                ],
+                "cargs": [
+                  3
+                ]
+              },
+              {
+                "qargs": [
+                  4
+                ],
+                "cargs": [
+                  4
+                ]
+              },
+              {
+                "qargs": [
+                  5
+                ],
+                "cargs": [
+                  5
+                ]
+              },
+              {
+                "qargs": [
+                  6
+                ],
+                "cargs": [
+                  6
+                ]
+              },
+              {
+                "qargs": [
+                  7
+                ],
+                "cargs": [
+                  7
+                ]
+              },
+              {
+                "qargs": [
+                  8
+                ],
+                "cargs": [
+                  8
+                ]
+              },
+              {
+                "qargs": [
+                  9
+                ],
+                "cargs": [
+                  9
+                ]
+              },
+              {
+                "qargs": [
+                  10
+                ],
+                "cargs": [
+                  10
+                ]
+              },
+              {
+                "qargs": [
+                  11
+                ],
+                "cargs": [
+                  11
+                ]
+              },
+              {
+                "qargs": [
+                  12
+                ],
+                "cargs": [
+                  12
+                ]
+              },
+              {
+                "qargs": [
+                  13
+                ],
+                "cargs": [
+                  13
+                ]
+              }
+            ],
+            "metric_scope": "stored representation; opaque composites are not expanded",
+            "digest_scope": "ordered public structure only; numeric parameters and global phase excluded"
+          },
+          "official_replay_count_ops": {
+            "rz": 85,
+            "sx": 31,
+            "cx": 27,
+            "x": 18,
+            "measure": 14
+          },
+          "replay_compile_seconds": 0.008137290002196096
+        }
+      ],
+      "scored_winner_record_index": 0,
+      "reported_official_metrics": {
+        "active_qubits": 15,
+        "depth": 155,
+        "total_gates": 533,
+        "two_qubit_gates": 209
+      },
+      "replayed_winner_matches_actual_official_report": true
+    },
+    {
+      "run": 3,
+      "tier": 5,
+      "actual_unique_records": 1,
+      "actual_total_executions": 1,
+      "captured_from_actual_official_scoring_worker": true,
+      "circuits": [
+        {
+          "record_index": 0,
+          "qubits": 19,
+          "classical_bits": 10,
+          "native_count_ops": {
+            "rz": 12301,
+            "cx": 11000,
+            "sx": 4862,
+            "x": 250,
+            "measure": 10
+          },
+          "native_metrics": {
+            "two_qubit_gates": 11000,
+            "depth": 19703,
+            "total_gates": 28413,
+            "active_qubits": 19
+          },
+          "official_replay_metrics": {
+            "two_qubit_gates": 10950,
+            "depth": 19703,
+            "total_gates": 28363,
+            "active_qubits": 19
+          },
+          "stage3_actual_recorded_input": {
+            "schema": "v63-parameter-free-ordered-structure-v1",
+            "structural_digest": "1ed2d4e6f9ff1de2efec9ce6a0fe913e212fa9bdfd2298471f93e1e9008a7995",
+            "num_qubits": 19,
+            "num_clbits": 10,
+            "literal_cx": 11000,
+            "metrics": {
+              "two_qubit_gates": 11000,
+              "depth": 19703,
+              "total_gates": 28413,
+              "active_qubits": 19
+            },
+            "instruction_histogram": {
+              "cx": 11000,
+              "measure": 10,
+              "rz": 12301,
+              "sx": 4862,
+              "x": 250
+            },
+            "instruction_count_including_measurements": 28423,
+            "opaque_instruction_count": 0,
+            "measurement_map": [
+              {
+                "qargs": [
+                  0
+                ],
+                "cargs": [
+                  0
+                ]
+              },
+              {
+                "qargs": [
+                  1
+                ],
+                "cargs": [
+                  1
+                ]
+              },
+              {
+                "qargs": [
+                  2
+                ],
+                "cargs": [
+                  2
+                ]
+              },
+              {
+                "qargs": [
+                  3
+                ],
+                "cargs": [
+                  3
+                ]
+              },
+              {
+                "qargs": [
+                  4
+                ],
+                "cargs": [
+                  4
+                ]
+              },
+              {
+                "qargs": [
+                  5
+                ],
+                "cargs": [
+                  5
+                ]
+              },
+              {
+                "qargs": [
+                  6
+                ],
+                "cargs": [
+                  6
+                ]
+              },
+              {
+                "qargs": [
+                  7
+                ],
+                "cargs": [
+                  7
+                ]
+              },
+              {
+                "qargs": [
+                  8
+                ],
+                "cargs": [
+                  8
+                ]
+              },
+              {
+                "qargs": [
+                  9
+                ],
+                "cargs": [
+                  9
+                ]
+              }
+            ],
+            "metric_scope": "stored representation; opaque composites are not expanded",
+            "digest_scope": "ordered public structure only; numeric parameters and global phase excluded"
+          },
+          "stage4_scoring_replay_output": {
+            "schema": "v63-parameter-free-ordered-structure-v1",
+            "structural_digest": "f17356f5e13863cc189930ad9e441400a240a9b21e076643015d4dc7e6bfe29d",
+            "num_qubits": 19,
+            "num_clbits": 10,
+            "literal_cx": 10950,
+            "metrics": {
+              "two_qubit_gates": 10950,
+              "depth": 19703,
+              "total_gates": 28363,
+              "active_qubits": 19
+            },
+            "instruction_histogram": {
+              "cx": 10950,
+              "measure": 10,
+              "rz": 12301,
+              "sx": 4862,
+              "x": 250
+            },
+            "instruction_count_including_measurements": 28373,
+            "opaque_instruction_count": 0,
+            "measurement_map": [
+              {
+                "qargs": [
+                  0
+                ],
+                "cargs": [
+                  0
+                ]
+              },
+              {
+                "qargs": [
+                  1
+                ],
+                "cargs": [
+                  1
+                ]
+              },
+              {
+                "qargs": [
+                  2
+                ],
+                "cargs": [
+                  2
+                ]
+              },
+              {
+                "qargs": [
+                  3
+                ],
+                "cargs": [
+                  3
+                ]
+              },
+              {
+                "qargs": [
+                  4
+                ],
+                "cargs": [
+                  4
+                ]
+              },
+              {
+                "qargs": [
+                  5
+                ],
+                "cargs": [
+                  5
+                ]
+              },
+              {
+                "qargs": [
+                  6
+                ],
+                "cargs": [
+                  6
+                ]
+              },
+              {
+                "qargs": [
+                  7
+                ],
+                "cargs": [
+                  7
+                ]
+              },
+              {
+                "qargs": [
+                  8
+                ],
+                "cargs": [
+                  8
+                ]
+              },
+              {
+                "qargs": [
+                  9
+                ],
+                "cargs": [
+                  9
+                ]
+              }
+            ],
+            "metric_scope": "stored representation; opaque composites are not expanded",
+            "digest_scope": "ordered public structure only; numeric parameters and global phase excluded"
+          },
+          "official_replay_count_ops": {
+            "rz": 12301,
+            "cx": 10950,
+            "sx": 4862,
+            "x": 250,
+            "measure": 10
+          },
+          "replay_compile_seconds": 0.824430681001104
+        }
+      ],
+      "scored_winner_record_index": 0,
+      "reported_official_metrics": {
+        "active_qubits": 19,
+        "depth": 19703,
+        "total_gates": 28363,
+        "two_qubit_gates": 10950
+      },
+      "replayed_winner_matches_actual_official_report": true
+    },
+    {
+      "run": 3,
+      "tier": 6,
+      "actual_unique_records": 2,
+      "actual_total_executions": 2,
+      "captured_from_actual_official_scoring_worker": true,
+      "circuits": [
+        {
+          "record_index": 0,
+          "qubits": 23,
+          "classical_bits": 1,
+          "native_count_ops": {
+            "rz": 574,
+            "cx": 436,
+            "sx": 196,
+            "measure": 1
+          },
+          "native_metrics": {
+            "two_qubit_gates": 436,
+            "depth": 819,
+            "total_gates": 1206,
+            "active_qubits": 23
+          },
+          "official_replay_metrics": {
+            "two_qubit_gates": 436,
+            "depth": 819,
+            "total_gates": 1206,
+            "active_qubits": 23
+          },
+          "stage3_actual_recorded_input": {
+            "schema": "v63-parameter-free-ordered-structure-v1",
+            "structural_digest": "749ec47a20cacc80a95458a8b9d313a94aa4cad81f05fc4159db3ba837ad5af6",
+            "num_qubits": 23,
+            "num_clbits": 1,
+            "literal_cx": 436,
+            "metrics": {
+              "two_qubit_gates": 436,
+              "depth": 819,
+              "total_gates": 1206,
+              "active_qubits": 23
+            },
+            "instruction_histogram": {
+              "cx": 436,
+              "measure": 1,
+              "rz": 574,
+              "sx": 196
+            },
+            "instruction_count_including_measurements": 1207,
+            "opaque_instruction_count": 0,
+            "measurement_map": [
+              {
+                "qargs": [
+                  22
+                ],
+                "cargs": [
+                  0
+                ]
+              }
+            ],
+            "metric_scope": "stored representation; opaque composites are not expanded",
+            "digest_scope": "ordered public structure only; numeric parameters and global phase excluded"
+          },
+          "stage4_scoring_replay_output": {
+            "schema": "v63-parameter-free-ordered-structure-v1",
+            "structural_digest": "749ec47a20cacc80a95458a8b9d313a94aa4cad81f05fc4159db3ba837ad5af6",
+            "num_qubits": 23,
+            "num_clbits": 1,
+            "literal_cx": 436,
+            "metrics": {
+              "two_qubit_gates": 436,
+              "depth": 819,
+              "total_gates": 1206,
+              "active_qubits": 23
+            },
+            "instruction_histogram": {
+              "cx": 436,
+              "measure": 1,
+              "rz": 574,
+              "sx": 196
+            },
+            "instruction_count_including_measurements": 1207,
+            "opaque_instruction_count": 0,
+            "measurement_map": [
+              {
+                "qargs": [
+                  22
+                ],
+                "cargs": [
+                  0
+                ]
+              }
+            ],
+            "metric_scope": "stored representation; opaque composites are not expanded",
+            "digest_scope": "ordered public structure only; numeric parameters and global phase excluded"
+          },
+          "official_replay_count_ops": {
+            "rz": 574,
+            "cx": 436,
+            "sx": 196,
+            "measure": 1
+          },
+          "replay_compile_seconds": 0.03784462199837435
+        },
+        {
+          "record_index": 1,
+          "qubits": 22,
+          "classical_bits": 14,
+          "native_count_ops": {
+            "rz": 4178,
+            "cx": 3000,
+            "sx": 1502,
+            "measure": 14
+          },
+          "native_metrics": {
+            "two_qubit_gates": 3000,
+            "depth": 5691,
+            "total_gates": 8680,
+            "active_qubits": 22
+          },
+          "official_replay_metrics": {
+            "two_qubit_gates": 3000,
+            "depth": 5691,
+            "total_gates": 8680,
+            "active_qubits": 22
+          },
+          "stage3_actual_recorded_input": {
+            "schema": "v63-parameter-free-ordered-structure-v1",
+            "structural_digest": "82c671d5f1f8364388e36b22be12f4a9836347fbfc8e2ddf08c706ae99d7b221",
+            "num_qubits": 22,
+            "num_clbits": 14,
+            "literal_cx": 3000,
+            "metrics": {
+              "two_qubit_gates": 3000,
+              "depth": 5691,
+              "total_gates": 8680,
+              "active_qubits": 22
+            },
+            "instruction_histogram": {
+              "cx": 3000,
+              "measure": 14,
+              "rz": 4178,
+              "sx": 1502
+            },
+            "instruction_count_including_measurements": 8694,
+            "opaque_instruction_count": 0,
+            "measurement_map": [
+              {
+                "qargs": [
+                  0
+                ],
+                "cargs": [
+                  0
+                ]
+              },
+              {
+                "qargs": [
+                  1
+                ],
+                "cargs": [
+                  1
+                ]
+              },
+              {
+                "qargs": [
+                  2
+                ],
+                "cargs": [
+                  2
+                ]
+              },
+              {
+                "qargs": [
+                  3
+                ],
+                "cargs": [
+                  3
+                ]
+              },
+              {
+                "qargs": [
+                  4
+                ],
+                "cargs": [
+                  4
+                ]
+              },
+              {
+                "qargs": [
+                  5
+                ],
+                "cargs": [
+                  5
+                ]
+              },
+              {
+                "qargs": [
+                  6
+                ],
+                "cargs": [
+                  6
+                ]
+              },
+              {
+                "qargs": [
+                  7
+                ],
+                "cargs": [
+                  7
+                ]
+              },
+              {
+                "qargs": [
+                  8
+                ],
+                "cargs": [
+                  8
+                ]
+              },
+              {
+                "qargs": [
+                  9
+                ],
+                "cargs": [
+                  9
+                ]
+              },
+              {
+                "qargs": [
+                  10
+                ],
+                "cargs": [
+                  10
+                ]
+              },
+              {
+                "qargs": [
+                  11
+                ],
+                "cargs": [
+                  11
+                ]
+              },
+              {
+                "qargs": [
+                  12
+                ],
+                "cargs": [
+                  12
+                ]
+              },
+              {
+                "qargs": [
+                  13
+                ],
+                "cargs": [
+                  13
+                ]
+              }
+            ],
+            "metric_scope": "stored representation; opaque composites are not expanded",
+            "digest_scope": "ordered public structure only; numeric parameters and global phase excluded"
+          },
+          "stage4_scoring_replay_output": {
+            "schema": "v63-parameter-free-ordered-structure-v1",
+            "structural_digest": "82c671d5f1f8364388e36b22be12f4a9836347fbfc8e2ddf08c706ae99d7b221",
+            "num_qubits": 22,
+            "num_clbits": 14,
+            "literal_cx": 3000,
+            "metrics": {
+              "two_qubit_gates": 3000,
+              "depth": 5691,
+              "total_gates": 8680,
+              "active_qubits": 22
+            },
+            "instruction_histogram": {
+              "cx": 3000,
+              "measure": 14,
+              "rz": 4178,
+              "sx": 1502
+            },
+            "instruction_count_including_measurements": 8694,
+            "opaque_instruction_count": 0,
+            "measurement_map": [
+              {
+                "qargs": [
+                  0
+                ],
+                "cargs": [
+                  0
+                ]
+              },
+              {
+                "qargs": [
+                  1
+                ],
+                "cargs": [
+                  1
+                ]
+              },
+              {
+                "qargs": [
+                  2
+                ],
+                "cargs": [
+                  2
+                ]
+              },
+              {
+                "qargs": [
+                  3
+                ],
+                "cargs": [
+                  3
+                ]
+              },
+              {
+                "qargs": [
+                  4
+                ],
+                "cargs": [
+                  4
+                ]
+              },
+              {
+                "qargs": [
+                  5
+                ],
+                "cargs": [
+                  5
+                ]
+              },
+              {
+                "qargs": [
+                  6
+                ],
+                "cargs": [
+                  6
+                ]
+              },
+              {
+                "qargs": [
+                  7
+                ],
+                "cargs": [
+                  7
+                ]
+              },
+              {
+                "qargs": [
+                  8
+                ],
+                "cargs": [
+                  8
+                ]
+              },
+              {
+                "qargs": [
+                  9
+                ],
+                "cargs": [
+                  9
+                ]
+              },
+              {
+                "qargs": [
+                  10
+                ],
+                "cargs": [
+                  10
+                ]
+              },
+              {
+                "qargs": [
+                  11
+                ],
+                "cargs": [
+                  11
+                ]
+              },
+              {
+                "qargs": [
+                  12
+                ],
+                "cargs": [
+                  12
+                ]
+              },
+              {
+                "qargs": [
+                  13
+                ],
+                "cargs": [
+                  13
+                ]
+              }
+            ],
+            "metric_scope": "stored representation; opaque composites are not expanded",
+            "digest_scope": "ordered public structure only; numeric parameters and global phase excluded"
+          },
+          "official_replay_count_ops": {
+            "rz": 4178,
+            "cx": 3000,
+            "sx": 1502,
+            "measure": 14
+          },
+          "replay_compile_seconds": 0.21589539400156355
+        }
+      ],
+      "scored_winner_record_index": 1,
+      "reported_official_metrics": {
+        "active_qubits": 22,
+        "depth": 5691,
+        "total_gates": 8680,
+        "two_qubit_gates": 3000
+      },
+      "replayed_winner_matches_actual_official_report": true
+    },
+    {
+      "run": 3,
+      "tier": 7,
+      "actual_unique_records": 2,
+      "actual_total_executions": 2,
+      "captured_from_actual_official_scoring_worker": true,
+      "circuits": [
+        {
+          "record_index": 0,
+          "qubits": 15,
+          "classical_bits": 14,
+          "native_count_ops": {
+            "rz": 267,
+            "cx": 209,
+            "sx": 31,
+            "x": 26,
+            "measure": 14
+          },
+          "native_metrics": {
+            "two_qubit_gates": 209,
+            "depth": 155,
+            "total_gates": 533,
+            "active_qubits": 15
+          },
+          "official_replay_metrics": {
+            "two_qubit_gates": 209,
+            "depth": 155,
+            "total_gates": 533,
+            "active_qubits": 15
+          },
+          "stage3_actual_recorded_input": {
+            "schema": "v63-parameter-free-ordered-structure-v1",
+            "structural_digest": "5da512e6707cf12cfeb25c55ae64d1588e96e7a7abd66580d6b95063bcdd91b5",
+            "num_qubits": 15,
+            "num_clbits": 14,
+            "literal_cx": 209,
+            "metrics": {
+              "two_qubit_gates": 209,
+              "depth": 155,
+              "total_gates": 533,
+              "active_qubits": 15
+            },
+            "instruction_histogram": {
+              "cx": 209,
+              "measure": 14,
+              "rz": 267,
+              "sx": 31,
+              "x": 26
+            },
+            "instruction_count_including_measurements": 547,
+            "opaque_instruction_count": 0,
+            "measurement_map": [
+              {
+                "qargs": [
+                  0
+                ],
+                "cargs": [
+                  0
+                ]
+              },
+              {
+                "qargs": [
+                  1
+                ],
+                "cargs": [
+                  1
+                ]
+              },
+              {
+                "qargs": [
+                  2
+                ],
+                "cargs": [
+                  2
+                ]
+              },
+              {
+                "qargs": [
+                  3
+                ],
+                "cargs": [
+                  3
+                ]
+              },
+              {
+                "qargs": [
+                  4
+                ],
+                "cargs": [
+                  4
+                ]
+              },
+              {
+                "qargs": [
+                  5
+                ],
+                "cargs": [
+                  5
+                ]
+              },
+              {
+                "qargs": [
+                  6
+                ],
+                "cargs": [
+                  6
+                ]
+              },
+              {
+                "qargs": [
+                  7
+                ],
+                "cargs": [
+                  7
+                ]
+              },
+              {
+                "qargs": [
+                  8
+                ],
+                "cargs": [
+                  8
+                ]
+              },
+              {
+                "qargs": [
+                  9
+                ],
+                "cargs": [
+                  9
+                ]
+              },
+              {
+                "qargs": [
+                  10
+                ],
+                "cargs": [
+                  10
+                ]
+              },
+              {
+                "qargs": [
+                  11
+                ],
+                "cargs": [
+                  11
+                ]
+              },
+              {
+                "qargs": [
+                  12
+                ],
+                "cargs": [
+                  12
+                ]
+              },
+              {
+                "qargs": [
+                  13
+                ],
+                "cargs": [
+                  13
+                ]
+              }
+            ],
+            "metric_scope": "stored representation; opaque composites are not expanded",
+            "digest_scope": "ordered public structure only; numeric parameters and global phase excluded"
+          },
+          "stage4_scoring_replay_output": {
+            "schema": "v63-parameter-free-ordered-structure-v1",
+            "structural_digest": "5da512e6707cf12cfeb25c55ae64d1588e96e7a7abd66580d6b95063bcdd91b5",
+            "num_qubits": 15,
+            "num_clbits": 14,
+            "literal_cx": 209,
+            "metrics": {
+              "two_qubit_gates": 209,
+              "depth": 155,
+              "total_gates": 533,
+              "active_qubits": 15
+            },
+            "instruction_histogram": {
+              "cx": 209,
+              "measure": 14,
+              "rz": 267,
+              "sx": 31,
+              "x": 26
+            },
+            "instruction_count_including_measurements": 547,
+            "opaque_instruction_count": 0,
+            "measurement_map": [
+              {
+                "qargs": [
+                  0
+                ],
+                "cargs": [
+                  0
+                ]
+              },
+              {
+                "qargs": [
+                  1
+                ],
+                "cargs": [
+                  1
+                ]
+              },
+              {
+                "qargs": [
+                  2
+                ],
+                "cargs": [
+                  2
+                ]
+              },
+              {
+                "qargs": [
+                  3
+                ],
+                "cargs": [
+                  3
+                ]
+              },
+              {
+                "qargs": [
+                  4
+                ],
+                "cargs": [
+                  4
+                ]
+              },
+              {
+                "qargs": [
+                  5
+                ],
+                "cargs": [
+                  5
+                ]
+              },
+              {
+                "qargs": [
+                  6
+                ],
+                "cargs": [
+                  6
+                ]
+              },
+              {
+                "qargs": [
+                  7
+                ],
+                "cargs": [
+                  7
+                ]
+              },
+              {
+                "qargs": [
+                  8
+                ],
+                "cargs": [
+                  8
+                ]
+              },
+              {
+                "qargs": [
+                  9
+                ],
+                "cargs": [
+                  9
+                ]
+              },
+              {
+                "qargs": [
+                  10
+                ],
+                "cargs": [
+                  10
+                ]
+              },
+              {
+                "qargs": [
+                  11
+                ],
+                "cargs": [
+                  11
+                ]
+              },
+              {
+                "qargs": [
+                  12
+                ],
+                "cargs": [
+                  12
+                ]
+              },
+              {
+                "qargs": [
+                  13
+                ],
+                "cargs": [
+                  13
+                ]
+              }
+            ],
+            "metric_scope": "stored representation; opaque composites are not expanded",
+            "digest_scope": "ordered public structure only; numeric parameters and global phase excluded"
+          },
+          "official_replay_count_ops": {
+            "rz": 267,
+            "cx": 209,
+            "sx": 31,
+            "x": 26,
+            "measure": 14
+          },
+          "replay_compile_seconds": 0.03984352599945851
+        },
+        {
+          "record_index": 1,
+          "qubits": 15,
+          "classical_bits": 14,
+          "native_count_ops": {
+            "rz": 85,
+            "sx": 31,
+            "cx": 27,
+            "x": 18,
+            "measure": 14
+          },
+          "native_metrics": {
+            "two_qubit_gates": 27,
+            "depth": 68,
+            "total_gates": 161,
+            "active_qubits": 15
+          },
+          "official_replay_metrics": {
+            "two_qubit_gates": 27,
+            "depth": 68,
+            "total_gates": 161,
+            "active_qubits": 15
+          },
+          "stage3_actual_recorded_input": {
+            "schema": "v63-parameter-free-ordered-structure-v1",
+            "structural_digest": "2a9b33b5546cc7d1d1b9b9abadda96d5e6737473eac1939e2b584c5f7f39a500",
+            "num_qubits": 15,
+            "num_clbits": 14,
+            "literal_cx": 27,
+            "metrics": {
+              "two_qubit_gates": 27,
+              "depth": 68,
+              "total_gates": 161,
+              "active_qubits": 15
+            },
+            "instruction_histogram": {
+              "cx": 27,
+              "measure": 14,
+              "rz": 85,
+              "sx": 31,
+              "x": 18
+            },
+            "instruction_count_including_measurements": 175,
+            "opaque_instruction_count": 0,
+            "measurement_map": [
+              {
+                "qargs": [
+                  0
+                ],
+                "cargs": [
+                  0
+                ]
+              },
+              {
+                "qargs": [
+                  1
+                ],
+                "cargs": [
+                  1
+                ]
+              },
+              {
+                "qargs": [
+                  2
+                ],
+                "cargs": [
+                  2
+                ]
+              },
+              {
+                "qargs": [
+                  3
+                ],
+                "cargs": [
+                  3
+                ]
+              },
+              {
+                "qargs": [
+                  4
+                ],
+                "cargs": [
+                  4
+                ]
+              },
+              {
+                "qargs": [
+                  5
+                ],
+                "cargs": [
+                  5
+                ]
+              },
+              {
+                "qargs": [
+                  6
+                ],
+                "cargs": [
+                  6
+                ]
+              },
+              {
+                "qargs": [
+                  7
+                ],
+                "cargs": [
+                  7
+                ]
+              },
+              {
+                "qargs": [
+                  8
+                ],
+                "cargs": [
+                  8
+                ]
+              },
+              {
+                "qargs": [
+                  9
+                ],
+                "cargs": [
+                  9
+                ]
+              },
+              {
+                "qargs": [
+                  10
+                ],
+                "cargs": [
+                  10
+                ]
+              },
+              {
+                "qargs": [
+                  11
+                ],
+                "cargs": [
+                  11
+                ]
+              },
+              {
+                "qargs": [
+                  12
+                ],
+                "cargs": [
+                  12
+                ]
+              },
+              {
+                "qargs": [
+                  13
+                ],
+                "cargs": [
+                  13
+                ]
+              }
+            ],
+            "metric_scope": "stored representation; opaque composites are not expanded",
+            "digest_scope": "ordered public structure only; numeric parameters and global phase excluded"
+          },
+          "stage4_scoring_replay_output": {
+            "schema": "v63-parameter-free-ordered-structure-v1",
+            "structural_digest": "2a9b33b5546cc7d1d1b9b9abadda96d5e6737473eac1939e2b584c5f7f39a500",
+            "num_qubits": 15,
+            "num_clbits": 14,
+            "literal_cx": 27,
+            "metrics": {
+              "two_qubit_gates": 27,
+              "depth": 68,
+              "total_gates": 161,
+              "active_qubits": 15
+            },
+            "instruction_histogram": {
+              "cx": 27,
+              "measure": 14,
+              "rz": 85,
+              "sx": 31,
+              "x": 18
+            },
+            "instruction_count_including_measurements": 175,
+            "opaque_instruction_count": 0,
+            "measurement_map": [
+              {
+                "qargs": [
+                  0
+                ],
+                "cargs": [
+                  0
+                ]
+              },
+              {
+                "qargs": [
+                  1
+                ],
+                "cargs": [
+                  1
+                ]
+              },
+              {
+                "qargs": [
+                  2
+                ],
+                "cargs": [
+                  2
+                ]
+              },
+              {
+                "qargs": [
+                  3
+                ],
+                "cargs": [
+                  3
+                ]
+              },
+              {
+                "qargs": [
+                  4
+                ],
+                "cargs": [
+                  4
+                ]
+              },
+              {
+                "qargs": [
+                  5
+                ],
+                "cargs": [
+                  5
+                ]
+              },
+              {
+                "qargs": [
+                  6
+                ],
+                "cargs": [
+                  6
+                ]
+              },
+              {
+                "qargs": [
+                  7
+                ],
+                "cargs": [
+                  7
+                ]
+              },
+              {
+                "qargs": [
+                  8
+                ],
+                "cargs": [
+                  8
+                ]
+              },
+              {
+                "qargs": [
+                  9
+                ],
+                "cargs": [
+                  9
+                ]
+              },
+              {
+                "qargs": [
+                  10
+                ],
+                "cargs": [
+                  10
+                ]
+              },
+              {
+                "qargs": [
+                  11
+                ],
+                "cargs": [
+                  11
+                ]
+              },
+              {
+                "qargs": [
+                  12
+                ],
+                "cargs": [
+                  12
+                ]
+              },
+              {
+                "qargs": [
+                  13
+                ],
+                "cargs": [
+                  13
+                ]
+              }
+            ],
+            "metric_scope": "stored representation; opaque composites are not expanded",
+            "digest_scope": "ordered public structure only; numeric parameters and global phase excluded"
+          },
+          "official_replay_count_ops": {
+            "rz": 85,
+            "sx": 31,
+            "cx": 27,
+            "x": 18,
+            "measure": 14
+          },
+          "replay_compile_seconds": 0.07154758699471131
+        }
+      ],
+      "scored_winner_record_index": 0,
+      "reported_official_metrics": {
+        "active_qubits": 15,
+        "depth": 155,
+        "total_gates": 533,
+        "two_qubit_gates": 209
+      },
+      "replayed_winner_matches_actual_official_report": true
+    }
+  ],
+  "comparisons": [
+    {
+      "reference_run": 1,
+      "run": 2,
+      "tier": 5,
+      "record_counts_equal": true,
+      "per_record": [
+        {
+          "record_index": 0,
+          "supported": true,
+          "shape_equal": true,
+          "exact_order_and_native_operations_equal": true,
+          "global_phase_equal": true
+        }
+      ],
+      "winner_indices_equal": true,
+      "selected_winner_equality": {
+        "supported": true,
+        "shape_equal": true,
+        "exact_order_and_native_operations_equal": true,
+        "global_phase_equal": true
+      }
+    },
+    {
+      "reference_run": 1,
+      "run": 2,
+      "tier": 6,
+      "record_counts_equal": true,
+      "per_record": [
+        {
+          "record_index": 0,
+          "supported": true,
+          "shape_equal": true,
+          "exact_order_and_native_operations_equal": true,
+          "global_phase_equal": true
+        },
+        {
+          "record_index": 1,
+          "supported": true,
+          "shape_equal": true,
+          "exact_order_and_native_operations_equal": true,
+          "global_phase_equal": true
+        }
+      ],
+      "winner_indices_equal": true,
+      "selected_winner_equality": {
+        "supported": true,
+        "shape_equal": true,
+        "exact_order_and_native_operations_equal": true,
+        "global_phase_equal": true
+      }
+    },
+    {
+      "reference_run": 1,
+      "run": 2,
+      "tier": 7,
+      "record_counts_equal": true,
+      "per_record": [
+        {
+          "record_index": 0,
+          "supported": true,
+          "shape_equal": true,
+          "exact_order_and_native_operations_equal": true,
+          "global_phase_equal": true
+        },
+        {
+          "record_index": 1,
+          "supported": true,
+          "shape_equal": true,
+          "exact_order_and_native_operations_equal": true,
+          "global_phase_equal": true
+        }
+      ],
+      "winner_indices_equal": true,
+      "selected_winner_equality": {
+        "supported": true,
+        "shape_equal": true,
+        "exact_order_and_native_operations_equal": true,
+        "global_phase_equal": true
+      }
+    },
+    {
+      "reference_run": 1,
+      "run": 3,
+      "tier": 5,
+      "record_counts_equal": true,
+      "per_record": [
+        {
+          "record_index": 0,
+          "supported": true,
+          "shape_equal": true,
+          "exact_order_and_native_operations_equal": true,
+          "global_phase_equal": true
+        }
+      ],
+      "winner_indices_equal": true,
+      "selected_winner_equality": {
+        "supported": true,
+        "shape_equal": true,
+        "exact_order_and_native_operations_equal": true,
+        "global_phase_equal": true
+      }
+    },
+    {
+      "reference_run": 1,
+      "run": 3,
+      "tier": 6,
+      "record_counts_equal": true,
+      "per_record": [
+        {
+          "record_index": 0,
+          "supported": true,
+          "shape_equal": true,
+          "exact_order_and_native_operations_equal": true,
+          "global_phase_equal": true
+        },
+        {
+          "record_index": 1,
+          "supported": true,
+          "shape_equal": true,
+          "exact_order_and_native_operations_equal": true,
+          "global_phase_equal": true
+        }
+      ],
+      "winner_indices_equal": true,
+      "selected_winner_equality": {
+        "supported": true,
+        "shape_equal": true,
+        "exact_order_and_native_operations_equal": true,
+        "global_phase_equal": true
+      }
+    },
+    {
+      "reference_run": 1,
+      "run": 3,
+      "tier": 7,
+      "record_counts_equal": true,
+      "per_record": [
+        {
+          "record_index": 0,
+          "supported": true,
+          "shape_equal": true,
+          "exact_order_and_native_operations_equal": true,
+          "global_phase_equal": true
+        },
+        {
+          "record_index": 1,
+          "supported": true,
+          "shape_equal": true,
+          "exact_order_and_native_operations_equal": true,
+          "global_phase_equal": true
+        }
+      ],
+      "winner_indices_equal": true,
+      "selected_winner_equality": {
+        "supported": true,
+        "shape_equal": true,
+        "exact_order_and_native_operations_equal": true,
+        "global_phase_equal": true
+      }
+    }
+  ],
+  "all_official_winners_reproduced": true,
+  "all_selected_winners_exact_native_sequence_equal": true,
+  "private_circuit_data_saved_in_evidence": false,
+  "private_parameter_values_saved": false,
+  "parameter_free_structural_fingerprints_saved": true,
+  "native_parameter_comparison_tolerance": 0,
+  "native_parameter_values_persisted": false,
+  "oracle_internal_decomposition_inspected": false,
+  "actual_aer_runs_added_by_this_analysis": 0,
+  "historical_actual_circuit_comparison_available": false,
+  "scope": "Equality concerns actual recorder-normalized native scoring-input circuits across these three local runs, not missing historical remote circuit payloads; raw QPY UUID/metadata byte identity is not required."
+}

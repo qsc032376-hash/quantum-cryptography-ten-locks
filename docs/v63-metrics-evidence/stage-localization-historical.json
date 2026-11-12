@@ -1,0 +1,172 @@
+{
+  "status": "TIER05_NATIVE_STAGE_COUNT_DIFFERENCE_CONFIRMED_CAUSE_UNRESOLVED",
+  "scope": "Read-only historical source review; no quantum execution, production changes, or approved artifact regeneration. New three-run and four-stage experiments are recorded separately.",
+  "source_provenance": [
+    {
+      "commit": "ce75c0721622d363e77912191a52a02c34f92472",
+      "path": "docs/v63-evidence/compiler_replay.py",
+      "location": "lines 19-23",
+      "sha256": "99a188c3f245aabf7c55703cc61d9b7a90c002f409e887dd9d2a12cff5385ced"
+    },
+    {
+      "commit": "ce75c0721622d363e77912191a52a02c34f92472",
+      "path": "docs/v63-evidence/compiler-replay.json",
+      "location": "pinned_builder and integrated_builder",
+      "sha256": "fc963f23e0e29db8ad6e875dec2c4129797b242b5da04e06b2e063f575c4f24c"
+    },
+    {
+      "commit": "ce75c0721622d363e77912191a52a02c34f92472",
+      "path": "docs/v63-evidence/operators.py",
+      "location": "T5 pinned reference and extract implementation",
+      "sha256": "4ced5b275f14c6c1ec1315d29a742c7a14444f4d6be0eca1d236c4d8a50d676d"
+    },
+    {
+      "commit": "97fcc0c7d6dec3b7385dc237d47d89d4d6ffd15c",
+      "path": "research/tier05_extreme/search.py",
+      "location": "lines 41-53, especially 45-51",
+      "sha256": "f4a762e26bbdd1f929e8a31554cfcb9f013f222e025ff4bb75eb958758c32cc4"
+    },
+    {
+      "commit": "ce75c0721622d363e77912191a52a02c34f92472",
+      "path": "submissions/team3/tier05/solution.py",
+      "location": "lines 118-131",
+      "sha256": "ea4ff71efaa8f5e1b270852ccbde8cd388df101945a63ecbbf83b2b3f0d81c34"
+    },
+    {
+      "commit": "e49ed058ed83b43866ffca4ca9b9785e3f9301ed",
+      "path": "docs/v63-metrics-reconciliation/actual-circuits.json",
+      "location": "results for Tier 5 in all three prior full official runs",
+      "sha256": "d1e7066ee95efa4435d6036e938967b405ee2b17b2672642f92ed5f5637ea496"
+    },
+    {
+      "commit": "e49ed058ed83b43866ffca4ca9b9785e3f9301ed",
+      "path": "docs/v63-metrics-reconciliation/scoring-impact.json",
+      "location": "reused score sensitivity bounds, not a new experiment",
+      "sha256": "6f6df876f1bef83bbdb98b60756d3ec6e75829dd71a4039650e4c7f23f2d6654"
+    }
+  ],
+  "compile_actual_return_contract": {
+    "source_commit": "97fcc0c7d6dec3b7385dc237d47d89d4d6ffd15c",
+    "source_path": "research/tier05_extreme/search.py",
+    "native_transpile_line": 46,
+    "native_transpile_configuration": {
+      "basis_gates": "solution.BASIS_GATES",
+      "optimization_level": "config.get(level,1); historical replay passes level=2",
+      "seed_transpiler": 12345,
+      "num_processes": 1,
+      "backend": "AerSimulator(statevector,max_parallel_threads=2,max_memory_mb=512)"
+    },
+    "gf2_line": 48,
+    "official_scoring_transpile_line": 50,
+    "tuple_return_line": 51,
+    "returned_second_item": "native, after gf2_runs and before separate official scoring transpilation",
+    "key_source_excerpt": [
+      "def compile_actual(c,config):",
+      " buffer=io.BytesIO();qpy.dump(c,buffer)",
+      " fingerprint=hashlib.sha256(buffer.getvalue()+json.dumps(config,sort_keys=True).encode()).hexdigest()",
+      " if fingerprint in _SCORE_CACHE:return _SCORE_CACHE[fingerprint]",
+      " t=time.perf_counter();sim=AerSimulator(method='statevector',max_parallel_threads=2,max_memory_mb=512)",
+      " native=transpile(c,sim,basis_gates=solution.BASIS_GATES,optimization_level=config.get('level',1),seed_transpiler=12345,num_processes=1)",
+      " stats={}",
+      " if config.get('gf2',True):native,stats,_=gf2_synthesis.gf2_runs(native)",
+      " native_seconds=time.perf_counter()-t",
+      " cfg=load_config();scored=transpile(native,**{k:cfg[k] for k in ('basis_gates','coupling_map','initial_layout','optimization_level','seed_transpiler')},num_processes=1)",
+      " result=({'fingerprint':fingerprint,'metrics':compute_metrics(scored),'compile_seconds':time.perf_counter()-t,'native_compile_seconds':native_seconds,'gf2':stats},native)",
+      " _SCORE_CACHE[fingerprint]=result",
+      " return result"
+    ],
+    "compiler_replay_use": "compiler_replay.py:21 obtains scored,compiled = research.compile_actual(...); line 22 records compiled.count_ops(). The variable named compiled therefore denotes native, not scored.",
+    "production_correspondence": "solution.py:124 builds; 126-129 performs optimization_level=2 native transpile; 130 applies gf2_runs; 131 submits that compiled circuit to Aer.",
+    "historical_replay_itself_executed_aer": false
+  },
+  "tier05_comparison": {
+    "historical_source": "ce75 compiler-replay.json; compilation replay, not a saved historical live Aer payload",
+    "local_source": "e49 actual-circuits.json; official solve recorder-normalized native inputs captured from the actual scoring worker, prior three full runs",
+    "historical_pinned_and_integrated_builders_same_record": true,
+    "historical_native_count_ops": {
+      "rz": 12301,
+      "cx": 11000,
+      "sx": 4862,
+      "x": 300,
+      "measure": 10
+    },
+    "prior_local_native_count_ops": {
+      "rz": 12301,
+      "cx": 11000,
+      "sx": 4862,
+      "x": 250,
+      "measure": 10
+    },
+    "prior_local_minus_historical_native_histogram": {
+      "cx": 0,
+      "measure": 0,
+      "rz": 0,
+      "sx": 0,
+      "x": -50
+    },
+    "historical_native_nonmeasurement_gate_count": 28463,
+    "prior_local_native_nonmeasurement_gate_count": 28413,
+    "historical_official_scoring_metrics": {
+      "two_qubit_gates": 10950,
+      "depth": 19703,
+      "total_gates": 28413,
+      "active_qubits": 19
+    },
+    "prior_local_official_scoring_metrics": {
+      "active_qubits": 19,
+      "depth": 19703,
+      "total_gates": 28363,
+      "two_qubit_gates": 10950
+    },
+    "historical_scoring_cx_reduction_from_native": 50,
+    "prior_local_scoring_cx_reduction_from_native": 50,
+    "conclusion": "A 50-X native histogram difference already exists at the intended Aer execution stage before official scoring. The final scored total differs by 50 while final CX remains 10950. Thus the discrepancy is not confined to the final official scoring stage.",
+    "causal_limits": [
+      "The historical original constructed circuit and historical ordered live Aer payload were not preserved; no historical four-stage structural equality can be established.",
+      "Matching histograms are not operator equivalence or gate-order equivalence; this evidence does not identify which X operations differ.",
+      "The observation cannot distinguish native transpiler output, GF(2) postprocessing, construction order, or environment effects without an isolating counterfactual.",
+      "Do not infer 25 cancelled X pairs or blame a specific Qiskit pass, Python patch version, operating system, or CPU solely from these counts.",
+      "Prior three-run local native operation equality concerns that documented environment; it is not a cross-environment unitary comparison."
+    ]
+  },
+  "actual_scored_circuit_selection": {
+    "official_rule": "Normalize and deduplicate recorded solve execution circuits, transpile every unique circuit using official configuration, select greatest (two_qubit_gates, depth) lexicographically; first record wins exact ties.",
+    "prior_local_winners": {
+      "5": {
+        "unique_records": 1,
+        "winner_record_index": 0
+      },
+      "6": {
+        "unique_records": 2,
+        "winner_record_index": 1
+      },
+      "7": {
+        "unique_records": 2,
+        "winner_record_index": 0
+      }
+    },
+    "warning": "build_circuit() alone is not the scoring input. Winner selection is based on all official-transpiled actual execution records, not native counts alone."
+  },
+  "prior_scoring_sensitivity_reused": {
+    "commit": "e49ed058ed83b43866ffca4ca9b9785e3f9301ed",
+    "path": "docs/v63-metrics-reconciliation/scoring-impact.json",
+    "applies_only_if_new_observed_ranges_do_not_expand": true,
+    "aggregate_conservative_lower_bound": -0.0036290322580645163,
+    "aggregate_conservative_upper_bound": 0.006984579046352394,
+    "formula": "S_t(v;r) = P_t * sum_m w_m * min(v_m,r_m)/v_m",
+    "metric_bound_formula": "For x=old,y=new: y<x -> [0,P*w*(x-y)/x]; y>x -> [-P*w*(y-x)/y,0]; y=x -> [0,0].",
+    "limitations": [
+      "Bounds hold for the stated observed vectors, not unbounded future compiler changes.",
+      "Other eligible-team metric vectors are assumed fixed; changes in their measurements require a new analysis.",
+      "Summing metric-wise extrema gives a conservative envelope, not a proof that a physically valid set of rival circuits jointly attains it.",
+      "If Team 3 changes the eligible best metric, rival normalized scores may also change; this is not a bound on rank or on every pairwise score gap.",
+      "A change below the 0.01 tie margin can still cross a tie-group boundary."
+    ],
+    "new_score_or_rank_estimate_computed": false
+  },
+  "overall_verdict_not_assigned_here": true,
+  "root_cause_claimed": false,
+  "hidden_key_plaintext_or_parameters_persisted": false,
+  "official_oracle_internal_decomposition_inspected": false,
+  "new_aer_jobs": 0
+}

@@ -1,0 +1,68 @@
+[
+  {
+    "evidence_file": "tier05-solve-profile.json",
+    "peak_process_tree_rss_bytes_sampled_50ms": 227979264,
+    "phase": "solve",
+    "returncode": 0,
+    "rss_limit_bytes": 2147483648,
+    "stop_reason": null,
+    "tier": 5,
+    "timeout_seconds": 120,
+    "wall_seconds": 38.85556759600149
+  },
+  {
+    "evidence_file": "tier05-score-profile.json",
+    "peak_process_tree_rss_bytes_sampled_50ms": 149651456,
+    "phase": "score",
+    "returncode": 0,
+    "rss_limit_bytes": 2147483648,
+    "stop_reason": null,
+    "tier": 5,
+    "timeout_seconds": 120,
+    "wall_seconds": 1.982432588993106
+  },
+  {
+    "evidence_file": "tier06-solve-profile.json",
+    "peak_process_tree_rss_bytes_sampled_50ms": 244342784,
+    "phase": "solve",
+    "returncode": 0,
+    "rss_limit_bytes": 2147483648,
+    "stop_reason": null,
+    "tier": 6,
+    "timeout_seconds": 120,
+    "wall_seconds": 68.94776335200004
+  },
+  {
+    "evidence_file": "tier06-score-profile.json",
+    "peak_process_tree_rss_bytes_sampled_50ms": 123506688,
+    "phase": "score",
+    "returncode": 0,
+    "rss_limit_bytes": 2147483648,
+    "stop_reason": null,
+    "tier": 6,
+    "timeout_seconds": 120,
+    "wall_seconds": 1.0185110020029242
+  },
+  {
+    "evidence_file": "tier07-solve-profile.json",
+    "peak_process_tree_rss_bytes_sampled_50ms": 112103424,
+    "phase": "solve",
+    "returncode": 0,
+    "rss_limit_bytes": 2147483648,
+    "stop_reason": null,
+    "tier": 7,
+    "timeout_seconds": 120,
+    "wall_seconds": 0.76170502199966
+  },
+  {
+    "evidence_file": "tier07-score-profile.json",
+    "peak_process_tree_rss_bytes_sampled_50ms": 98897920,
+    "phase": "score",
+    "returncode": 0,
+    "rss_limit_bytes": 2147483648,
+    "stop_reason": null,
+    "tier": 7,
+    "timeout_seconds": 120,
+    "wall_seconds": 0.6092247880005743
+  }
+]

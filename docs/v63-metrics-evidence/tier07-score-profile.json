@@ -1,0 +1,883 @@
+{
+  "instrumentation": "sys.setprofile; unchanged official worker function",
+  "official_checker_sha256": "d6e1351600f69739d3f481c7fae6292bd6ab1d83c141997aafd8a848d5d1cd36",
+  "official_scoring_inputs": [
+    {
+      "digest_scope": "ordered public structure only; numeric parameters and global phase excluded",
+      "instruction_count_including_measurements": 547,
+      "instruction_histogram": {
+        "cx": 209,
+        "measure": 14,
+        "rz": 267,
+        "sx": 31,
+        "x": 26
+      },
+      "literal_cx": 209,
+      "measurement_map": [
+        {
+          "cargs": [
+            0
+          ],
+          "qargs": [
+            0
+          ]
+        },
+        {
+          "cargs": [
+            1
+          ],
+          "qargs": [
+            1
+          ]
+        },
+        {
+          "cargs": [
+            2
+          ],
+          "qargs": [
+            2
+          ]
+        },
+        {
+          "cargs": [
+            3
+          ],
+          "qargs": [
+            3
+          ]
+        },
+        {
+          "cargs": [
+            4
+          ],
+          "qargs": [
+            4
+          ]
+        },
+        {
+          "cargs": [
+            5
+          ],
+          "qargs": [
+            5
+          ]
+        },
+        {
+          "cargs": [
+            6
+          ],
+          "qargs": [
+            6
+          ]
+        },
+        {
+          "cargs": [
+            7
+          ],
+          "qargs": [
+            7
+          ]
+        },
+        {
+          "cargs": [
+            8
+          ],
+          "qargs": [
+            8
+          ]
+        },
+        {
+          "cargs": [
+            9
+          ],
+          "qargs": [
+            9
+          ]
+        },
+        {
+          "cargs": [
+            10
+          ],
+          "qargs": [
+            10
+          ]
+        },
+        {
+          "cargs": [
+            11
+          ],
+          "qargs": [
+            11
+          ]
+        },
+        {
+          "cargs": [
+            12
+          ],
+          "qargs": [
+            12
+          ]
+        },
+        {
+          "cargs": [
+            13
+          ],
+          "qargs": [
+            13
+          ]
+        }
+      ],
+      "metric_scope": "stored representation; opaque composites are not expanded",
+      "metrics": {
+        "active_qubits": 15,
+        "depth": 155,
+        "total_gates": 533,
+        "two_qubit_gates": 209
+      },
+      "num_clbits": 14,
+      "num_qubits": 15,
+      "opaque_instruction_count": 0,
+      "schema": "v63-parameter-free-ordered-structure-v1",
+      "structural_digest": "5da512e6707cf12cfeb25c55ae64d1588e96e7a7abd66580d6b95063bcdd91b5"
+    },
+    {
+      "digest_scope": "ordered public structure only; numeric parameters and global phase excluded",
+      "instruction_count_including_measurements": 175,
+      "instruction_histogram": {
+        "cx": 27,
+        "measure": 14,
+        "rz": 85,
+        "sx": 31,
+        "x": 18
+      },
+      "literal_cx": 27,
+      "measurement_map": [
+        {
+          "cargs": [
+            0
+          ],
+          "qargs": [
+            0
+          ]
+        },
+        {
+          "cargs": [
+            1
+          ],
+          "qargs": [
+            1
+          ]
+        },
+        {
+          "cargs": [
+            2
+          ],
+          "qargs": [
+            2
+          ]
+        },
+        {
+          "cargs": [
+            3
+          ],
+          "qargs": [
+            3
+          ]
+        },
+        {
+          "cargs": [
+            4
+          ],
+          "qargs": [
+            4
+          ]
+        },
+        {
+          "cargs": [
+            5
+          ],
+          "qargs": [
+            5
+          ]
+        },
+        {
+          "cargs": [
+            6
+          ],
+          "qargs": [
+            6
+          ]
+        },
+        {
+          "cargs": [
+            7
+          ],
+          "qargs": [
+            7
+          ]
+        },
+        {
+          "cargs": [
+            8
+          ],
+          "qargs": [
+            8
+          ]
+        },
+        {
+          "cargs": [
+            9
+          ],
+          "qargs": [
+            9
+          ]
+        },
+        {
+          "cargs": [
+            10
+          ],
+          "qargs": [
+            10
+          ]
+        },
+        {
+          "cargs": [
+            11
+          ],
+          "qargs": [
+            11
+          ]
+        },
+        {
+          "cargs": [
+            12
+          ],
+          "qargs": [
+            12
+          ]
+        },
+        {
+          "cargs": [
+            13
+          ],
+          "qargs": [
+            13
+          ]
+        }
+      ],
+      "metric_scope": "stored representation; opaque composites are not expanded",
+      "metrics": {
+        "active_qubits": 15,
+        "depth": 68,
+        "total_gates": 161,
+        "two_qubit_gates": 27
+      },
+      "num_clbits": 14,
+      "num_qubits": 15,
+      "opaque_instruction_count": 0,
+      "schema": "v63-parameter-free-ordered-structure-v1",
+      "structural_digest": "2a9b33b5546cc7d1d1b9b9abadda96d5e6737473eac1939e2b584c5f7f39a500"
+    }
+  ],
+  "official_scoring_outputs": [
+    {
+      "digest_scope": "ordered public structure only; numeric parameters and global phase excluded",
+      "instruction_count_including_measurements": 547,
+      "instruction_histogram": {
+        "cx": 209,
+        "measure": 14,
+        "rz": 267,
+        "sx": 31,
+        "x": 26
+      },
+      "literal_cx": 209,
+      "measurement_map": [
+        {
+          "cargs": [
+            0
+          ],
+          "qargs": [
+            0
+          ]
+        },
+        {
+          "cargs": [
+            1
+          ],
+          "qargs": [
+            1
+          ]
+        },
+        {
+          "cargs": [
+            2
+          ],
+          "qargs": [
+            2
+          ]
+        },
+        {
+          "cargs": [
+            3
+          ],
+          "qargs": [
+            3
+          ]
+        },
+        {
+          "cargs": [
+            4
+          ],
+          "qargs": [
+            4
+          ]
+        },
+        {
+          "cargs": [
+            5
+          ],
+          "qargs": [
+            5
+          ]
+        },
+        {
+          "cargs": [
+            6
+          ],
+          "qargs": [
+            6
+          ]
+        },
+        {
+          "cargs": [
+            7
+          ],
+          "qargs": [
+            7
+          ]
+        },
+        {
+          "cargs": [
+            8
+          ],
+          "qargs": [
+            8
+          ]
+        },
+        {
+          "cargs": [
+            9
+          ],
+          "qargs": [
+            9
+          ]
+        },
+        {
+          "cargs": [
+            10
+          ],
+          "qargs": [
+            10
+          ]
+        },
+        {
+          "cargs": [
+            11
+          ],
+          "qargs": [
+            11
+          ]
+        },
+        {
+          "cargs": [
+            12
+          ],
+          "qargs": [
+            12
+          ]
+        },
+        {
+          "cargs": [
+            13
+          ],
+          "qargs": [
+            13
+          ]
+        }
+      ],
+      "metric_scope": "stored representation; opaque composites are not expanded",
+      "metrics": {
+        "active_qubits": 15,
+        "depth": 155,
+        "total_gates": 533,
+        "two_qubit_gates": 209
+      },
+      "num_clbits": 14,
+      "num_qubits": 15,
+      "opaque_instruction_count": 0,
+      "schema": "v63-parameter-free-ordered-structure-v1",
+      "structural_digest": "5da512e6707cf12cfeb25c55ae64d1588e96e7a7abd66580d6b95063bcdd91b5"
+    },
+    {
+      "digest_scope": "ordered public structure only; numeric parameters and global phase excluded",
+      "instruction_count_including_measurements": 175,
+      "instruction_histogram": {
+        "cx": 27,
+        "measure": 14,
+        "rz": 85,
+        "sx": 31,
+        "x": 18
+      },
+      "literal_cx": 27,
+      "measurement_map": [
+        {
+          "cargs": [
+            0
+          ],
+          "qargs": [
+            0
+          ]
+        },
+        {
+          "cargs": [
+            1
+          ],
+          "qargs": [
+            1
+          ]
+        },
+        {
+          "cargs": [
+            2
+          ],
+          "qargs": [
+            2
+          ]
+        },
+        {
+          "cargs": [
+            3
+          ],
+          "qargs": [
+            3
+          ]
+        },
+        {
+          "cargs": [
+            4
+          ],
+          "qargs": [
+            4
+          ]
+        },
+        {
+          "cargs": [
+            5
+          ],
+          "qargs": [
+            5
+          ]
+        },
+        {
+          "cargs": [
+            6
+          ],
+          "qargs": [
+            6
+          ]
+        },
+        {
+          "cargs": [
+            7
+          ],
+          "qargs": [
+            7
+          ]
+        },
+        {
+          "cargs": [
+            8
+          ],
+          "qargs": [
+            8
+          ]
+        },
+        {
+          "cargs": [
+            9
+          ],
+          "qargs": [
+            9
+          ]
+        },
+        {
+          "cargs": [
+            10
+          ],
+          "qargs": [
+            10
+          ]
+        },
+        {
+          "cargs": [
+            11
+          ],
+          "qargs": [
+            11
+          ]
+        },
+        {
+          "cargs": [
+            12
+          ],
+          "qargs": [
+            12
+          ]
+        },
+        {
+          "cargs": [
+            13
+          ],
+          "qargs": [
+            13
+          ]
+        }
+      ],
+      "metric_scope": "stored representation; opaque composites are not expanded",
+      "metrics": {
+        "active_qubits": 15,
+        "depth": 68,
+        "total_gates": 161,
+        "two_qubit_gates": 27
+      },
+      "num_clbits": 14,
+      "num_qubits": 15,
+      "opaque_instruction_count": 0,
+      "schema": "v63-parameter-free-ordered-structure-v1",
+      "structural_digest": "2a9b33b5546cc7d1d1b9b9abadda96d5e6737473eac1939e2b584c5f7f39a500"
+    }
+  ],
+  "official_worker_output": {
+    "metrics": {
+      "active_qubits": 15,
+      "depth": 155,
+      "total_gates": 533,
+      "two_qubit_gates": 209
+    },
+    "seconds": 0.03557171500142431
+  },
+  "phase": "score",
+  "profile_errors": [],
+  "python_hash_seed": "0",
+  "qiskit_parallel": "FALSE",
+  "selected_metrics_equal_official_worker_output": true,
+  "selected_scoring_input": {
+    "digest_scope": "ordered public structure only; numeric parameters and global phase excluded",
+    "instruction_count_including_measurements": 547,
+    "instruction_histogram": {
+      "cx": 209,
+      "measure": 14,
+      "rz": 267,
+      "sx": 31,
+      "x": 26
+    },
+    "literal_cx": 209,
+    "measurement_map": [
+      {
+        "cargs": [
+          0
+        ],
+        "qargs": [
+          0
+        ]
+      },
+      {
+        "cargs": [
+          1
+        ],
+        "qargs": [
+          1
+        ]
+      },
+      {
+        "cargs": [
+          2
+        ],
+        "qargs": [
+          2
+        ]
+      },
+      {
+        "cargs": [
+          3
+        ],
+        "qargs": [
+          3
+        ]
+      },
+      {
+        "cargs": [
+          4
+        ],
+        "qargs": [
+          4
+        ]
+      },
+      {
+        "cargs": [
+          5
+        ],
+        "qargs": [
+          5
+        ]
+      },
+      {
+        "cargs": [
+          6
+        ],
+        "qargs": [
+          6
+        ]
+      },
+      {
+        "cargs": [
+          7
+        ],
+        "qargs": [
+          7
+        ]
+      },
+      {
+        "cargs": [
+          8
+        ],
+        "qargs": [
+          8
+        ]
+      },
+      {
+        "cargs": [
+          9
+        ],
+        "qargs": [
+          9
+        ]
+      },
+      {
+        "cargs": [
+          10
+        ],
+        "qargs": [
+          10
+        ]
+      },
+      {
+        "cargs": [
+          11
+        ],
+        "qargs": [
+          11
+        ]
+      },
+      {
+        "cargs": [
+          12
+        ],
+        "qargs": [
+          12
+        ]
+      },
+      {
+        "cargs": [
+          13
+        ],
+        "qargs": [
+          13
+        ]
+      }
+    ],
+    "metric_scope": "stored representation; opaque composites are not expanded",
+    "metrics": {
+      "active_qubits": 15,
+      "depth": 155,
+      "total_gates": 533,
+      "two_qubit_gates": 209
+    },
+    "num_clbits": 14,
+    "num_qubits": 15,
+    "opaque_instruction_count": 0,
+    "schema": "v63-parameter-free-ordered-structure-v1",
+    "structural_digest": "5da512e6707cf12cfeb25c55ae64d1588e96e7a7abd66580d6b95063bcdd91b5"
+  },
+  "selected_scoring_output": {
+    "digest_scope": "ordered public structure only; numeric parameters and global phase excluded",
+    "instruction_count_including_measurements": 547,
+    "instruction_histogram": {
+      "cx": 209,
+      "measure": 14,
+      "rz": 267,
+      "sx": 31,
+      "x": 26
+    },
+    "literal_cx": 209,
+    "measurement_map": [
+      {
+        "cargs": [
+          0
+        ],
+        "qargs": [
+          0
+        ]
+      },
+      {
+        "cargs": [
+          1
+        ],
+        "qargs": [
+          1
+        ]
+      },
+      {
+        "cargs": [
+          2
+        ],
+        "qargs": [
+          2
+        ]
+      },
+      {
+        "cargs": [
+          3
+        ],
+        "qargs": [
+          3
+        ]
+      },
+      {
+        "cargs": [
+          4
+        ],
+        "qargs": [
+          4
+        ]
+      },
+      {
+        "cargs": [
+          5
+        ],
+        "qargs": [
+          5
+        ]
+      },
+      {
+        "cargs": [
+          6
+        ],
+        "qargs": [
+          6
+        ]
+      },
+      {
+        "cargs": [
+          7
+        ],
+        "qargs": [
+          7
+        ]
+      },
+      {
+        "cargs": [
+          8
+        ],
+        "qargs": [
+          8
+        ]
+      },
+      {
+        "cargs": [
+          9
+        ],
+        "qargs": [
+          9
+        ]
+      },
+      {
+        "cargs": [
+          10
+        ],
+        "qargs": [
+          10
+        ]
+      },
+      {
+        "cargs": [
+          11
+        ],
+        "qargs": [
+          11
+        ]
+      },
+      {
+        "cargs": [
+          12
+        ],
+        "qargs": [
+          12
+        ]
+      },
+      {
+        "cargs": [
+          13
+        ],
+        "qargs": [
+          13
+        ]
+      }
+    ],
+    "metric_scope": "stored representation; opaque composites are not expanded",
+    "metrics": {
+      "active_qubits": 15,
+      "depth": 155,
+      "total_gates": 533,
+      "two_qubit_gates": 209
+    },
+    "num_clbits": 14,
+    "num_qubits": 15,
+    "opaque_instruction_count": 0,
+    "schema": "v63-parameter-free-ordered-structure-v1",
+    "structural_digest": "5da512e6707cf12cfeb25c55ae64d1588e96e7a7abd66580d6b95063bcdd91b5"
+  },
+  "selected_unique_record_index": 0,
+  "source_sha256": "08cb45b42d45b9d55d23adb18cf6110d033001dcf69c9bb0b32acfc1b05cc79b",
+  "tier": 7,
+  "trace_complete": true,
+  "transpile_configurations": [
+    {
+      "basis_gates": [
+        "rz",
+        "sx",
+        "x",
+        "cx"
+      ],
+      "coupling_map": null,
+      "initial_layout": null,
+      "num_processes": null,
+      "optimization_level": 1,
+      "seed_transpiler": 12345
+    },
+    {
+      "basis_gates": [
+        "rz",
+        "sx",
+        "x",
+        "cx"
+      ],
+      "coupling_map": null,
+      "initial_layout": null,
+      "num_processes": null,
+      "optimization_level": 1,
+      "seed_transpiler": 12345
+    }
+  ],
+  "worker_wall_seconds": 0.04299724500015145
+}

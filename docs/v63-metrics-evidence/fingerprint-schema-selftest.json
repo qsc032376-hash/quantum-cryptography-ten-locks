@@ -1,0 +1,9 @@
+{
+  "ast_parse": "PASS",
+  "literal_cx_and_official_metrics": "PASS",
+  "native_exact_equality_guards": "PASS",
+  "opaque_name_parameter_exclusion": "PASS",
+  "parameter_phase_metadata_exclusion": "PASS",
+  "quantum_execution": false,
+  "wire_order_sensitive": "PASS"
+}

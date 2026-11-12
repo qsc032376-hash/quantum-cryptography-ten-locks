@@ -1,0 +1,1871 @@
+{
+  "status": "COMPLETE",
+  "python": "3.12.14",
+  "qiskit": "2.6.1",
+  "qiskit_aer": "0.18.2",
+  "pass_managers": [
+    {
+      "label": "official_scoring",
+      "optimization_level": 1,
+      "basis_gates": [
+        "rz",
+        "sx",
+        "x",
+        "cx"
+      ],
+      "seed_transpiler": 12345,
+      "coupling_map": null,
+      "initial_layout": null,
+      "backend_present": false,
+      "expanded_stage_order": [
+        "pre_init",
+        "init",
+        "post_init",
+        "pre_layout",
+        "layout",
+        "post_layout",
+        "pre_routing",
+        "routing",
+        "post_routing",
+        "pre_translation",
+        "translation",
+        "post_translation",
+        "pre_optimization",
+        "optimization",
+        "post_optimization",
+        "pre_scheduling",
+        "scheduling",
+        "post_scheduling"
+      ],
+      "active_stages": {
+        "pre_init": {
+          "class": "qiskit.passmanager.flow_controllers.FlowControllerLinear",
+          "tasks": [
+            {
+              "class": "qiskit.transpiler.passes.utils.contains_instruction.ContainsInstruction",
+              "configuration": {
+                "_instruction_names": [
+                  "box",
+                  "for_loop",
+                  "if_else",
+                  "switch_case",
+                  "while_loop"
+                ],
+                "_recurse": false
+              }
+            },
+            {
+              "class": "qiskit.passmanager.flow_controllers.ConditionalController",
+              "condition": {
+                "module": "qiskit.transpiler.preset_passmanagers.common",
+                "qualname": "_InvalidControlFlowForBackend.condition"
+              },
+              "tasks": [
+                {
+                  "class": "qiskit.transpiler.passes.utils.error.Error"
+                }
+              ]
+            }
+          ]
+        },
+        "init": {
+          "class": "qiskit.passmanager.flow_controllers.FlowControllerLinear",
+          "tasks": [
+            {
+              "class": "qiskit.transpiler.passes.optimization.inverse_cancellation.InverseCancellation"
+            },
+            {
+              "class": "qiskit.transpiler.passes.optimization.contract_idle_wires_in_control_flow.ContractIdleWiresInControlFlow"
+            }
+          ]
+        },
+        "translation": {
+          "class": "qiskit.passmanager.flow_controllers.FlowControllerLinear",
+          "tasks": [
+            {
+              "class": "qiskit.transpiler.passes.synthesis.unitary_synthesis.UnitarySynthesis",
+              "configuration": {
+                "method": "default",
+                "_basis_gates": [
+                  "box",
+                  "cx",
+                  "delay",
+                  "for_loop",
+                  "if_else",
+                  "measure",
+                  "reset",
+                  "rz",
+                  "switch_case",
+                  "sx",
+                  "while_loop",
+                  "x"
+                ],
+                "_min_qubits": 0,
+                "_approximation_degree": 1.0,
+                "_plugin_config": null,
+                "_fallback_on_default": false,
+                "_pulse_optimize": null,
+                "_natural_direction": null
+              }
+            },
+            {
+              "class": "qiskit.transpiler.passes.synthesis.high_level_synthesis.HighLevelSynthesis",
+              "configuration": {
+                "qubits_initially_zero": true
+              }
+            },
+            {
+              "class": "qiskit.transpiler.passes.basis.basis_translator.BasisTranslator",
+              "configuration": {
+                "_target_basis": [
+                  "x",
+                  "delay",
+                  "measure",
+                  "switch_case",
+                  "reset",
+                  "cx",
+                  "if_else",
+                  "box",
+                  "sx",
+                  "for_loop",
+                  "rz",
+                  "while_loop"
+                ],
+                "_min_qubits": 0
+              }
+            }
+          ]
+        },
+        "optimization": {
+          "class": "qiskit.passmanager.flow_controllers.FlowControllerLinear",
+          "tasks": [
+            {
+              "class": "qiskit.transpiler.passes.analysis.size.Size",
+              "configuration": {
+                "recurse": true
+              }
+            },
+            {
+              "class": "qiskit.transpiler.passes.analysis.depth.Depth",
+              "configuration": {
+                "recurse": true
+              }
+            },
+            {
+              "class": "qiskit.transpiler.passes.utils.fixed_point.FixedPoint",
+              "configuration": {
+                "_property": "size"
+              }
+            },
+            {
+              "class": "qiskit.transpiler.passes.utils.fixed_point.FixedPoint",
+              "configuration": {
+                "_property": "depth"
+              }
+            },
+            {
+              "class": "qiskit.passmanager.flow_controllers.DoWhileController",
+              "do_while": {
+                "module": "qiskit.transpiler.preset_passmanagers.builtin_plugins",
+                "qualname": "_optimization_check_fixed_point.<locals>.check"
+              },
+              "tasks": [
+                {
+                  "class": "qiskit.transpiler.passes.optimization.optimize_1q_decomposition.Optimize1qGatesDecomposition",
+                  "configuration": {
+                    "_basis_gates": [
+                      "box",
+                      "cx",
+                      "delay",
+                      "for_loop",
+                      "if_else",
+                      "measure",
+                      "reset",
+                      "rz",
+                      "switch_case",
+                      "sx",
+                      "while_loop",
+                      "x"
+                    ]
+                  }
+                },
+                {
+                  "class": "qiskit.transpiler.passes.optimization.inverse_cancellation.InverseCancellation"
+                },
+                {
+                  "class": "qiskit.transpiler.passes.optimization.contract_idle_wires_in_control_flow.ContractIdleWiresInControlFlow"
+                },
+                {
+                  "class": "qiskit.transpiler.passes.utils.gates_basis.GatesInBasis",
+                  "configuration": {
+                    "_basis_gates": [
+                      "barrier",
+                      "box",
+                      "cx",
+                      "delay",
+                      "for_loop",
+                      "if_else",
+                      "measure",
+                      "reset",
+                      "rz",
+                      "snapshot",
+                      "store",
+                      "switch_case",
+                      "sx",
+                      "while_loop",
+                      "x"
+                    ]
+                  }
+                },
+                {
+                  "class": "qiskit.passmanager.flow_controllers.ConditionalController",
+                  "condition": {
+                    "module": "qiskit.transpiler.preset_passmanagers.builtin_plugins",
+                    "qualname": "OptimizationPassManager.pass_manager.<locals>.should_unroll"
+                  },
+                  "tasks": [
+                    {
+                      "class": "qiskit.passmanager.flow_controllers.FlowControllerLinear",
+                      "tasks": [
+                        {
+                          "class": "qiskit.transpiler.passes.synthesis.unitary_synthesis.UnitarySynthesis",
+                          "configuration": {
+                            "method": "default",
+                            "_basis_gates": [
+                              "box",
+                              "cx",
+                              "delay",
+                              "for_loop",
+                              "if_else",
+                              "measure",
+                              "reset",
+                              "rz",
+                              "switch_case",
+                              "sx",
+                              "while_loop",
+                              "x"
+                            ],
+                            "_min_qubits": 0,
+                            "_approximation_degree": 1.0,
+                            "_plugin_config": null,
+                            "_fallback_on_default": false,
+                            "_pulse_optimize": null,
+                            "_natural_direction": null
+                          }
+                        },
+                        {
+                          "class": "qiskit.transpiler.passes.synthesis.high_level_synthesis.HighLevelSynthesis",
+                          "configuration": {
+                            "qubits_initially_zero": true
+                          }
+                        },
+                        {
+                          "class": "qiskit.transpiler.passes.basis.basis_translator.BasisTranslator",
+                          "configuration": {
+                            "_target_basis": [
+                              "x",
+                              "delay",
+                              "measure",
+                              "switch_case",
+                              "reset",
+                              "cx",
+                              "if_else",
+                              "box",
+                              "sx",
+                              "for_loop",
+                              "rz",
+                              "while_loop"
+                            ],
+                            "_min_qubits": 0
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "class": "qiskit.transpiler.passes.analysis.size.Size",
+                  "configuration": {
+                    "recurse": true
+                  }
+                },
+                {
+                  "class": "qiskit.transpiler.passes.analysis.depth.Depth",
+                  "configuration": {
+                    "recurse": true
+                  }
+                },
+                {
+                  "class": "qiskit.transpiler.passes.utils.fixed_point.FixedPoint",
+                  "configuration": {
+                    "_property": "size"
+                  }
+                },
+                {
+                  "class": "qiskit.transpiler.passes.utils.fixed_point.FixedPoint",
+                  "configuration": {
+                    "_property": "depth"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "scheduling": {
+          "class": "qiskit.passmanager.flow_controllers.FlowControllerLinear",
+          "tasks": [
+            {
+              "class": "qiskit.transpiler.passes.utils.contains_instruction.ContainsInstruction",
+              "configuration": {
+                "_instruction_names": [
+                  "delay"
+                ],
+                "_recurse": true
+              }
+            },
+            {
+              "class": "qiskit.passmanager.flow_controllers.ConditionalController",
+              "condition": {
+                "module": "qiskit.transpiler.preset_passmanagers.common",
+                "qualname": "generate_scheduling.<locals>._contains_delay"
+              },
+              "tasks": [
+                {
+                  "class": "qiskit.transpiler.passes.scheduling.time_unit_conversion.TimeUnitConversion"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "layout_stage_present": false,
+      "routing_stage_present": false,
+      "sabre_or_stochastic_swap_passes_present": [],
+      "flow_class_and_config_digest_sha256": "0aa7accdc712ac1dc8675aefe55d58149525214c62e19e898f8bb7c63061e05f",
+      "warnings": []
+    },
+    {
+      "label": "tier05_precompile",
+      "optimization_level": 2,
+      "basis_gates": [
+        "rz",
+        "sx",
+        "x",
+        "cx"
+      ],
+      "seed_transpiler": 12345,
+      "coupling_map": null,
+      "initial_layout": null,
+      "backend_present": true,
+      "expanded_stage_order": [
+        "pre_init",
+        "init",
+        "post_init",
+        "pre_layout",
+        "layout",
+        "post_layout",
+        "pre_routing",
+        "routing",
+        "post_routing",
+        "pre_translation",
+        "translation",
+        "post_translation",
+        "pre_optimization",
+        "optimization",
+        "post_optimization",
+        "pre_scheduling",
+        "scheduling",
+        "post_scheduling"
+      ],
+      "active_stages": {
+        "pre_init": {
+          "class": "qiskit.passmanager.flow_controllers.FlowControllerLinear",
+          "tasks": [
+            {
+              "class": "qiskit.transpiler.passes.utils.contains_instruction.ContainsInstruction",
+              "configuration": {
+                "_instruction_names": [
+                  "box",
+                  "for_loop",
+                  "if_else",
+                  "switch_case",
+                  "while_loop"
+                ],
+                "_recurse": false
+              }
+            },
+            {
+              "class": "qiskit.passmanager.flow_controllers.ConditionalController",
+              "condition": {
+                "module": "qiskit.transpiler.preset_passmanagers.common",
+                "qualname": "_InvalidControlFlowForBackend.condition"
+              },
+              "tasks": [
+                {
+                  "class": "qiskit.transpiler.passes.utils.error.Error"
+                }
+              ]
+            }
+          ]
+        },
+        "init": {
+          "class": "qiskit.passmanager.flow_controllers.FlowControllerLinear",
+          "tasks": [
+            {
+              "class": "qiskit.transpiler.passes.synthesis.unitary_synthesis.UnitarySynthesis",
+              "configuration": {
+                "method": "default",
+                "_basis_gates": [
+                  "box",
+                  "cx",
+                  "delay",
+                  "for_loop",
+                  "if_else",
+                  "measure",
+                  "reset",
+                  "rz",
+                  "switch_case",
+                  "sx",
+                  "while_loop",
+                  "x"
+                ],
+                "_min_qubits": 3,
+                "_approximation_degree": 1.0,
+                "_plugin_config": null,
+                "_fallback_on_default": false,
+                "_pulse_optimize": null,
+                "_natural_direction": null
+              }
+            },
+            {
+              "class": "qiskit.transpiler.passes.synthesis.high_level_synthesis.HighLevelSynthesis",
+              "configuration": {
+                "qubits_initially_zero": true
+              }
+            },
+            {
+              "class": "qiskit.transpiler.passes.basis.basis_translator.BasisTranslator",
+              "configuration": {
+                "_target_basis": [
+                  "x",
+                  "delay",
+                  "measure",
+                  "switch_case",
+                  "reset",
+                  "cx",
+                  "if_else",
+                  "box",
+                  "sx",
+                  "for_loop",
+                  "rz",
+                  "while_loop"
+                ],
+                "_min_qubits": 3
+              }
+            },
+            {
+              "class": "qiskit.transpiler.passes.optimization.elide_permutations.ElidePermutations"
+            },
+            {
+              "class": "qiskit.transpiler.passes.optimization.remove_diagonal_gates_before_measure.RemoveDiagonalGatesBeforeMeasure"
+            },
+            {
+              "class": "qiskit.transpiler.passes.optimization.remove_identity_equiv.RemoveIdentityEquivalent",
+              "configuration": {
+                "_approximation_degree": 1.0
+              }
+            },
+            {
+              "class": "qiskit.transpiler.passes.optimization.inverse_cancellation.InverseCancellation"
+            },
+            {
+              "class": "qiskit.transpiler.passes.optimization.contract_idle_wires_in_control_flow.ContractIdleWiresInControlFlow"
+            },
+            {
+              "class": "qiskit.transpiler.passes.optimization.commutative_cancellation.CommutativeCancellation",
+              "configuration": {
+                "_approximation_degree": 1.0,
+                "basis": []
+              }
+            },
+            {
+              "class": "qiskit.transpiler.passes.optimization.consolidate_blocks.ConsolidateBlocks",
+              "configuration": {
+                "_approximation_degree": 1.0,
+                "basis_gates": null,
+                "force_consolidate": false
+              }
+            },
+            {
+              "class": "qiskit.transpiler.passes.optimization.split_2q_unitaries.Split2QUnitaries",
+              "configuration": {
+                "requested_fidelity": 1.0,
+                "split_swap": true
+              }
+            }
+          ]
+        },
+        "translation": {
+          "class": "qiskit.passmanager.flow_controllers.FlowControllerLinear",
+          "tasks": [
+            {
+              "class": "qiskit.transpiler.passes.synthesis.unitary_synthesis.UnitarySynthesis",
+              "configuration": {
+                "method": "default",
+                "_basis_gates": [
+                  "box",
+                  "cx",
+                  "delay",
+                  "for_loop",
+                  "if_else",
+                  "measure",
+                  "reset",
+                  "rz",
+                  "switch_case",
+                  "sx",
+                  "while_loop",
+                  "x"
+                ],
+                "_min_qubits": 0,
+                "_approximation_degree": 1.0,
+                "_plugin_config": null,
+                "_fallback_on_default": false,
+                "_pulse_optimize": null,
+                "_natural_direction": null
+              }
+            },
+            {
+              "class": "qiskit.transpiler.passes.synthesis.high_level_synthesis.HighLevelSynthesis",
+              "configuration": {
+                "qubits_initially_zero": true
+              }
+            },
+            {
+              "class": "qiskit.transpiler.passes.basis.basis_translator.BasisTranslator",
+              "configuration": {
+                "_target_basis": [
+                  "x",
+                  "delay",
+                  "measure",
+                  "switch_case",
+                  "reset",
+                  "cx",
+                  "if_else",
+                  "box",
+                  "sx",
+                  "for_loop",
+                  "rz",
+                  "while_loop"
+                ],
+                "_min_qubits": 0
+              }
+            }
+          ]
+        },
+        "optimization": {
+          "class": "qiskit.passmanager.flow_controllers.FlowControllerLinear",
+          "tasks": [
+            {
+              "class": "qiskit.transpiler.passes.optimization.two_qubit_peephole.TwoQubitPeepholeOptimization",
+              "configuration": {
+                "_approximation_degree": 1.0
+              }
+            },
+            {
+              "class": "qiskit.transpiler.passes.analysis.size.Size",
+              "configuration": {
+                "recurse": true
+              }
+            },
+            {
+              "class": "qiskit.transpiler.passes.analysis.depth.Depth",
+              "configuration": {
+                "recurse": true
+              }
+            },
+            {
+              "class": "qiskit.transpiler.passes.utils.fixed_point.FixedPoint",
+              "configuration": {
+                "_property": "size"
+              }
+            },
+            {
+              "class": "qiskit.transpiler.passes.utils.fixed_point.FixedPoint",
+              "configuration": {
+                "_property": "depth"
+              }
+            },
+            {
+              "class": "qiskit.passmanager.flow_controllers.DoWhileController",
+              "do_while": {
+                "module": "qiskit.transpiler.preset_passmanagers.builtin_plugins",
+                "qualname": "_optimization_check_fixed_point.<locals>.check"
+              },
+              "tasks": [
+                {
+                  "class": "qiskit.transpiler.passes.optimization.remove_identity_equiv.RemoveIdentityEquivalent",
+                  "configuration": {
+                    "_approximation_degree": 1.0
+                  }
+                },
+                {
+                  "class": "qiskit.transpiler.passes.optimization.optimize_1q_decomposition.Optimize1qGatesDecomposition",
+                  "configuration": {
+                    "_basis_gates": [
+                      "box",
+                      "cx",
+                      "delay",
+                      "for_loop",
+                      "if_else",
+                      "measure",
+                      "reset",
+                      "rz",
+                      "switch_case",
+                      "sx",
+                      "while_loop",
+                      "x"
+                    ]
+                  }
+                },
+                {
+                  "class": "qiskit.transpiler.passes.optimization.commutative_cancellation.CommutativeCancellation",
+                  "configuration": {
+                    "_approximation_degree": 1.0,
+                    "basis": [
+                      "box",
+                      "cx",
+                      "delay",
+                      "for_loop",
+                      "if_else",
+                      "measure",
+                      "reset",
+                      "rz",
+                      "switch_case",
+                      "sx",
+                      "while_loop",
+                      "x"
+                    ]
+                  }
+                },
+                {
+                  "class": "qiskit.transpiler.passes.optimization.contract_idle_wires_in_control_flow.ContractIdleWiresInControlFlow"
+                },
+                {
+                  "class": "qiskit.transpiler.passes.utils.gates_basis.GatesInBasis",
+                  "configuration": {
+                    "_basis_gates": [
+                      "barrier",
+                      "box",
+                      "cx",
+                      "delay",
+                      "for_loop",
+                      "if_else",
+                      "measure",
+                      "reset",
+                      "rz",
+                      "snapshot",
+                      "store",
+                      "switch_case",
+                      "sx",
+                      "while_loop",
+                      "x"
+                    ]
+                  }
+                },
+                {
+                  "class": "qiskit.passmanager.flow_controllers.ConditionalController",
+                  "condition": {
+                    "module": "qiskit.transpiler.preset_passmanagers.builtin_plugins",
+                    "qualname": "OptimizationPassManager.pass_manager.<locals>.should_unroll"
+                  },
+                  "tasks": [
+                    {
+                      "class": "qiskit.passmanager.flow_controllers.FlowControllerLinear",
+                      "tasks": [
+                        {
+                          "class": "qiskit.transpiler.passes.synthesis.unitary_synthesis.UnitarySynthesis",
+                          "configuration": {
+                            "method": "default",
+                            "_basis_gates": [
+                              "box",
+                              "cx",
+                              "delay",
+                              "for_loop",
+                              "if_else",
+                              "measure",
+                              "reset",
+                              "rz",
+                              "switch_case",
+                              "sx",
+                              "while_loop",
+                              "x"
+                            ],
+                            "_min_qubits": 0,
+                            "_approximation_degree": 1.0,
+                            "_plugin_config": null,
+                            "_fallback_on_default": false,
+                            "_pulse_optimize": null,
+                            "_natural_direction": null
+                          }
+                        },
+                        {
+                          "class": "qiskit.transpiler.passes.synthesis.high_level_synthesis.HighLevelSynthesis",
+                          "configuration": {
+                            "qubits_initially_zero": true
+                          }
+                        },
+                        {
+                          "class": "qiskit.transpiler.passes.basis.basis_translator.BasisTranslator",
+                          "configuration": {
+                            "_target_basis": [
+                              "x",
+                              "delay",
+                              "measure",
+                              "switch_case",
+                              "reset",
+                              "cx",
+                              "if_else",
+                              "box",
+                              "sx",
+                              "for_loop",
+                              "rz",
+                              "while_loop"
+                            ],
+                            "_min_qubits": 0
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "class": "qiskit.transpiler.passes.analysis.size.Size",
+                  "configuration": {
+                    "recurse": true
+                  }
+                },
+                {
+                  "class": "qiskit.transpiler.passes.analysis.depth.Depth",
+                  "configuration": {
+                    "recurse": true
+                  }
+                },
+                {
+                  "class": "qiskit.transpiler.passes.utils.fixed_point.FixedPoint",
+                  "configuration": {
+                    "_property": "size"
+                  }
+                },
+                {
+                  "class": "qiskit.transpiler.passes.utils.fixed_point.FixedPoint",
+                  "configuration": {
+                    "_property": "depth"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "scheduling": {
+          "class": "qiskit.passmanager.flow_controllers.FlowControllerLinear",
+          "tasks": [
+            {
+              "class": "qiskit.transpiler.passes.utils.contains_instruction.ContainsInstruction",
+              "configuration": {
+                "_instruction_names": [
+                  "delay"
+                ],
+                "_recurse": true
+              }
+            },
+            {
+              "class": "qiskit.passmanager.flow_controllers.ConditionalController",
+              "condition": {
+                "module": "qiskit.transpiler.preset_passmanagers.common",
+                "qualname": "generate_scheduling.<locals>._contains_delay"
+              },
+              "tasks": [
+                {
+                  "class": "qiskit.transpiler.passes.scheduling.time_unit_conversion.TimeUnitConversion"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "layout_stage_present": false,
+      "routing_stage_present": false,
+      "sabre_or_stochastic_swap_passes_present": [],
+      "flow_class_and_config_digest_sha256": "5f31517501c6ff2238a1d5bc1f9007f11b8fb3973f2f5134e8481e4bf8cbdd9c",
+      "warnings": [
+        {
+          "category": "UserWarning",
+          "message": "Providing `coupling_map` and/or `basis_gates` along with `backend` is not recommended, as this will invalidate the backend's gate durations and error rates."
+        }
+      ],
+      "backend_target_summary": {
+        "num_qubits": 30,
+        "operation_names": [
+          "break_loop",
+          "ccx",
+          "ccz",
+          "continue_loop",
+          "cp",
+          "crx",
+          "cry",
+          "crz",
+          "cswap",
+          "csx",
+          "cu",
+          "cu1",
+          "cu2",
+          "cu3",
+          "cx",
+          "cy",
+          "cz",
+          "delay",
+          "diagonal",
+          "ecr",
+          "for_loop",
+          "h",
+          "id",
+          "if_else",
+          "initialize",
+          "kraus",
+          "mcp",
+          "mcphase",
+          "mcr",
+          "mcrx",
+          "mcry",
+          "mcrz",
+          "mcswap",
+          "mcsx",
+          "mcu",
+          "mcu1",
+          "mcu2",
+          "mcu3",
+          "mcx",
+          "mcx_gray",
+          "mcy",
+          "mcz",
+          "measure",
+          "multiplexer",
+          "p",
+          "pauli",
+          "qerror_loc",
+          "quantum_channel",
+          "r",
+          "reset",
+          "roerror",
+          "rx",
+          "rxx",
+          "ry",
+          "ryy",
+          "rz",
+          "rzx",
+          "rzz",
+          "s",
+          "save_amplitudes",
+          "save_amplitudes_sq",
+          "save_density_matrix",
+          "save_expval",
+          "save_expval_var",
+          "save_probabilities",
+          "save_probabilities_dict",
+          "save_state",
+          "save_statevector",
+          "save_statevector_dict",
+          "sdg",
+          "set_statevector",
+          "store",
+          "swap",
+          "switch_case",
+          "sx",
+          "sxdg",
+          "t",
+          "tdg",
+          "u",
+          "u1",
+          "u2",
+          "u3",
+          "unitary",
+          "while_loop",
+          "x",
+          "y",
+          "z"
+        ],
+        "basis_override_used_by_approved_solver": true
+      }
+    },
+    {
+      "label": "tier06_tier07_precompile",
+      "optimization_level": 2,
+      "basis_gates": [
+        "rz",
+        "sx",
+        "x",
+        "cx"
+      ],
+      "seed_transpiler": 12345,
+      "coupling_map": null,
+      "initial_layout": null,
+      "backend_present": false,
+      "expanded_stage_order": [
+        "pre_init",
+        "init",
+        "post_init",
+        "pre_layout",
+        "layout",
+        "post_layout",
+        "pre_routing",
+        "routing",
+        "post_routing",
+        "pre_translation",
+        "translation",
+        "post_translation",
+        "pre_optimization",
+        "optimization",
+        "post_optimization",
+        "pre_scheduling",
+        "scheduling",
+        "post_scheduling"
+      ],
+      "active_stages": {
+        "pre_init": {
+          "class": "qiskit.passmanager.flow_controllers.FlowControllerLinear",
+          "tasks": [
+            {
+              "class": "qiskit.transpiler.passes.utils.contains_instruction.ContainsInstruction",
+              "configuration": {
+                "_instruction_names": [
+                  "box",
+                  "for_loop",
+                  "if_else",
+                  "switch_case",
+                  "while_loop"
+                ],
+                "_recurse": false
+              }
+            },
+            {
+              "class": "qiskit.passmanager.flow_controllers.ConditionalController",
+              "condition": {
+                "module": "qiskit.transpiler.preset_passmanagers.common",
+                "qualname": "_InvalidControlFlowForBackend.condition"
+              },
+              "tasks": [
+                {
+                  "class": "qiskit.transpiler.passes.utils.error.Error"
+                }
+              ]
+            }
+          ]
+        },
+        "init": {
+          "class": "qiskit.passmanager.flow_controllers.FlowControllerLinear",
+          "tasks": [
+            {
+              "class": "qiskit.transpiler.passes.synthesis.unitary_synthesis.UnitarySynthesis",
+              "configuration": {
+                "method": "default",
+                "_basis_gates": [
+                  "box",
+                  "cx",
+                  "delay",
+                  "for_loop",
+                  "if_else",
+                  "measure",
+                  "reset",
+                  "rz",
+                  "switch_case",
+                  "sx",
+                  "while_loop",
+                  "x"
+                ],
+                "_min_qubits": 3,
+                "_approximation_degree": 1.0,
+                "_plugin_config": null,
+                "_fallback_on_default": false,
+                "_pulse_optimize": null,
+                "_natural_direction": null
+              }
+            },
+            {
+              "class": "qiskit.transpiler.passes.synthesis.high_level_synthesis.HighLevelSynthesis",
+              "configuration": {
+                "qubits_initially_zero": true
+              }
+            },
+            {
+              "class": "qiskit.transpiler.passes.basis.basis_translator.BasisTranslator",
+              "configuration": {
+                "_target_basis": [
+                  "x",
+                  "delay",
+                  "measure",
+                  "switch_case",
+                  "reset",
+                  "cx",
+                  "if_else",
+                  "box",
+                  "sx",
+                  "for_loop",
+                  "rz",
+                  "while_loop"
+                ],
+                "_min_qubits": 3
+              }
+            },
+            {
+              "class": "qiskit.transpiler.passes.optimization.elide_permutations.ElidePermutations"
+            },
+            {
+              "class": "qiskit.transpiler.passes.optimization.remove_diagonal_gates_before_measure.RemoveDiagonalGatesBeforeMeasure"
+            },
+            {
+              "class": "qiskit.transpiler.passes.optimization.remove_identity_equiv.RemoveIdentityEquivalent",
+              "configuration": {
+                "_approximation_degree": 1.0
+              }
+            },
+            {
+              "class": "qiskit.transpiler.passes.optimization.inverse_cancellation.InverseCancellation"
+            },
+            {
+              "class": "qiskit.transpiler.passes.optimization.contract_idle_wires_in_control_flow.ContractIdleWiresInControlFlow"
+            },
+            {
+              "class": "qiskit.transpiler.passes.optimization.commutative_cancellation.CommutativeCancellation",
+              "configuration": {
+                "_approximation_degree": 1.0,
+                "basis": []
+              }
+            },
+            {
+              "class": "qiskit.transpiler.passes.optimization.consolidate_blocks.ConsolidateBlocks",
+              "configuration": {
+                "_approximation_degree": 1.0,
+                "basis_gates": null,
+                "force_consolidate": false
+              }
+            },
+            {
+              "class": "qiskit.transpiler.passes.optimization.split_2q_unitaries.Split2QUnitaries",
+              "configuration": {
+                "requested_fidelity": 1.0,
+                "split_swap": true
+              }
+            }
+          ]
+        },
+        "translation": {
+          "class": "qiskit.passmanager.flow_controllers.FlowControllerLinear",
+          "tasks": [
+            {
+              "class": "qiskit.transpiler.passes.synthesis.unitary_synthesis.UnitarySynthesis",
+              "configuration": {
+                "method": "default",
+                "_basis_gates": [
+                  "box",
+                  "cx",
+                  "delay",
+                  "for_loop",
+                  "if_else",
+                  "measure",
+                  "reset",
+                  "rz",
+                  "switch_case",
+                  "sx",
+                  "while_loop",
+                  "x"
+                ],
+                "_min_qubits": 0,
+                "_approximation_degree": 1.0,
+                "_plugin_config": null,
+                "_fallback_on_default": false,
+                "_pulse_optimize": null,
+                "_natural_direction": null
+              }
+            },
+            {
+              "class": "qiskit.transpiler.passes.synthesis.high_level_synthesis.HighLevelSynthesis",
+              "configuration": {
+                "qubits_initially_zero": true
+              }
+            },
+            {
+              "class": "qiskit.transpiler.passes.basis.basis_translator.BasisTranslator",
+              "configuration": {
+                "_target_basis": [
+                  "x",
+                  "delay",
+                  "measure",
+                  "switch_case",
+                  "reset",
+                  "cx",
+                  "if_else",
+                  "box",
+                  "sx",
+                  "for_loop",
+                  "rz",
+                  "while_loop"
+                ],
+                "_min_qubits": 0
+              }
+            }
+          ]
+        },
+        "optimization": {
+          "class": "qiskit.passmanager.flow_controllers.FlowControllerLinear",
+          "tasks": [
+            {
+              "class": "qiskit.transpiler.passes.optimization.two_qubit_peephole.TwoQubitPeepholeOptimization",
+              "configuration": {
+                "_approximation_degree": 1.0
+              }
+            },
+            {
+              "class": "qiskit.transpiler.passes.analysis.size.Size",
+              "configuration": {
+                "recurse": true
+              }
+            },
+            {
+              "class": "qiskit.transpiler.passes.analysis.depth.Depth",
+              "configuration": {
+                "recurse": true
+              }
+            },
+            {
+              "class": "qiskit.transpiler.passes.utils.fixed_point.FixedPoint",
+              "configuration": {
+                "_property": "size"
+              }
+            },
+            {
+              "class": "qiskit.transpiler.passes.utils.fixed_point.FixedPoint",
+              "configuration": {
+                "_property": "depth"
+              }
+            },
+            {
+              "class": "qiskit.passmanager.flow_controllers.DoWhileController",
+              "do_while": {
+                "module": "qiskit.transpiler.preset_passmanagers.builtin_plugins",
+                "qualname": "_optimization_check_fixed_point.<locals>.check"
+              },
+              "tasks": [
+                {
+                  "class": "qiskit.transpiler.passes.optimization.remove_identity_equiv.RemoveIdentityEquivalent",
+                  "configuration": {
+                    "_approximation_degree": 1.0
+                  }
+                },
+                {
+                  "class": "qiskit.transpiler.passes.optimization.optimize_1q_decomposition.Optimize1qGatesDecomposition",
+                  "configuration": {
+                    "_basis_gates": [
+                      "box",
+                      "cx",
+                      "delay",
+                      "for_loop",
+                      "if_else",
+                      "measure",
+                      "reset",
+                      "rz",
+                      "switch_case",
+                      "sx",
+                      "while_loop",
+                      "x"
+                    ]
+                  }
+                },
+                {
+                  "class": "qiskit.transpiler.passes.optimization.commutative_cancellation.CommutativeCancellation",
+                  "configuration": {
+                    "_approximation_degree": 1.0,
+                    "basis": [
+                      "box",
+                      "cx",
+                      "delay",
+                      "for_loop",
+                      "if_else",
+                      "measure",
+                      "reset",
+                      "rz",
+                      "switch_case",
+                      "sx",
+                      "while_loop",
+                      "x"
+                    ]
+                  }
+                },
+                {
+                  "class": "qiskit.transpiler.passes.optimization.contract_idle_wires_in_control_flow.ContractIdleWiresInControlFlow"
+                },
+                {
+                  "class": "qiskit.transpiler.passes.utils.gates_basis.GatesInBasis",
+                  "configuration": {
+                    "_basis_gates": [
+                      "barrier",
+                      "box",
+                      "cx",
+                      "delay",
+                      "for_loop",
+                      "if_else",
+                      "measure",
+                      "reset",
+                      "rz",
+                      "snapshot",
+                      "store",
+                      "switch_case",
+                      "sx",
+                      "while_loop",
+                      "x"
+                    ]
+                  }
+                },
+                {
+                  "class": "qiskit.passmanager.flow_controllers.ConditionalController",
+                  "condition": {
+                    "module": "qiskit.transpiler.preset_passmanagers.builtin_plugins",
+                    "qualname": "OptimizationPassManager.pass_manager.<locals>.should_unroll"
+                  },
+                  "tasks": [
+                    {
+                      "class": "qiskit.passmanager.flow_controllers.FlowControllerLinear",
+                      "tasks": [
+                        {
+                          "class": "qiskit.transpiler.passes.synthesis.unitary_synthesis.UnitarySynthesis",
+                          "configuration": {
+                            "method": "default",
+                            "_basis_gates": [
+                              "box",
+                              "cx",
+                              "delay",
+                              "for_loop",
+                              "if_else",
+                              "measure",
+                              "reset",
+                              "rz",
+                              "switch_case",
+                              "sx",
+                              "while_loop",
+                              "x"
+                            ],
+                            "_min_qubits": 0,
+                            "_approximation_degree": 1.0,
+                            "_plugin_config": null,
+                            "_fallback_on_default": false,
+                            "_pulse_optimize": null,
+                            "_natural_direction": null
+                          }
+                        },
+                        {
+                          "class": "qiskit.transpiler.passes.synthesis.high_level_synthesis.HighLevelSynthesis",
+                          "configuration": {
+                            "qubits_initially_zero": true
+                          }
+                        },
+                        {
+                          "class": "qiskit.transpiler.passes.basis.basis_translator.BasisTranslator",
+                          "configuration": {
+                            "_target_basis": [
+                              "x",
+                              "delay",
+                              "measure",
+                              "switch_case",
+                              "reset",
+                              "cx",
+                              "if_else",
+                              "box",
+                              "sx",
+                              "for_loop",
+                              "rz",
+                              "while_loop"
+                            ],
+                            "_min_qubits": 0
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "class": "qiskit.transpiler.passes.analysis.size.Size",
+                  "configuration": {
+                    "recurse": true
+                  }
+                },
+                {
+                  "class": "qiskit.transpiler.passes.analysis.depth.Depth",
+                  "configuration": {
+                    "recurse": true
+                  }
+                },
+                {
+                  "class": "qiskit.transpiler.passes.utils.fixed_point.FixedPoint",
+                  "configuration": {
+                    "_property": "size"
+                  }
+                },
+                {
+                  "class": "qiskit.transpiler.passes.utils.fixed_point.FixedPoint",
+                  "configuration": {
+                    "_property": "depth"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "scheduling": {
+          "class": "qiskit.passmanager.flow_controllers.FlowControllerLinear",
+          "tasks": [
+            {
+              "class": "qiskit.transpiler.passes.utils.contains_instruction.ContainsInstruction",
+              "configuration": {
+                "_instruction_names": [
+                  "delay"
+                ],
+                "_recurse": true
+              }
+            },
+            {
+              "class": "qiskit.passmanager.flow_controllers.ConditionalController",
+              "condition": {
+                "module": "qiskit.transpiler.preset_passmanagers.common",
+                "qualname": "generate_scheduling.<locals>._contains_delay"
+              },
+              "tasks": [
+                {
+                  "class": "qiskit.transpiler.passes.scheduling.time_unit_conversion.TimeUnitConversion"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "layout_stage_present": false,
+      "routing_stage_present": false,
+      "sabre_or_stochastic_swap_passes_present": [],
+      "flow_class_and_config_digest_sha256": "5f31517501c6ff2238a1d5bc1f9007f11b8fb3973f2f5134e8481e4bf8cbdd9c",
+      "warnings": []
+    }
+  ],
+  "trials": [
+    {
+      "trial": 1,
+      "status": "PASS",
+      "tier": 5,
+      "rows": [
+        {
+          "variant": "direct",
+          "constructed": {
+            "structural_digest_sha256": "07368d6242b27822ce39d816bae5c1d53bad950405eb21c4b9fa8900b6e64e58",
+            "metrics": {
+              "two_qubit_gates": 0,
+              "depth": 51,
+              "total_gates": 60,
+              "active_qubits": 19
+            },
+            "count_ops": {
+              "tier05_phase_oracle": 25,
+              "tier05_diffuser": 25,
+              "h": 10,
+              "measure": 10
+            }
+          },
+          "precompiled": {
+            "structural_digest_sha256": "507a8969671744c6253197d40667b5448d015cd51d0eedd860ff28d3b659654f",
+            "metrics": {
+              "two_qubit_gates": 11000,
+              "depth": 19703,
+              "total_gates": 28413,
+              "active_qubits": 19
+            },
+            "count_ops": {
+              "rz": 12301,
+              "cx": 11000,
+              "sx": 4862,
+              "x": 250,
+              "measure": 10
+            }
+          },
+          "scored": {
+            "structural_digest_sha256": "f93759c2201de83bc62ffaa845036a1a25776c42d42dbbe44fb45c34bde7b53f",
+            "metrics": {
+              "two_qubit_gates": 10950,
+              "depth": 19703,
+              "total_gates": 28363,
+              "active_qubits": 19
+            },
+            "count_ops": {
+              "rz": 12301,
+              "cx": 10950,
+              "sx": 4862,
+              "x": 250,
+              "measure": 10
+            }
+          },
+          "seconds": 3.4929329070000676
+        },
+        {
+          "variant": "qpy_roundtrip_before_precompile",
+          "constructed": {
+            "structural_digest_sha256": "07368d6242b27822ce39d816bae5c1d53bad950405eb21c4b9fa8900b6e64e58",
+            "metrics": {
+              "two_qubit_gates": 0,
+              "depth": 51,
+              "total_gates": 60,
+              "active_qubits": 19
+            },
+            "count_ops": {
+              "tier05_phase_oracle": 25,
+              "tier05_diffuser": 25,
+              "h": 10,
+              "measure": 10
+            }
+          },
+          "precompiled": {
+            "structural_digest_sha256": "507a8969671744c6253197d40667b5448d015cd51d0eedd860ff28d3b659654f",
+            "metrics": {
+              "two_qubit_gates": 11000,
+              "depth": 19703,
+              "total_gates": 28413,
+              "active_qubits": 19
+            },
+            "count_ops": {
+              "rz": 12301,
+              "cx": 11000,
+              "sx": 4862,
+              "x": 250,
+              "measure": 10
+            }
+          },
+          "scored": {
+            "structural_digest_sha256": "f93759c2201de83bc62ffaa845036a1a25776c42d42dbbe44fb45c34bde7b53f",
+            "metrics": {
+              "two_qubit_gates": 10950,
+              "depth": 19703,
+              "total_gates": 28363,
+              "active_qubits": 19
+            },
+            "count_ops": {
+              "rz": 12301,
+              "cx": 10950,
+              "sx": 4862,
+              "x": 250,
+              "measure": 10
+            }
+          },
+          "seconds": 3.549100943004305
+        }
+      ],
+      "roundtrip_native_equality": {
+        "supported": true,
+        "equal": true,
+        "parameter_tolerance": 0,
+        "global_phase_included": true
+      },
+      "roundtrip_scored_equality": {
+        "supported": true,
+        "equal": true,
+        "parameter_tolerance": 0,
+        "global_phase_included": true
+      },
+      "scope": "Tier5 sole solver circuit compile flow",
+      "aer_runs": 0
+    },
+    {
+      "trial": 2,
+      "status": "PASS",
+      "tier": 5,
+      "rows": [
+        {
+          "variant": "direct",
+          "constructed": {
+            "structural_digest_sha256": "07368d6242b27822ce39d816bae5c1d53bad950405eb21c4b9fa8900b6e64e58",
+            "metrics": {
+              "two_qubit_gates": 0,
+              "depth": 51,
+              "total_gates": 60,
+              "active_qubits": 19
+            },
+            "count_ops": {
+              "tier05_phase_oracle": 25,
+              "tier05_diffuser": 25,
+              "h": 10,
+              "measure": 10
+            }
+          },
+          "precompiled": {
+            "structural_digest_sha256": "507a8969671744c6253197d40667b5448d015cd51d0eedd860ff28d3b659654f",
+            "metrics": {
+              "two_qubit_gates": 11000,
+              "depth": 19703,
+              "total_gates": 28413,
+              "active_qubits": 19
+            },
+            "count_ops": {
+              "rz": 12301,
+              "cx": 11000,
+              "sx": 4862,
+              "x": 250,
+              "measure": 10
+            }
+          },
+          "scored": {
+            "structural_digest_sha256": "f93759c2201de83bc62ffaa845036a1a25776c42d42dbbe44fb45c34bde7b53f",
+            "metrics": {
+              "two_qubit_gates": 10950,
+              "depth": 19703,
+              "total_gates": 28363,
+              "active_qubits": 19
+            },
+            "count_ops": {
+              "rz": 12301,
+              "cx": 10950,
+              "sx": 4862,
+              "x": 250,
+              "measure": 10
+            }
+          },
+          "seconds": 3.8984197649988346
+        },
+        {
+          "variant": "qpy_roundtrip_before_precompile",
+          "constructed": {
+            "structural_digest_sha256": "07368d6242b27822ce39d816bae5c1d53bad950405eb21c4b9fa8900b6e64e58",
+            "metrics": {
+              "two_qubit_gates": 0,
+              "depth": 51,
+              "total_gates": 60,
+              "active_qubits": 19
+            },
+            "count_ops": {
+              "tier05_phase_oracle": 25,
+              "tier05_diffuser": 25,
+              "h": 10,
+              "measure": 10
+            }
+          },
+          "precompiled": {
+            "structural_digest_sha256": "507a8969671744c6253197d40667b5448d015cd51d0eedd860ff28d3b659654f",
+            "metrics": {
+              "two_qubit_gates": 11000,
+              "depth": 19703,
+              "total_gates": 28413,
+              "active_qubits": 19
+            },
+            "count_ops": {
+              "rz": 12301,
+              "cx": 11000,
+              "sx": 4862,
+              "x": 250,
+              "measure": 10
+            }
+          },
+          "scored": {
+            "structural_digest_sha256": "f93759c2201de83bc62ffaa845036a1a25776c42d42dbbe44fb45c34bde7b53f",
+            "metrics": {
+              "two_qubit_gates": 10950,
+              "depth": 19703,
+              "total_gates": 28363,
+              "active_qubits": 19
+            },
+            "count_ops": {
+              "rz": 12301,
+              "cx": 10950,
+              "sx": 4862,
+              "x": 250,
+              "measure": 10
+            }
+          },
+          "seconds": 3.4135082499997225
+        }
+      ],
+      "roundtrip_native_equality": {
+        "supported": true,
+        "equal": true,
+        "parameter_tolerance": 0,
+        "global_phase_included": true
+      },
+      "roundtrip_scored_equality": {
+        "supported": true,
+        "equal": true,
+        "parameter_tolerance": 0,
+        "global_phase_included": true
+      },
+      "scope": "Tier5 sole solver circuit compile flow",
+      "aer_runs": 0
+    },
+    {
+      "trial": 1,
+      "status": "PASS",
+      "tier": 6,
+      "rows": [
+        {
+          "variant": "direct",
+          "constructed": {
+            "structural_digest_sha256": "e0d57e2dbc96a408885c297b0b981f9a1e97378868f6ad33822041c788705a19",
+            "metrics": {
+              "two_qubit_gates": 0,
+              "depth": 25,
+              "total_gates": 38,
+              "active_qubits": 22
+            },
+            "count_ops": {
+              "h": 14,
+              "measure": 14,
+              "tier06_Q_phase": 12,
+              "tier06_diffuser": 12
+            }
+          },
+          "precompiled": {
+            "structural_digest_sha256": "7ed9023dd8cb247f794dfe8e89251778d104c88b8a25f7775bb90df57c0ccb73",
+            "metrics": {
+              "two_qubit_gates": 3000,
+              "depth": 5691,
+              "total_gates": 8680,
+              "active_qubits": 22
+            },
+            "count_ops": {
+              "rz": 4178,
+              "cx": 3000,
+              "sx": 1502,
+              "measure": 14
+            }
+          },
+          "scored": {
+            "structural_digest_sha256": "7ed9023dd8cb247f794dfe8e89251778d104c88b8a25f7775bb90df57c0ccb73",
+            "metrics": {
+              "two_qubit_gates": 3000,
+              "depth": 5691,
+              "total_gates": 8680,
+              "active_qubits": 22
+            },
+            "count_ops": {
+              "rz": 4178,
+              "cx": 3000,
+              "sx": 1502,
+              "measure": 14
+            }
+          },
+          "seconds": 0.2326994049944915
+        },
+        {
+          "variant": "qpy_roundtrip_before_precompile",
+          "constructed": {
+            "structural_digest_sha256": "e0d57e2dbc96a408885c297b0b981f9a1e97378868f6ad33822041c788705a19",
+            "metrics": {
+              "two_qubit_gates": 0,
+              "depth": 25,
+              "total_gates": 38,
+              "active_qubits": 22
+            },
+            "count_ops": {
+              "h": 14,
+              "measure": 14,
+              "tier06_Q_phase": 12,
+              "tier06_diffuser": 12
+            }
+          },
+          "precompiled": {
+            "structural_digest_sha256": "7ed9023dd8cb247f794dfe8e89251778d104c88b8a25f7775bb90df57c0ccb73",
+            "metrics": {
+              "two_qubit_gates": 3000,
+              "depth": 5691,
+              "total_gates": 8680,
+              "active_qubits": 22
+            },
+            "count_ops": {
+              "rz": 4178,
+              "cx": 3000,
+              "sx": 1502,
+              "measure": 14
+            }
+          },
+          "scored": {
+            "structural_digest_sha256": "7ed9023dd8cb247f794dfe8e89251778d104c88b8a25f7775bb90df57c0ccb73",
+            "metrics": {
+              "two_qubit_gates": 3000,
+              "depth": 5691,
+              "total_gates": 8680,
+              "active_qubits": 22
+            },
+            "count_ops": {
+              "rz": 4178,
+              "cx": 3000,
+              "sx": 1502,
+              "measure": 14
+            }
+          },
+          "seconds": 0.23729131900472566
+        }
+      ],
+      "roundtrip_native_equality": {
+        "supported": true,
+        "equal": true,
+        "parameter_tolerance": 0,
+        "global_phase_included": true
+      },
+      "roundtrip_scored_equality": {
+        "supported": true,
+        "equal": true,
+        "parameter_tolerance": 0,
+        "global_phase_included": true
+      },
+      "scope": "Tier6 nominal default12-round builder only; no measured calibration or Aer execution",
+      "aer_runs": 0
+    },
+    {
+      "trial": 2,
+      "status": "PASS",
+      "tier": 6,
+      "rows": [
+        {
+          "variant": "direct",
+          "constructed": {
+            "structural_digest_sha256": "e0d57e2dbc96a408885c297b0b981f9a1e97378868f6ad33822041c788705a19",
+            "metrics": {
+              "two_qubit_gates": 0,
+              "depth": 25,
+              "total_gates": 38,
+              "active_qubits": 22
+            },
+            "count_ops": {
+              "h": 14,
+              "measure": 14,
+              "tier06_Q_phase": 12,
+              "tier06_diffuser": 12
+            }
+          },
+          "precompiled": {
+            "structural_digest_sha256": "7ed9023dd8cb247f794dfe8e89251778d104c88b8a25f7775bb90df57c0ccb73",
+            "metrics": {
+              "two_qubit_gates": 3000,
+              "depth": 5691,
+              "total_gates": 8680,
+              "active_qubits": 22
+            },
+            "count_ops": {
+              "rz": 4178,
+              "cx": 3000,
+              "sx": 1502,
+              "measure": 14
+            }
+          },
+          "scored": {
+            "structural_digest_sha256": "7ed9023dd8cb247f794dfe8e89251778d104c88b8a25f7775bb90df57c0ccb73",
+            "metrics": {
+              "two_qubit_gates": 3000,
+              "depth": 5691,
+              "total_gates": 8680,
+              "active_qubits": 22
+            },
+            "count_ops": {
+              "rz": 4178,
+              "cx": 3000,
+              "sx": 1502,
+              "measure": 14
+            }
+          },
+          "seconds": 0.2095863790018484
+        },
+        {
+          "variant": "qpy_roundtrip_before_precompile",
+          "constructed": {
+            "structural_digest_sha256": "e0d57e2dbc96a408885c297b0b981f9a1e97378868f6ad33822041c788705a19",
+            "metrics": {
+              "two_qubit_gates": 0,
+              "depth": 25,
+              "total_gates": 38,
+              "active_qubits": 22
+            },
+            "count_ops": {
+              "h": 14,
+              "measure": 14,
+              "tier06_Q_phase": 12,
+              "tier06_diffuser": 12
+            }
+          },
+          "precompiled": {
+            "structural_digest_sha256": "7ed9023dd8cb247f794dfe8e89251778d104c88b8a25f7775bb90df57c0ccb73",
+            "metrics": {
+              "two_qubit_gates": 3000,
+              "depth": 5691,
+              "total_gates": 8680,
+              "active_qubits": 22
+            },
+            "count_ops": {
+              "rz": 4178,
+              "cx": 3000,
+              "sx": 1502,
+              "measure": 14
+            }
+          },
+          "scored": {
+            "structural_digest_sha256": "7ed9023dd8cb247f794dfe8e89251778d104c88b8a25f7775bb90df57c0ccb73",
+            "metrics": {
+              "two_qubit_gates": 3000,
+              "depth": 5691,
+              "total_gates": 8680,
+              "active_qubits": 22
+            },
+            "count_ops": {
+              "rz": 4178,
+              "cx": 3000,
+              "sx": 1502,
+              "measure": 14
+            }
+          },
+          "seconds": 0.23786204800126143
+        }
+      ],
+      "roundtrip_native_equality": {
+        "supported": true,
+        "equal": true,
+        "parameter_tolerance": 0,
+        "global_phase_included": true
+      },
+      "roundtrip_scored_equality": {
+        "supported": true,
+        "equal": true,
+        "parameter_tolerance": 0,
+        "global_phase_included": true
+      },
+      "scope": "Tier6 nominal default12-round builder only; no measured calibration or Aer execution",
+      "aer_runs": 0
+    }
+  ],
+  "planned_trials": "Two fresh processes per publicTier5/Tier6 builder, direct and QPY-roundtrip-before-precompile ineach",
+  "aer_runs": 0,
+  "production_or_official_files_modified": false,
+  "oracle_definitions_inspected": false,
+  "structural_digest_schema": "sha256canonicalJSON_v1: ordered public gate class/name, qubit/clbit indices andparametercount; excludesnumericparameter/globalphasevalues,labels,registerUUID,metadata,opaqueinternals",
+  "structural_digest_is_not_unitary_identity": true,
+  "parameter_values_saved": false,
+  "thread_environment": {
+    "PYTHONHASHSEED": "0",
+    "QISKIT_PARALLEL": "FALSE",
+    "OMP_NUM_THREADS": "2",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "RAYON_NUM_THREADS": null
+  },
+  "historical_actual_pass_trace_available": false,
+  "comparison": {
+    "5": {
+      "fresh_process_structural_digests_and_counts_equal": true,
+      "qpy_roundtrip_before_precompile_preserves_native_and_scored_exact_primitive_sequences": true
+    },
+    "6": {
+      "fresh_process_structural_digests_and_counts_equal": true,
+      "qpy_roundtrip_before_precompile_preserves_native_and_scored_exact_primitive_sequences": true
+    }
+  },
+  "elapsed_seconds": 19.482377278000058,
+  "conclusion": "Bounded same-host probes identify pass plans and test serialization/order stability; they do not isolate missing historical platform or native-library cause.",
+  "script_sha256": "aa86d5c2ca1dfa9539c08e196d7174811de41cb8df43c4fa89d5b5166fef7790"
+}

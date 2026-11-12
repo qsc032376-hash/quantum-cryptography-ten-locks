@@ -1,0 +1,183 @@
+{
+  "created_at": "2026-11-11T20:23:19.932138-05:00",
+  "approved_commit": "ce75c0721622d363e77912191a52a02c34f92472",
+  "parent_audit_commit": "e49ed058ed83b43866ffca4ca9b9785e3f9301ed",
+  "purpose": "Byte integrity of safe published audit evidence; excludes this self-index.",
+  "files": [
+    {
+      "path": "docs/V63_METRICS_VARIANCE_INVESTIGATION.md",
+      "bytes": 18535,
+      "sha256": "716b6f6a8f0b06528476b1ba7760d61d171274b99263afdee51d3d2dd05281d6"
+    },
+    {
+      "path": "docs/v63-metrics-evidence/README.md",
+      "bytes": 6493,
+      "sha256": "6c4528030dd42699c7d85dbbbdb09ee7f4a090a3d5bfba831f94b7e65636a8f3"
+    },
+    {
+      "path": "docs/v63-metrics-evidence/acceptance-analysis.md",
+      "bytes": 8418,
+      "sha256": "f9d9e21de57bcaeab632d41cbe28b4edcc78ceab3d47a3002b34b80af92def55"
+    },
+    {
+      "path": "docs/v63-metrics-evidence/actual-circuits.json",
+      "bytes": 104195,
+      "sha256": "5ba87e90a738b88702d53b730d8372a8fae44142a0e919a77a73abf450b61ffe"
+    },
+    {
+      "path": "docs/v63-metrics-evidence/analyze_actual_circuits.py",
+      "bytes": 8080,
+      "sha256": "1fbfcc84ea61eab69b8a4e44d6a7c50cb2729689847f3c5c4e3e423752c79efc"
+    },
+    {
+      "path": "docs/v63-metrics-evidence/circuit_fingerprint.py",
+      "bytes": 4352,
+      "sha256": "5fb6782456ea844d26c0ef4bd5fe4896311e91c984bf2ca8bda2d06dd5bdf9ac"
+    },
+    {
+      "path": "docs/v63-metrics-evidence/collect_environment.py",
+      "bytes": 9243,
+      "sha256": "38412c0cd71136e52f2575a31d4b71f407e6a8c396f237af535efe206c78c584"
+    },
+    {
+      "path": "docs/v63-metrics-evidence/environment-notes.md",
+      "bytes": 3961,
+      "sha256": "547a0a094c734f50cbed91d5720a82003839116e6d1dca1e1da9b8f9bb40d3d4"
+    },
+    {
+      "path": "docs/v63-metrics-evidence/finalize_evidence.py",
+      "bytes": 7973,
+      "sha256": "6a3f39c4cb426bf0d525853ccde690d1431ec49169349571f31497ee817110b0"
+    },
+    {
+      "path": "docs/v63-metrics-evidence/fingerprint-schema-selftest.json",
+      "bytes": 270,
+      "sha256": "9a16e90867a375febde758ed6bd1698ea0ac2aaffbf3408057bad67da6c2f22b"
+    },
+    {
+      "path": "docs/v63-metrics-evidence/fingerprint_selftest.py",
+      "bytes": 3310,
+      "sha256": "365720a8c3377f46fe778f746db820c24f5c4b3f3931f2d341bd7c12c96a8f41"
+    },
+    {
+      "path": "docs/v63-metrics-evidence/four-stage-methodology.md",
+      "bytes": 5451,
+      "sha256": "dfcd6b7beadb90860296732d9148c0e0abeea98ea382438ebf3d829e16711f82"
+    },
+    {
+      "path": "docs/v63-metrics-evidence/four-stage-resource-records.json",
+      "bytes": 1815,
+      "sha256": "4afc0caf709c4925476f87381dc955c232d92c5bc093c7fa6308b6c367e819b6"
+    },
+    {
+      "path": "docs/v63-metrics-evidence/four-stage-selected-summary.json",
+      "bytes": 34749,
+      "sha256": "91e05b6d055c6227f45651fb48966e725050efc5b88411eff5d46de89e18e23e"
+    },
+    {
+      "path": "docs/v63-metrics-evidence/four_stage_probe.py",
+      "bytes": 17666,
+      "sha256": "8a922dd3ebd6361c9c0a2740cee3ae74a803605406067d339c4618da55dbda1c"
+    },
+    {
+      "path": "docs/v63-metrics-evidence/full-environment.json",
+      "bytes": 20451,
+      "sha256": "450d2c1dacb7b5a0e5662759c02f2402e5dd9c05af8db8c16a0531d4dfa7fb59"
+    },
+    {
+      "path": "docs/v63-metrics-evidence/investigation.json",
+      "bytes": 4857,
+      "sha256": "6d23265d12b411a15122b202ff001a98905939ee428e26b8be45b090d7e66d52"
+    },
+    {
+      "path": "docs/v63-metrics-evidence/pass-manager-probe-notes.md",
+      "bytes": 4283,
+      "sha256": "6913f4ba63357a59ee6c4423e8abf8a7bb561c538244987147f7085b31b47539"
+    },
+    {
+      "path": "docs/v63-metrics-evidence/pass-manager-probe.json",
+      "bytes": 62009,
+      "sha256": "720e5e4082e72a7ee00dac55b902627e02404a3c9e67874c318c39e2df60577f"
+    },
+    {
+      "path": "docs/v63-metrics-evidence/pass_manager_probe.py",
+      "bytes": 11669,
+      "sha256": "aa86d5c2ca1dfa9539c08e196d7174811de41cb8df43c4fa89d5b5166fef7790"
+    },
+    {
+      "path": "docs/v63-metrics-evidence/repeat_three.py",
+      "bytes": 8975,
+      "sha256": "b5bb5a025f27f62b00d65c679e2f60f5632ed43267ee1476077460310bc2a833"
+    },
+    {
+      "path": "docs/v63-metrics-evidence/run-1/checker/report.json",
+      "bytes": 4364,
+      "sha256": "998b1c8fd2b4d45e0d481a09d97a5a21bc940fc79c790be5d25d3e2b09c31aab"
+    },
+    {
+      "path": "docs/v63-metrics-evidence/run-1/checker/report.md",
+      "bytes": 836,
+      "sha256": "f5786f00a9b12ef31ca26d96133784daecc922c3e4ebb7b210735cae6b2e5e57"
+    },
+    {
+      "path": "docs/v63-metrics-evidence/run-2/checker/report.json",
+      "bytes": 4367,
+      "sha256": "cc0946a75a1763355c67166fea4c9303f0e0d8787398f2dde3f4ccc6dfe8261c"
+    },
+    {
+      "path": "docs/v63-metrics-evidence/run-2/checker/report.md",
+      "bytes": 836,
+      "sha256": "f5786f00a9b12ef31ca26d96133784daecc922c3e4ebb7b210735cae6b2e5e57"
+    },
+    {
+      "path": "docs/v63-metrics-evidence/run-3/checker/report.json",
+      "bytes": 4364,
+      "sha256": "37b8eede658ceaa79fa64c2c87623d0da9c84effd9da36d117d1449fa38d6820"
+    },
+    {
+      "path": "docs/v63-metrics-evidence/run-3/checker/report.md",
+      "bytes": 836,
+      "sha256": "f5786f00a9b12ef31ca26d96133784daecc922c3e4ebb7b210735cae6b2e5e57"
+    },
+    {
+      "path": "docs/v63-metrics-evidence/stage-localization-historical.json",
+      "bytes": 9076,
+      "sha256": "e42eeec3b1f5cbe40d1213355ade688b702c3981abbaf94669ac59272c120bfa"
+    },
+    {
+      "path": "docs/v63-metrics-evidence/three-runs.json",
+      "bytes": 22985,
+      "sha256": "f8777a93755954a2447bccd4afd673771e7454bb7364be7c26fc74f918f6ba3a"
+    },
+    {
+      "path": "docs/v63-metrics-evidence/tier05-score-profile.json",
+      "bytes": 8735,
+      "sha256": "bf0c7aee615d15d043e7fce747bf6730e293e7a6f66841cdf8a6cd7f457653a1"
+    },
+    {
+      "path": "docs/v63-metrics-evidence/tier05-solve-profile.json",
+      "bytes": 9912,
+      "sha256": "4516d552b6b7d63b624b020c2178830306cc14fa306fc00a783909cdac8dcc54"
+    },
+    {
+      "path": "docs/v63-metrics-evidence/tier06-score-profile.json",
+      "bytes": 12496,
+      "sha256": "aa4c555ce4ec1c26c411a0d10068f39542c024f34318c641616547659c9f2132"
+    },
+    {
+      "path": "docs/v63-metrics-evidence/tier06-solve-profile.json",
+      "bytes": 16112,
+      "sha256": "d809cbe324bf0630909a703ec0928ad74c0b0475d0a47d04bd546aff1b14d3b8"
+    },
+    {
+      "path": "docs/v63-metrics-evidence/tier07-score-profile.json",
+      "bytes": 15574,
+      "sha256": "21f49fdec749fe55b8f91dcea8b13e38879c76be93d0eef2597fcf45160b138c"
+    },
+    {
+      "path": "docs/v63-metrics-evidence/tier07-solve-profile.json",
+      "bytes": 22324,
+      "sha256": "720688d3b051a2269460108088c5c6549f2d14c06ed247cc1900c685e8e6df43"
+    }
+  ]
+}
